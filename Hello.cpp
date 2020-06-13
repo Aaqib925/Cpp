@@ -7,4 +7,6 @@ int main(){
     // something to console(terminal) requires std::cout
     // endl is used to terminate the line
     cout << "Aaqib here";
+
+    return 0;
 };
