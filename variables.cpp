@@ -18,6 +18,15 @@ int main(){
     cout << age << endl;
 
     age = ++age;  // this is called as post increment.
-    cout << age;
+    cout << age << endl;
+    
+    float ageFloat = 155.0;
+    cout << ageFloat << endl;
 
-}
+    age = age + ageFloat;
+    cout << age << endl;  // this means float can be added into int.
+    
+    ageFloat -= 10;
+
+    cout << ageFloat << endl;
+};
