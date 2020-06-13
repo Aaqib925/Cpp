@@ -29,4 +29,13 @@ int main(){
     ageFloat -= 10;
 
     cout << ageFloat << endl;
+
+    string num = "1";
+    string num2 = "2";
+    // string result = num + num2;
+    // cout << result << endl;
+
+    cout << num + num2 << endl; // this endl SUCKSSSSSS.
+
+    cout << "hello";
 };
