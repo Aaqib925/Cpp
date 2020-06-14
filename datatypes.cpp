@@ -22,8 +22,13 @@ using namespace std;
 // }
 
 int main(){
-    for (int i = 0; i <= 25; i++){
+    for (int i = 0; i <= 5; i++){
         cout << i << endl;
+    }
+    cout << endl;
+    string name = "Aaqib";
+    for (char x: name){
+        cout << x << endl;
     }
     return 0;
 }
