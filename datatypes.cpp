@@ -9,5 +9,8 @@ int main(){
     // float pointValue = 1.4;
     // cout << pointValue << endl;
     int x;
-    
+    cout << "Enter any number: " << endl;
+
+    cin >> x;
+    cout << x << endl;
 }
