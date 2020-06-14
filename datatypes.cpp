@@ -18,4 +18,5 @@ int main(){
     else{
         cout << "The number " << x << " is Odd number." << endl;
     }
+    return 0;
 }
