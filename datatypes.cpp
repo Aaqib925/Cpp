@@ -13,9 +13,9 @@ int main(){
 
     cin >> x;
     if (x % 2 == 0){
-        cout << "The number " << x << " is Even number."
+        cout << "The number " << x << " is Even number." << endl;
     }
     else{
-        cout << "The number " << x << " is Odd number."
+        cout << "The number " << x << " is Odd number." << endl;
     }
 }
