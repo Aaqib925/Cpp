@@ -8,9 +8,14 @@ int main(){
 
     // float pointValue = 1.4;
     // cout << pointValue << endl;
-    string x;
+    int x;
     cout << "Enter any number: ";
 
     cin >> x;
-    cout << x << endl;
+    if (x % 2 == 0){
+        cout << "The number " << x << " is Even number."
+    }
+    else{
+        cout << "The number " << x << " is Odd number."
+    }
 }
