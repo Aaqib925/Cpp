@@ -22,6 +22,8 @@ using namespace std;
 // }
 
 int main(){
+
+    // cout << int(15/2) << endl;
     for (int i = 0; i <= 5; i++){
         cout << i << endl;
     }
