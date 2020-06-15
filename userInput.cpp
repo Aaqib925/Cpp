@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <algorithm>
 using namespace std;
 
 int main(){
@@ -32,5 +33,5 @@ int main(){
     getline(cin, x);
     cout << x << endl;
 
-    
+    max(a, b, c, d)
 }
