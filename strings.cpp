@@ -18,6 +18,18 @@ int main(){
     // is the range for the substr
 
     name[0] = 'S';
-    cout << name;
+    cout << name << endl;
 
-};
+    // strlen(stringObject) function to find out the length, it's only specific with strings.
+
+    cout << name.find("Saqib") << endl;
+
+    name.pop_back(); // remove the last character of the string.
+
+    cout << name << endl;
+
+    name.resize(2); // it's takes length argument from 0 to n
+    cout << name << endl;
+
+
+}
