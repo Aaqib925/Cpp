@@ -51,10 +51,10 @@ using namespace std;
 //     cout << endl;
 // }
 
-int main(){
-    int number = 0;
-    while (cin >> number){
-        cout << "Your entered " << number << endl; // to break this use ctrl + d in UNIX systems.
-    }
-    return 0;
-}
+// int main(){
+//     int number = 0;
+//     while (cin >> number){
+//         cout << "Your entered " << number << endl; // to break this use ctrl + d in UNIX systems.
+//     }
+//     return 0;
+// }
