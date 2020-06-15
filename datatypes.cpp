@@ -21,16 +21,19 @@ using namespace std;
     // return 0;
 // }
 
-int main(){
+// int main(){
 
-    // cout << int(15/2) << endl;
-    for (int i = 0; i <= 5; i++){
-        cout << i << endl;
-    }
-    cout << endl;
-    string name = "Aaqib";
-    for (char x: name){
-        cout << x << endl;
-    }
-    return 0;
-}
+//     // cout << int(15/2) << endl;
+//     for (int i = 0; i <= 5; i++){
+//         cout << i << endl;
+//     }
+//     cout << endl;
+//     string name = "Aaqib";
+//     for (char x: name){
+//         cout << x << endl;
+//     }
+//     return 0;
+// }
+
+// write a program to print the numbers in a interval given by the user
+
