@@ -41,12 +41,12 @@ int main(){
     int x, y;
     cout << "Enter the starting number: ";
     cin >> x;
-    cout << endl;
+    // cout << endl;
     cout << "Enter the Ending Number: ";
     cin >> y;
     while (x <= y){
-        cout << x << endl;
+        cout << x << " ";
         x++;
     }
-
+    cout << endl;
 }
