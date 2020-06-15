@@ -61,18 +61,18 @@ using namespace std;
 
 // hackerrank solution, input: 3 12345678912345 a 334.23 14049.30493
 
-#include <iostream>
-#include <cstdio>
-#include <iomanip>
-using namespace std;
+// #include <iostream>
+// #include <cstdio>
+// #include <iomanip>
+// using namespace std;
 
-int main() {
-    // Complete the code.
-    int a; long b; char c; float d; double e;
-    cin >> a >> b >> c >> d >> e;
+// int main() {
+//     // Complete the code.
+//     int a; long b; char c; float d; double e;
+//     cin >> a >> b >> c >> d >> e;
 
-    cout << a << "\n" << b << "\n" << c << "\n";
+//     cout << a << "\n" << b << "\n" << c << "\n";
 
-    cout << fixed << showpoint << setprecision(3) << d << "\n";
-    cout << fixed << showpoint << setprecision(9) << e << "\n";
-}
+//     cout << fixed << showpoint << setprecision(3) << d << "\n";
+//     cout << fixed << showpoint << setprecision(9) << e << "\n";
+// }
