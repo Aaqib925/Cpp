@@ -31,5 +31,12 @@ int main(){
     name.resize(2); // it's takes length argument from 0 to n
     cout << name << endl;
 
+    name += "qib Nazir";
+
+    string reversedString;
+    for (char x: name){
+        reversedString = x + reversedString;
+    }
+    cout << reversedString << endl;
 
 }
