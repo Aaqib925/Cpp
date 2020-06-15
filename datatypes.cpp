@@ -61,6 +61,10 @@ using namespace std;
 
 // hackerrank solution, input: 3 12345678912345 a 334.23 14049.30493
 
+// Setprecision is used to set the maximum number of decimal places after the point.
+//  Fixed is used to give an output in the fixed point notation i.e. 342.123 etc. 
+// if u use scientific instead of fixed then it will show 3.421e+02.
+
 // #include <iostream>
 // #include <cstdio>
 // #include <iomanip>
