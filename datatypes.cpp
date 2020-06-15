@@ -37,3 +37,16 @@ using namespace std;
 
 // write a program to print the numbers in a interval given by the user
 
+int main(){
+    int x, y;
+    cout << "Enter the starting number: ";
+    cin >> x;
+    cout << endl;
+    cout << "Enter the Ending Number: ";
+    cin >> y;
+    while (x <= y){
+        cout << x << endl;
+        x++;
+    }
+
+}
