@@ -41,7 +41,11 @@ int main(){
     b = min(num1, num2);
     q = a / b;
     r = a % b;
-    while (true){
+    if (r == 0){
+        cout << "The GCD of " << num1 << " " << num2 << " is " << b << endl;
+    }
+    else{
+        while (r > 0){
         a = b;
         b = r;
         q = a / b;
@@ -51,7 +55,9 @@ int main(){
         else{
             break;
         }
-
     }
+    cout << "The GCR of " << num1 << " " << num2 << " is " << r << endl;
+    }
+    
     
 }
