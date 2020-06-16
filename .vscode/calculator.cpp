@@ -28,22 +28,26 @@ int main(){
             result = secondValue;
         }
 
-        if (i < operands){
+        if (i != operands - 1){
             cout << "Enter Operator: ";
             cin >> symbol; 
         }
 
         if (symbol == '+'){
             result = addNumbers(result, secondValue);
+            cout << result << endl;
         }
         else if(symbol == '-'){
             result = subNumbers(result, secondValue);
+            cout << result << endl;
         }
         else if(symbol == '*'){
             result = multNumbers(result, secondValue);
+            cout << result << endl;
         }
         else if(symbol == '/'){
             result = divNumbers(result, secondValue);
+            cout << result << endl;
         }
     }
     cout << result << endl;
