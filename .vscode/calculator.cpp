@@ -17,7 +17,7 @@ int main(){
 
     for (int i = 0; i < operations; i++){
         double secondValue;
-        string symbol;
+        char symbol;
 
         if (number == true && operation == false){
             cout << "Enter Operand number " << i + 1 << " : ";
@@ -37,9 +37,25 @@ int main(){
             result = secondValue;
         }
         else{
-            if (symbol == "+"){
-                
+            if (symbol == '+')
+            {
+                result = addNumbers(result, secondValue);
             }
+
+            else if (symbol == '-')
+            {
+                result = subNumbers(result, secondValue);
+            }
+
+            else if (symbol == '*')
+            {
+                result = multNumbers(result, secondValue);
+            }
+            else if (symbol == '/')
+            {
+                result = divNumbers(result, secondValue);
+            }
+                    
         }
 
 
