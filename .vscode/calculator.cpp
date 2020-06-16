@@ -7,58 +7,44 @@ double divNumbers(double, double);
 double multNumbers(double, double);
 
 int main(){
-    double result;
-    int operations;
-    cout << "Enter number of Operations: ";
-    cin >> operations;
+    double result = 0;
+    int operands;
+    cout << "Enter number of Operatands: ";
+    cin >> operands;
 
     bool number = true;
     bool operation = false;
 
-    for (int i = 0; i < operations; i++){
+    for (int i = 0; i < operands; i++){
         double secondValue;
-        char symbol;
+        char symbol = 'z';
 
-        if (number == true && operation == false){
-            cout << "Enter Operand number " << i + 1 << " : ";
-            cin >> secondValue;
-            number = false;
-            operation = true;
-        }
+        // taking inputs
+        cout << "Enter Operand number " << i + 1 << ": ";
+        cin >> secondValue;
 
-        else if (number == false && operation == true){
-            cout << "Enter the operator: ";
-            cin >> symbol;
-            number = true;
-            operation = false;
-        }
 
         if (i == 0){
             result = secondValue;
         }
-        else{
-            if (symbol == '+')
-            {
-                result = addNumbers(result, secondValue);
-            }
 
-            else if (symbol == '-')
-            {
-                result = subNumbers(result, secondValue);
-            }
-
-            else if (symbol == '*')
-            {
-                result = multNumbers(result, secondValue);
-            }
-            else if (symbol == '/')
-            {
-                result = divNumbers(result, secondValue);
-            }
-                    
+        if (i < operands){
+            cout << "Enter Operator: ";
+            cin >> symbol; 
         }
 
-
+        if (symbol == '+'){
+            result = addNumbers(result, secondValue);
+        }
+        else if(symbol == '-'){
+            result = subNumbers(result, secondValue);
+        }
+        else if(symbol == '*'){
+            result = multNumbers(result, secondValue);
+        }
+        else if(symbol == '/'){
+            result = divNumbers(result, secondValue);
+        }
     }
     cout << result << endl;
 
