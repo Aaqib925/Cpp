@@ -56,7 +56,7 @@ int main(){
             break;
         }
     }
-    cout << "The GCR of " << num1 << " " << num2 << " is " << r << endl;
+    cout << "The GCR of " << num1 << " " << num2 << " is: " << r << "." << endl;
     }
     
     
