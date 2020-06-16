@@ -60,5 +60,22 @@ int main(){
 
 
     }
+    cout << result << endl;
 
+}
+
+double addNumbers(double num1, double num2){
+    return num1 + num2;
+}
+
+double subNumbers(double num1, double num2){
+    return num1 - num2;
+}
+
+double multNumbers(double num1, double num2){
+    return num1 * num2;
+}
+
+double divNumbers(double num1, double num2){
+    return num1 / num2;
 }
