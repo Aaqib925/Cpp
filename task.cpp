@@ -24,6 +24,9 @@ using namespace std;
 // }
 
 int main(){
-    cout << 45 % 10 << endl;
-    cout << 45 / 10 << endl;
+    int x, y;
+    cin >> x >> y;
+    cout << "Value of q" << x / y << endl;
+    cout << "Value of r" << x % y << endl;
+    
 }
