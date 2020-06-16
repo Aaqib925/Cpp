@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include <iomanip>
 using namespace std;
 
 double addNumbers(double, double);
@@ -11,46 +13,46 @@ int main(){
     int operands;
     cout << "Enter number of Operatands: ";
     cin >> operands;
-
-    bool number = true;
-    bool operation = false;
+    cout << endl;
+    char symbol = 'z';
+    string equation;
 
     for (int i = 0; i < operands; i++){
         double secondValue;
-        char symbol = 'z';
-
-        // taking inputs
-        cout << "Enter Operand number " << i + 1 << ": ";
+        cout << "Enter the Operand number " << i + 1 << ": ";
         cin >> secondValue;
-
+        equation += to_string(secondValue);
+        equation += " ";
 
         if (i == 0){
             result = secondValue;
         }
+        if (symbol != 'z'){
+            if (symbol == '+'){
+                result = addNumbers(result, secondValue);
+            }
+            else if(symbol == '-'){
+                result = subNumbers(result, secondValue);
+            }
+            else if(symbol == '*'){
+                result = multNumbers(result, secondValue);
+            }
+            else if(symbol == '/'){
+                result = divNumbers(result, secondValue);
+            }
+        }
 
-        if (i != operands - 1){
+        if (i < operands - 1){
             cout << "Enter Operator: ";
             cin >> symbol; 
-        }
-
-        if (symbol == '+'){
-            result = addNumbers(result, secondValue);
-            cout << result << endl;
-        }
-        else if(symbol == '-'){
-            result = subNumbers(result, secondValue);
-            cout << result << endl;
-        }
-        else if(symbol == '*'){
-            result = multNumbers(result, secondValue);
-            cout << result << endl;
-        }
-        else if(symbol == '/'){
-            result = divNumbers(result, secondValue);
-            cout << result << endl;
+            cout << endl;
+            equation += symbol;
+            equation += " ";
         }
     }
-    cout << result << endl;
+    cout << endl;
+    cout << "Your Answer is: ";
+    cout << equation << " = " << result << endl;
 
 }
 
