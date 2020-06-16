@@ -33,31 +33,32 @@ using namespace std;
 
 // euclideans's algo to find greatest common divisor
 
-int main(){
-    int a, b, q, r, num1, num2;
-    cout << "Enter two numbers to find GCD: ";
-    cin >> num1 >> num2;
-    a = max(num1, num2);
-    b = min(num1, num2);
-    q = a / b;
-    r = a % b;
-    if (r == 0){
-        cout << "The GCD of " << num1 << " " << num2 << " is " << b << endl;
-    }
-    else{
-        while (r > 0){
-        a = b;
-        b = r;
-        q = a / b;
-        if (a % b != 0){
-            r = a % b;
-        }
-        else{
-            break;
-        }
-    }
-    cout << "The GCR of " << num1 << " " << num2 << " is: " << r << "." << endl;
-    }
+// int main(){
+//     int a, b, q, r, num1, num2;
+//     cout << "Enter two numbers to find GCD: ";
+//     cin >> num1 >> num2;
+//     a = max(num1, num2);
+//     b = min(num1, num2);
+//     q = a / b;
+//     r = a % b;
+//     if (r == 0){
+//         cout << "The GCD of " << num1 << " " << num2 << " is " << b << endl;
+//     }
+//     else{
+//         while (r > 0){
+//         a = b;
+//         b = r;
+//         q = a / b;
+//         if (a % b != 0){
+//             r = a % b;
+//         }
+//         else{
+//             break;
+//         }
+//     }
+//     cout << "The GCR of " << num1 << " " << num2 << " is: " << r << "." << endl;
+//     }
     
     
-}
+// }
+
