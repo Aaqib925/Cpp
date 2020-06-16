@@ -22,3 +22,8 @@ using namespace std;
 //     }
 //     return 0;
 // }
+
+int main(){
+    cout << 45 % 10 << endl;
+    cout << 45 / 10 << endl;
+}
