@@ -73,10 +73,15 @@ using namespace std;
 int main(){
 
     // power function
-    float result;
+    float result = 1;
     float base;
-    int exponent;
+    int userPower;
     cout << "Enter the Base and Power: ";
-    cin >> base >> exponent;
+    cin >> base >> userPower;
 
+    while (userPower > 0){
+        result *= base;
+        userPower--;
+    }
+    cout << "Result: " << result << endl;
 }
