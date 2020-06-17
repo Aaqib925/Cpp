@@ -69,3 +69,14 @@ using namespace std;
 //     cout << x / y << endl;
 //     cout << x % y << endl;
 // }
+
+int main(){
+
+    // power function
+    float result;
+    float base;
+    int exponent;
+    cout << "Enter the Base and Power: ";
+    cin >> base >> exponent;
+
+}
