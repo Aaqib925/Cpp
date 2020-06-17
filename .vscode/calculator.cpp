@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <cmath>
 using namespace std;
 
 double addNumbers(double, double);
