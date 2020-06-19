@@ -92,19 +92,33 @@ int main() {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
     int n, q;
     cin >> n >> q;
-    int firstLength;
+    int firstLength, secondLength;
     cin >> firstLength;
     // first array
-    int firstArray[firstLength];
+    int firstArray[firstLength], secondArray[secondLength];
     int x;
     for (int i = 0; i < firstLength; i++){
         cin >> x;
         firstArray[i] = x;
-        cout << x << endl;
+        // cout << x << endl;
     }
+    
+    cin >> secondLength;
+    for (int i = 0; i < secondLength; i ++){
+        cin >> x;
+        secondArray[i] = x;
+    }
+    int arrayNumber, j;
+    for (int i = 0; i < q; i ++){
+        cin >> arrayNumber >> j;
+        if (arrayNumber == 0){
+            cout << firstArray[j] << endl;
+        }
+        else if (arrayNumber == 1){
+            cout << secondArray[j] << endl;
 
-    
-    
+        }
+    }
     
     return 0;
 }
