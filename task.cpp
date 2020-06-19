@@ -127,3 +127,26 @@ using namespace std;
 
 // 10 10 3 916135 272188 794963 3 178997 502468 671251 1 122266 3 223511 996043 990104 3 319694 335208 200789 2 867809 273793 1 925358 1 71140 1 862238 1 994309 6 0 5 0 5 0 7 0 5 0 6 0 3 2 3 1 0 0 9 0
 
+int main(){
+    int n, q;
+    cin >> n >> q;
+    vector<vector<int>>a(n);
+
+    for (int i = 0; i < n; i ++){
+        int lengthOfArray;
+        cin >> lengthOfArray;
+
+        for (int j = 0; j < lengthOfArray; j ++){
+            int value;
+            cin >> value;
+            a[i].push_back(value);
+        }
+    }
+    
+    
+    for (int i = 0; i < q; i ++){
+        int x, y;
+        cin >> x >> y;
+        cout << a[x][y] << endl;
+    }
+}
