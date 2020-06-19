@@ -85,3 +85,26 @@ using namespace std;
 //     }
 //     cout << "Result: " << result << endl;
 // }
+
+// hackerrank challenge
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int n, q;
+    cin >> n >> q;
+    int firstLength;
+    cin >> firstLength;
+    // first array
+    int firstArray[firstLength];
+    int x;
+    for (int i = 0; i < firstLength; i++){
+        cin >> x;
+        firstArray[i] = x;
+        cout << x << endl;
+    }
+
+    
+    
+    
+    return 0;
+}
