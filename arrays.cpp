@@ -19,4 +19,8 @@ int main(){
 
     // int arrlength = cars.find(cars[-1]);
     // cout << arrlength;
+
+    for (int i = 0; i < arrSize; i ++){
+        cout << cars[i] << endl;
+    }
 }
