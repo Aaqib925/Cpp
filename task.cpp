@@ -70,18 +70,18 @@ using namespace std;
 //     cout << x % y << endl;
 // }
 
-int main(){
+// int main(){
 
-    // power function
-    float result = 1;
-    float base;
-    int userPower;
-    cout << "Enter the Base and Power: ";
-    cin >> base >> userPower;
+//     // power function
+//     float result = 1;
+//     float base;
+//     int userPower;
+//     cout << "Enter the Base and Power: ";
+//     cin >> base >> userPower;
 
-    while (userPower > 0){
-        result *= base;
-        userPower--;
-    }
-    cout << "Result: " << result << endl;
-}
+//     while (userPower > 0){
+//         result *= base;
+//         userPower--;
+//     }
+//     cout << "Result: " << result << endl;
+// }
