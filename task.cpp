@@ -151,3 +151,33 @@ using namespace std;
 //     }
 // }
 
+int main(){
+    int n;
+    cin >> n;
+
+    string arr[n];
+    // for first half phase we have to add - at the index
+
+    for (int i = 0; i < n / 2; i ++){
+        int x;
+        cin >> x;
+
+        string s;
+        cin >> s;
+
+        arr[x] += "- ";
+    }
+
+    // for second half, add character or string to the particular index
+
+    for (int i = n / 2; i < n; i ++){
+        int x;
+        cin >> x;
+
+        string s;
+        cin >> s;
+
+        arr[x] += s + ' ';
+    }
+
+}
