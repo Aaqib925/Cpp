@@ -6,6 +6,8 @@ using namespace std;
 void printName(string);
 int main(){
     printName("Aaqib");
+    printName("Abbas beemar");
+    printName("Faiq also beemar");
 
 }
 
