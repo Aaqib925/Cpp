@@ -153,38 +153,38 @@ using namespace std;
 
 
 // input: 20 0 ab 6 cd 0 ef 6 gh 4 ij 0 ab 6 cd 0 ef 6 gh 0 ij 4 that 3 be 0 to 1 be 5 question 1 or 2 not 4 is 2 to 4 the
-int main(){
-    int n;
-    cin >> n;
+// int main(){
+//     int n;
+//     cin >> n;
 
-    string arr[n];
-    // for first half phase we have to add - at the index
+//     string arr[n];
+//     // for first half phase we have to add - at the index
 
-    for (int i = 0; i < n / 2; i ++){
-        int x;
-        cin >> x;
+//     for (int i = 0; i < n / 2; i ++){
+//         int x;
+//         cin >> x;
 
-        string s;
-        cin >> s;
+//         string s;
+//         cin >> s;
 
-        arr[x] += "- ";
-    }
+//         arr[x] += "- ";
+//     }
 
-    // for second half, add character or string to the particular index
+//     // for second half, add character or string to the particular index
 
-    for (int i = n / 2; i < n; i ++){
-        int x;
-        cin >> x;
+//     for (int i = n / 2; i < n; i ++){
+//         int x;
+//         cin >> x;
 
-        string s;
-        cin >> s;
+//         string s;
+//         cin >> s;
 
-        arr[x] += s + ' ';
-    }
+//         arr[x] += s + ' ';
+//     }
 
-    for (string s: arr){
-        cout << s;
-    }
-}
+//     for (string s: arr){
+//         cout << s;
+//     }
+// }
 
  
