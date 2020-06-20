@@ -186,5 +186,29 @@ using namespace std;
 //         cout << s;
 //     }
 // }
+#include <sstream>
 
- 
+ void countSort(vector<vector<string>> arr) {
+    int n = arr.size();
+    string ans[n];
+    for (int i = 0; i < n/2; i++ ){
+        string num = arr[i][0];
+        stringstream geek(num); 
+        int x;
+        geek >> x;
+        string valu = arr[i][1];
+
+        ans[i] = ans[i] + "-" + " ";
+
+    }
+
+    for (int i = n/2; i < n; i++){
+        string num = arr[i][0];
+        stringstream geek(num);
+        int x;
+        geek >> x;
+        string valu = arr[i][1];
+
+        ans[i] = ans[i] + valu + " ";
+    }
+}
