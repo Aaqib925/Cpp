@@ -198,7 +198,7 @@ using namespace std;
         geek >> x;
         string valu = arr[i][1];
 
-        ans[i] = ans[i] + "-" + " ";
+        ans[x] = ans[x] + "-" + " ";
 
     }
 
@@ -209,6 +209,6 @@ using namespace std;
         geek >> x;
         string valu = arr[i][1];
 
-        ans[i] = ans[i] + valu + " ";
+        ans[x] = ans[x] + valu + " ";
     }
 }
