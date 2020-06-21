@@ -216,3 +216,7 @@ using namespace std;
 //         cout << ans[i]
 //     }
 // }
+
+int main(){
+    // converting a string into the int
+}
