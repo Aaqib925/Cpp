@@ -224,6 +224,7 @@ int main(){
     // first you need to include sstream library
     string x = "22";
     stringstream converter(x);
-    int x;
-    
+    int y;
+    converter >> y;
+    cout << y + 2 << endl;
 }
