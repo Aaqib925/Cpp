@@ -81,5 +81,7 @@ int main(){
     c1.payingCar();
     c2.payingCar();
     c2.payingCar();
-    
+
+    c1.printData();
+    c2.printData();
 }
