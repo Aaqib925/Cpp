@@ -3,7 +3,7 @@ using namespace std;
 
 int main(){
     int x;
-    cout << "Enter the number from 0 to 6";
+    cout << "Enter the number from 0 to 6: ";
     cin >> x;
 
     string DayName;
@@ -20,8 +20,10 @@ int main(){
 
     
     default:
-        cout << "You Entered a Invalid Number."
+        cout << "You Entered a Invalid Number.";
     }
+
+    cout << DayName << endl;
 
 
 }
