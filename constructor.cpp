@@ -13,7 +13,12 @@ class Counter{
     }
 
     void count_inc(){
-        count += 1
-        
+        count += 1;
+
     }
-}
+
+    void count_dec(){
+        count -= 1;
+    }
+};
+
