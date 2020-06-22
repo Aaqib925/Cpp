@@ -13,3 +13,8 @@ class myClass{
         cout << "Data is: " << somedata << endl;
     }
 }
+
+int main(){
+
+    
+}
