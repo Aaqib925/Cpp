@@ -41,4 +41,10 @@ int main(){
 
     c1.printCount();
     c2.printCount();
+
+    // using copy default constructor
+
+    Counter c3;
+    c3 = c2;
+    c3.printCount();
 }
