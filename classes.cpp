@@ -9,4 +9,7 @@ class myClass{
     void setData(int d){
         somedata = d;
     }
+    void showData(){
+        cout << "Data is: " << somedata << endl;
+    }
 }
