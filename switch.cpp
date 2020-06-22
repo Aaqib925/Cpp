@@ -21,7 +21,6 @@ int main(){
     
     default:
         cout << "You Entered a Invalid Number."
-        break;
     }
 
 
