@@ -70,12 +70,16 @@ class Toolbooth{
     }
 
     void printData(){
-        cout << "The amount of money is " << amountOfMoney << endl;
+        cout << "The amount of money is " << amountOfMoney << "$" << endl;
     }
 
 };
 
 int main(){
 
+    Toolbooth c1, c2;
+    c1.payingCar();
+    c2.payingCar();
+    c2.payingCar();
     
 }
