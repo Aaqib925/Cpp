@@ -20,5 +20,21 @@ class Counter{
     void count_dec(){
         count -= 1;
     }
+
+    void printCount(){
+        cout << count << endl;
+    }
 };
 
+int main(){
+    Counter c1, c2;
+
+    c1.printCount();
+    c2.printCount();
+    c1.count_inc();
+    c2.count_inc();
+    c2.count_inc();
+
+    c1.printCount();
+    c2.printCount();
+}
