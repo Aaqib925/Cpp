@@ -14,6 +14,7 @@ class Counter{
 
     Counter(int a){   // this is called counter overloading
         count = a;
+        cout << "The Value of count is set to " << a << endl;
     }
 
     void count_inc(){
