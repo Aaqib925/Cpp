@@ -12,6 +12,10 @@ class Counter{
         cout << "The Value of count is set to one." << endl;
     }
 
+    Counter(int a){   // this is called counter overloading
+        count = a;
+    }
+
     void count_inc(){
         count += 1;
 
@@ -27,7 +31,7 @@ class Counter{
 };
 
 int main(){
-    Counter c1, c2;
+    Counter c1, c2(4);
 
     c1.printCount();
     c2.printCount();
