@@ -217,14 +217,35 @@ using namespace std;
 //     }
 // }
 
-#include <sstream>
+// #include <sstream>
 
-int main(){
-    // converting a string into the int
-    // first you need to include sstream library
-    string x = "22";
-    stringstream converter(x);
-    int y;
-    converter >> y;
-    cout << y + 2 << endl;
-}
+// int main(){
+//     // converting a string into the int
+//     // first you need to include sstream library
+//     string x = "22";
+//     stringstream converter(x);
+//     int y;
+//     converter >> y;
+//     cout << y + 2 << endl;
+// }
+
+// int main(){
+//     int x;
+//     cout << "Enter the range of Pattern: ";
+//     cin >> x;
+
+//     for (int i = 0; i < x; i ++){
+//         for (int j = 0; j < x + 2; j ++){
+//             if (j == i + 1){
+//                 cout << "-";
+//             }
+//             else if(j < i + 1){
+//                 cout << "<";
+//             }
+//             else if(j > i + 1){
+//                 cout << ">";
+//             }
+//         }
+//         cout << endl;
+//     }
+// }
