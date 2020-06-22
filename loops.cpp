@@ -16,7 +16,7 @@ int main(){
     }
     while(x <= 10);
 
-    forloop();
+    forLoop();
 }
 
 // using for loop
