@@ -12,4 +12,8 @@ class Counter{
         cout << "The Value of count is set to one." << endl;
     }
 
+    void count_inc(){
+        count += 1
+        
+    }
 }
