@@ -5,7 +5,7 @@ using namespace std;
 int square(int);   // the function square is overloading with different argument attributes
 double square(double);
 
-void main(){
+int main(){
     int userInt;
     double userDouble;
 
@@ -13,6 +13,17 @@ void main(){
     cout << "Enter an Integer and Float Value: ";
     cin >> userInt >> userDouble;
     
+    cout << "Here are the squares: ";
+    cout << square(userInt) << " and " << square(userDouble);
 
+    return 0;
 }
 
+
+int square(int x){
+    return x * x;
+}
+
+double square(double x){
+    return x * x;
+}
