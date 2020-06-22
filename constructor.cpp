@@ -49,3 +49,24 @@ int main(){
     c3 = c2;
     c3.printCount();
 }
+
+// review question
+
+class Toolbooth{
+
+    private:
+    int numOfCars;
+    double amountOfMoney;
+
+    public:
+    // constructor for initializing the value to zero
+    Toolbooth(){
+        numOfCars = 0;
+        amountOfMoney = 0;
+    }
+
+    void payingCar(){
+
+    }
+
+}
