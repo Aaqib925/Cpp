@@ -14,7 +14,7 @@ int main(){
     cin >> userInt >> userDouble;
     
     cout << "Here are the squares: ";
-    cout << square(userInt) << " and " << square(userDouble);
+    cout << square(userInt) << " and " << square(userDouble) << endl;
 
     return 0;
 }
