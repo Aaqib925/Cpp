@@ -3,6 +3,7 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+#include <string>
 using namespace std;
 
 
@@ -270,3 +271,17 @@ using namespace std;
 //     return result;
 // }
 
+int calculateLength(int[]);
+
+int main(){
+    int x[4] = {2, 3, 2, 5};
+    cout << calculateLength(&x[0]) << endl;
+}
+
+int calculateLength(int arr[]){
+    int result = 0;
+    int x = sizeof(arr)/sizeof(arr[0]);
+    return x;
+    
+    
+}
