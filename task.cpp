@@ -271,17 +271,9 @@ using namespace std;
 //     return result;
 // }
 
-int calculateLength(int[]);
+// int calculateLength(int[]);
 
-int main(){
-    int x[4] = {2, 3, 2, 5};
-    cout << calculateLength(&x[0]) << endl;
-}
-
-int calculateLength(int arr[]){
-    int result = 0;
-    int x = sizeof(arr)/sizeof(arr[0]);
-    return x;
-    
-    
-}
+// int main(){
+//     int x[4] = {2, 3, 2, 5};
+//     cout << calculateLength(&x[0]) << endl;
+// }
