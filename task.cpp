@@ -252,13 +252,20 @@ using namespace std;
 
 // program to merge two sorted arrays
 
-int mergeList(int, int);
+int total(int arr[], int n);
 
 int main(){
-
+    int x[3] = {2, 3, 4};
+    cout << total(x, 3) << endl;
 }
 
-int mergeList(int arr1[], int arr2[]){
-    int total =  sizeof(arr1)/sizeof(arr1[0]) +  sizeof(arr2)/sizeof(arr2[0]);
-    return total;
+int total(int arr[], int n){
+    int result = 0;
+    for (int i = 0; i < n; i ++){
+        cout << arr[i] << endl;
+        result += arr[i];
+        cout << result << endl;
+
+    }
+    return result;
 }
