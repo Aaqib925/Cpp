@@ -252,20 +252,21 @@ using namespace std;
 
 // program to merge two sorted arrays
 
-int total(int arr[], int n);
+// int total(int arr[], int n);
 
-int main(){
-    int x[3] = {2, 3, 4};
-    cout << total(x, 3) << endl;
-}
+// int main(){
+//     int x[3] = {2, 3, 4};
+//     cout << total(x, 3) << endl;
+// }
 
-int total(int arr[], int n){
-    int result = 0;
-    for (int i = 0; i < n; i ++){
-        cout << arr[i] << endl;
-        result += arr[i];
-        cout << result << endl;
+// int total(int arr[], int n){
+//     int result = 0;
+//     for (int i = 0; i < n; i ++){
+//         cout << arr[i] << endl;
+//         result += arr[i];
+//         cout << result << endl;
 
-    }
-    return result;
-}
+//     }
+//     return result;
+// }
+
