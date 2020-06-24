@@ -298,3 +298,13 @@ using namespace std;
 //     return 0;
 // }
 
+void myFunction(int[]);
+
+int main(){
+    int array[3] = {1, 2, 3};
+    myFunction(array);
+}
+
+void myFunction(int arr[]){
+    cout << arr[1] << endl;
+}
