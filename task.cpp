@@ -6,10 +6,9 @@
 #include <string>
 using namespace std;
 
-
 // int main() {
 //     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
-    
+
 //     int arrayLength;
 //     cin >> arrayLength;
 
@@ -29,7 +28,7 @@ using namespace std;
 //     cin >> x >> y;
 //     cout << "Value of q" << " " << x / y << endl;
 //     cout << "Value of r" << " " << x % y << endl;
-    
+
 // }
 
 // euclideans's algo to find greatest common divisor
@@ -59,8 +58,7 @@ using namespace std;
 //     }
 //     cout << "The GCR of " << num1 << " " << num2 << " is: " << r << "." << endl;
 //     }
-    
-    
+
 // }
 
 // int main(){
@@ -90,7 +88,7 @@ using namespace std;
 // hackerrank challenge
 
 // int main() {
-//     /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+//     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
 //     int n, q;
 //     cin >> n >> q;
 //     int firstLength, secondLength;
@@ -143,15 +141,13 @@ using namespace std;
 //             a[i].push_back(value);
 //         }
 //     }
-    
-    
+
 //     for (int i = 0; i < q; i ++){
 //         int x, y;
 //         cin >> x >> y;
 //         cout << a[x][y] << endl;
 //     }
 // }
-
 
 // input: 20 0 ab 6 cd 0 ef 6 gh 4 ij 0 ab 6 cd 0 ef 6 gh 0 ij 4 that 3 be 0 to 1 be 5 question 1 or 2 not 4 is 2 to 4 the
 // int main(){
@@ -194,7 +190,7 @@ using namespace std;
 //     string ans[n];
 //     for (int i = 0; i < n/2; i++ ){
 //         string num = arr[i][0];
-//         stringstream geek(num); 
+//         stringstream geek(num);
 //         int x;
 //         geek >> x;
 //         string valu = arr[i][1];
@@ -300,23 +296,26 @@ using namespace std;
 
 void myFunction(int arr[], int num1, int arr2[], int num2);
 
-int main(){
+int main()
+{
     int array[4] = {1, 2, 3, 4};
     int array2[3] = {5, 6, 7};
     int length1, length2;
-    length1 = sizeof(array)/sizeof(array[0]);
-    length2 = sizeof(array2)/sizeof(array2[0]);
+    length1 = sizeof(array) / sizeof(array[0]);
+    length2 = sizeof(array2) / sizeof(array2[0]);
     myFunction(array, length1, array2, length2);
     cout << endl;
 }
 
-void myFunction(int arr[], int num1, int arr2[], int num2){
-    for (int i = 0; i < num1; i ++){
+void myFunction(int arr[], int num1, int arr2[], int num2)
+{
+    for (int i = 0; i < num1; i++)
+    {
         cout << arr[i] << " ";
     }
     cout << endl;
-    for (int j = 0; j < num2; j ++){
+    for (int j = 0; j < num2; j++)
+    {
         cout << arr2[j] << " ";
     }
-
 }
