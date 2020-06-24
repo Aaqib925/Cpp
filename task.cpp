@@ -277,3 +277,9 @@ using namespace std;
 //     int x[4] = {2, 3, 2, 5};
 //     cout << calculateLength(&x[0]) << endl;
 // }
+
+int fibbonacci(int num);
+
+int main(){
+    
+}
