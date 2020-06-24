@@ -301,10 +301,11 @@ using namespace std;
 void myFunction(int[]);
 
 int main(){
-    int array[3] = {1, 2, 3};
+    int array[4] = {1, 2, 2, 3};
     myFunction(array);
 }
 
 void myFunction(int arr[]){
-    cout << arr[1] << endl;
+    cout << arr[3] << endl;
+
 }
