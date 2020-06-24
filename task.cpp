@@ -290,6 +290,7 @@ int main(){
     int numberOfTerms;
     cout << "Enter range of fibbonacci series: ";
     cin >> numberOfTerms;
+    cout << "The fibonacci series is: ";
     for (int i = 0; i < numberOfTerms; i ++){
         cout << fibonacci(i) << " ";
     }
