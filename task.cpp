@@ -337,26 +337,30 @@ void myFunction(int arr[], int num1, int arr2[], int num2)
 {
     int finalLength = num1 + num2;
     int finalArray[finalLength];
-    for (int i = 0; i < max(num1, num2); i ++){
-        int x, y;
-        if (i < num1){
-            x = arr[i];
+    int i = 0, j = 0, k = 0;
+    while (i <= num1 || j <= num2){
+        if (j > num2){
+            finalArray[k] = arr[i];
+            i ++;
+            k ++;
+            continue;
         }
-        if (i < num2){
-            y = arr2[i];
+        else if (i > num1){
+            finalArray[k] = arr2[j];
+            j++; k++; continue;
         }
-        if (x > y){
-            finalArray[i] = y;
-            finalArray[i + 1] = x;
-            cout << x << " " << y << endl;
+        if (arr[i] > arr2[j]){
+            finalArray[k] = arr2[j];
+            j++;
         }
-        if (x < y){
-            finalArray[i] = x;
-            finalArray[i + 1] = y;
-            cout << x << " " << y << endl;
+        else if(arr[i] < arr2[j]){
+            finalArray[k] = arr[i];
+            i ++;
         }
-
+        k ++;
     }
+
+
     for (int i = 0; i < finalLength; i++){
         cout << finalArray[i] << " ";
     }
