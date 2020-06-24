@@ -307,15 +307,16 @@ int main(){
     length1 = sizeof(array)/sizeof(array[0]);
     length2 = sizeof(array2)/sizeof(array2[0]);
     myFunction(array, length1, array2, length2);
+    cout << endl;
 }
 
 void myFunction(int arr[], int num1, int arr2[], int num2){
     for (int i = 0; i < num1; i ++){
-        cout << arr[i];
+        cout << arr[i] << " ";
     }
     cout << endl;
     for (int j = 0; j < num2; j ++){
-        cout << arr2[j];
+        cout << arr2[j] << " ";
     }
 
 }
