@@ -283,3 +283,10 @@ int fibbonacci(int num);
 int main(){
     
 }
+
+int fibonacci(int num){
+    if (num <= 1){
+        return num;
+    }
+    return fibbonacci(num - 1) + fibbonacci(num - 2)
+}
