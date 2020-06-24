@@ -298,14 +298,24 @@ using namespace std;
 //     return 0;
 // }
 
-void myFunction(int[]);
+void myFunction(int arr[], int num1, int arr2[], int num2);
 
 int main(){
-    int array[4] = {1, 2, 2, 3};
-    myFunction(array);
+    int array[4] = {1, 2, 3, 4};
+    int array2[3] = {5, 6, 7};
+    int length1, length2;
+    length1 = sizeof(array)/sizeof(array[0]);
+    length2 = sizeof(array2)/sizeof(array2[0]);
+    myFunction(array, length1, array2, length2);
 }
 
-void myFunction(int arr[]){
-    cout << arr[3] << endl;
+void myFunction(int arr[], int num1, int arr2[], int num2){
+    for (int i = 0; i < num1; i ++){
+        cout << arr[i];
+    }
+    cout << endl;
+    for (int j = 0; j < num2; j ++){
+        cout << arr2[j];
+    }
 
 }
