@@ -334,7 +334,7 @@ using namespace std;
 // }
 
 // void myFunction(int arr[], int num1, int arr2[], int num2, int result[])
-// {   
+// {
 //     // int result[num1 + num2];
 //     int i = 0, j = 0, k = 0;
 //     while (i < num1 && j < num2){
@@ -365,14 +365,12 @@ using namespace std;
 
 // }
 
-
 // void mergeArrays(int arr[], int num1, int arr2[], int num2);
-
 
 // int main(){
 //     int array1[] = {1, 2, 3, 4};
 //     int array2[] = {5, 6, 7, 8};
-    
+
 //     int n1, n2;
 //     n1 = sizeof(array1)/sizeof(array2);
 //     n2 = sizeof(array2)/sizeof(array2);
@@ -412,48 +410,50 @@ using namespace std;
 
 void mergeArrays(int arr1[], int arr2[], int n1, int n2);
 
-int main() 
-{ 
-    int arr1[] = {1, 3, 5, 7, 9}; 
-    int n1 = sizeof(arr1) / sizeof(arr1[0]); 
-  
-    int arr2[] = {2, 4, 6, 8, 10}; 
-    int n2 = sizeof(arr2) / sizeof(arr2[0]); 
-  
-    // int arr3[n1+n2]; 
-    mergeArrays(arr1, arr2, n1, n2); 
+int main()
+{
+    int arr1[] = {1, 3, 5, 7, 9};
+    int n1 = sizeof(arr1) / sizeof(arr1[0]);
+
+    int arr2[] = {2, 4, 6, 8, 10};
+    int n2 = sizeof(arr2) / sizeof(arr2[0]);
+
+    // int arr3[n1+n2];
+    mergeArrays(arr1, arr2, n1, n2);
     cout << endl;
-} 
+}
 
-
-void mergeArrays(int arr1[], int arr2[], int num1, int num2) 
-{ 
-    int i = 0, j = 0, k = 0; 
+void mergeArrays(int arr1[], int arr2[], int num1, int num2)
+{
+    int i = 0, j = 0, k = 0;
     int arr3[num1 + num2];
-    // Traverse both array 
-    while (i<num1 && j <num2) 
-    {  
-        if (arr1[i] < arr2[j]){
+    while (i < num1 && j < num2)
+    {
+        if (arr1[i] < arr2[j])
+        {
             arr3[k] = arr1[i];
             k++, i++;
         }
-        else{
-            arr3[k] = arr2[j]; 
+        else
+        {
+            arr3[k] = arr2[j];
             k++, j++;
         }
-    } 
-  
-    // Store remaining elements of first array 
-    while (i < num1){
-        arr3[k] = arr1[i]; 
+    }
+    // Store remaining elements of first array
+    while (i < num1)
+    {
+        arr3[k] = arr1[i];
         k++, i++;
     }
-    // Store remaining elements of second array 
-    while (j < num2){
-        arr3[k] = arr2[j]; 
+    // Store remaining elements of second array
+    while (j < num2)
+    {
+        arr3[k] = arr2[j];
         k++, j++;
     }
-    for(int i = 0; i < num1 + num2; i ++){
+    for (int i = 0; i < num1 + num2; i++)
+    {
         cout << arr3[i] << " ";
     }
-} 
+}
