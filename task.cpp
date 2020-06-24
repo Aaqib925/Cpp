@@ -278,20 +278,22 @@ using namespace std;
 //     cout << calculateLength(&x[0]) << endl;
 // }
 
-int fibbonacci(int num);
-
-int main(){
-    int numberOfTerms;
-    cout << "Enter range of fibbonacci series: ";
-    cin >> numberOfTerms;
-    for (int i = 0; i < numberOfTerms; i ++){
-        cout << fibbonacci(i) << " ";
-    }
-}
+int fibonacci(int num);
 
 int fibonacci(int num){
     if (num <= 1){
         return num;
     }
-    return fibbonacci(num - 1) + fibbonacci(num - 2);
+    return fibonacci(num - 1) + fibonacci(num - 2);
 }
+int main(){
+    int numberOfTerms;
+    cout << "Enter range of fibbonacci series: ";
+    cin >> numberOfTerms;
+    for (int i = 0; i < numberOfTerms; i ++){
+        cout << fibonacci(i) << " ";
+    }
+    cout << endl;
+    return 0;
+}
+
