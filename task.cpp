@@ -335,6 +335,29 @@ int main()
 
 void myFunction(int arr[], int num1, int arr2[], int num2)
 {
-    int x = sizeof(arr)/sizeof(arr[0]);
-    cout << x;
+    int finalLength = num1 + num2;
+    int finalArray[finalLength];
+    for (int i = 0; i < max(num1, num2); i ++){
+        int x, y;
+        if (i < num1){
+            x = arr[i];
+        }
+        if (i < num2){
+            y = arr2[i];
+        }
+        if (x > y){
+            finalArray[i] = y;
+            finalArray[i + 1] = x;
+            cout << x << " " << y << endl;
+        }
+        if (x < y){
+            finalArray[i] = x;
+            finalArray[i + 1] = y;
+            cout << x << " " << y << endl;
+        }
+
+    }
+    for (int i = 0; i < finalLength; i++){
+        cout << finalArray[i] << " ";
+    }
 }
