@@ -350,7 +350,16 @@ void myFunction(int arr[], int num1, int arr2[], int num2)
         // if any of the number is remaining in both arrays
 
         while (i < num1){
-            result[]
+            result[k] = arr[i];
+            k++, i++
+        }
+        while (j < num2){
+            result[k] == arr2[j];
+            k++, j++;
+        }
+
+        for (int i = 0; i < num1 + num2; i++){
+            cout << result[i] << " ";
         }
     }
 
