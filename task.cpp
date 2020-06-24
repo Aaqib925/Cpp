@@ -294,6 +294,32 @@ using namespace std;
 //     return 0;
 // }
 
+// void myFunction(int arr[], int num1, int arr2[], int num2);
+
+// int main()
+// {
+//     int array[4] = {1, 2, 3, 4};
+//     int array2[3] = {5, 6, 7};
+//     int length1, length2;
+//     length1 = sizeof(array) / sizeof(int);
+//     length2 = sizeof(array2) / sizeof(array2[0]);
+//     myFunction(array, length1, array2, length2);
+//     cout << endl;
+// }
+
+// void myFunction(int arr[], int num1, int arr2[], int num2)
+// {
+//     for (int i = 0; i < num1; i++)
+//     {
+//         cout << arr[i] << " ";
+//     }
+//     cout << endl;
+//     for (int j = 0; j < num2; j++)
+//     {
+//         cout << arr2[j] << " ";
+//     }
+// }
+
 void myFunction(int arr[], int num1, int arr2[], int num2);
 
 int main()
@@ -309,13 +335,6 @@ int main()
 
 void myFunction(int arr[], int num1, int arr2[], int num2)
 {
-    for (int i = 0; i < num1; i++)
-    {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
-    for (int j = 0; j < num2; j++)
-    {
-        cout << arr2[j] << " ";
-    }
+    int x = sizeof(arr)/sizeof(arr[0]);
+    cout << x;
 }
