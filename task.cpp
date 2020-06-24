@@ -320,48 +320,48 @@ using namespace std;
 //     }
 // }
 
-void myFunction(int arr[], int num1, int arr2[], int num2);
+// void myFunction(int arr[], int num1, int arr2[], int num2, int result[]);
 
-int main()
-{
-    int array[6] = {6, 7, 8, 9, 10, 11};
-    int array2[4] = {1, 3, 4, 5};
-    int length1, length2;
-    length1 = sizeof(array) / sizeof(array[0]);
-    length2 = sizeof(array2) / sizeof(array2[0]);
-    myFunction(array, length1, array2, length2);
-    cout << endl;
-}
+// int main()
+// {
+//     int array[] = {1, 3, 5, 7};
+//     int array2[] = {2, 4, 6, 8};
+//     int length1, length2;
+//     length1 = sizeof(array) / sizeof(array[0]);
+//     length2 = sizeof(array2) / sizeof(array2[0]);
+//     int res[length1 + length2];
+//     myFunction(array, length1, array2, length2, res);
+// }
 
-void myFunction(int arr[], int num1, int arr2[], int num2)
-{   
-    int result[num1 + num2];
-    int i = 0, j = 0, k = 0;
-    while (i < num1 && j < num2){
-        if (arr[i] < arr2[j]){
-            result[k] = arr[i];
-            k++, i++;
-        }
-        else{
-            result[k] = arr2[j];
-            k++, j++;
-        }
+// void myFunction(int arr[], int num1, int arr2[], int num2, int result[])
+// {   
+//     // int result[num1 + num2];
+//     int i = 0, j = 0, k = 0;
+//     while (i < num1 && j < num2){
+//         if (arr[i] < arr2[j]){
+//             result[k] = arr[i];
+//             k++, i++;
+//         }
+//         else{
+//             result[k] = arr2[j];
+//             k++, j++;
+//         }
 
-        // if any of the number is remaining in both arrays
+//         // if any of the number is remaining in both arrays
 
-        while (i < num1){
-            result[k] = arr[i];
-            k++, i++
-        }
-        while (j < num2){
-            result[k] == arr2[j];
-            k++, j++;
-        }
+//         while (i < num1){
+//             result[k] = arr[i];
+//             k++, i++;
+//         }
+//         while (j < num2){
+//             result[k] == arr2[j];
+//             k++, j++;
+//         }
 
-        for (int i = 0; i < num1 + num2; i++){
-            cout << result[i] << " ";
-        }
-    }
+//         for (int i = 0; i < num1 + num2; i++){
+//             cout << result[i] << " ";
+//         }
+//     }
 
 
-}
+// }
