@@ -324,44 +324,35 @@ void myFunction(int arr[], int num1, int arr2[], int num2);
 
 int main()
 {
-    int array[4] = {1, 2, 3, 4};
-    int array2[3] = {5, 6, 7};
+    int array[6] = {6, 7, 8, 9, 10, 11};
+    int array2[4] = {1, 3, 4, 5};
     int length1, length2;
-    length1 = sizeof(array) / sizeof(int);
+    length1 = sizeof(array) / sizeof(array[0]);
     length2 = sizeof(array2) / sizeof(array2[0]);
     myFunction(array, length1, array2, length2);
     cout << endl;
 }
 
 void myFunction(int arr[], int num1, int arr2[], int num2)
-{
-    int finalLength = num1 + num2;
-    int finalArray[finalLength];
+{   
+    int result[num1 + num2];
     int i = 0, j = 0, k = 0;
-    while (i <= num1 || j <= num2){
-        if (j > num2){
-            finalArray[k] = arr[i];
-            i ++;
-            k ++;
-            continue;
+    while (i < num1 && j < num2){
+        if (arr[i] < arr2[j]){
+            result[k] = arr[i];
+            k++, i++;
         }
-        else if (i > num1){
-            finalArray[k] = arr2[j];
-            j++; k++; continue;
+        else{
+            result[k] = arr2[j];
+            k++, j++;
         }
-        if (arr[i] > arr2[j]){
-            finalArray[k] = arr2[j];
-            j++;
+
+        // if any of the number is remaining in both arrays
+
+        while (i < num1){
+            result[]
         }
-        else if(arr[i] < arr2[j]){
-            finalArray[k] = arr[i];
-            i ++;
-        }
-        k ++;
     }
 
 
-    for (int i = 0; i < finalLength; i++){
-        cout << finalArray[i] << " ";
-    }
 }
