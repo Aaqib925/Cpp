@@ -301,7 +301,7 @@ int main()
     int array[4] = {1, 2, 3, 4};
     int array2[3] = {5, 6, 7};
     int length1, length2;
-    length1 = sizeof(array) / sizeof(array[0]);
+    length1 = sizeof(array) / sizeof(int);
     length2 = sizeof(array2) / sizeof(array2[0]);
     myFunction(array, length1, array2, length2);
     cout << endl;
