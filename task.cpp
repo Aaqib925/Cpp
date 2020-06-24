@@ -281,12 +281,17 @@ using namespace std;
 int fibbonacci(int num);
 
 int main(){
-    
+    int numberOfTerms;
+    cout << "Enter range of fibbonacci series: ";
+    cin >> numberOfTerms;
+    for (int i = 0; i < numberOfTerms; i ++){
+        cout << fibbonacci(i) << " ";
+    }
 }
 
 int fibonacci(int num){
     if (num <= 1){
         return num;
     }
-    return fibbonacci(num - 1) + fibbonacci(num - 2)
+    return fibbonacci(num - 1) + fibbonacci(num - 2);
 }
