@@ -482,15 +482,18 @@ int main() {
         string s2;
         string total;
         cin >> total;
-        for (int j = 0; j < l1; j++){
+        for (int j = 0; j < total.length(); j++){
             if (total[j] != ' '){
-                s1 += total[j];
+                if (j < l1){
+                    s1 += total[j];
+
+                }
+                else{
+                    s2 += total[j];
+                }
             }
+            
         }
-        for (int k = 0; k < l2; k++){
-            if (total[k] != ' '){
-                s2 += total[k];
-            }
-        }
+        cout << s1 << " " << s2;
     }
 }
