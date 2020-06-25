@@ -457,3 +457,17 @@ using namespace std;
 //         cout << arr3[i] << " ";
 //     }
 // }
+
+vector<int> parseInts(string str) {
+	// Complete this function
+    vector<int> result;
+    stringstream geek(str);
+    int number;
+    char comma;
+    while(geek >> number){
+        result.push_back(number);
+        geek >> comma;
+
+    }
+    return result;
+}
