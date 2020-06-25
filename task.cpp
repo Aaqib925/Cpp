@@ -458,16 +458,39 @@ using namespace std;
 //     }
 // }
 
-vector<int> parseInts(string str) {
-	// Complete this function
-    vector<int> result;
-    stringstream geek(str);
-    int number;
-    char comma;
-    while(geek >> number){
-        result.push_back(number);
-        geek >> comma;
+// vector<int> parseInts(string str) {
+// 	// Complete this function
+//     vector<int> result;
+//     stringstream geek(str);
+//     int number;
+//     char comma;
+//     while(geek >> number){
+//         result.push_back(number);
+//         geek >> comma;
 
+//     }
+//     return result;
+// }
+
+
+int main() {
+	// Complete the program
+    int l1, l2;
+    cin >> l1 >> l2;
+    for (int i = 0; i < 2; i ++){
+        string s1;
+        string s2;
+        string total;
+        cin >> total;
+        for (int j = 0; j < l1; j++){
+            if (total[j] != ' '){
+                s1 += total[j];
+            }
+        }
+        for (int k = 0; k < l2; k++){
+            if (total[k] != ' '){
+                s2 += total[k];
+            }
+        }
     }
-    return result;
 }
