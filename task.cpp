@@ -473,31 +473,40 @@ using namespace std;
 // }
 
 
-int main() {
-	// Complete the program
-    int l1, l2;
-    cin >> l1 >> l2;
-    for (int i = 0; i < 2; i ++){
-        string s1;
-        string s2;
-        string total;
-        cin >> total;
-        for (int j = 0; j < total.length(); j++){
-            if (total[j] != ' '){
-                if (j < l1){
-                    s1 += total[j];
+// int main() {
+// 	// Complete the program
+//     int l1, l2;
+//     cin >> l1 >> l2;
+//     for (int i = 0; i < 2; i ++){
+//         string s1;
+//         string s2;
+//         string total;
+//         cin >> total;
+//         for (int j = 0; j < total.length(); j++){
+//             if (total[j] != ' '){
+//                 if (j < l1){
+//                     s1 += total[j];
 
-                }
-                else{
-                    s2 += total[j];
-                }
-            }
+//                 }
+//                 else{
+//                     s2 += total[j];
+//                 }
+//             }
             
-        }
-        cout << s1.length() << endl << s2.length() << endl;
-        cout << s1 + s2 << endl;
-        swap(s1[0], s2[0]);
-        cout << s1 << "\n" << s2;
+//         }
+//         cout << s1.length() << endl << s2.length() << endl;
+//         cout << s1 + s2 << endl;
+//         swap(s1[0], s2[0]);
+//         cout << s1 << "\n" << s2;
 
-    }
-}
+//     }
+// }
+
+// int main(){
+//     string s1, s2;
+//     cin >> s1 >> s2;
+//     cout << s1.length() << " " << s2.length() << endl;
+//     cout << s1 + s2 << "\n";
+//     swap(s1[0], s2[0]);
+//     cout << s1 << " " << s2;
+// }
