@@ -15,4 +15,8 @@ int main(){
 
     int *pAge = &age;
     cout << pAge << endl;
+
+    // we can dereference the pointer to get the true value
+
+    cout << *pAge << endl;
 }
