@@ -11,5 +11,8 @@ int main(){
 
     cout << &age << endl;
     // we can pass this memory address and can use it as an object
-    
+    // store the address in a variable we use * sign
+
+    int *pAge = &age;
+    cout << pAge << endl;
 }
