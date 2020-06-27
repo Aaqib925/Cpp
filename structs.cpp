@@ -16,7 +16,8 @@ int main(){
     // first right struct name then the variable name
 
     info firstPerson;
-    firstPerson = {
+    firstPerson = { // we have to provide in the same order we declare it
+    // it is homogenous so it can contain data of more than one type.
         "Aaqib",
         18,
         2.7,
