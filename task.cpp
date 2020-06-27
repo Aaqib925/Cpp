@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <string>
 #include <map>
+#include <sstream> 
 
 using namespace std;
 
@@ -516,5 +517,33 @@ using namespace std;
 // Attribute Parser
 
 int main(){
+    // int n, q; // n is number of lines in HRML code, q are the queries
+
+    // cin >> n >> q;
+
+    // declare a hashmap
+
+    map<string, string> myHashMap;
+    string inputStr, mytag;
+    string attribute, value;
+    getline(cin, inputStr);
+    string word;
+    stringstream ss(inputStr);
+    while (getline(ss, word, ' ')){
+        if (word[0] == '<'){
+            mytag = word.substr(1);
+        }
+        else if (word[0] != '"' && word[0] != '='){
+            attribute = word;
+        }
+        else if (word[0] == '"'){
+            if (word.back() == '>'){
+                word = word.substr(0, word.length() - 2);
+                cout << word << endl;
+            }
+            attribute = word.substr(1, word.length() - 1);
+        }
+    }
     
+
 }
