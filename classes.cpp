@@ -98,3 +98,57 @@ class Student{
         return total;
     }
 };
+
+class Box{
+    private:
+    int l, b, h;
+
+    public:
+    Box(){
+        l = b = h = 0;
+    }
+    Box(int length, int breath, int height){
+        l = length;
+        b = breath;
+        h = height;
+    }
+    Box(const Box& B){
+        l = B.l;
+        b = B.b;
+        h = B.h;
+    }
+//     int getLength() - Return box's length
+// int getBreadth() - Return box's breadth
+// int getHeight() - Return box's height
+// long long CalculateVolume() - Return the volume of the box
+
+    int getLength(){
+        return l;
+    }
+    int getBreath(){
+        return b;
+    }
+    int getHeight(){
+        return h;
+    }
+    long long CalculateVolume(){
+        long long x = l * b * h;
+        return x;
+    }
+
+    friend bool operator < (Box& A, Box& B){
+        if ( (A.l < B.l) || (A.b < B.b && A.l == B.l) || ( A.h < B.h && A.b == B.b && A.l == B.l)){
+            return true;
+        }
+        else{
+            return false;
+        }
+
+    }
+    friend ostream& operator<<(ostream& out, Box& B){
+        out << B.l << " " << B.b << " " << B.h;
+        return out;
+    }
+
+
+};
