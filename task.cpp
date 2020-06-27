@@ -540,12 +540,12 @@ int main(){
             if (word.back() == '>'){
                 word = word.substr(0, word.length() - 1);
             }
-            value = word.substr(1, word.length() - 1);
+            value = word.substr(1, word.length() - 2);
         }
     }
 
     myHashMap[attribute] = value;
 
-    
+    cout << myHashMap["tag1~value"] << endl;
 
 }
