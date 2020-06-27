@@ -542,10 +542,11 @@ int main(){
             }
             value = word.substr(1, word.length() - 2);
         }
+        myHashMap[attribute] = value;
     }
 
-    myHashMap[attribute] = value;
+    
 
-    cout << myHashMap["tag1~value"] << endl;
+    cout << myHashMap["tag1~father"] << endl;
 
 }
