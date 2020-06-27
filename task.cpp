@@ -672,3 +672,14 @@ using namespace std;
 
 
 // };
+
+int main(){
+    int n;
+    cin >> n;
+    vector<int> myVector(n);
+    while (cin >> n){
+        myVector.push_back(n);
+    }
+    
+
+}
