@@ -621,7 +621,7 @@ using namespace std;
 
 // class Box{
 //     private:
-//     int l, b, h;
+//     long l, b, h;
 
 //     public:
 //     Box(){
