@@ -692,3 +692,30 @@ using namespace std;
 //     }
 
 // }
+
+int main(){
+    int n, e;
+    cin >> n;
+    vector<int> myVector;
+
+    for (int i = 0; i < n; i ++){
+        int x;
+        cin >> x;
+        myVector.push_back(x);
+    }
+    cin >> n;
+
+    myVector.erase(myVector.begin() + n);
+
+    cin >> n >> e;
+
+    myVector.erase(myVector.begin() + n, myVector.begin() + e);
+
+    cout << myVector.size() << endl;
+
+    for (int i = 0; i < myVector.size(); i++){
+        cout << myVector[i] << " ";
+    }
+
+
+}
