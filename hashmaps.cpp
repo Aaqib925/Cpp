@@ -1,5 +1,7 @@
 #include <iostream>
 #include <map>
+#include <cassert>
+
 using namespace std;
  
 int main(){
@@ -11,7 +13,11 @@ int main(){
     if (myHashMap.find("World") == myHashMap.end()){
         cout << "The key world is not present." << endl;
     } 
-    cout << myHashMap["world"] << endl; << // if key is not present in hashmap, it result 0 value
+    cout << myHashMap["world"] << endl; // if key is not present in hashmap, it result 0 value
 
-    
+    map<string, int>::iterator i = myHashMap.find("Aaqib");
+    assert(i != myHashMap.end());
+    cout << i->first << endl;
+    cout << i->second << endl;
+
 }
