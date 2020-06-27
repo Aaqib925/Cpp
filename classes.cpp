@@ -74,3 +74,27 @@ class Student{
         return ss.str();
     }
 };
+
+class Student{
+    private:
+    int scores[5];
+    int total;
+    
+    public:
+    Student(){
+        total = 0;
+    }
+
+    // to get input
+
+    void input(){
+        for (int i = 0; i < 5; i ++){
+            cin >> scores[i];
+            total += scores[i];
+        }
+    }
+
+    int CalculateTotal(){
+        return total;
+    }
+};
