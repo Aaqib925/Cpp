@@ -709,7 +709,7 @@ int main(){
 
     cin >> n >> e;
 
-    myVector.erase(myVector.begin() + n, myVector.begin() + e);
+    myVector.erase(myVector.begin() + n - 1, myVector.begin() + e - 1);
 
     cout << myVector.size() << endl;
 
