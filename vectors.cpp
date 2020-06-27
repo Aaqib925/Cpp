@@ -4,7 +4,6 @@
 
 using namespace std;
 
-
 // int main(){
 //     int n;
 //     cin >> n;
@@ -13,18 +12,17 @@ using namespace std;
 //         int x;
 //         cin >> x;
 //         myVector.push_back(x);
-        
+
 //     }
 //     sort(myVector.begin(), myVector.end());
-    
-    
+
 //     for (int i = 0; i < n; i++){
 //         cout << myVector[i] << " ";
 //     }
 
 // }
 
-//Removes the element present at position.  
+//Removes the element present at position.
 // Ex: v.erase(v.begin()+4); (erases the fifth element of the vector v)
 
 // Removes the elements in the range from start to end inclusive of the start and exclusive of the end.
@@ -54,15 +52,16 @@ using namespace std;
 //         cout << myVector[i] << " ";
 //     }
 
-
 // }
 
-int main(){
+int main()
+{
     int n;
     cin >> n;
     vector<int> v;
 
-    for (int i = 0; i < n; i++){
+    for (int i = 0; i < n; i++)
+    {
         int x;
         cin >> x;
         v.push_back(x);
@@ -70,10 +69,17 @@ int main(){
 
     int q;
     cin >> q;
-    for(int i = 0; i < q; i ++){
+    for (int i = 0; i < q; i++)
+    {
         int value;
         cin >> value;
 
-        
+        vector<int>::iterator low;
+        low = lower_bound(v.begin(), v.end(), value);
+        // cout << low << endl;
+        if (v[low - v.begin()] == value)
+            cout << "Yes " << (low - v.begin() + 1) << endl;
+        else
+            cout << "No " << (low - v.begin() + 1) << endl;
     }
 }
