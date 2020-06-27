@@ -534,16 +534,18 @@ int main(){
             mytag = word.substr(1);
         }
         else if (word[0] != '"' && word[0] != '='){
-            attribute = word;
+            attribute = mytag + "~" + word;
         }
         else if (word[0] == '"'){
             if (word.back() == '>'){
-                word = word.substr(0, word.length() - 2);
-                cout << word << endl;
+                word = word.substr(0, word.length() - 1);
             }
-            attribute = word.substr(1, word.length() - 1);
+            value = word.substr(1, word.length() - 1);
         }
     }
+
+    myHashMap[attribute] = value;
+
     
 
 }
