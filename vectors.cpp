@@ -29,7 +29,7 @@ using namespace std;
 // Ex:v.erase(v.begin()+2,v.begin()+5);(erases all the elements from the third element to the fifth element.)
 
 int main(){
-    int n;
+    int n, e;
     cin >> n;
     vector<int> myVector;
 
@@ -37,6 +37,19 @@ int main(){
         int x;
         cin >> x;
         myVector.push_back(x);
+    }
+    cin >> n;
+
+    myVector.erase(myVector.begin() + n);
+
+    cin >> n >> e;
+
+    myVector.erase(myVector.begin() + n, myVector.begin() + e);
+
+    cout << myVector.size() << endl;
+
+    for (int i = 0; i < myVector.size(); i++){
+        cout << myVector[i] << " ";
     }
 
 
