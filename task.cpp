@@ -516,37 +516,37 @@ using namespace std;
 
 // Attribute Parser
 
-int main(){
+// int main(){
     // int n, q; // n is number of lines in HRML code, q are the queries
 
     // cin >> n >> q;
 
     // declare a hashmap
 
-    map<string, string> myHashMap;
-    string inputStr, mytag;
-    string attribute, value;
-    getline(cin, inputStr);
-    string word;
-    stringstream ss(inputStr);
-    while (getline(ss, word, ' ')){
-        if (word[0] == '<'){
-            mytag = word.substr(1);
-        }
-        else if (word[0] != '"' && word[0] != '='){
-            attribute = mytag + "~" + word;
-        }
-        else if (word[0] == '"'){
-            if (word.back() == '>'){
-                word = word.substr(0, word.length() - 1);
-            }
-            value = word.substr(1, word.length() - 2);
-        }
-        myHashMap[attribute] = value;
-    }
+//     map<string, string> myHashMap;
+//     string inputStr, mytag;
+//     string attribute, value;
+//     getline(cin, inputStr);
+//     string word;
+//     stringstream ss(inputStr);
+//     while (getline(ss, word, ' ')){
+//         if (word[0] == '<'){
+//             mytag = word.substr(1);
+//         }
+//         else if (word[0] != '"' && word[0] != '='){
+//             attribute = mytag + "~" + word;
+//         }
+//         else if (word[0] == '"'){
+//             if (word.back() == '>'){
+//                 word = word.substr(0, word.length() - 1);
+//             }
+//             value = word.substr(1, word.length() - 2);
+//         }
+//         myHashMap[attribute] = value;
+//     }
 
     
 
-    cout << myHashMap["tag1~father"] << endl;
+//     cout << myHashMap["tag1~father"] << endl;
 
-}
+// }
