@@ -550,3 +550,47 @@ using namespace std;
 //     cout << myHashMap["tag1~father"] << endl;
 
 // }
+
+int main(){
+    string arr[] = {"<tag1 value = \"HelloWorld\">", "<tag2 name = \"Name1\" aaqib = \"Nazir\"", "</tag1>", "</tag2>"};
+    map<string, string> myHashMap;
+    string mytag, word, attribute, value, endingTag = "";
+    vector<string> myvector;
+    for (int i = 0; i < 4; i++){
+        string inputStr = arr[i];
+        stringstream ss(inputStr);
+        while (getline(ss, word, ' ')){
+            if (word[0] == '<' && word[1] != '/' && endingTag == ""){
+                mytag = word.substr(1);
+                endingTag = "</" + mytag + ">";
+                myvector.push_back(endingTag);
+            
+            }
+            else if (word[0] == '<' && word[1] != '/' && endingTag != ""){
+                mytag += "." + word.substr(1);
+                endingTag = "</" + word.substr(1) + ">";
+                myvector.push_back(endingTag);
+            }
+            else if (word == myvector[myvector.size() - 1]){
+                myvector.pop_back();
+                endingTag = "";
+            }
+            else if (word[0] != '"' && word[0] != '=' && word.back() != '>' && mytag != ""){
+                attribute = mytag + "~" + word;
+                // cout << attribute << endl;
+            }
+            else if (word[0] == '"' && attribute != ""){
+                if (word.back() == '>'){
+                    word = word.substr(0, word.length() - 1);
+                }
+                value = word.substr(1, word.length() - 2);
+            }
+            myHashMap[attribute] = value;
+            
+        }
+       
+        
+    }
+    cout << myHashMap["tag1~value"];
+
+}
