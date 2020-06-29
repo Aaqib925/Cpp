@@ -758,6 +758,7 @@ int main(){
 }
 
 void myfunc(int arr[]){
-
-
+    for(int x: arr){
+        cout << x;
+    }
 }
