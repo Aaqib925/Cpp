@@ -720,32 +720,32 @@ using namespace std;
 
 // }
 
-int main()
-{
-    int n;
-    cin >> n;
-    vector<int> v;
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     vector<int> v;
 
-    for (int i = 0; i < n; i++)
-    {
-        int x;
-        cin >> x;
-        v.push_back(x);
-    }
+//     for (int i = 0; i < n; i++)
+//     {
+//         int x;
+//         cin >> x;
+//         v.push_back(x);
+//     }
 
-    int q;
-    cin >> q;
-    for (int i = 0; i < q; i++)
-    {
-        int value;
-        cin >> value;
+//     int q;
+//     cin >> q;
+//     for (int i = 0; i < q; i++)
+//     {
+//         int value;
+//         cin >> value;
 
-        vector<int>::iterator low;
-        low = lower_bound(v.begin(), v.end(), value);
-        // cout << low << endl;
-        if (v[low - v.begin()] == value)
-            cout << "Yes " << (low - v.begin() + 1) << endl;
-        else
-            cout << "No " << (low - v.begin() + 1) << endl;
-    }
-}
+//         vector<int>::iterator low;
+//         low = lower_bound(v.begin(), v.end(), value);
+//         // cout << low << endl;
+//         if (v[low - v.begin()] == value)
+//             cout << "Yes " << (low - v.begin() + 1) << endl;
+//         else
+//             cout << "No " << (low - v.begin() + 1) << endl;
+//     }
+// }
