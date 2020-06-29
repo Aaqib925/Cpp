@@ -6,6 +6,7 @@
 #include <string>
 #include <map>
 #include <sstream> 
+#include <iterator>
 
 
 using namespace std;
@@ -750,15 +751,18 @@ using namespace std;
 //     }
 // }
 
-void myfunc(int[]);
+// void myfunc(int[]);
 
-int main(){
-    int myarr[] = {2, 3, 5, 6};
-    myfunc(myarr);
-}
+// int main(){
+//     int myarr[] = {1, 2, 3, 4, 5, 6, 5, 8}; 
+//     int n = end(myarr) - begin(myarr);
+//     cout << n << endl;
+//     myfunc(myarr);
+// }
 
-void myfunc(int arr[]){
-    for(int x: arr){
-        cout << x;
-    }
-}
+// void myfunc(int arr[]){
+//     int n = end(&arr) - begin(&arr);
+//     cout << n << endl;
+
+
+// }
