@@ -749,3 +749,15 @@ using namespace std;
 //             cout << "No " << (low - v.begin() + 1) << endl;
 //     }
 // }
+
+void myfunc(int[]);
+
+int main(){
+    int myarr[] = {2, 3, 5, 6};
+    myfunc(myarr);
+}
+
+void myfunc(int arr[]){
+
+
+}
