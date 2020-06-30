@@ -767,8 +767,8 @@ using namespace std;
 
 // }
 
-int main(){
-    int roll_number = 238;
+// int main(){
+    // int roll_number = 238;
     // int a = 4, m = 0, b = 3, x = roll_number;
     // for (int i=a; i<x+(b+x&a); i++){
     //     m = m*b*b + i;
@@ -794,5 +794,11 @@ int main(){
     // i=i+x*x+y;
     // }while(i<1000*50);
     // cout << i << endl;
+
+
+// }
+
+int main(){
+
     
 }
