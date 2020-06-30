@@ -890,3 +890,11 @@ using namespace std;
 //     cout << name1 << endl;
 //     cout << name2 << endl;
 // }
+
+int main(){
+    int x;
+    cin >> x;
+    for (int i = 0; i < x; i++){
+        cout << i * i << " ";
+    }
+}
