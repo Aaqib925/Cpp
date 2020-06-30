@@ -782,10 +782,17 @@ int main(){
     // }while(n>0 && n<1000);
     // cout << n << endl;
 
-    int z=0, x= roll_number;
-    while(z<100*50)
-    {
-    z=z*x+x+50;
-    }
-    cout << z << endl;
+    // int z=0, x= roll_number;
+    // while(z<100*50)
+    // {
+    // z=z*x+x+50;
+    // }
+    // cout << z << endl;
+    // int i=100, x= roll_number;
+    // do
+    // {
+    // i=i+x*x+y;
+    // }while(i<1000*50);
+    // cout << i << endl;
+    
 }
