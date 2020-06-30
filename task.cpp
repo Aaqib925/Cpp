@@ -766,3 +766,26 @@ using namespace std;
 
 
 // }
+
+int main(){
+    int roll_number = 238;
+    // int a = 4, m = 0, b = 3, x = roll_number;
+    // for (int i=a; i<x+(b+x&a); i++){
+    //     m = m*b*b + i;
+    //     cout << m << endl;
+    // }
+
+    // int n=987, x= roll_number;
+    // do
+    // {
+    // n=n+x;
+    // }while(n>0 && n<1000);
+    // cout << n << endl;
+
+    int z=0, x= roll_number;
+    while(z<100*50)
+    {
+    z=z*x+x+50;
+    }
+    cout << z << endl;
+}
