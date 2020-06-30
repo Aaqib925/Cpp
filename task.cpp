@@ -873,20 +873,20 @@ using namespace std;
 //     }
 // }
 
-#include <string>
-#include <iostream>
-using namespace std;
-int main()
-{
-    string name1, name2;
-    int n;
-    cout << "Enter your First Name: " << endl;
-    cin >> name1;
-    cout << "Enter your Last Name : " << endl;
-    cin >> name2;
-    cout << " Enter total number of characters in your first name: " << endl;
-    cin >> n;
-    name1.replace(0, n, name2);
-    cout << name1 << endl;
-    cout << name2 << endl;
-}
+// #include <string>
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     string name1, name2;
+//     int n;
+//     cout << "Enter your First Name: " << endl;
+//     cin >> name1;
+//     cout << "Enter your Last Name : " << endl;
+//     cin >> name2;
+//     cout << " Enter total number of characters in your first name: " << endl;
+//     cin >> n;
+//     name1.replace(0, n, name2);
+//     cout << name1 << endl;
+//     cout << name2 << endl;
+// }
