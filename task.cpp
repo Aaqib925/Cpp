@@ -827,48 +827,66 @@ using namespace std;
 
 // }
 
+// #include <iostream>
+// using namespace std;
+// void find_x(int *y)
+// {
+//     int x;
+//     if (*y < 50)
+//     {
+//         x = 5 * *y;
+//         x > *y || x < 100 ? x += x : x *= x;
+//         x = x % 2 + (++x) * *y / 2 * *y / 3;
+//         cout << "When y = " << *y << " value of x : " << x << endl;
+//     }
+//     else if (*y < 100)
+//     {
+//         x = *y * 4 + 22;
+//         x > *y || x < 500 ? x += x : x *= x;
+//         x = x % 2 + (++x) * *y / 2 * *y / 3;
+//         cout << "When y = " << *y << " value of x : " << x << endl;
+//     }
+//     else if (*y < 200)
+//     {
+//         x = *y * 2 + 54;
+//         x > *y || x < 800 ? x += x : x *= x;
+//         x = x % 2 + (++x) * *y / 2 * *y / 3;
+//         cout << "When y = " << *y << " value of x : " << x << endl;
+//     }
+//     else if (*y < 270)
+//     {
+//         x = *y * 7 + 65;
+//         x > *y || x < 1000 ? x += x : x *= x;
+//         x = x % 2 + (++x) * *y / 2 * *y / 3;
+//         cout << "When y = " << *y << " value of x : " << x << endl;
+//     }
+// }
+// int main()
+// {
+//     int y;
+//     cout << " Enter the value of y : " << endl;
+//     cin >> y;
+//     for (int i = 0; i < 3; i++)
+//     {
+//         find_x(&y);
+//         y = y + 50;
+//     }
+// }
+
+#include <string>
 #include <iostream>
 using namespace std;
-void find_x(int *y)
-{
-    int x;
-    if (*y < 50)
-    {
-        x = 5 * *y;
-        x > *y || x < 100 ? x += x : x *= x;
-        x = x % 2 + (++x) * *y / 2 * *y / 3;
-        cout << "When y = " << *y << " value of x : " << x << endl;
-    }
-    else if (*y < 100)
-    {
-        x = *y * 4 + 22;
-        x > *y || x < 500 ? x += x : x *= x;
-        x = x % 2 + (++x) * *y / 2 * *y / 3;
-        cout << "When y = " << *y << " value of x : " << x << endl;
-    }
-    else if (*y < 200)
-    {
-        x = *y * 2 + 54;
-        x > *y || x < 800 ? x += x : x *= x;
-        x = x % 2 + (++x) * *y / 2 * *y / 3;
-        cout << "When y = " << *y << " value of x : " << x << endl;
-    }
-    else if (*y < 270)
-    {
-        x = *y * 7 + 65;
-        x > *y || x < 1000 ? x += x : x *= x;
-        x = x % 2 + (++x) * *y / 2 * *y / 3;
-        cout << "When y = " << *y << " value of x : " << x << endl;
-    }
-}
 int main()
 {
-    int y;
-    cout << " Enter the value of y : " << endl;
-    cin >> y;
-    for (int i = 0; i < 3; i++)
-    {
-        find_x(&y);
-        y = y + 50;
-    }
+    string name1, name2;
+    int n;
+    cout << "Enter your First Name: " << endl;
+    cin >> name1;
+    cout << "Enter your Last Name : " << endl;
+    cin >> name2;
+    cout << " Enter total number of characters in your first name: " << endl;
+    cin >> n;
+    name1.replace(0, n, name2);
+    cout << name1 << endl;
+    cout << name2 << endl;
 }
