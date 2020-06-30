@@ -823,16 +823,16 @@ using namespace std;
 
 // }
 
-int main(){
-    // using CNIC 42301-8599197-3
-    int x = 10;
-    int n = 19;
-    int total = 0;
-    for (int i = 1; i <= n; i++){
-        int y = (x * i) - 1;
-        total += y;
-        cout << y << " ";
-    }
-    cout << endl << "Your Sum is: " << total << endl;
+// int main(){
+//     // using CNIC 42301-8599197-3
+//     int x = 10;
+//     int n = 19;
+//     int total = 0;
+//     for (int i = 1; i <= n; i++){
+//         int y = (x * i) - 1;
+//         total += y;
+//         cout << y << " ";
+//     }
+//     cout << endl << "Your Sum is: " << total << endl;
 
-}
+// }
