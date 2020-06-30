@@ -798,26 +798,41 @@ using namespace std;
 
 // }
 
-int main(){
-    int R = 238;
-    string name = "Shahwar";
-    int N = name.length();
-    cout << "Before Multiplication: "
-    int array[N][N];
-    for (int i = 0; i < N; i ++){
-        for (int j = 0; j < N; j++){
-            cout << arr[i][j] << " ";
-        }
-        cout << end;
-    }
+// int main(){
+//     int R = 238;
+//     string name = "Shahwar";
+//     int N = name.length();
+//     cout << "Before Multiplication: " << endl;
+//     int array[N][N];
+//     for (int i = 0; i < N; i++){
+//         for (int j = 0; j < N; j++){
+//             array[i][j] = 0;
+//             cout << array[i][j] << " ";
+//         }
+//         cout << endl;
+//     }
 
-    cout << "After Multiplication: " 
-    for (int i = 0; i < N; i ++){
-        for (int j = 0; j < N; j++){
-            array[i][j] = R * (i + j);
-            cout << array[i][j] << " ";
-        }
-        cout << endl;
+//     cout << "After Multiplication: " << endl;
+//     for (int i = 0; i < N; i ++){
+//         for (int j = 0; j < N; j++){
+//             array[i][j] = R * (i + j);
+//             cout << array[i][j] << " ";
+//         }
+//         cout << endl;
+//     }
+
+// }
+
+int main(){
+    // using CNIC 42301-8599197-3
+    int x = 10;
+    int n = 19;
+    int total = 0;
+    for (int i = 1; i <= n; i++){
+        int y = (x * i) - 1;
+        total += y;
+        cout << y << " ";
     }
+    cout << endl << "Your Sum is: " << total << endl;
 
 }
