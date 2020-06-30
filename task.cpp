@@ -798,16 +798,18 @@ using namespace std;
 
 // }
 
-int main(){
-    int R = 238;
-    String name = "Shahwar";
-    int N = name.length();
+// int main(){
+//     int R = 238;
+//     string name = "Shahwar";
+//     int N = name.length();
 
-    int array[N][N];
-    for (int i = 0; i < N; i++){
-        for (int j = 0; j < N; i++){
-            array[i][j] = i + j;
-        }
-    }
+//     int array[N][N];
+//     for (int i = 0; i < N; i ++){
+//         for (int j = 0; j < N; j++){
+//             array[i][j] = R * (i + j);
+//             cout << array[i][j] << " ";
+//         }
+//         cout << endl;
+//     }
 
-}
+// }
