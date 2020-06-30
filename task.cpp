@@ -5,9 +5,8 @@
 #include <algorithm>
 #include <string>
 #include <map>
-#include <sstream> 
+#include <sstream>
 #include <iterator>
-
 
 using namespace std;
 
@@ -477,7 +476,6 @@ using namespace std;
 //     return result;
 // }
 
-
 // int main() {
 // 	// Complete the program
 //     int l1, l2;
@@ -497,7 +495,7 @@ using namespace std;
 //                     s2 += total[j];
 //                 }
 //             }
-            
+
 //         }
 //         cout << s1.length() << endl << s2.length() << endl;
 //         cout << s1 + s2 << endl;
@@ -519,11 +517,11 @@ using namespace std;
 // Attribute Parser
 
 // int main(){
-    // int n, q; // n is number of lines in HRML code, q are the queries
+// int n, q; // n is number of lines in HRML code, q are the queries
 
-    // cin >> n >> q;
+// cin >> n >> q;
 
-    // declare a hashmap
+// declare a hashmap
 
 //     map<string, string> myHashMap;
 //     string inputStr, mytag;
@@ -547,8 +545,6 @@ using namespace std;
 //         myHashMap[attribute] = value;
 //     }
 
-    
-
 //     cout << myHashMap["tag1~father"] << endl;
 
 // }
@@ -566,7 +562,7 @@ using namespace std;
 //                 mytag = word.substr(1);
 //                 endingTag = "</" + mytag + ">";
 //                 myvector.push_back(endingTag);
-            
+
 //             }
 //             else if (word[0] == '<' && word[1] != '/' && endingTag != ""){
 //                 mytag += "." + word.substr(1);
@@ -588,10 +584,9 @@ using namespace std;
 //                 value = word.substr(1, word.length() - 2);
 //             }
 //             myHashMap[attribute] = value;
-            
+
 //         }
-       
-        
+
 //     }
 //     cout << myHashMap["tag1~value"];
 
@@ -601,7 +596,7 @@ using namespace std;
 //     private:
 //     int scores[5];
 //     int total;
-    
+
 //     public:
 //     Student(){
 //         total = 0;
@@ -672,7 +667,6 @@ using namespace std;
 //         return out;
 //     }
 
-
 // };
 
 // int main(){
@@ -683,11 +677,10 @@ using namespace std;
 //         int x;
 //         cin >> x;
 //         myVector.push_back(x);
-        
+
 //     }
 //     sort(myVector.begin(), myVector.end());
-    
-    
+
 //     for (int i = 0; i < n; i++){
 //         cout << myVector[i] << " ";
 //     }
@@ -717,7 +710,6 @@ using namespace std;
 //     for (int i = 0; i < myVector.size(); i++){
 //         cout << myVector[i] << " ";
 //     }
-
 
 // }
 
@@ -754,7 +746,7 @@ using namespace std;
 // void myfunc(int[]);
 
 // int main(){
-//     int myarr[] = {1, 2, 3, 4, 5, 6, 5, 8}; 
+//     int myarr[] = {1, 2, 3, 4, 5, 6, 5, 8};
 //     int n = end(myarr) - begin(myarr);
 //     cout << n << endl;
 //     myfunc(myarr);
@@ -764,37 +756,35 @@ using namespace std;
 //     int n = end(&arr) - begin(&arr);
 //     cout << n << endl;
 
-
 // }
 
 // int main(){
-    // int roll_number = 238;
-    // int a = 4, m = 0, b = 3, x = roll_number;
-    // for (int i=a; i<x+(b+x&a); i++){
-    //     m = m*b*b + i;
-    //     cout << m << endl;
-    // }
+//     int roll_number = 238;
+// int a = 4, m = 0, b = 3, x = roll_number;
+// for (int i=a; i<x+(b+x&a); i++){
+//     m = m*b*b + i;
+//     cout << m << endl;
+// }
 
-    // int n=987, x= roll_number;
-    // do
-    // {
-    // n=n+x;
-    // }while(n>0 && n<1000);
-    // cout << n << endl;
+// int n=987, x= roll_number;
+// do
+// {
+// n=n+x;
+// }while(n>0 && n<1000);
+// cout << n << endl;
 
-    // int z=0, x= roll_number;
-    // while(z<100*50)
-    // {
-    // z=z*x+x+50;
-    // }
-    // cout << z << endl;
-    // int i=100, x= roll_number;
-    // do
-    // {
-    // i=i+x*x+y;
-    // }while(i<1000*50);
-    // cout << i << endl;
-
+// int z=0, x= roll_number;
+// while(z<100*50)
+// {
+// z=z*x+x+50;
+// }
+// cout << z << endl;
+//     int i=100, x= roll_number, y = 1;
+//     do
+//     {
+//     i=i+x*x+y;
+//     }while(i<1000*50);
+//     cout << i << endl;
 
 // }
 
@@ -836,3 +826,49 @@ using namespace std;
 //     cout << endl << "Your Sum is: " << total << endl;
 
 // }
+
+#include <iostream>
+using namespace std;
+void find_x(int *y)
+{
+    int x;
+    if (*y < 50)
+    {
+        x = 5 * *y;
+        x > *y || x < 100 ? x += x : x *= x;
+        x = x % 2 + (++x) * *y / 2 * *y / 3;
+        cout << "When y = " << *y << " value of x : " << x << endl;
+    }
+    else if (*y < 100)
+    {
+        x = *y * 4 + 22;
+        x > *y || x < 500 ? x += x : x *= x;
+        x = x % 2 + (++x) * *y / 2 * *y / 3;
+        cout << "When y = " << *y << " value of x : " << x << endl;
+    }
+    else if (*y < 200)
+    {
+        x = *y * 2 + 54;
+        x > *y || x < 800 ? x += x : x *= x;
+        x = x % 2 + (++x) * *y / 2 * *y / 3;
+        cout << "When y = " << *y << " value of x : " << x << endl;
+    }
+    else if (*y < 270)
+    {
+        x = *y * 7 + 65;
+        x > *y || x < 1000 ? x += x : x *= x;
+        x = x % 2 + (++x) * *y / 2 * *y / 3;
+        cout << "When y = " << *y << " value of x : " << x << endl;
+    }
+}
+int main()
+{
+    int y;
+    cout << " Enter the value of y : " << endl;
+    cin >> y;
+    for (int i = 0; i < 3; i++)
+    {
+        find_x(&y);
+        y = y + 50;
+    }
+}
