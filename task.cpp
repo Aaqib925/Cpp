@@ -799,6 +799,15 @@ using namespace std;
 // }
 
 int main(){
+    int R = 238;
+    String name = "Shahwar";
+    int N = name.length();
 
-    
+    int array[N][N];
+    for (int i = 0; i < N; i++){
+        for (int j = 0; j < N; i++){
+            array[i][j] = i + j;
+        }
+    }
+
 }
