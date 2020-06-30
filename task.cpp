@@ -891,10 +891,10 @@ using namespace std;
 //     cout << name2 << endl;
 // }
 
-int main(){
-    int x;
-    cin >> x;
-    for (int i = 0; i < x; i++){
-        cout << i * i << " ";
-    }
-}
+// int main(){
+//     int x;
+//     cin >> x;
+//     for (int i = 0; i < x; i++){
+//         cout << i * i << " ";
+//     }
+// }
