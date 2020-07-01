@@ -948,3 +948,18 @@ using namespace std;
 //     cout << endl;
 //     return 0;
 // }
+
+class BadLengthException{
+    private:
+    int stringLength;
+
+    public:
+    BadLengthException(int number){
+        stringLength = number;
+    }
+
+    int what(){
+        return stringLength;
+    }
+};
+
