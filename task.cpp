@@ -1026,6 +1026,7 @@ class Student: public Person{
 
     static int id;
     int arr[6];
+    int total = 0;
 
     Student(){
         cur_id = id;
@@ -1037,12 +1038,16 @@ class Student: public Person{
             int x;
             cin >> x;
             arr[i] = x;
+
         }
 
     }
 
     void putdata() override{
-        
+        for (int i: arr){
+            total += i;
+        }
+        cout << name << " " << age << " " << total << " " << cur_id << endl;
     }
 
 };
