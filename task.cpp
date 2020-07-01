@@ -949,17 +949,34 @@ using namespace std;
 //     return 0;
 // }
 
-class BadLengthException{
-    private:
-    int stringLength;
+// class BadLengthException{
+//     private:
+//     int stringLength;
 
-    public:
-    BadLengthException(int number){
-        stringLength = number;
-    }
+//     public:
+//     BadLengthException(int number){
+//         stringLength = number;
+//     }
 
-    int what(){
-        return stringLength;
-    }
-};
+//     int what(){
+//         return stringLength;
+//     }
+// };
+
+// int main(){
+//     int x[4];
+//     try{
+//         x[6] = 0;
+//     }
+    // catch (exception& error){
+    //     cout << "Exception: " << error.what() << endl;
+    // }
+    // catch (bad_alloc& error){
+    //     cout << "Not enough Memory" << endl;
+    // }
+//     catch (...){
+//         cout << "Other" << endl;
+//     }
+    
+// }
 
