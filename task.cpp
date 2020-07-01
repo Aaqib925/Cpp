@@ -1021,3 +1021,26 @@ class Professor: public Person{
 
 int Professor::id = 1;
 
+class Student: public Person{
+    public:
+
+    static int id;
+    int arr[6];
+
+    Student(){
+        cur_id = id;
+
+    }
+    void getdata() override{
+        cin >> name >> age;
+        for (int i = 0; i < 6; i++){
+            int x;
+            cin >> x;
+            arr[i] = x;
+        }
+
+    }
+
+};
+
+int Student::id = 1;
