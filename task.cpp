@@ -898,3 +898,53 @@ using namespace std;
 //         cout << i * i << " ";
 //     }
 // }
+
+
+// class Distance 
+// {
+//     private: 
+//         int feet;
+//         float inches;
+
+//     public:
+//         Distance()
+//         {
+//             feet = 0;
+//             inches = 0.0;
+//         }
+
+//         Distance(int ft, float in)
+//         {
+//             feet = ft;
+//             inches = in;
+//         }
+
+//         void get_distance()
+//         {
+//             cout << "\nEnter feet: ";
+//             cin >> feet;
+
+//             cout << "\nEnter inches: ";
+//             cin >> inches;
+//         }
+
+//         void print_dist()
+//         {
+//             cout << feet << "\'" << inches << "\'";
+//         }
+// };
+
+
+// int main()
+// {   
+//     Distance dist1(11, 6.25);
+//     Distance dist2(dist1);
+//     Distance dist3 = dist1;
+
+//     dist1.print_dist();
+//     dist2.print_dist();
+//     dist3.print_dist();
+
+//     cout << endl;
+//     return 0;
+// }
