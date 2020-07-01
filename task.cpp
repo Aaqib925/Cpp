@@ -980,3 +980,44 @@ using namespace std;
     
 // }
 
+class Person{
+    public:
+    string name;
+    int age;
+    int cur_id;
+
+    Person(){
+        name = "", age = 0, cur_id = 0;
+    }
+    
+    virtual void getdata(){
+        cin >> name >> age;
+    }
+    virtual void putdata(){
+        cout << name << " " << age << endl;
+
+    }
+};
+
+class Professor: public Person{
+    public:
+    int publications, cur_id;
+    static int id;
+
+    Professor(){
+        cur_id = id;
+        publications = 0;
+    }
+
+    void getdata() override{
+        cin >> name >> age >> publications;
+    }
+
+    void putdata() override{
+        cout << name << " " << age << " " << publications << " " << cur_id << endl;
+    }
+
+};
+
+int Professor::id = 1;
+
