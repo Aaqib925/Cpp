@@ -1041,6 +1041,10 @@ class Student: public Person{
 
     }
 
+    void putdata() override{
+        
+    }
+
 };
 
 int Student::id = 1;
