@@ -21,9 +21,9 @@ int main(){
 
     // for removing a element from the set we use .erase(value) function
 
-    a.erase(5);
+    // a.erase(5);
     
-    // set<int>::iterator itr=s.find(val); //Gives the iterator to the element val if it is found otherwise returns s.end() .
+    set<int>::iterator itr=a.find(6); //Gives the iterator to the element val if it is found otherwise returns s.end() .
     // Ex: set<int>::iterator itr=s.find(100); //If 100 is not present then it==s.end().
 
     auto pos = a.find(5); // i didn't got this bro
