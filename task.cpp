@@ -1184,4 +1184,28 @@ using namespace std;
 //     m1.printFunc();
 // }
 
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    int n;
+    cin >> n;
+    map<string, int> mymap;
+
+    for (int i = 0; i < n; i++){
+        string x; int y, c;
+        cin >> c >> x;
+        if (c == 1){
+            cin >> y;
+            mymap[x] += y;
+
+        }
+        else if (c == 2){
+            mymap.erase(x);
+        }
+        else{
+            cout << mymap[x] << endl;
+        }
+    }
+
+    return 0;
+}
 
