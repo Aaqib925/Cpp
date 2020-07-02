@@ -1168,18 +1168,20 @@ using namespace std;
 
 // }
 
-class Rarefunc{
-    public:
-    void printFunc();
+// class Rarefunc{
+//     public:
+//     void printFunc();
     
-    ~Rarefunc(){};
-};
+//     ~Rarefunc(){};
+// };
 
-void Rarefunc:: printFunc(){
-    cout << "Hello World" << endl;
-}
+// void Rarefunc:: printFunc(){
+//     cout << "Hello World" << endl;
+// }
 
-int main(){
-    Rarefunc m1;
-    m1.printFunc();
-}
+// int main(){
+//     Rarefunc m1;
+//     m1.printFunc();
+// }
+
+
