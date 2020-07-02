@@ -1102,20 +1102,52 @@ using namespace std;
 //     }
 // }
 
+// int main(){
+//     string x;
+//     cout << "Enter any word or sentence: ";
+//     getline(cin, x);
+//     map<char, int> mymap;
+//     for (char i: x){
+//         mymap[i] = 0;
+//         for (char j : x){
+//             if (i == j){
+//                 mymap[i] += 1;
+//             }
+//         }
+//     }
+//     for (auto element: mymap){
+//         cout << element.first << ": " << element.second << endl;
+//     }
+// }
+
+void repchar();
+void repchar(char);
+void repchar(char, int);
+
 int main(){
-    string x;
-    cout << "Enter any word or sentence: ";
-    cin >> x;
-    map<char, int> mymap;
-    for (char i: x){
-        mymap[i] = 0;
-        for (char j : x){
-            if (i == j){
-                mymap[i] += 1;
-            }
-        }
+    repchar();
+    repchar('+');
+    repchar('-', 20);
+
+}
+
+void repchar(){
+    for (int i = 0; i < 45; i ++){
+        cout << "*";
     }
-    for (auto element: mymap){
-        cout << element.first << ": " << element.second << endl;
+    cout << endl;
+}
+
+void repchar(char a){
+    for (int i = 0; i < 45; i ++){
+        cout << a;
     }
+    cout << endl;
+}
+
+void repchar(char a, int x){
+    for (int i = 0; i < x; i ++){
+        cout << a;
+    }
+    cout << endl;
 }
