@@ -7,6 +7,7 @@
 #include <map>
 #include <sstream>
 #include <iterator>
+#include <iomanip>
 
 using namespace std;
 
@@ -1184,28 +1185,56 @@ using namespace std;
 //     m1.printFunc();
 // }
 
+// int main() {
+//     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+//     int n;
+//     cin >> n;
+//     map<string, int> mymap;
+
+//     for (int i = 0; i < n; i++){
+//         string x; int y, c;
+//         cin >> c >> x;
+//         if (c == 1){
+//             cin >> y;
+//             mymap[x] += y;
+
+//         }
+//         else if (c == 2){
+//             mymap.erase(x);
+//         }
+//         else{
+//             cout << mymap[x] << endl;
+//         }
+//     }
+
+//     return 0;
+// }
+
+// input: 1 100.345 2006.008 2331.41592653498
 int main() {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
-    int n;
-    cin >> n;
-    map<string, int> mymap;
+	int T; cin >> T;
+	cout << setiosflags(ios::uppercase);
+	cout << setw(0xf) << internal;
+	while(T--) {
+		double A; cin >> A;
+		double B; cin >> B;
+		double C; cin >> C;
 
-    for (int i = 0; i < n; i++){
-        string x; int y, c;
-        cin >> c >> x;
-        if (c == 1){
-            cin >> y;
-            mymap[x] += y;
+		/* Enter your code here */
+        // for first line
+        cout << hex << left << showbase << nouppercase;
+        cout << (long long)A << endl;
 
-        }
-        else if (c == 2){
-            mymap.erase(x);
-        }
-        else{
-            cout << mymap[x] << endl;
-        }
-    }
+        // for second line
 
-    return 0;
+        cout << dec << right << setw(15) << setfill('_') << showpos << fixed << setprecision(2);
+        cout << B << endl;
+
+        // for third line
+
+        cout << scientific << uppercase << noshowpos << setprecision(9);
+        cout << C << endl;
+	}
+	return 0;
+
 }
-
