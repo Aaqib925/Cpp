@@ -1101,3 +1101,21 @@ using namespace std;
 //         cout << i << endl;
 //     }
 // }
+
+int main(){
+    string x;
+    cout << "Enter any word or sentence: ";
+    cin >> x;
+    map<char, int> mymap;
+    for (char i: x){
+        mymap[i] = 0;
+        for (char j : x){
+            if (i == j){
+                mymap[i] += 1;
+            }
+        }
+    }
+    for (auto element: mymap){
+        cout << element.first << ": " << element.second << endl;
+    }
+}
