@@ -1151,3 +1151,19 @@ using namespace std;
 //     }
 //     cout << endl;
 // }
+string printString();
+string printString(){
+    int age;
+    string name;
+    cin >> name >> age;
+    stringstream ss;
+    ss << name << " " << age;
+    return ss.str();
+
+}
+
+int main(){
+    string ans = printString();
+    cout << ans[3];
+
+}
