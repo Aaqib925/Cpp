@@ -1120,34 +1120,34 @@ using namespace std;
 //     }
 // }
 
-void repchar();
-void repchar(char);
-void repchar(char, int);
+// void repchar();
+// void repchar(char);
+// void repchar(char, int);
 
-int main(){
-    repchar();
-    repchar('+');
-    repchar('-', 20);
+// int main(){
+//     repchar();
+//     repchar('+');
+//     repchar('-', 20);
 
-}
+// }
 
-void repchar(){
-    for (int i = 0; i < 45; i ++){
-        cout << "*";
-    }
-    cout << endl;
-}
+// void repchar(){
+//     for (int i = 0; i < 45; i ++){
+//         cout << "*";
+//     }
+//     cout << endl;
+// }
 
-void repchar(char a){
-    for (int i = 0; i < 45; i ++){
-        cout << a;
-    }
-    cout << endl;
-}
+// void repchar(char a){
+//     for (int i = 0; i < 45; i ++){
+//         cout << a;
+//     }
+//     cout << endl;
+// }
 
-void repchar(char a, int x){
-    for (int i = 0; i < x; i ++){
-        cout << a;
-    }
-    cout << endl;
-}
+// void repchar(char a, int x){
+//     for (int i = 0; i < x; i ++){
+//         cout << a;
+//     }
+//     cout << endl;
+// }
