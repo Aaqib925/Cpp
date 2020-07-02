@@ -980,103 +980,124 @@ using namespace std;
     
 // }
 
-class Person{
-    public:
-    string name;
-    int age;
-    int cur_id;
+// class Person{
+//     public:
+//     string name;
+//     int age;
+//     int cur_id;
 
-    Person(){
-        name = "", age = 0, cur_id = 0;
-    }
+//     Person(){
+//         name = "", age = 0, cur_id = 0;
+//     }
     
-    virtual void getdata(){
-        cin >> name >> age;
-    }
-    virtual void putdata(){
-        cout << name << " " << age << endl;
+//     virtual void getdata(){
+//         cin >> name >> age;
+//     }
+//     virtual void putdata(){
+//         cout << name << " " << age << endl;
 
-    }
-};
+//     }
+// };
 
-class Professor: public Person{
-    public:
-    int publications, cur_id;
-    static int id;
+// class Professor: public Person{
+//     public:
+//     int publications, cur_id;
+//     static int id;
 
-    Professor(){
-        cur_id = id++;
-        publications = 0;
-    }
+//     Professor(){
+//         cur_id = id++;
+//         publications = 0;
+//     }
 
-    void getdata() override{
-        cin >> name >> age >> publications;
-    }
+//     void getdata() override{
+//         cin >> name >> age >> publications;
+//     }
 
-    void putdata() override{
-        cout << name << " " << age << " " << publications << " " << cur_id << endl;
-    }
+//     void putdata() override{
+//         cout << name << " " << age << " " << publications << " " << cur_id << endl;
+//     }
 
-};
+// };
 
-int Professor::id = 1;
+// int Professor::id = 1;
 
-class Student: public Person{
-    public:
+// class Student: public Person{
+//     public:
 
-    static int id;
-    int arr[6];
-    int total = 0;
+//     static int id;
+//     int arr[6];
+//     int total = 0;
 
-    Student(){
-        cur_id = id++;
+//     Student(){
+//         cur_id = id++;
 
-    }
-    void getdata() override{
-        cin >> name >> age;
-        for (int i = 0; i < 6; i++){
-            int x;
-            cin >> x;
-            arr[i] = x;
+//     }
+//     void getdata() override{
+//         cin >> name >> age;
+//         for (int i = 0; i < 6; i++){
+//             int x;
+//             cin >> x;
+//             arr[i] = x;
 
-        }
+//         }
 
-    }
+//     }
 
-    void putdata() override{
-        for (int i: arr){
-            total += i;
-        }
-        cout << name << " " << age << " " << total << " " << cur_id << endl;
-    }
+//     void putdata() override{
+//         for (int i: arr){
+//             total += i;
+//         }
+//         cout << name << " " << age << " " << total << " " << cur_id << endl;
+//     }
 
-};
+// };
 
-int Student::id = 1;
+// int Student::id = 1;
 
-int main(){
+// int main(){
 
-    int n, val;
-    cin>>n; //The number of objects that is going to be created.
-    Person *per[n];
+//     int n, val;
+//     cin>>n; //The number of objects that is going to be created.
+//     Person *per[n];
 
-    for(int i = 0;i < n;i++){
+//     for(int i = 0;i < n;i++){
 
-        cin>>val;
-        if(val == 1){
-            // If val is 1 current object is of type Professor
-            per[i] = new Professor;
+//         cin>>val;
+//         if(val == 1){
+//             // If val is 1 current object is of type Professor
+//             per[i] = new Professor;
 
-        }
-        else per[i] = new Student; // Else the current object is of type Student
+//         }
+//         else per[i] = new Student; // Else the current object is of type Student
 
-        per[i]->getdata(); // Get the data from the user.
+//         per[i]->getdata(); // Get the data from the user.
 
-    }
+//     }
 
-    for(int i=0;i<n;i++)
-        per[i]->putdata(); // Print the required output for each object.
+//     for(int i=0;i<n;i++)
+//         per[i]->putdata(); // Print the required output for each object.
 
-    return 0;
+//     return 0;
 
-}
+// }
+
+
+// int main(){
+//     int arr[] = {1, 2, 3};
+//     for (int i: arr){
+//         cout << i << endl;
+//     }
+// }
+
+// void myfunc(int[]);
+
+// int main(){
+//     int myarr[] = {1, 2, 3};
+//     myfunc(myarr);
+// }
+
+// void myfunc(int arr[]){
+//     for (int i: *arr){
+//         cout << i << endl;
+//     }
+// }
