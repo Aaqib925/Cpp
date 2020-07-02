@@ -1151,19 +1151,35 @@ using namespace std;
 //     }
 //     cout << endl;
 // }
-string printString();
-string printString(){
-    int age;
-    string name;
-    cin >> name >> age;
-    stringstream ss;
-    ss << name << " " << age;
-    return ss.str();
+// string printString();
+// string printString(){
+//     int age;
+//     string name;
+//     cin >> name >> age;
+//     stringstream ss;
+//     ss << name << " " << age;
+//     return ss.str();
 
+// }
+
+// int main(){
+//     string ans = printString();
+//     cout << ans[3];
+
+// }
+
+class Rarefunc{
+    public:
+    void printFunc();
+    
+    ~Rarefunc(){};
+};
+
+void Rarefunc:: printFunc(){
+    cout << "Hello World" << endl;
 }
 
 int main(){
-    string ans = printString();
-    cout << ans[3];
-
+    Rarefunc m1;
+    m1.printFunc();
 }
