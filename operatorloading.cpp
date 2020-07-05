@@ -79,7 +79,6 @@ int main(){
 
     Conc cc("Aaqib");
     Conc cc2("Nazeer");
-
     Conc cc3 = cc + cc2;
     cc3.print();
     
