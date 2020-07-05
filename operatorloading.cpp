@@ -39,7 +39,10 @@ class Count{
 Count Count::operator+(Count c){
     int cc = count + c.count;
     return Count(cc);
-
+    // this can also written like this
+    // Count temp;
+    // temp.count = count + c.count;
+    // return temp;
 }
 
 
