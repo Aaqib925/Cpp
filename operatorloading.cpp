@@ -43,7 +43,24 @@ class Conc{
     private:
     string str;
 
-    public 
+    public:
+    Conc(){
+        str = "";
+    }
+    Conc(string x){
+        str = x;
+    }
+
+    void print(){
+        cout << str << endl;
+
+    }
+
+    Conc operator+(Conc xx){
+        string y = str + xx.str;
+        return Conc(y);
+
+    }
 };
 
 
@@ -59,5 +76,11 @@ int main(){
     c2++;
     Count c3 = c1 + c2;
     c3.print();
+
+    Conc cc("Aaqib");
+    Conc cc2("Nazeer");
+
+    Conc cc3 = cc + cc2;
+    cc3.print();
     
 }
