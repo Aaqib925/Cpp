@@ -1258,7 +1258,3 @@ using namespace std;
 // uppercase: Undoes previous nouppercase manipulator and ensures that the 'E' in the scientific notation is capitalised
 // noshowpos: Undoes previous showpos manipulator and gets rid of the plus at the start of positive values
 // setprecision: Changes the number of digits after the decimal place from 2 to 9.
-
-int main(){
-    
-}
