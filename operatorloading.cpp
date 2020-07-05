@@ -17,7 +17,7 @@ class Count{
         count++;
     }
 
-    Count operator ++(int){
+    Count operator ++(int){  // postfix
         Count temp;
         temp.count = count++;
         return temp;
