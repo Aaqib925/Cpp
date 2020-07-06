@@ -1,3 +1,4 @@
- (bad_alloc& error){
-    //     cout << "Not enough Memory" << endl;
-    // }
+
+        // a[index].push_back(date);
+        // a[index].push_back(disease);
+        // a[index].push_back(dateDis);
