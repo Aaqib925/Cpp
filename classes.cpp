@@ -153,11 +153,9 @@ class Hospital{
     string arr[5] = {"Name: ", "Date of admission: ", "Disease: ", "Date of discharge: ", "Age: "};
 
     public:
-    Hospital(){
-        index++;
-    }
 
     void addPatient(){
+        index++;
         vector<string> data;
         cout << "Enter Name of Patient: ";
         cin >> name;
@@ -194,7 +192,7 @@ vector<vector<string>> Hospital::a;
 class Age: public Hospital{
     public:
     void enterAge(){
-        for (int i; i < index; i++){
+        for (int i = 0; i < index; i++){
             string x;
             cout << "Enter Age of " << a[i][0] << ": ";
             cin >> x;
@@ -205,6 +203,7 @@ class Age: public Hospital{
         for (int i = 0; i < a.size(); i++){
             cout << "Age of " <<  a[i][0] << " is " << a[i][4]; 
         }
+        cout << endl;
     }
 };
 int main(){
@@ -220,4 +219,7 @@ int main(){
     p1.addPatient();
     p1.showData();
 
+    Age a1;
+    a1.enterAge();
+    a1.showData();
 }
