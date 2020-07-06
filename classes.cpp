@@ -155,6 +155,7 @@ class Hospital{
     public:
 
     void addPatient(){
+        cout << endl;
         index++;
         vector<string> data;
         cout << "Enter Name of Patient: ";
@@ -178,6 +179,7 @@ class Hospital{
     virtual void showData(){
         
         for (int i = 0; i < a.size(); i++){
+            cout << endl;
             for (int j = 0; j < 4; j++){
                 cout << arr[j] << a[i][j] << " || ";
             }
@@ -193,6 +195,7 @@ class Age: public Hospital{
     public:
     void enterAge(){
         for (int i = 0; i < index; i++){
+            cout << endl;
             string x;
             cout << "Enter Age of " << a[i][0] << ": ";
             cin >> x;
@@ -200,7 +203,9 @@ class Age: public Hospital{
         }
     }
     void showData() override{
+        
         for (int i = 0; i < a.size(); i++){
+            cout << endl;
             cout << "Age of " <<  a[i][0] << " is " << a[i][4]; 
         }
         cout << endl;
