@@ -1260,27 +1260,65 @@ using namespace std;
 // setprecision: Changes the number of digits after the decimal place from 2 to 9.
 
 
-class Rectangle{
-    protected:
-    int width;
-    int height;
+// class Rectangle{
+//     protected:
+//     int width;
+//     int height;
 
+//     public:
+//     Rectangle() : width(0), height(0){}
+
+//     void display(){
+//         cout << width << " " << height << endl;
+//     }
+
+// };
+
+// class rectangleArea: public Rectangle{
+//     public:
+//     void read_input(){
+//         cin >> width >> height;
+//     }
+
+//     void display(){
+//         cout << width * height << endl;
+//     }
+// };
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+class Triangle{
+	public:
+		void triangle(){
+			cout<<"I am a triangle\n";
+		}
+};
+
+class Isosceles : public Triangle{
+  	public:
+  		void isosceles(){
+    		cout<<"I am an isosceles triangle\n";
+  		}
+};
+
+//Write your code here.
+class Equilateral: public Triangle{
     public:
-    Rectangle() : width(0), height(0){}
-
-    void display(){
-        cout << width << " " << height << endl;
+    void equilateral(){
+        cout << "I am an equilateral triangle" << endl;
     }
 
 };
-
-class rectangleArea: public Rectangle{
-    public:
-    void read_input(){
-        cin >> width >> height;
-    }
-
-    void display(){
-        cout << width * height << endl;
-    }
-};
+int main(){
+  
+    Equilateral eqr;
+    eqr.equilateral();
+    eqr.isosceles();
+    eqr.triangle();
+    return 0;
+}
