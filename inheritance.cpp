@@ -19,6 +19,24 @@ class AnotherChef: public Chef{
     }
 };
 
+class Counter{
+    protected:
+    int count;
+
+    public:
+    Counter(){
+        count = 0;
+    }
+
+    Counter(int x){
+        count = x;
+    }
+
+    Counter operator ++(){
+        return Counter(++count);
+    }
+};
+
 int main(){
     Chef chef1;
     chef1.makeChicken();
