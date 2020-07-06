@@ -35,6 +35,12 @@ class Counter{
     Counter operator ++(){
         return Counter(++count);
     }
+    Counter operator++(int){
+        return Counter(count++);
+    }
+    void printData(){
+        cout << count << endl;
+    }
 };
 
 class CountDc : public Counter{
@@ -48,9 +54,11 @@ class CountDc : public Counter{
     }
 
     CountDc operator --(){
-        return CountDc(--count)
+        return CountDc(--count);
     }
-
+    CountDc operator --(int){
+        return CountDc(count--);
+    }
 };
 
 int main(){
@@ -60,5 +68,9 @@ int main(){
     AnotherChef chef2;
     chef2.makeChicken();
     chef2.makePasta();
+
+    Counter c1;
+    c1++;
+
 
 }
