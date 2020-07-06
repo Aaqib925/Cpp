@@ -177,10 +177,12 @@ class Hospital{
     }
 
     void showData(){
+        string arr[] = {"Name: ", "Date of admission: ", "Disease: ", "Date of discharge: "};
         for (int i = 0; i < a.size(); i++){
-            for (string x: a[i]){
-                cout << x << endl;
+            for (int j = 0; j < 4; j++){
+                cout << arr[j] << a[i][j] << " || ";
             }
+            cout << endl;
         }
     }
 
