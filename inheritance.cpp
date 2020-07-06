@@ -62,15 +62,19 @@ class CountDc : public Counter{
 };
 
 int main(){
-    Chef chef1;
-    chef1.makeChicken();
+    // Chef chef1;
+    // chef1.makeChicken();
 
-    AnotherChef chef2;
-    chef2.makeChicken();
-    chef2.makePasta();
+    // AnotherChef chef2;
+    // chef2.makeChicken();
+    // chef2.makePasta();
 
     Counter c1;
     c1++;
+    c1.printData();
 
-
+    CountDc c2;
+    c2++;
+    c2--;
+    c2.printData();
 }
