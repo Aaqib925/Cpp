@@ -150,6 +150,7 @@ class Hospital{
     string name, date, disease, dateDis;
     static int index;
     static vector<vector<string>> a;
+    string arr[5] = {"Name: ", "Date of admission: ", "Disease: ", "Date of discharge: ", "Age: "};
 
     public:
     Hospital(){
@@ -176,8 +177,8 @@ class Hospital{
 
     }
 
-    void showData(){
-        string arr[] = {"Name: ", "Date of admission: ", "Disease: ", "Date of discharge: "};
+    virtual void showData(){
+        
         for (int i = 0; i < a.size(); i++){
             for (int j = 0; j < 4; j++){
                 cout << arr[j] << a[i][j] << " || ";
@@ -187,10 +188,25 @@ class Hospital{
     }
 
 };
-int Hospital::index = -1;
+int Hospital::index = 0;
 vector<vector<string>> Hospital::a;
 
-
+class Age: public Hospital{
+    public:
+    void enterAge(){
+        for (int i; i < index; i++){
+            string x;
+            cout << "Enter Age of " << a[i][0] << ": ";
+            cin >> x;
+            a[i].push_back(x);
+        }
+    }
+    void showData() override{
+        for (int i = 0; i < a.size(); i++){
+            cout << "Age of " <<  a[i][0] << " is " << a[i][4]; 
+        }
+    }
+};
 int main(){
     // to make instance for class use classname with instance name
 
