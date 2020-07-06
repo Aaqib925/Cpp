@@ -1,6 +1,7 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
+#include <iomanip>
 using namespace std;
 
 // class myClass{
@@ -145,86 +146,107 @@ using namespace std;
 
 // };
 
-class Hospital{
+// class Hospital{
+//     protected:
+//     string name, date, disease, dateDis;
+//     static int index;
+//     static vector<vector<string>> a;
+//     string arr[5] = {"Name: ", "Date of admission: ", "Disease: ", "Date of discharge: ", "Age: "};
+
+//     public:
+
+//     void addPatient(){
+//         cout << endl;
+//         index++;
+//         vector<string> data;
+//         cout << "Enter Name of Patient: ";
+//         cin >> name;
+//         cout << "Enter date of admission: ";
+//         cin >> date;
+//         cout << "Enter Disease: ";
+//         cin >> disease;
+//         cout << "Enter date of discharge: ";
+//         cin >> dateDis;
+
+//         data.push_back(name);
+//         data.push_back(date);
+//         data.push_back(disease);
+//         data.push_back(dateDis);
+
+//         a.push_back(data);
+
+//     }
+
+//     virtual void showData(){
+        
+//         for (int i = 0; i < a.size(); i++){
+//             cout << endl;
+//             for (int j = 0; j < 4; j++){
+//                 cout << arr[j] << a[i][j] << " || ";
+//             }
+//             cout << endl;
+//         }
+//     }
+
+// };
+// int Hospital::index = 0;
+// vector<vector<string>> Hospital::a;
+
+// class Age: public Hospital{
+//     public:
+//     void enterAge(){
+//         for (int i = 0; i < index; i++){
+//             cout << endl;
+//             string x;
+//             cout << "Enter Age of " << a[i][0] << ": ";
+//             cin >> x;
+//             a[i].push_back(x);
+//         }
+//     }
+//     void showData() override{
+        
+//         for (int i = 0; i < a.size(); i++){
+//             cout << endl;
+//             cout << "Age of " <<  a[i][0] << " is " << a[i][4]; 
+//         }
+//         cout << endl;
+//     }
+// };
+// int main(){
+//     // to make instance for class use classname with instance name
+
+//     // myClass obj1, obj2;
+//     // obj1.setData(4);
+//     // obj2.setData(5);
+//     // obj1.showData();
+//     // obj2.showData();
+
+//     Hospital p1;
+//     p1.addPatient();
+//     p1.showData();
+
+//     Age a1;
+//     a1.enterAge();
+//     a1.showData();
+// }
+
+class Publication{
     protected:
-    string name, date, disease, dateDis;
-    static int index;
-    static vector<vector<string>> a;
-    string arr[5] = {"Name: ", "Date of admission: ", "Disease: ", "Date of discharge: ", "Age: "};
+    string title;
+    float price;
 
     public:
-
-    void addPatient(){
-        cout << endl;
-        index++;
-        vector<string> data;
-        cout << "Enter Name of Patient: ";
-        cin >> name;
-        cout << "Enter date of admission: ";
-        cin >> date;
-        cout << "Enter Disease: ";
-        cin >> disease;
-        cout << "Enter date of discharge: ";
-        cin >> dateDis;
-
-        data.push_back(name);
-        data.push_back(date);
-        data.push_back(disease);
-        data.push_back(dateDis);
-
-        a.push_back(data);
-
+    void putdata(){
+        cout << "Enter Title: ";
+        cin >> title;
+        cout << "Enter Price: ";
+        cin >> price;
+        cout << setprecision(3) << price;
     }
 
-    virtual void showData(){
-        
-        for (int i = 0; i < a.size(); i++){
-            cout << endl;
-            for (int j = 0; j < 4; j++){
-                cout << arr[j] << a[i][j] << " || ";
-            }
-            cout << endl;
-        }
+    void getdata(){
+        cout << "Title: " << title << endl;
+        cout << "Price: " << price << endl;
     }
 
-};
-int Hospital::index = 0;
-vector<vector<string>> Hospital::a;
-
-class Age: public Hospital{
-    public:
-    void enterAge(){
-        for (int i = 0; i < index; i++){
-            cout << endl;
-            string x;
-            cout << "Enter Age of " << a[i][0] << ": ";
-            cin >> x;
-            a[i].push_back(x);
-        }
-    }
-    void showData() override{
-        
-        for (int i = 0; i < a.size(); i++){
-            cout << endl;
-            cout << "Age of " <<  a[i][0] << " is " << a[i][4]; 
-        }
-        cout << endl;
-    }
-};
-int main(){
-    // to make instance for class use classname with instance name
-
-    // myClass obj1, obj2;
-    // obj1.setData(4);
-    // obj2.setData(5);
-    // obj1.showData();
-    // obj2.showData();
-
-    Hospital p1;
-    p1.addPatient();
-    p1.showData();
-
-    Age a1;
-    a1.enterAge();
-    a1.showData();
 }
