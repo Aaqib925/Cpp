@@ -37,6 +37,22 @@ class Counter{
     }
 };
 
+class CountDc : public Counter{
+    public:
+    CountDc() : Counter(){
+
+    }
+
+    CountDc(int x){
+        count = x;
+    }
+
+    CountDc operator --(){
+        return CountDc(--count)
+    }
+
+};
+
 int main(){
     Chef chef1;
     chef1.makeChicken();
