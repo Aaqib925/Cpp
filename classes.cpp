@@ -1,5 +1,6 @@
 #include <iostream>
 #include <sstream>
+#include <vector>
 using namespace std;
 
 class myClass{
@@ -152,3 +153,25 @@ class Box{
 
 
 };
+
+class Hospital{
+    protected:
+    string name, date, disease, dateDis;
+    static int index;
+    vector<vector<string>> a;
+
+    public:
+
+    void addPatient(){
+        index += 1;
+        cout << "Enter Name of Patient: ";
+        cin >> name;
+        cout << "Enter date of admission: ";
+        cin >> date;
+        cout << "Enter Disease: ";
+        cin >> disease;
+        cout << "Enter date of discharge: "
+    }
+
+};
+int Hospital::index = 0;
