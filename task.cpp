@@ -1260,3 +1260,27 @@ using namespace std;
 // setprecision: Changes the number of digits after the decimal place from 2 to 9.
 
 
+class Rectangle{
+    protected:
+    int width;
+    int height;
+
+    public:
+    Rectangle() : width(0), height(0){}
+
+    void display(){
+        cout << width << " " << height << endl;
+    }
+
+};
+
+class rectangleArea: public Rectangle{
+    public:
+    void read_input(){
+        cin >> width >> height;
+    }
+
+    void display(){
+        cout << width * height << endl;
+    }
+};
