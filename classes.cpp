@@ -7,7 +7,7 @@ using namespace std;
 // class myClass{
 //     private:
 //     int somedata; // encapsulation
-    
+
 //     public:
 //     void setData(int d){
 //         somedata = d;
@@ -16,7 +16,6 @@ using namespace std;
 //         cout << "Data is: " << somedata << endl;
 //     }
 // };
-
 
 // class Student{
 //     private:
@@ -72,7 +71,7 @@ using namespace std;
 //     private:
 //     int scores[5];
 //     int total;
-    
+
 //     public:
 //     Student(){
 //         total = 0;
@@ -143,7 +142,6 @@ using namespace std;
 //         return out;
 //     }
 
-
 // };
 
 // class Hospital{
@@ -178,7 +176,7 @@ using namespace std;
 //     }
 
 //     virtual void showData(){
-        
+
 //         for (int i = 0; i < a.size(); i++){
 //             cout << endl;
 //             for (int j = 0; j < 4; j++){
@@ -204,10 +202,10 @@ using namespace std;
 //         }
 //     }
 //     void showData() override{
-        
+
 //         for (int i = 0; i < a.size(); i++){
 //             cout << endl;
-//             cout << "Age of " <<  a[i][0] << " is " << a[i][4]; 
+//             cout << "Age of " <<  a[i][0] << " is " << a[i][4];
 //         }
 //         cout << endl;
 //     }
@@ -230,23 +228,91 @@ using namespace std;
 //     a1.showData();
 // }
 
-class Publication{
-    protected:
+class Publication
+{
+protected:
     string title;
     float price;
 
-    public:
-    void putdata(){
+public:
+    Publication()
+    {
+        title = "", price = 0;
+    }
+    void putdata()
+    {
         cout << "Enter Title: ";
         cin >> title;
         cout << "Enter Price: ";
         cin >> price;
-        cout << setprecision(3) << price;
+    }
+
+    void getdata()
+    {
+        cout << "Title: " << title << endl;
+        cout << "Price: " << fixed << showpoint << setprecision(3) << price << endl;
+    }
+};
+
+class Books : public Publication
+{
+protected:
+    int count;
+
+public:
+    Books()
+    {
+        count = 0;
+    }
+    void putdata()
+    {
+        // Publication::putdata();
+        cout << "Enter the page count: ";
+        cin >> count;
+    }
+    void getdata()
+    {
+        // Publication::getdata();
+        cout << "Page Count: " << count << endl;
+    }
+
+};
+
+class Tape: public Publication{
+    protected:
+    float playTime;
+
+    public:
+    Tape(){
+        playTime = 0;
+    }
+
+    void putdata(){
+        // Publication::putdata();
+        cout << "Enter Playing time in minutes: ";
+        cin >> playTime;
     }
 
     void getdata(){
-        cout << "Title: " << title << endl;
-        cout << "Price: " << price << endl;
+        // Publication::getdata();
+        cout << "Total Played Time in Minutes: " << playTime << endl;
     }
 
+};
+
+int
+main()
+{
+    Publication p1;
+    p1.putdata();
+
+    p1.getdata();
+
+    Books b1;
+    b1.putdata();
+    b1.getdata();
+
+    Tape t1;
+    t1.putdata();
+    t1.getdata();
 }
