@@ -96,3 +96,14 @@ Complex operator+(Complex A, Complex B){
     temp.y = A.y + B.y;
     return temp;
 }
+
+int main(){
+    Complex c1, c2, c3;
+    c1.setData(2, 4);
+    c2.setData(5, 6);
+
+    c3 = c1 + c2;
+
+    c3.showData();
+
+}
