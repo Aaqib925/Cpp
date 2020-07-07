@@ -146,30 +146,47 @@ using namespace std;
 
 
 // how to overloading extraction >> operator and insertion operator using friend function
-class Complex{
-    private:
-    int x, y;
+// class Complex{
+//     private:
+//     int x, y;
 
-    public:
+//     public:
     
-    friend ostream& operator<<(ostream&, Complex);
-    friend istream& operator>>(istream&, Complex&); // for istream, the object should be passed 
-    // with ampersand.
+//     friend ostream& operator<<(ostream&, Complex);
+//     friend istream& operator>>(istream&, Complex&); // for istream, the object should be passed 
+//     // with ampersand.
+
+// };
+
+// ostream& operator<<(ostream &dout, Complex c){
+//     cout << "x =" << c.x << "y =" << c.y << endl;
+//     return dout;
+// }
+
+// istream& operator>>(istream &din, Complex &C){
+//     cin >> C.x >> C.y;
+//     return din;
+// }
+
+// int main(){
+//     Complex c1;
+//     cin >> c1;
+//     cout << c1;
+// }
+
+// Member function of one class and friend function for other class
+
+class foo{
+    public:
+    void myfun(){}
+
 
 };
 
-ostream& operator<<(ostream &dout, Complex c){
-    cout << "x =" << c.x << "y =" << c.y << endl;
-    return dout;
-}
+class B{
+    friend void foo::myfun();
 
-istream& operator>>(istream &din, Complex &C){
-    cin >> C.x >> C.y;
-    return din;
-}
+    // if we want to make all member functions of class foo friend functions for B
+    friend class foo;
+};
 
-int main(){
-    Complex c1;
-    cin >> c1;
-    cout << c1;
-}
