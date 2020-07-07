@@ -152,12 +152,23 @@ class Complex{
 
     public:
     
-    friend ostream operator<<(ostream&, Complex);
-    friend istream operator>>(istream&, Complex);
+    friend ostream& operator<<(ostream&, Complex);
+    friend istream& operator>>(istream&, Complex&);
 
 };
 
-ostream operator<<(ostream &dout, Complex c){
+ostream& operator<<(ostream &dout, Complex c){
     cout << "x =" << c.x << "y =" << c.y << endl;
     return dout;
+}
+
+istream& operator>>(istream &din, Complex &C){
+    cin >> C.x >> C.y;
+    return din;
+}
+
+int main(){
+    Complex c1;
+    cin >> c1;
+    cout << c1;
 }
