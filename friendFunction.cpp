@@ -88,4 +88,11 @@ class Complex{
 
     friend Complex operator+(Complex, Complex);
 
+};
+
+Complex operator+(Complex A, Complex B){
+    Complex temp;
+    temp.x = A.x + B.x;
+    temp.y = A.y + B.y;
+    return temp;
 }
