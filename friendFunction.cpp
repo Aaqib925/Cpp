@@ -176,17 +176,18 @@ using namespace std;
 
 // Member function of one class and friend function for other class
 
-class foo{
-    public:
-    void myfun(){}
+// class foo{
+//     public:
+//     void myfun(){}
 
 
-};
+// };
 
-class B{
-    friend void foo::myfun();
+// class B{
+//     friend void foo::myfun();
 
-    // if we want to make all member functions of class foo friend functions for B
-    friend class foo;
-};
+//     // if we want to make all member functions of class foo friend functions for B
+//     friend class foo;
+// };
+
 
