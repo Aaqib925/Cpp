@@ -206,6 +206,9 @@ using namespace std;
 //         for (int i = 0; i < a.size(); i++){
 //             cout << endl;
 //             cout << "Age of " <<  a[i][0] << " is " << a[i][4];
+//             // for (int j = 0; j < 5; j++){
+//             //     cout << arr[j] << a[i][j] << " || ";
+//             // }
 //         }
 //         cout << endl;
 //     }
@@ -219,100 +222,101 @@ using namespace std;
 //     // obj1.showData();
 //     // obj2.showData();
 
-//     Hospital p1;
+//     Hospital p1, p2;
 //     p1.addPatient();
-//     p1.showData();
+//     p2.addPatient();
+//     // p1.showData();
 
-//     Age a1;
+//     Age a1, a2;
 //     a1.enterAge();
 //     a1.showData();
 // }
 
-class Publication
-{
-protected:
-    string title;
-    float price;
+// class Publication
+// {
+// protected:
+//     string title;
+//     float price;
 
-public:
-    Publication()
-    {
-        title = "", price = 0;
-    }
-    void putdata()
-    {
-        cout << "Enter Title: ";
-        cin >> title;
-        cout << "Enter Price: ";
-        cin >> price;
-    }
+// public:
+//     Publication()
+//     {
+//         title = "", price = 0;
+//     }
+//     void putdata()
+//     {
+//         cout << "Enter Title: ";
+//         cin >> title;
+//         cout << "Enter Price: ";
+//         cin >> price;
+//     }
 
-    void getdata()
-    {
-        cout << "Title: " << title << endl;
-        cout << "Price: " << fixed << showpoint << setprecision(3) << price << endl;
-    }
-};
+//     void getdata()
+//     {
+//         cout << "Title: " << title << endl;
+//         cout << "Price: " << fixed << showpoint << setprecision(3) << price << endl;
+//     }
+// };
 
-class Books : public Publication
-{
-protected:
-    int count;
+// class Books : public Publication
+// {
+// protected:
+//     int count;
 
-public:
-    Books()
-    {
-        count = 0;
-    }
-    void putdata()
-    {
-        // Publication::putdata();
-        cout << "Enter the page count: ";
-        cin >> count;
-    }
-    void getdata()
-    {
-        // Publication::getdata();
-        cout << "Page Count: " << count << endl;
-    }
+// public:
+//     Books()
+//     {
+//         count = 0;
+//     }
+//     void putdata()
+//     {
+//         // Publication::putdata();
+//         cout << "Enter the page count: ";
+//         cin >> count;
+//     }
+//     void getdata()
+//     {
+//         // Publication::getdata();
+//         cout << "Page Count: " << count << endl;
+//     }
 
-};
+// };
 
-class Tape: public Publication{
-    protected:
-    float playTime;
+// class Tape: public Publication{
+//     protected:
+//     float playTime;
 
-    public:
-    Tape(){
-        playTime = 0;
-    }
+//     public:
+//     Tape(){
+//         playTime = 0;
+//     }
 
-    void putdata(){
-        // Publication::putdata();
-        cout << "Enter Playing time in minutes: ";
-        cin >> playTime;
-    }
+//     void putdata(){
+//         // Publication::putdata();
+//         cout << "Enter Playing time in minutes: ";
+//         cin >> playTime;
+//     }
 
-    void getdata(){
-        // Publication::getdata();
-        cout << "Total Played Time in Minutes: " << playTime << endl;
-    }
+//     void getdata(){
+//         // Publication::getdata();
+//         cout << "Total Played Time in Minutes: " << playTime << endl;
+//     }
 
-};
+// };
 
-int
-main()
-{
-    Publication p1;
-    p1.putdata();
+// int
+// main()
+// {
+//     Publication p1;
+//     p1.putdata();
 
-    p1.getdata();
+//     p1.getdata();
 
-    Books b1;
-    b1.putdata();
-    b1.getdata();
+//     Books b1;
+//     b1.putdata();
+//     b1.getdata();
 
-    Tape t1;
-    t1.putdata();
-    t1.getdata();
-}
+//     Tape t1;
+//     t1.putdata();
+//     t1.getdata();
+// }
