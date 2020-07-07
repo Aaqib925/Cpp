@@ -96,3 +96,17 @@ int main(){
     string ordinary = cc3.ans();
     cout << ordinary << endl;
 }
+
+
+
+// Complex operator+(Complex& obj1 , Complex& obj2){
+//     Complex t ;
+//      t.a = obj1.a + obj2.a;
+//      t.b = obj1.b + obj2.b;
+//      return t;
+// }
+// ostream& operator <<(ostream& out , const Complex& obj){
+
+//     out<<obj.a<<"+i"<<obj.b<<endl;
+//     return out;
+// }
