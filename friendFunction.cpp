@@ -38,34 +38,54 @@ using namespace std;
 
 // }
 
-class B;
-class A{
-    private:
-    int x = 5;
+// class B;
+// class A{
+//     private:
+//     int x = 5;
 
-    public:
+//     public:
 
-    friend void myfun(A, B);
+//     friend void myfun(A, B);
 
-};
+// };
 
-class B{
-    private:
-    int x = 5;
+// class B{
+//     private:
+//     int x = 5;
 
-    public:
+//     public:
     
-    friend void myfun(A, B);
+//     friend void myfun(A, B);
 
-};
+// };
 
-void myfun(A obj1, B obj2){
-    cout << obj1.x + obj2.x << endl;
-}
+// void myfun(A obj1, B obj2){
+//     cout << obj1.x + obj2.x << endl;
+// }
 
-int main(){
-    A a1;
-    B b1;
+// int main(){
+//     A a1;
+//     B b1;
 
-    myfun(a1, b1);
+//     myfun(a1, b1);
+// }
+
+// operator overloading in friend function
+
+class Complex{
+    private:
+    int x, y;
+
+    public:
+    void setData(int a, int b){
+        x = a;
+        y = b;
+    }
+
+    void showData(){
+        cout << x << " " << y << endl;
+    }
+
+    friend Complex operator+(Complex, Complex);
+
 }
