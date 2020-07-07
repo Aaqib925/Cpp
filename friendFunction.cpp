@@ -110,36 +110,54 @@ using namespace std;
 
 // Overloading unuary operator using friend function
 
+// class Complex{
+//     private:
+//     int x, y;
+
+//     public:
+//     void setData(int a, int b){
+//         x = a, y = b;
+//     }
+
+//     void showData(){
+//         cout << "x = " << x << " " << "y = " << y << endl;
+//     }
+
+//     friend Complex operator-(Complex);
+
+// };
+
+// Complex operator-(Complex C){
+//     C.x = -C.x;
+//     C.y = -C.y;
+//     return C;
+// }
+
+// int main(){
+//     Complex c1, c2;
+//     c1.setData(2, 4);
+//     c2.setData(5, 3);
+
+//     c1 = -c1;
+//     c2 = -c2;
+//     c1.showData();
+//     c2.showData();
+// }
+
+
+// how to overloading extraction >> operator and insertion operator using friend function
 class Complex{
     private:
     int x, y;
 
     public:
-    void setData(int a, int b){
-        x = a, y = b;
-    }
-
-    void showData(){
-        cout << "x = " << x << " " << "y = " << y << endl;
-    }
-
-    friend Complex operator-(Complex);
+    
+    friend ostream operator<<(ostream&, Complex);
+    friend istream operator>>(istream&, Complex);
 
 };
 
-Complex operator-(Complex C){
-    C.x = -C.x;
-    C.y = -C.y;
-    return C;
-}
-
-int main(){
-    Complex c1, c2;
-    c1.setData(2, 4);
-    c2.setData(5, 3);
-
-    c1 = -c1;
-    c2 = -c2;
-    c1.showData();
-    c2.showData();
+ostream operator<<(ostream &dout, Complex c){
+    cout << "x =" << c.x << "y =" << c.y << endl;
+    return dout;
 }
