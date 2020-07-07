@@ -1319,14 +1319,14 @@ using namespace std;
 // }
 
 
-int main(){
-    // creating a char array
-    char title[5]; // This is C function, total length string length + 1;
-    // #include<string.h>
-    strcpy(title, "Aqib");  // char array has 5 position, so 4 chars can be passed
+// int main(){
+//     // creating a char array
+//     char title[5]; // This is C function, total length string length + 1;
+//     // #include<string.h>
+//     strcpy(title, "Aqib");  // char array has 5 position, so 4 chars can be passed
 
-    for (char x: title){
-        cout << x << endl;
-    }
+//     for (char x: title){
+//         cout << x << endl;
+//     }
 
-}
+// }
