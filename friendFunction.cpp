@@ -72,38 +72,74 @@ using namespace std;
 
 // operator overloading in friend function
 
+// class Complex{
+//     private:
+//     int x, y;
+
+//     public:
+//     void setData(int a, int b){
+//         x = a;
+//         y = b;
+//     }
+
+//     void showData(){
+//         cout << x << " " << y << endl;
+//     }
+
+//     friend Complex operator+(Complex, Complex);
+
+// };
+
+// Complex operator+(Complex A, Complex B){
+//     Complex temp;
+//     temp.x = A.x + B.x;
+//     temp.y = A.y + B.y;
+//     return temp;
+// }
+
+// int main(){
+//     Complex c1, c2, c3;
+//     c1.setData(2, 4);
+//     c2.setData(5, 6);
+
+//     c3 = c1 + c2;
+
+//     c3.showData();
+
+// }
+
+// Overloading unuary operator using friend function
+
 class Complex{
     private:
     int x, y;
 
     public:
     void setData(int a, int b){
-        x = a;
-        y = b;
+        x = a, y = b;
     }
 
     void showData(){
-        cout << x << " " << y << endl;
+        cout << "x = " << x << " " << "y = " << y << endl;
     }
 
-    friend Complex operator+(Complex, Complex);
+    friend Complex operator-(Complex);
 
 };
 
-Complex operator+(Complex A, Complex B){
-    Complex temp;
-    temp.x = A.x + B.x;
-    temp.y = A.y + B.y;
-    return temp;
+Complex operator-(Complex C){
+    C.x = -C.x;
+    C.y = -C.y;
+    return C;
 }
 
 int main(){
-    Complex c1, c2, c3;
+    Complex c1, c2;
     c1.setData(2, 4);
-    c2.setData(5, 6);
+    c2.setData(5, 3);
 
-    c3 = c1 + c2;
-
-    c3.showData();
-
+    c1 = -c1;
+    c2 = -c2;
+    c1.showData();
+    c2.showData();
 }
