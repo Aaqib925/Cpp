@@ -153,7 +153,8 @@ class Complex{
     public:
     
     friend ostream& operator<<(ostream&, Complex);
-    friend istream& operator>>(istream&, Complex&);
+    friend istream& operator>>(istream&, Complex&); // for istream, the object should be passed 
+    // with ampersand.
 
 };
 
