@@ -189,5 +189,3 @@ using namespace std;
 //     // if we want to make all member functions of class foo friend functions for B
 //     friend class foo;
 // };
-
-
