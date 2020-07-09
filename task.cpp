@@ -1330,3 +1330,27 @@ using namespace std;
 //     }
 
 // }
+
+class postfix{
+    private:
+    int x;
+
+    public:
+    postfix(int c){
+        x = c;
+    }
+
+    postfix operator+=(int c){
+        x += c;
+        return postfix(x);
+    }
+
+    void print(){
+        cout << x << endl;
+    }
+
+};
+
+int main(){
+    
+}
