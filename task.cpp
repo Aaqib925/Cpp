@@ -1352,5 +1352,7 @@ class postfix{
 };
 
 int main(){
-    
+    postfix c = 2;
+    c+=  5;
+    c.print();
 }
