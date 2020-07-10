@@ -1331,28 +1331,28 @@ using namespace std;
 
 // }
 
-class postfix{
-    private:
-    int x;
+// class postfix{
+//     private:
+//     int x;
 
-    public:
-    postfix(int c){
-        x = c;
-    }
+//     public:
+//     postfix(int c){
+//         x = c;
+//     }
 
-    postfix operator+=(int c){
-        x += c;
-        return postfix(x);
-    }
+//     postfix operator+=(int c){
+//         x += c;
+//         return postfix(x);
+//     }
 
-    void print(){
-        cout << x << endl;
-    }
+//     void print(){
+//         cout << x << endl;
+//     }
 
-};
+// };
 
-int main(){
-    postfix c = 2;
-    c+=  5;
-    c.print();
-}
+// int main(){
+//     postfix c = 2;
+//     c+=  5;
+//     c.print();
+// }
