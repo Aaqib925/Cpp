@@ -163,6 +163,8 @@ using namespace std;
 //     return dout;
 // }
 
+// for istream we have to pass the working argument as a reference.
+
 // istream& operator>>(istream &din, Complex &C){
 //     cin >> C.x >> C.y;
 //     return din;
