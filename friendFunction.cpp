@@ -158,6 +158,8 @@ using namespace std;
 
 // };
 
+// we can make a object of class ostream, so we make refrence of it, by using &
+
 // ostream& operator<<(ostream &dout, Complex c){
 //     cout << "x =" << c.x << "y =" << c.y << endl;
 //     return dout;
