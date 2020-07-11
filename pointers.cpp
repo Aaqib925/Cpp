@@ -39,4 +39,20 @@ class Box{
 
 };
 
+int main(){
+    // object pointer
+    // this type of pointer is created with same datatype or class name we want to access using
+    // pointers, we use -> to point the function for the object
+    // for assigning the pointer to the object pass the refrence of object to the object pointer
+    // variable;
+
+    Box *p, smallBox;
+
+    p = &smallBox;
+
+    
+
+
+
+}
 
