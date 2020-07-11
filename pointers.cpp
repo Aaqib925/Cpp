@@ -53,6 +53,9 @@ int main(){
     p->setDimension(2, 4, 5); // equivalent to smallBox.setDimension(2, 4, 5);
     p->showData(); // equivalent to smallBox.showData();
 
+    // this-> pointers contains address of caller object
+    // this is the local object pointer in every instance member function
+    // it is used to refer caller object in member function
 
 }
 
