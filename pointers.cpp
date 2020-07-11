@@ -33,6 +33,15 @@ class Box{
         h = z;
     }
 
+    void setThis(int x, int y, int z){
+        // cin >> this->l >> this->b >> this->h;
+
+        this->l = x;
+        this->b = y;
+        this->h = z;
+
+    }
+
     void showData(){
         cout << l << " " << b << " " << h << endl;
     }
@@ -46,7 +55,7 @@ int main(){
     // for assigning the pointer to the object pass the refrence of object to the object pointer
     // variable;
 
-    Box *p, smallBox;
+    Box *p, smallBox, AnotherBox;
 
     p = &smallBox;
 
@@ -56,6 +65,10 @@ int main(){
     // this-> pointers contains address of caller object
     // this is the local object pointer in every instance member function
     // it is used to refer caller object in member function
+    // according to my assumption this is equivalent to self term from python
+
+    AnotherBox.setThis(4, 5, 6);
+    AnotherBox.showData();
 
 }
 
