@@ -1356,3 +1356,16 @@ using namespace std;
 //     c+=  5;
 //     c.print();
 // }
+
+int main(){
+
+    string arr[2][2];
+    string arr1[] = {"Aaqib", "Nazeer"};
+    copy(arr1, arr1 + 2, arr[0]);
+
+    cout << arr[0][1] << endl;
+
+
+    copy(staff, staff + 5, cricketer[3]);
+
+}
