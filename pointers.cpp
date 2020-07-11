@@ -28,7 +28,7 @@ class Box{
     public:
 
     void setDimension(int x, int y, int z){
-        l = b;
+        l = x;
         b = y;
         h = z;
     }
@@ -50,8 +50,8 @@ int main(){
 
     p = &smallBox;
 
-    
-
+    p->setDimension(2, 4, 5); // equivalent to smallBox.setDimension(2, 4, 5);
+    p->showData(); // equivalent to smallBox.showData();
 
 
 }
