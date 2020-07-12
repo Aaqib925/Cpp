@@ -35,6 +35,12 @@ int main(){
     // the function, which means allocated at runtime, not compile time
 
     // now p->f1() will run the overridden function for child class
+
+    // when an object is created from a class, if there is any virtual fucntion inside it,
+    // *_vptr pointer is created which points to the static array of the pointers of 
+    // all the virtual functions inside that class
     
+    // that array is called vtable.. whenever the data points the vptr, it checks for the vtable
+    // all the LB function will be pointed to the vtable and then executed.
 
 }
