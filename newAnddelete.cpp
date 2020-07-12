@@ -9,7 +9,16 @@ int main(){
     // stack memory type
 
 
-    int *p = new int;
+    int *p = new int;   // object pointer should be of same datatype as for new ** data type
     cout << p << endl;
 
+    // declaring a array using dynamic memory allocation
+
+    int *array = new int[5];
+    
+    // to delete the memory allocated by the DMA variable, we use the delete function
+
+    delete p; // P is not deleted, The thing which is being pointed is deleted
+
+    delete []array;
 }
