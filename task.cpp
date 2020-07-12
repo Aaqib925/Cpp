@@ -1369,3 +1369,20 @@ using namespace std;
 //     copy(staff, staff + 5, cricketer[3]);
 
 // }
+
+int main(){
+    int N = 7;
+    int K = 4;
+    int arr[] ={3, 4, 5, 8, 1, 4, 10};
+
+    for (int i = 0; i < N; i ++){
+        if (i + K < N){
+            int max;
+            for (int j = 0; j < K; j++){
+                cout << arr[i + j] << endl;
+            }
+        }
+        cout << endl;
+    }
+
+}
