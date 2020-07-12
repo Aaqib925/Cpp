@@ -14,11 +14,6 @@ template <class x> void myfun(x a, x b){ // this x is the placeholder which is e
 
 }
 
-int main(){
-    myfun(2, 5);
-    myfun(22.3, 552.5);
-
-}
 
 // class Template
 // template is also called generic function
@@ -36,11 +31,11 @@ template <class X> class ArrayList{
     ArrayList(int capacity){
         s = new Controlblock;
         s->capacity = capacity;
-        s->arr_ptr = new int[s->capacity];
+        s->arr_ptr = new X[s->capacity];
     }
 
     void addElement(int index, X value){
-        if (index >> 0 && index < s->capacity){
+        if (index >= 0 && index < s->capacity){
             s->arr_ptr[index] = value;
         }
         else{
@@ -48,4 +43,37 @@ template <class X> class ArrayList{
         }
     }
 
+    void viewElement(int index, X &value){
+        if (index >= 0 && index < s->capacity){
+            value = s->arr_ptr[index];
+        }
+        else{
+            cout << "Index is invalid" << endl;
+        }
+    }
+
+    void viewList(){
+        for (int i = 0; i < s->capacity; i ++){
+            cout << s->arr_ptr[i] << " ";
+        }
+        cout << endl;
+    }
+
 };
+
+int main(){
+    myfun(2, 5);
+    myfun(22.3, 552.5);
+
+    ArrayList <float>a1(3); // we can change the placeholder too
+    float value;
+    a1.addElement(0, 2);
+    a1.addElement(1, 3);
+    a1.viewElement(0, value);
+    a1.addElement(2, 5);
+
+    cout << value << endl;
+    a1.viewList();
+
+
+}
