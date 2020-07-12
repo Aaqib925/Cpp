@@ -9,6 +9,7 @@
 #include <iterator>
 #include <iomanip>
 #include<string.h>
+#include <list>
 
 using namespace std;
 
@@ -1411,3 +1412,73 @@ using namespace std;
 //     cout << endl;
 
 // }
+
+// int main(){
+//     map<int, list<pair<int, int> >::iterator> mp;
+//     list<pair<int, int> > lru;
+
+//     lru.push_back({1, 2});
+//     mp[2] = lru.begin();
+
+// }
+struct Node{
+   Node* next;
+   Node* prev;
+   int value;
+   int key;
+   Node(Node* p, Node* n, int k, int val):prev(p),next(n),key(k),value(val){};
+   Node(int k, int val):prev(NULL),next(NULL),key(k),value(val){};
+};
+
+class Cache{
+   
+   protected: 
+   map<int,Node*> mp; //map the key to the node in the linked list
+   int cp;  //capacity
+   Node* tail; // double linked list tail pointer
+   Node* head; // double linked list head pointer
+   virtual void set(int, int) = 0; //set function
+   virtual int get(int) = 0; //get function
+
+};
+
+class LRUCache: public Cache{
+    public:
+    int cp;
+    map<int, list<pair<int, int>>::iterator> mp;
+    list<pair<int, int>> lru;
+
+    LRUCache(int capacity){
+        cp = capacity;
+    }
+
+    void set (int k, int v){
+        if (mp.find(k) != mp.end()){
+            mp[k]->key = k;
+            mp[k]->val = v;
+
+        }
+        else{
+            lru.push_front({k, v});
+            mp[k] = lru.begin();
+            if(lru.size() > cp) {
+                mp.erase(lru.back().key);
+                lru.pop_back();
+            }
+        }
+
+    }
+
+    int get(int k){
+        if (mp.find(k) != mp.end()){
+            lru.push_front(*mp[k]);
+            lru.erase(mp[k]);
+            mp[k] = lru.begin();
+            return mp[k]->val;
+        }
+        else{
+            return -1
+        }
+    }
+
+};
