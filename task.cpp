@@ -1370,19 +1370,44 @@ using namespace std;
 
 // }
 
-int main(){
-    int N = 7;
-    int K = 4;
-    int arr[] ={3, 4, 5, 8, 1, 4, 10};
+// int main(){
+//     int N = 7;
+//     int K = 4;
+//     int arr[] ={3, 4, 5, 8, 1, 4, 10};
+//     vector<int> ans;
 
-    for (int i = 0; i < N; i ++){
-        if (i + K < N){
-            int max;
-            for (int j = 0; j < K; j++){
-                cout << arr[i + j] << endl;
-            }
-        }
-        cout << endl;
-    }
+//     for (int i = 0; i < N; i ++){
+//         if (i + K < N){
+//             int max = 0;
+//             for (int j = 0; j < K; j++){
+//                 if (arr[i + j] > max){
+//                     max = arr[i + j];
+//                 }
+//             }
+//             ans.push_back(max);
+//         }
+//     }
+//     for (int i = 0; i < ans.size(); i++){
+//         cout << ans[i] << " ";
+//     }
 
-}
+// }
+
+// int main(){
+
+
+//     for (int i = 0; i < N; i ++){
+//         if (i + K <= N){
+//             int max = 0;
+//             for (int j = 0; j < K; j++){
+//                 if (arr[i + j] > max){
+//                     max = arr[i + j];
+//                 }
+//             }
+//             // ans.push_back(max);
+//             cout << max << " ";
+//         }
+//     }
+//     cout << endl;
+
+// }
