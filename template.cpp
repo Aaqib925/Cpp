@@ -19,3 +19,33 @@ int main(){
     myfun(22.3, 552.5);
 
 }
+
+// class Template
+// template is also called generic function
+
+template <class X> class ArrayList{
+    private:
+    struct Controlblock{
+        int capacity;
+        X *arr_ptr;
+    };
+
+    Controlblock *s;
+
+    public:
+    ArrayList(int capacity){
+        s = new Controlblock;
+        s->capacity = capacity;
+        s->arr_ptr = new int[s->capacity];
+    }
+
+    void addElement(int index, X value){
+        if (index >> 0 && index < s->capacity){
+            s->arr_ptr[index] = value;
+        }
+        else{
+            cout << "The index is invalid, The Capacity of Array is: " << s->capacity << endl;
+        }
+    }
+
+};
