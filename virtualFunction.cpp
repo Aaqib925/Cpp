@@ -100,8 +100,7 @@ class Father{
 
 class Son:public Father{
     public:
-    Son(int x){
-        age = x;
+    Son(int x): Father(x){
     }
 
     void iAm(){
@@ -111,8 +110,8 @@ class Son:public Father{
 
 class Daughter: public Father{
     public:
-    Daughter(int x){
-        age = x;
+    Daughter(int x): Father(x){
+        
     }
 
     void iAm(){
@@ -121,5 +120,17 @@ class Daughter: public Father{
 };
 
 int main(){
-    
+    Father f1(29);
+    f1.iAm();
+
+    Father *ptr;
+
+    Son s1(5);
+    ptr = &s1;
+    ptr->iAm();
+
+    Daughter d1(7);
+    ptr = &d1;
+    ptr->iAm();
+
 }
