@@ -35,18 +35,72 @@ class C: public A{
     }
 };
 
+// Review Question
+
+class Shape{
+    protected:
+    double length, width;
+
+    public:
+
+    virtual void get_data(){
+        cout << "Enter the Length: ";
+        cin >> this->length;
+        cout << "Enter the Width: ";
+        cin >> this->width;
+    }
+
+    virtual void show_data() = 0;
+
+};
+
+class Rectangle: public Shape{
+    public:
+    
+    void show_data(){
+        cout << "The Area of Rectangle is: " << (this->width * this->length) << endl;
+
+    }
+
+};
+
+class Triangle: public Shape{
+    public:
+    void show_data(){
+        cout << "The Area of Triangle is: " << (this->width * this->length)/2 << endl;
+    }
+
+};
+
 int main(){
-    A *arr[2];
+    // A *arr[2];
 
-    B obj1;
-    C obj2;
+    // B obj1;
+    // C obj2;
 
-    arr[0] = &obj1;
-    arr[1] = &obj2;
+    // arr[0] = &obj1;
+    // arr[1] = &obj2;
 
-    arr[0]->fun();
-    arr[1]->fun();
+    // arr[0]->fun();
+    // arr[1]->fun();
 
     // we create a abstract class, if we don't want to make object for it, but want to use
     // member functions only
+
+    // Review Question
+
+    Shape *arr[2];
+
+    Rectangle r1;
+    Triangle t1;
+
+    arr[0] = &r1;
+    arr[1] = &t1;
+
+    arr[0]->get_data();
+    arr[0]->show_data();
+
+    arr[1]->get_data();
+    arr[1]->show_data();
+
 }
