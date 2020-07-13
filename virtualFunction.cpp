@@ -46,39 +46,80 @@ using namespace std;
 // }
 
 
-class A{
+// class A{
+//     public:
+//     virtual void show(){
+//         cout << "This is Base class function." << endl;
+//     }
+
+// };
+
+// class D: public A{
+//     public:
+//     void show(){
+//         cout << "The is first derived class." << endl;
+//     }
+// };
+
+// class D2: public A{
+//     public:
+//     void show(){
+//         cout << "The is second derived class." << endl;
+//     }
+
+// };
+
+// int main(){
+//     // creating a pointer object of base class
+//     A *ptr;
+//     D d1;
+//     D2 d2;
+
+//     ptr = &d1;
+//     ptr->show();
+
+//     ptr = &d2;
+//     ptr->show();
+
+// }
+
+class Father{
+    protected:
+    int age;
+
     public:
-    virtual void show(){
-        cout << "This is Base class function." << endl;
+    Father(int x){
+        age = x;
+    }
+
+    virtual void iAm(){
+        cout << "I am Father, My age is: " << age << endl;
     }
 
 };
 
-class D: public A{
+class Son:public Father{
     public:
-    void show(){
-        cout << "The is first derived class." << endl;
+    Son(int x){
+        age = x;
+    }
+
+    void iAm(){
+        cout << "I am Son, My age is: " << age << endl;
     }
 };
 
-class D2: public A{
+class Daughter: public Father{
     public:
-    void show(){
-        cout << "The is second derived class." << endl;
+    Daughter(int x){
+        age = x;
     }
 
+    void iAm(){
+        cout << "I am Daughter, My age is: " << age << endl;
+    }
 };
 
 int main(){
-    // creating a pointer object of base class
-    A *ptr;
-    D d1;
-    D2 d2;
-
-    ptr = &d1;
-    ptr->show();
-
-    ptr = &d2;
-    ptr->show();
-
+    
 }
