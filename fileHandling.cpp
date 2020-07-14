@@ -12,7 +12,7 @@ int main(){
     fout.open("data.txt");
     // for writing something we use object of ofstream object name
 
-    fout << "Aaqib";
+    fout << "Hello";
 
     fout.close();
 
