@@ -1492,3 +1492,76 @@ using namespace std;
 
 
 // }
+
+// #include <cstdlib>
+
+// class account_manage
+// {
+//     protected:
+// 	    char cnic[13], pin[6];
+//         char acc_type[10];
+//         char name[30];
+// 	    double cash_dept;
+//         int acc_num = rand() % 100+1000000;
+// };
+
+// class create : virtual public account_manage
+// {
+//     public:
+//         virtual void display_info(){
+
+//         }
+//         void create_account()
+//         {
+//             cout << "Enter Name: "; cin >> name;
+//             cout << "Enter CNIC Number: "; cin >> cnic;
+//             cout << "Enter Account Type (Current/Saving): "; cin >> acc_type;
+//             cout << "Enter the amount of cash (More than RS. 1000): "; cin >> cash_dept;
+//             if (cash_dept<1000)
+//                 {cout << "Amount must be greater than 1000!\nEnter new amount: "; cin >> cash_dept;}
+//             else
+//                 cout << "Congratulations! Your Account Has Been Created." << endl;
+//             cout << "Your Account Number is: " << acc_num << endl;
+//             cout << "Enter 6 digit pin: "; cin >> pin;
+//         }
+// };
+
+
+// class display : virtual public account_manage
+// {
+//     // private: 
+//     // 	char name[30], cnic[13], pin[6], acc_type[10];
+// 	//     double cash_dept;
+//     //     int acc_num = rand() % 100+1000000;
+//     public: 
+//         void display_info()
+//         {
+//         cout << "--------------------------------------------" << endl;
+//         cout << "Name: " << name << endl;
+//         cout << "CNIC: " << cnic << endl;
+//         cout << "Account Type: " << acc_type << endl;
+//         cout << "Balance: " << "RS. " << cash_dept << endl;
+//         cout << "Account Number: " << acc_num << endl;
+//         cout << "--------------------------------------------" << endl;
+//         }
+// };
+
+// class costumer: virtual public create, virtual public display
+// {
+//     public:
+//     void create_account()
+//     {create::create_account();}
+//     void display_info()
+//     {display::display_info();}
+// };
+
+// int main()
+// {   
+//     account_manage *ptr;
+    
+//     costumer a1;
+//     ptr = &a1;
+//     a1.create_account();
+//     a1.display_info();
+//     return 0;
+// }
