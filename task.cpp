@@ -1421,3 +1421,74 @@ using namespace std;
 //     mp[2] = lru.begin();
 
 // }
+
+// class A{
+//     public:
+//     string x;
+
+//     public:
+//     void change(string x){
+//         this->x = x;
+//     }
+
+//     void show(){
+//         cout << x << endl;
+//     }
+
+// };
+
+// class B: public A{
+    
+// };
+
+// class C: public A{
+// };
+
+// class D: public A{
+//     public:
+//     void change(string y){
+//         this->x = y;
+//     }
+// };
+
+// int main(){
+//     A a;
+//     a.change("Hello");
+//     a.show();
+//     B b;
+//     b.show();
+// }
+
+// class A{
+//     public:
+//     string x;
+
+//     A(string x){
+//         this->x = x;
+//     }
+
+//     void show(){
+//         cout << x << endl;
+//     }
+// };
+
+// class B: public A{
+//     public:
+//     B(string x): A(x) {}
+//     void change(string x){
+//         this->x = x;
+//     }
+// };
+
+// int main(){
+//     A *ptr;
+//     B b("Aaqib");
+//     ptr = &b;
+
+//     ptr->show();
+
+//     b.change("Hello");
+//     ptr->show();
+
+
+// }
