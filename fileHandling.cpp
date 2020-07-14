@@ -12,8 +12,24 @@ int main(){
     fout.open("data.txt");
     // for writing something we use object of ofstream object name
 
-    fout << "Hello";
+    fout << "Hello Students";
 
     fout.close();
+
+    ifstream fin;
+    // for reading the input
+    fin.open("data.txt");
+    char ch;
+    // fin >> ch;  // but this will not get the space
+
+    ch = fin.get();
+    while(!fin.eof()){
+        
+        cout << ch;
+        ch = fin.get();
+    }
+
+    fin.close();
+
 
 }
