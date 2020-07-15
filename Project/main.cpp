@@ -241,15 +241,15 @@ class Finalize : virtual public Customer, virtual public Payment
 public:
     void finalize()
     {
+        time_t now = time(0);
+        char *dt = ctime(&now);
+        Customer::working();
+        Customer::customerData();
+        Payment::showItems(username);
+        Payment::showCosts();
+        Payment::agrii();
         if (done)
         {
-            time_t now = time(0);
-            char *dt = ctime(&now);
-            Customer::working();
-            Customer::customerData();
-            Payment::showItems(username);
-            Payment::showCosts();
-            Payment::agrii();
             cout << endl;
             cout << "Your Order Number is: " << OrderNumber << endl;
             cout << endl;
@@ -266,9 +266,9 @@ public:
             ofstream fout;
             fout.open("RECORDS.txt", ios::app);
 
-            fout << "=====================================\n";
+            fout << "===================================================\n";
             fout << "User: " << username << "\n";
-            cout << "User Record ID: " << number << "\n";
+            fout << "User Record ID: " << number << "\n";
             fout << "Order Number: " << OrderNumber << "\n";
             fout << "\n";
             fout << "Item\t\t"
