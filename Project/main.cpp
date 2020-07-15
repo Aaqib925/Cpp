@@ -155,7 +155,6 @@ class Payment: public ShoppingCart{
     bool done = false;
     static int OrderNumber;
     string paymentMethod;
-    string creditCard;
     string card;
     string pin;
 
@@ -179,52 +178,67 @@ class Payment: public ShoppingCart{
             cout << endl;
         }
         cout << endl;
-        cout << "YOUR TOTAL COST IS: " << totalCost << endl;
+        cout << "YOUR TOTAL COST IS: " << totalCost << "$" << endl;
         cout << endl;
 
     }
 
     void agrii(){
-        cout << "Do you want to continue to Payment step? Y/N";
+        cout << "Do you want to continue to Payment step? Y/N: ";
         char x;
         cin >> x;
         if (x == 'Y' || x == 'y'){
             done = true;
+            OrderNumber += 1;
             cout << "Please Enter your Payment Method 1 or 2" << endl;
             cout << "1: Cash On delivery" << endl;
             cout << "2: Credit Card" << endl;
-            cin >> x;
-            if (x == 1){
-                paymentMethod = "Cash On Delivery!!";
+            int y;
+            cin >> y;
+            if (y == 1){
+                paymentMethod = "Cash On Delivery!";
             }
-            else if(x == 2){
+            else if(y == 2){
                 paymentMethod = "Credit Card";
                 cout << "Enter Credit Card number: ";
                 cin >> card;
                 cout << "Enter Your PIN: ";
                 cin >> pin;
-                cout << "Thank you for choosing us!!";
 
             }
         }
         done = false;
+        cout << "Thank you for using our Service!!" << endl;
     }
 
 };
 
 int Payment::OrderNumber = rand () % 100+1000;
 
-class Finalize{
+class Finalize: virtual public Customer, virtual public Payment{
+    public:
+
+    void finalize(){
+        Customer::working();
+        Customer::customerData();
+        Payment::showItems(username);
+        Payment::showCosts();
+        Payment::agrii();
+        cout << "Your Order Number is: " << OrderNumber << endl;
+        cout << endl;
+        cout << "Your Order will be delivered soon to you at address: " << address << endl;
+        cout << endl;
+        cout << "For any compliance call us on +923223132233." << end;
+
+        // writing the whole data into the file for record;
+
+        
+    }
 
 };
 
 int main(){
-    Customer c1;
-    c1.working();
-    c1.customerData();
-
-    Payment p1;
-    p1.showItems("hello");
-    p1.showCosts();
-
+    Finalize o1;
+    o1.finalize();
+    
 }
