@@ -136,10 +136,11 @@ class ShoppingCart{
                 userls.push_back(to_string(pair.second * x));
             }
         }
-        
+
+        if (!userls.empty()){
+            customerList.push_back(userls);
+        }
     }
-
-
 
 };
 
