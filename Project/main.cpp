@@ -25,6 +25,8 @@ class User{
 
         fout << userData << "\n";
 
+        cout << "Your Account has been Created" << endl;
+
         fout.close();
 
     }
@@ -35,7 +37,6 @@ class User{
         ifstream fin;
 
         fin.open("Users.txt");
-
         if (fin.is_open()){
 
             while(!fin.eof()){
@@ -46,7 +47,7 @@ class User{
                     return true;
                 }
                 else{
-                    cout << "Not Fount" << endl;
+                    cout << "NOT FOUND" << endl;
                     return false;
                 }
             }
@@ -69,22 +70,22 @@ class Customer: public User{
             
             if(checkData(addedString)){
                 ans = true;
-                break;
             }
 
             else{
                 cout << "Your Account doesn't exist in out records, Please Create Account" << endl;
+                User::createAccount(User::getData());
+                ans = true;
 
-                
-            }
-            
+            }       
 
         }
 
     }
 
-}
+};
 
 int main(){
-    
+    Customer c1;
+    c1.working();
 }
