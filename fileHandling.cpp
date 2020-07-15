@@ -31,5 +31,13 @@ int main(){
 
     fin.close();
 
+    // different mods for opening file in cpp are
 
+    // ios:: in to read
+    // iout:: to output
+    // ios::app to append
+    // ios::ate to update
+    // ios::binary to add binary
+
+    
 }
