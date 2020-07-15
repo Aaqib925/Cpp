@@ -50,6 +50,8 @@ class User{
                 }
             }
         }
+
+        fin.close();
     }
 
 
