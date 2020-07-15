@@ -154,6 +154,10 @@ class Payment: public ShoppingCart{
     double totalCost;
     bool done = false;
     static int OrderNumber;
+    string paymentMethod;
+    string creditCard;
+    string card;
+    string pin;
 
 
     public:
@@ -174,13 +178,45 @@ class Payment: public ShoppingCart{
             }
             cout << endl;
         }
-        cout << totalCost << endl;
+        cout << endl;
+        cout << "YOUR TOTAL COST IS: " << totalCost << endl;
+        cout << endl;
 
+    }
+
+    void agrii(){
+        cout << "Do you want to continue to Payment step? Y/N";
+        char x;
+        cin >> x;
+        if (x == 'Y' || x == 'y'){
+            done = true;
+            cout << "Please Enter your Payment Method 1 or 2" << endl;
+            cout << "1: Cash On delivery" << endl;
+            cout << "2: Credit Card" << endl;
+            cin >> x;
+            if (x == 1){
+                paymentMethod = "Cash On Delivery!!";
+            }
+            else if(x == 2){
+                paymentMethod = "Credit Card";
+                cout << "Enter Credit Card number: ";
+                cin >> card;
+                cout << "Enter Your PIN: ";
+                cin >> pin;
+                cout << "Thank you for choosing us!!";
+
+            }
+        }
+        done = false;
     }
 
 };
 
 int Payment::OrderNumber = rand () % 100+1000;
+
+class Finalize{
+
+};
 
 int main(){
     Customer c1;
