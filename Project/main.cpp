@@ -1,5 +1,8 @@
 #include <iostream>
 #include <fstream>
+#include <vector>
+#include <map>
+#include<string>
 
 
 using namespace std;
@@ -9,7 +12,7 @@ class User{
     string username, password;
     
     public:
-
+    static int number;
     virtual string getData(){
         cout << "Enter Username: ";
         cin >> username;
@@ -26,12 +29,13 @@ class User{
         fout << userData << "\n";
 
         cout << "Your Account has been Created" << endl;
+        // number += 1;
 
         fout.close();
 
     }
 
-    bool checkData(string userData){
+    virtual bool checkData(string userData){
         int offset;
         string line;
         ifstream fin;
@@ -54,12 +58,16 @@ class User{
         }
 
         fin.close();
+        return false;
     }
 };
+
+int User::number = rand () % 100+10000;
 
 class Customer: public User{
     protected:
     bool ans = false;
+    string contactNumber, address;
 
     public:
     void working(){
@@ -80,12 +88,65 @@ class Customer: public User{
             }       
 
         }
-
     }
+
+    void customerData(){
+        number += 1;
+        cout << "Dear " << username << " , Please enter your Billing address: ";
+        cin >> this->address;
+        cout << "Please enter your contact number: ";
+        cin >> this->contactNumber;
+        cout << "Thank You for the moment!!" << endl << "Your id is: " << number << endl;
+    }
+
+};
+
+// map<string, int> ShoppingCart::mymap;
+
+
+
+class ShoppingCart{
+    protected:
+    vector<vector<string>> customerList;
+    bool order = false;
+    map<string, int> mymap;
+    
+    public:
+    ShoppingCart(){
+        mymap["Grocery"] = 7;
+        mymap["Fast food"] = 5;
+        mymap["Electronic"] = 15;
+        mymap["HouseHolds"] = 20;
+    }
+
+
+    void showItems(string userId){
+        cout << "Dear Customer " << userId << ", Select your items from below: " << endl;
+        vector<string> userls;
+
+        for (auto const& pair: mymap){
+            int x;
+            cout << "Package " << pair.first << " of Price " << pair.second << "$ EACH!" << endl;
+            cout << "Enter Quantity for " << pair.first << ": ";
+            cin >> x;
+            cout << endl;
+            if (x != 0){
+                userls.push_back(pair.first);
+                userls.push_back(to_string(pair.second * x));
+            }
+        }
+        
+    }
+
+
 
 };
 
 int main(){
     Customer c1;
     c1.working();
+    c1.customerData();
+
+    ShoppingCart s1;
+    s1.showItems("kiaaa haa");
 }
