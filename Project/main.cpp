@@ -10,11 +10,12 @@ class User{
     
     public:
 
-    virtual void getData(){
+    virtual string getData(){
         cout << "Enter Username: ";
         cin >> username;
         cout << "Enter Password: ";
         cin >> password;
+        return username+password;
     }
 
     void createAccount(string userData){
@@ -53,10 +54,36 @@ class User{
 
         fin.close();
     }
-
-
 };
 
+class Customer: public User{
+    protected:
+    bool ans = false;
+
+    public:
+    void working(){
+        while(!ans){
+            string addedString; // this contains username+password
+
+            addedString = User::getData();
+            
+            if(checkData(addedString)){
+                ans = true;
+                break;
+            }
+
+            else{
+                cout << "Your Account doesn't exist in out records, Please Create Account" << endl;
+
+                
+            }
+            
+
+        }
+
+    }
+
+}
 
 int main(){
     
