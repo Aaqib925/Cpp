@@ -54,12 +54,14 @@ public:
                 getline(fin, line);
                 if (offset = line.find(userData, 0) != string::npos)
                 {
-                    cout << "FOUND" << endl;
+                    cout << "ACCOUNT FOUND" << endl;
+                    cout << endl;
                     return true;
                 }
                 else
                 {
-                    cout << "NOT FOUND" << endl;
+                    cout << "ACCOUNT NOT FOUND" << endl;
+                    cout << endl;
                     return false;
                 }
             }
@@ -123,6 +125,17 @@ protected:
     map<string, int> mymap;
 
 public:
+    int validation()
+    {
+        int x;
+        while (!(cin >> x))
+        {
+            cout << "Enter valid number!!" << endl;
+            cin.clear();
+            cin.ignore(123, '\n');
+        }
+        return x;
+    }
     ShoppingCart()
     {
         mymap["Grocery   "] = 7;
@@ -141,7 +154,7 @@ public:
             int x;
             cout << "Package " << pair.first << " of Price " << pair.second << "$ EACH!" << endl;
             cout << "Enter Quantity for " << pair.first << ": ";
-            cin >> x;
+            x = validation();
             cout << endl;
             if (x != 0)
             {
@@ -200,9 +213,9 @@ public:
     void agrii()
     {
         cout << "Do you want to continue to Payment step? Y/N: ";
-        char x;
-        cin >> x;
-        if (x == 'Y' || x == 'y')
+        char y;
+        cin >> y;
+        if (y == 'Y' || y == 'y')
         {
             done = true;
             OrderNumber += 1;
