@@ -3,6 +3,8 @@
 #include <vector>
 #include <map>
 #include<string>
+#include <sstream>
+
 
 
 using namespace std;
@@ -113,7 +115,7 @@ class ShoppingCart{
     
     public:
     ShoppingCart(){
-        mymap["Grocery"] = 7;
+        mymap["Grocery   "] = 7;
         mymap["Fast food"] = 5;
         mymap["Electronic"] = 15;
         mymap["HouseHolds"] = 20;
@@ -122,9 +124,10 @@ class ShoppingCart{
 
     void showItems(string userId){
         cout << "Dear Customer " << userId << ", Select your items from below: " << endl;
-        vector<string> userls;
+        
 
         for (auto const& pair: mymap){
+            vector<string> userls;
             int x;
             cout << "Package " << pair.first << " of Price " << pair.second << "$ EACH!" << endl;
             cout << "Enter Quantity for " << pair.first << ": ";
@@ -134,21 +137,58 @@ class ShoppingCart{
                 userls.push_back(pair.first);
                 userls.push_back(to_string(pair.second));
                 userls.push_back(to_string(pair.second * x));
+                // customerList.push_back()
+            }
+            if (!userls.empty()){
+                customerList.push_back(userls);
             }
         }
 
-        if (!userls.empty()){
-            customerList.push_back(userls);
-        }
+        
     }
 
 };
+
+class Payment: public ShoppingCart{
+    protected:
+    double totalCost;
+    bool done = false;
+    static int OrderNumber;
+
+
+    public:
+    void showCosts(){
+
+        cout << "Your Order Number is: " << OrderNumber << endl;
+        cout << "Item\t\t" << "Price/Each\t\t" << "Total" << endl;
+        
+        for (int i = 0; i < customerList.size(); i ++){
+            for (int j = 0; j < 3; j++){
+                cout << customerList[i][j] << "\t\t";
+                if (j == 2){
+                    stringstream ss(customerList[i][j]);
+                    int x = 0;
+                    ss >> x;
+                    totalCost += x;
+                }
+            }
+            cout << endl;
+        }
+        cout << totalCost << endl;
+
+    }
+
+};
+
+int Payment::OrderNumber = rand () % 100+1000;
 
 int main(){
     Customer c1;
     c1.working();
     c1.customerData();
 
-    ShoppingCart s1;
-    s1.showItems("kiaaa haa");
+    Payment p1;
+    p1.showItems("hello");
+    p1.showCosts();
+
 }
