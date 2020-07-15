@@ -132,6 +132,7 @@ class ShoppingCart{
             cout << endl;
             if (x != 0){
                 userls.push_back(pair.first);
+                userls.push_back(to_string(pair.second));
                 userls.push_back(to_string(pair.second * x));
             }
         }
