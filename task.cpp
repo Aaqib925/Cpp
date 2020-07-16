@@ -8,7 +8,7 @@
 #include <sstream>
 #include <iterator>
 #include <iomanip>
-#include<string.h>
+#include <string.h>
 #include <list>
 
 using namespace std;
@@ -902,10 +902,9 @@ using namespace std;
 //     }
 // }
 
-
-// class Distance 
+// class Distance
 // {
-//     private: 
+//     private:
 //         int feet;
 //         float inches;
 
@@ -937,9 +936,8 @@ using namespace std;
 //         }
 // };
 
-
 // int main()
-// {   
+// {
 //     Distance dist1(11, 6.25);
 //     Distance dist2(dist1);
 //     Distance dist3 = dist1;
@@ -971,16 +969,16 @@ using namespace std;
 //     try{
 //         x[6] = 0;
 //     }
-    // catch (exception& error){
-    //     cout << "Exception: " << error.what() << endl;
-    // }
-    // catch (bad_alloc& error){
-    //     cout << "Not enough Memory" << endl;
-    // }
+// catch (exception& error){
+//     cout << "Exception: " << error.what() << endl;
+// }
+// catch (bad_alloc& error){
+//     cout << "Not enough Memory" << endl;
+// }
 //     catch (...){
 //         cout << "Other" << endl;
 //     }
-    
+
 // }
 
 // class Person{
@@ -992,7 +990,7 @@ using namespace std;
 //     Person(){
 //         name = "", age = 0, cur_id = 0;
 //     }
-    
+
 //     virtual void getdata(){
 //         cin >> name >> age;
 //     }
@@ -1084,7 +1082,6 @@ using namespace std;
 
 // }
 
-
 // int main(){
 //     int arr[] = {1, 2, 3};
 //     for (int i: arr){
@@ -1174,7 +1171,7 @@ using namespace std;
 // class Rarefunc{
 //     public:
 //     void printFunc();
-    
+
 //     ~Rarefunc(){};
 // };
 
@@ -1261,7 +1258,6 @@ using namespace std;
 // noshowpos: Undoes previous showpos manipulator and gets rid of the plus at the start of positive values
 // setprecision: Changes the number of digits after the decimal place from 2 to 9.
 
-
 // class Rectangle{
 //     protected:
 //     int width;
@@ -1287,7 +1283,6 @@ using namespace std;
 //     }
 // };
 
-
 // class Triangle{
 // 	public:
 // 		void triangle(){
@@ -1311,14 +1306,13 @@ using namespace std;
 
 // };
 // int main(){
-  
+
 //     Equilateral eqr;
 //     eqr.equilateral();
 //     eqr.isosceles();
 //     eqr.triangle();
 //     return 0;
 // }
-
 
 // int main(){
 //     // creating a char array
@@ -1366,7 +1360,6 @@ using namespace std;
 
 //     cout << arr[0][1] << endl;
 
-
 //     copy(staff, staff + 5, cricketer[3]);
 
 // }
@@ -1395,7 +1388,6 @@ using namespace std;
 // }
 
 // int main(){
-
 
 //     for (int i = 0; i < N; i ++){
 //         if (i + K <= N){
@@ -1438,7 +1430,7 @@ using namespace std;
 // };
 
 // class B: public A{
-    
+
 // };
 
 // class C: public A{
@@ -1490,7 +1482,6 @@ using namespace std;
 //     b.change("Hello");
 //     ptr->show();
 
-
 // }
 
 // #include <cstdlib>
@@ -1526,14 +1517,13 @@ using namespace std;
 //         }
 // };
 
-
 // class display : virtual public account_manage
 // {
-//     // private: 
+//     // private:
 //     // 	char name[30], cnic[13], pin[6], acc_type[10];
 // 	//     double cash_dept;
 //     //     int acc_num = rand() % 100+1000000;
-//     public: 
+//     public:
 //         void display_info()
 //         {
 //         cout << "--------------------------------------------" << endl;
@@ -1556,9 +1546,9 @@ using namespace std;
 // };
 
 // int main()
-// {   
+// {
 //     account_manage *ptr;
-    
+
 //     costumer a1;
 //     ptr = &a1;
 //     a1.create_account();
@@ -1566,91 +1556,103 @@ using namespace std;
 //     return 0;
 // }
 
-class College{
-    protected:
+class College
+{
+protected:
     string name, city;
 
-    public:
-    College(){
+public:
+    College()
+    {
         this->name = "";
         this->city = "";
     }
 
-    virtual void getData()=0; // for creating the Abstract base class
+    virtual void getData() = 0; // for creating the Abstract base class
 
-    virtual void baseData(){
+    virtual void baseData()
+    {
         cout << "Enter the College Name: ";
         cin >> this->name;
         cout << "Enter the City: ";
         cin >> this->city;
     }
 
-    virtual void showData(){
+    virtual void showData()
+    {
         cout << "The College Name is: " << this->name << endl;
         cout << "The City is: " << this->city << endl;
     }
-
 };
 
-class Teacher: public College{
-    protected:
+class Teacher : public College
+{
+protected:
     string teacherName;
 
-    public:
-    Teacher(): College(){
+public:
+    Teacher() : College()
+    {
         teacherName = "";
     }
 
-    void getData(){
+    void getData()
+    {
         College::baseData();
         cout << "Enter Teacher Name: ";
         cin >> this->teacherName;
-
     }
 
-    void showData(){
+    void showData()
+    {
         College::showData();
         cout << "The Name of Teacher is: " << this->teacherName << endl;
     }
-
 };
 
-class Department: public College{
-    protected:
+class Department : public College
+{
+protected:
     string departName;
 
-    public:
-    Department(): College(){
+public:
+    Department() : College()
+    {
         departName = "";
     }
 
-    void getData(){
+    void getData()
+    {
         College::baseData();
         cout << "Enter Department Name: ";
         cin >> this->departName;
     }
 
-    void showData(){
+    void showData()
+    {
         College::showData();
         cout << "The Name of Department is: " << departName << endl;
     }
 };
 
-
-int main(){
+int main()
+{
     College *ptr[50]; // creating a array of pointers from base Class;
     int numberOfPerson = 0;
 
     char personType;
     char quit;
 
-    do{
+    do
+    {
         cout << "Want to Teacher or Student (S/T)" << endl;
         cin >> personType;
-        if (personType == 'S' || personType == 's'){
+        if (personType == 'S' || personType == 's')
+        {
             ptr[numberOfPerson] = new Department;
         }
-        else if (personType == 'Q' || personType == 'q'){
+        else if (personType == 'Q' || personType == 'q')
+        {
             ptr[numberOfPerson] = new Teacher;
         }
 
@@ -1659,11 +1661,11 @@ int main(){
         cout << endl;
         cout << "Want to Another? Y/N: ";
         cin >> personType;
-    }while(personType == 'Y' || personType == 'y');
+    } while (personType == 'Y' || personType == 'y');
     cout << endl;
-    for (int i = 0; i < numberOfPerson; i++){
+    for (int i = 0; i < numberOfPerson; i++)
+    {
         ptr[i]->showData();
         cout << endl;
     }
-
 }
