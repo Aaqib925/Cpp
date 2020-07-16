@@ -1565,3 +1565,32 @@ using namespace std;
 //     a1.display_info();
 //     return 0;
 // }
+
+class College{
+    protected:
+    string name, city;
+
+    public:
+    College(){
+        this->name = "";
+        this->city = "";
+    }
+
+    virtual void getData()=0; // for creating the Abstract base class
+
+    virtual void baseData(){
+        cout << "Enter the Name: ";
+        cin >> this->name;
+        cout << "Enter the City: ";
+        cin >> this->city;
+    }
+
+    virtual void showData(){
+        cout << "The Name is: " << this->name << endl;
+        cout << "The City is: " << this->city << endl;
+    }
+
+};
+
+
+
