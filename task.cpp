@@ -1627,7 +1627,7 @@ class Department: public College{
     void getData(){
         College::baseData();
         cout << "Enter Department Name: ";
-        cin >> this->departName
+        cin >> this->departName;
     }
 
     void showData(){
@@ -1635,18 +1635,6 @@ class Department: public College{
         cout << "The Name of Department is: " << departName << endl;
     }
 };
-
-char userChoice(){
-    char x;
-    cout << "Enter S/T or Q to quit: ";
-    while (!(cin >> x)){
-        if (x != 'S' || x != 'T' || x != 's' || x != 't' || x != 'Q' || x != 'q'){
-            cin.clear();
-            cin.ignore(50, '\n');
-            cout << "Please Enter S or T or Q to quit only" << endl;
-        }
-    }
-}
 
 
 int main(){
@@ -1657,18 +1645,25 @@ int main(){
     char quit;
 
     do{
-        cout << "Want to Teacher or Student (S/T)";
-        personType = userChoice();
-        if (personType == 'S' || personType == 't'){
+        cout << "Want to Teacher or Student (S/T)" << endl;
+        cin >> personType;
+        if (personType == 'S' || personType == 's'){
             ptr[numberOfPerson] = new Department;
         }
-        else{
+        else if (personType == 'Q' || personType == 'q'){
             ptr[numberOfPerson] = new Teacher;
         }
 
         ptr[numberOfPerson]->getData();
         numberOfPerson += 1;
-    }while(personType != 'Q' || personType != 'q');
-
+        cout << endl;
+        cout << "Want to Another? Y/N: ";
+        cin >> personType;
+    }while(personType == 'Y' || personType == 'y');
+    cout << endl;
+    for (int i = 0; i < numberOfPerson; i++){
+        ptr[i]->showData();
+        cout << endl;
+    }
 
 }
