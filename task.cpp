@@ -1638,25 +1638,37 @@ class Department: public College{
 
 char userChoice(){
     char x;
-    cout << "Enter S/T: ";
+    cout << "Enter S/T or Q to quit: ";
     while (!(cin >> x)){
-        cin.clear();
-        cin.ignore(50, '\n');
-        cout << "Please Enter S or T only: ";
+        if (x != 'S' || x != 'T' || x != 's' || x != 't' || x != 'Q' || x != 'q'){
+            cin.clear();
+            cin.ignore(50, '\n');
+            cout << "Please Enter S or T or Q to quit only" << endl;
+        }
     }
 }
 
 
 int main(){
     College *ptr[50]; // creating a array of pointers from base Class;
-    int numberOfPersons = 0;
+    int numberOfPerson = 0;
 
     char personType;
+    char quit;
 
     do{
         cout << "Want to Teacher or Student (S/T)";
-        char
-    }
+        personType = userChoice();
+        if (personType == 'S' || personType == 't'){
+            ptr[numberOfPerson] = new Department;
+        }
+        else{
+            ptr[numberOfPerson] = new Teacher;
+        }
+
+        ptr[numberOfPerson]->getData();
+        numberOfPerson += 1;
+    }while(personType != 'Q' || personType != 'q');
 
 
 }
