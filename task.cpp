@@ -1579,18 +1579,66 @@ class College{
     virtual void getData()=0; // for creating the Abstract base class
 
     virtual void baseData(){
-        cout << "Enter the Name: ";
+        cout << "Enter the College Name: ";
         cin >> this->name;
         cout << "Enter the City: ";
         cin >> this->city;
     }
 
     virtual void showData(){
-        cout << "The Name is: " << this->name << endl;
+        cout << "The College Name is: " << this->name << endl;
         cout << "The City is: " << this->city << endl;
     }
 
 };
 
+class Teacher: public College{
+    protected:
+    string teacherName;
+
+    public:
+    Teacher(): College(){
+        teacherName = "";
+    }
+
+    void getData(){
+        College::baseData();
+        cout << "Enter Teacher Name: ";
+        cin >> this->teacherName;
+
+    }
+
+    void showData(){
+        College::showData();
+        cout << "The Name of Teacher is: " << this->teacherName << endl;
+    }
+
+};
+
+class Department: public College{
+    protected:
+    string departName;
+
+    public:
+    Department(): College(){
+        departName = "";
+    }
+
+    void getData(){
+        College::baseData();
+        cout << "Enter Department Name: ";
+        cin >> this->departName
+    }
+
+    void showData(){
+        College::showData();
+        cout << "The Name of Department is: " << departName << endl;
+    }
+};
+
+int main(){
+    College *ptr[50]; // creating a array of pointers from base Class;
 
 
+
+}
