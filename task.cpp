@@ -1636,9 +1636,27 @@ class Department: public College{
     }
 };
 
+char userChoice(){
+    char x;
+    cout << "Enter S/T: ";
+    while (!(cin >> x)){
+        cin.clear();
+        cin.ignore(50, '\n');
+        cout << "Please Enter S or T only: ";
+    }
+}
+
+
 int main(){
     College *ptr[50]; // creating a array of pointers from base Class;
+    int numberOfPersons = 0;
 
+    char personType;
+
+    do{
+        cout << "Want to Teacher or Student (S/T)";
+        char
+    }
 
 
 }
