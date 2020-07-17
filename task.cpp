@@ -1645,13 +1645,13 @@ using namespace std;
 
 //     do
 //     {
-//         cout << "Want to Teacher or Student (S/T)" << endl;
+//         cout << "Want to Teacher or Department (T/D)" << endl;
 //         cin >> personType;
-//         if (personType == 'S' || personType == 's')
+//         if (personType == 'D' || personType == 'd')
 //         {
 //             ptr[numberOfPerson] = new Department;
 //         }
-//         else if (personType == 'Q' || personType == 'q')
+//         else if (personType == 'T' || personType == 't')
 //         {
 //             ptr[numberOfPerson] = new Teacher;
 //         }
