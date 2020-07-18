@@ -1669,3 +1669,52 @@ using namespace std;
 //         cout << endl;
 //     }
 // }
+
+// class clothes
+// {
+// public:
+//     virtual void price() = 0;
+// };
+// class shirt;
+// class skirt : public clothes
+// {
+// private:
+//     int p;
+
+// public:
+//     void price()
+//     {
+//         cout << "enter total price for skirts";
+//         cin >> p;
+//     }
+//     friend int discount(shirt, skirt);
+// };
+// class shirt : public clothes
+// {
+// private:
+//     int c;
+
+// public:
+//     void price()
+//     {
+//         cout << "enter total price for shirts";
+//         cin >> c;
+//     }
+//     friend int discount(shirt, skirt);
+// };
+// int discount(shirt sh, skirt sk)
+// {
+//     cout << "total price was:" << sh.c + sk.p << endl;
+//     cout << "total price after discount is:" << (sh.c + sk.p) - (0.25 * (sh.c + sk.p)) << endl;
+// }
+// int main()
+// {
+//     skirt k;
+//     shirt s;
+
+//     s.price();
+//     k.price();
+//     discount(s, k);
+
+//     return 0;
+// }
