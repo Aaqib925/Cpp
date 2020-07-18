@@ -1718,3 +1718,88 @@ using namespace std;
 
 //     return 0;
 // }
+
+// class College
+// {
+//     public:
+//         string name;
+//         string city;
+//         static int count;
+//     public:
+//     College()
+//         {
+//             name = "";
+//             city = "";
+//         }
+//         void get_info()
+//         {
+//             cout << "Enter the name of College: " << endl;
+//             getline(cin, name);
+//             cout << "Enter the name of city: " << endl;
+//             getline(cin, city);
+//         } 
+//         void show_info()
+//         {
+//             cout << "Name of College is: " << name << endl;
+//             cout << "Name of city is: " << city << endl;
+//         }
+// };
+
+// int College::count = 0;
+
+// class Department : public College
+// {
+//     private:
+//         string department_name;
+//     public:
+//     Department(): College(){
+//         department_name = "";
+//     }
+
+//     void get_info()
+//     {
+//         College::get_info();
+//         cout << "Enter name of department: " << endl;
+//         getline(cin, department_name);
+//     }
+//     void show_info()
+//     {   
+//         College::show_info();
+//         cout << "Name of department is: " << department_name << endl;
+//     }
+// };
+
+// class Teacher : public College
+// {
+//     private:
+//         string teacher_name;
+//     public:
+//     Teacher(): College(){
+//         count ++;
+//         teacher_name = "";
+//     }
+//     void get_info()
+//     {
+//         College::get_info();
+//         cout << "Enter name of teacher: " << endl;
+//         getline(cin, teacher_name);
+//     }
+//     void show_info()
+//     {   
+//         College::show_info();
+//         cout << "Name of teacher is: " << teacher_name << endl;
+//     }
+// };
+
+// int main()
+// {
+//     Department d1;
+//     Teacher t1;
+//     d1.get_info();
+//     t1.get_info();
+//     d1.show_info();
+//     t1.show_info();
+
+//     cout << "\n Total no.of Teacher in the college: " << College::count << endl;
+//     return 0;
+// }
