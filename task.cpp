@@ -10,6 +10,7 @@
 #include <iomanip>
 #include <string.h>
 #include <list>
+#include <fstream>
 
 using namespace std;
 
@@ -1851,3 +1852,32 @@ using namespace std;
 //     }
 //     return 0;
 // }
+
+
+int main(){
+    ofstream fout;
+    fout.open("data.txt", ios::app);
+
+    // string word;
+    // while (word != "QUIT"){
+    //     getline(cin, word);
+    //     if (word != "QUIT")
+    //         fout << word << " ";
+    // }
+
+    // ifstream fin;
+    // fin.open("data.txt");
+    // fin.seekg(4); // 32 is the ASCII code of space
+    // cout << fin.get() << endl;
+
+    // char character;
+    // while (character != '-'){
+    //     cin >> character;
+    //     if (character != '-'){
+    //         fout << character;
+    //     }
+    // }
+
+    
+    fout.close();
+}
