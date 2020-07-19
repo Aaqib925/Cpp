@@ -1737,7 +1737,7 @@ using namespace std;
 //             getline(cin, name);
 //             cout << "Enter the name of city: " << endl;
 //             getline(cin, city);
-//         } 
+//         }
 //         void show_info()
 //         {
 //             cout << "Name of College is: " << name << endl;
@@ -1763,7 +1763,7 @@ using namespace std;
 //         getline(cin, department_name);
 //     }
 //     void show_info()
-//     {   
+//     {
 //         College::show_info();
 //         cout << "Name of department is: " << department_name << endl;
 //     }
@@ -1785,7 +1785,7 @@ using namespace std;
 //         getline(cin, teacher_name);
 //     }
 //     void show_info()
-//     {   
+//     {
 //         College::show_info();
 //         cout << "Name of teacher is: " << teacher_name << endl;
 //     }
@@ -1803,3 +1803,36 @@ using namespace std;
 //     cout << "\n Total no.of Teacher in the college: " << College::count << endl;
 //     return 0;
 // }
+
+int main()
+{
+    int n, i;
+    cin >> n;
+    for (i = 0; i < n; i++)
+    {
+        string type;
+        cin >> type;
+        if (type == "float")
+        {
+            double element1, element2;
+            cin >> element1 >> element2;
+            AddElements<double> myfloat(element1);
+            cout << myfloat.add(element2) << endl;
+        }
+        else if (type == "int")
+        {
+            int element1, element2;
+            cin >> element1 >> element2;
+            AddElements<int> myint(element1);
+            cout << myint.add(element2) << endl;
+        }
+        else if (type == "string")
+        {
+            string element1, element2;
+            cin >> element1 >> element2;
+            AddElements<string> mystring(element1);
+            cout << mystring.concatenate(element2) << endl;
+        }
+    }
+    return 0;
+}
