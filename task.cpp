@@ -1803,6 +1803,15 @@ using namespace std;
 //     cout << "\n Total no.of Teacher in the college: " << College::count << endl;
 //     return 0;
 // }
+template <class X> class AddElements{
+    public:
+    X data;
+    AddElements(X a){
+        data = a;
+    }
+    
+}
+
 
 int main()
 {
