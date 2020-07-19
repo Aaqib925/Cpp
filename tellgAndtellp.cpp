@@ -72,4 +72,11 @@ int main(){
 
     fin.seekg(2, ios_base::cur);
     cout << fin.tellg() << endl;
+
+    fin.seekg(-2, ios_base::end);
+    cout << (char)fin.get() << endl;
+
+    // seekp also does the same thing, for the put pointer
+    // it is also overloaded with the one and two arguments form
+    // same functionality and same arguments of ios_base::cur, ios_base::beg, ios_base::end
 }
