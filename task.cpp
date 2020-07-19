@@ -1878,6 +1878,20 @@ int main(){
     //     }
     // }
 
-    
+    // char character;
+    // int x = 0;
+    // while(character != '-'){
+    //     cin >> character;
+    //     if (character != '-'){
+    //         fout.seekp(fout.tellp() - 1);
+    //         fout << character;
+    //         x += 1;
+    //         // cout << x << endl;
+    //     }
+    // }
+    cout << fout.tellp();
+    fout << "A";
+    fout.seekp((int)fout.tellp() - 2);
+    fout << "Q";
     fout.close();
 }
