@@ -1854,9 +1854,9 @@ using namespace std;
 // }
 
 
-int main(){
-    ofstream fout;
-    fout.open("data.txt", ios::app);
+// int main(){
+//     ofstream fout;
+//     fout.open("data.txt", ios::app);
 
     // string word;
     // while (word != "QUIT"){
@@ -1889,9 +1889,9 @@ int main(){
     //         // cout << x << endl;
     //     }
     // }
-    cout << fout.tellp();
-    fout << "A";
-    fout.seekp((int)fout.tellp() - 2);
-    fout << "Q";
-    fout.close();
-}
+//     cout << fout.tellp();
+//     fout << "A";
+//     fout.seekp((int)fout.tellp() - 2);
+//     fout << "Q";
+//     fout.close();
+// }
