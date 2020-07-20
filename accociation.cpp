@@ -162,6 +162,20 @@ class Laborer{
 
     void showData(){
         emp.showData();
-        
+
     }
+};
+
+int main(){
+    Manager m1;
+    Scientist s1;
+    Laborer l1;
+
+    m1.getData();
+    s1.getData();
+    l1.getData();
+
+    m1.showData();
+    s1.showData();
+    l1.showData();
 }
