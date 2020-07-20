@@ -119,6 +119,13 @@ class Manager{
         cout << "Enter the Title: "; cin >> title;
         cout << "Enter the Dues: "; cin >> dues;
         emp.getData();
+        su.getData();
     }
-    
+
+    void showData(){
+        cout << "The Title is: " << title << endl;
+        emp.showData(); 
+        su.showData();
+    }
+
 }
