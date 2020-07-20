@@ -116,6 +116,9 @@ class Manager{
 
     public:
     void getData(){
-        
+        cout << "Enter the Title: "; cin >> title;
+        cout << "Enter the Dues: "; cin >> dues;
+        emp.getData();
     }
+    
 }
