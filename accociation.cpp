@@ -123,9 +123,45 @@ class Manager{
     }
 
     void showData(){
-        cout << "The Title is: " << title << endl;
         emp.showData(); 
+        cout << "The Title is: " << title << endl;
+        cout << "The Dues are: " << dues << endl;
         su.showData();
     }
 
+};
+
+class Scientist{
+    private:
+    int pubs;
+    Employee emp;
+    Student su;
+
+    public:
+    void getData(){
+        emp.getData();
+        cout << "Enter the Publications: "; cin >> pubs;
+        su.getData();
+    }
+
+    void showData(){
+        emp.showData();
+        cout << "The number of Publications is: " << pubs << endl;
+        su.showData();
+    }
+};
+
+class Laborer{
+    private:
+    Employee emp;
+
+    public:
+    void getData(){
+        emp.getData();
+    }
+
+    void showData(){
+        emp.showData();
+        
+    }
 }
