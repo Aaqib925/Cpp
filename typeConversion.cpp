@@ -6,6 +6,7 @@ using namespace std;
 // Primitive type to class type.
 // Class to primitive
 // Class to class
+
 class Dummy{
     private:
     int a, b;
