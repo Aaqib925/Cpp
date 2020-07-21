@@ -16,6 +16,11 @@ class Complex{
         this->x = 0;
         this->y = 0;
     }
+
+    Complex(int x){
+        this->x = x;
+        this->y = 0;
+    }
     void getData(int x, int y){
         this->x = x;
         this->y = y;
