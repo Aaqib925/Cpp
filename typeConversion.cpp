@@ -7,6 +7,31 @@ using namespace std;
 // Class to primitive
 // Class to class
 
-int main(){
+class Complex{
+    private:
+    int x, y;
 
+    public:
+    Complex(){
+        this->x = 0;
+        this->y = 0;
+    }
+    void getData(int x, int y){
+        this->x = x;
+        this->y = y;
+    }
+
+    void showData(){
+        cout << "x = " << x << " y = " << y << endl;
+    }
+};
+
+int main(){
+    Complex c1;
+    c1.getData(2, 5);
+
+    int x = 6;
+    c1 = x;  // x value will be send as argument of constructor c1
+
+    c1.showData();
 }
