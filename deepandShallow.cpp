@@ -17,6 +17,9 @@ class Dummy{
     int x, y;
 
     public:
+    Dummy(){
+        x = 0; y = 0;
+    }
     void getData(int x, int y){
         this->x = x;
         this->y = y;
@@ -25,8 +28,49 @@ class Dummy{
     void showData(){
         cout << "x = " << x << " y = " << y << endl;
     }
+    // default copy constructor looks something like this
+
+    Dummy(Dummy &d){
+        x = d.x;    // this is used for shallow copy
+        y = d.y;
+    }
 };
 
-int main(){
+class Dummy{
+    private:
+    int x, y;
+
+    public:
+    Dummy(){
+        x = 0; y = 0;
+    }
+    void getData(int x, int y){
+        this->x = x;
+        this->y = y;
+    }
+
+    void showData(){
+        cout << "x = " << x << " y = " << y << endl;
+    }
+    // default copy constructor looks something like this
+
+    Dummy(Dummy &d){
+        x = d.x;    // this is used for shallow copy
+        y = d.y;
+    }
+};
+
+
+int main()
+{
+    Dummy d1;
+    d1.getData(2, 4);
     
+    Dummy d2 = d1; // copy constructor will be called here. *Shallow copy
+    d2.showData();
+
+    Dummy d3;
+    d3 = d2; // Assignment operator will be called here. *Shallow copy
+    d3.showData();
+
 }
