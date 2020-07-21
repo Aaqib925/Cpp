@@ -23,6 +23,7 @@ class Dummy{
     void getData(int x, int y){
         this->x = x;
         this->y = y;
+        
     }
 
     void showData(){
@@ -36,27 +37,32 @@ class Dummy{
     }
 };
 
-class Dummy{
+class Dummy2{
     private:
-    int x, y;
+    int x, y, *p; // creating a pointer which will point a block outside the object
 
     public:
-    Dummy(){
+    Dummy2(){
         x = 0; y = 0;
+        p = new int;    // assigning pointer the address of the block outside.
     }
-    void getData(int x, int y){
+    void getData(int x, int y, int z){
         this->x = x;
         this->y = y;
+        *p = z; // assigning the value to the pointer requires *
     }
 
     void showData(){
-        cout << "x = " << x << " y = " << y << endl;
+        cout << "x = " << x << " y = " << y << " p = " << p << endl;
     }
-    // default copy constructor looks something like this
+    // default copy constructor looks something like this, for deep copying
 
-    Dummy(Dummy &d){
+    Dummy2(Dummy2 &d){
         x = d.x;    // this is used for shallow copy
         y = d.y;
+        p = new int;    // if the deep copy isn't done, then the object would have been
+        *p = *(d.p);     // pointed to the &d p block, in that case if &d is deleted 
+                        // the Pointer wil be having no value
     }
 };
 
