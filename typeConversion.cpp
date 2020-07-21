@@ -6,6 +6,25 @@ using namespace std;
 // Primitive type to class type.
 // Class to primitive
 // Class to class
+class Dummy{
+    private:
+    int a, b;
+
+    public:
+    void setData(int a, int b){
+        this->a = a;
+        this->b = b;
+    }
+
+    int returnA(){
+        return a;
+    }
+
+    int returnB(){
+        return b;
+    }
+};
+
 
 class Complex{
     private:
@@ -32,11 +51,16 @@ class Complex{
     // class to primitive
     // we will use the operator function, along with the primitive data type to which we want
     // to convert
-    operator int(){
+    operator int(){ // we can also use char, float or double here for primitive etc.
         return x + y;
     }
-};
 
+    // Class to Class type conversion
+    Complex(Dummy dObj){
+        this->x = dObj.returnA();
+        this->y = dObj.returnB();
+    }
+};
 
 
 
@@ -56,4 +80,11 @@ int main(){
     int y;
     y = c1; // c1.operator int() called here, and y will be assigned according to what we defined.
     cout << "The Value of y is: " << y << endl;
+
+    // Class to Class type conversion
+    Dummy d;
+    d.setData(6, 7);
+    c1 = d;
+    c1.showData();
+
 }
