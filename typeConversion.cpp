@@ -24,6 +24,17 @@ class Dummy{
     int returnB(){
         return b;
     }
+
+    void assignA(int x){
+        this->a = x;
+    }
+    void assignB(int x){
+        this->b = x;
+    }
+
+    void showData(){
+        cout << "a = " << a << " b = " << b << endl;
+    }
 };
 
 
@@ -57,9 +68,17 @@ class Complex{
     }
 
     // Class to Class type conversion
-    Complex(Dummy dObj){
+    Complex(Dummy dObj){            // this can also be done with casting operator.
         this->x = dObj.returnA();
         this->y = dObj.returnB();
+    }
+
+    operator Dummy(){
+        Dummy temp;
+        temp.assignA(x);
+        temp.assignB(y);
+        return temp;
+        
     }
 };
 
@@ -88,4 +107,6 @@ int main(){
     c1 = d;
     c1.showData();
 
+    d = c1;
+    d.showData();
 }
