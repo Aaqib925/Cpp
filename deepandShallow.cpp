@@ -53,7 +53,7 @@ class Dummy2{
     }
 
     void showData(){
-        cout << "x = " << x << " y = " << y << " p = " << p << endl;
+        cout << "x = " << x << " y = " << y << " p = " << *p << endl;
     }
     // default copy constructor looks something like this, for deep copying
 
@@ -64,6 +64,9 @@ class Dummy2{
         *p = *(d.p);     // pointed to the &d p block, in that case if &d is deleted 
                         // the Pointer wil be having no value
     }
+    // ~Dummy2(){
+    //     delete p;
+    // }
 };
 
 
@@ -79,4 +82,11 @@ int main()
     d3 = d2; // Assignment operator will be called here. *Shallow copy
     d3.showData();
 
+    Dummy2 d4;
+    d4.getData(2, 3, 5);
+    d4.showData();
+
+    Dummy2 d5;
+    d5 = d4; // deep copy of *p and new block will be created for this object
+    d5.showData();
 }
