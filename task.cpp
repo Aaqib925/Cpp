@@ -1819,7 +1819,6 @@ using namespace std;
 //     }
 // };
 
-
 // int main()
 // {
 //     int n, i;
@@ -1853,45 +1852,58 @@ using namespace std;
 //     return 0;
 // }
 
-
 // int main(){
 //     ofstream fout;
 //     fout.open("data.txt", ios::app);
 
-    // string word;
-    // while (word != "QUIT"){
-    //     getline(cin, word);
-    //     if (word != "QUIT")
-    //         fout << word << " ";
-    // }
+// string word;
+// while (word != "QUIT"){
+//     getline(cin, word);
+//     if (word != "QUIT")
+//         fout << word << " ";
+// }
 
-    // ifstream fin;
-    // fin.open("data.txt");
-    // fin.seekg(4); // 32 is the ASCII code of space
-    // cout << fin.get() << endl;
+// ifstream fin;
+// fin.open("data.txt");
+// fin.seekg(4); // 32 is the ASCII code of space
+// cout << fin.get() << endl;
 
-    // char character;
-    // while (character != '-'){
-    //     cin >> character;
-    //     if (character != '-'){
-    //         fout << character;
-    //     }
-    // }
+// char character;
+// while (character != '-'){
+//     cin >> character;
+//     if (character != '-'){
+//         fout << character;
+//     }
+// }
 
-    // char character;
-    // int x = 0;
-    // while(character != '-'){
-    //     cin >> character;
-    //     if (character != '-'){
-    //         fout.seekp(fout.tellp() - 1);
-    //         fout << character;
-    //         x += 1;
-    //         // cout << x << endl;
-    //     }
-    // }
+// char character;
+// int x = 0;
+// while(character != '-'){
+//     cin >> character;
+//     if (character != '-'){
+//         fout.seekp(fout.tellp() - 1);
+//         fout << character;
+//         x += 1;
+//         // cout << x << endl;
+//     }
+// }
 //     cout << fout.tellp();
 //     fout << "A";
 //     fout.seekp((int)fout.tellp() - 2);
 //     fout << "Q";
 //     fout.close();
 // }
+
+int main()
+{
+    string name[] = {"Aaqib", "Faiq", "Abbas"};
+
+    int N = sizeof(name) / sizeof(name[0]); //Get the array size
+
+    sort(name, name + N); //Use the start and end like this
+
+    for (int i = 0; i < N; i++)
+    {
+        cout << name[i] << endl;
+    }
+}
