@@ -1961,3 +1961,16 @@ using namespace std;
 //     mostActive(myvector);
 // }
 
+int main(){
+    
+    while(1){
+        char x;
+        cin >> x;
+        if (x == 'y' || x == 'Y'){
+            break;
+        }
+        else{
+            cout << "Please Enter y or Y" << endl;
+        }
+    }
+}
