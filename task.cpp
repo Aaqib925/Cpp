@@ -1894,16 +1894,70 @@ using namespace std;
 //     fout.close();
 // }
 
-int main()
-{
-    string name[] = {"Aaqib", "Faiq", "Abbas"};
+// int main()
+// {
+//     string name[] = {"Aaqib", "Faiq", "Abbas"};
 
-    int N = sizeof(name) / sizeof(name[0]); //Get the array size
+//     int N = sizeof(name) / sizeof(name[0]); //Get the array size
 
-    sort(name, name + N); //Use the start and end like this
+//     sort(name, name + N); //Use the start and end like this
 
-    for (int i = 0; i < N; i++)
-    {
-        cout << name[i] << endl;
-    }
-}
+//     for (int i = 0; i < N; i++)
+//     {
+//         cout << name[i] << endl;
+//     }
+// }
+
+// void mostActive(vector<string> customers);
+// void mostActive(vector<string> customers)
+
+// {
+//     map<string, int> data;
+//     int lengthOfCustomer = customers.size();
+//     cout << lengthOfCustomer << endl;
+//     for (int i = 0; i < customers.size(); i++)
+//     {
+//         data[customers[i]] = 0;
+//         for (int j = 0; j < customers.size(); j++)
+//         {
+//             if (customers[i] == customers[j])
+//             {
+//                 data[customers[i]] += 1;
+//             }
+//         }
+//     }
+//     vector<string> ans;
+
+//     for (const auto &p : data)
+//     {   
+//         // cout << p.first << " " << p.second << endl;
+//         double answer = ((double)p.second/lengthOfCustomer) * 100;
+
+//         if (answer > 5.0){
+//             ans.push_back(p.first);
+//         }
+//     }
+//     string arr[ans.size()];
+//     for (int i = 0; i < ans.size(); i++){
+//         arr[i] = ans[i];
+//     }
+
+//     int z = sizeof(arr)/sizeof(arr[0]); //Get the array size
+
+//     sort(arr,arr+z);
+//     vector<string> final;
+//     for (int i = 0; i < ans.size(); i++){
+//         final.push_back(arr[i]);
+//     }
+
+//     return final;
+// }
+
+// int main()
+// {
+//     vector<string> myvector = {"Bigcorp", "Bigcorp", "Acme", "Bigcorp", "Zork", "Zork",
+//     "Abc", "Bigcorp", "Acme", "Bigcorp", "Bigcorp", "Zork", "Bigcorp", "Zork", "Zork", "Bigcorp",
+//     "Acme", "Bigcorp", "Acme", "Bigcorp", "Acme", "LittleCorp", "NadirCorp"};
+//     mostActive(myvector);
+// }
+
