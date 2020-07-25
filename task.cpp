@@ -1975,23 +1975,23 @@ using namespace std;
 //     }
 // }
 
-int main(){
-    map<string, int> mmap;
-    cout << "Enter how much data you want to add: ";
-    int x;
-    cin >> x;
-    for (int i = 0; i < x; i++){
-        cout << "Enter the String key: ";
-        string KEY;
-        cin.ignore();
-        getline(cin, KEY);
-        cout << "Enter the int Value: ";
-        int y;
-        cin >> y;
-        mmap[KEY] = y;
-    }
+// int main(){
+//     map<string, int> mmap;
+//     cout << "Enter how much data you want to add: ";
+//     int x;
+//     cin >> x;
+//     for (int i = 0; i < x; i++){
+//         cout << "Enter the String key: ";
+//         string KEY;
+//         cin.ignore();
+//         getline(cin, KEY);
+//         cout << "Enter the int Value: ";
+//         int y;
+//         cin >> y;
+//         mmap[KEY] = y;
+//     }
 
-    for (auto element : mmap){
-        cout << "Key: " << element.first << " Value: " << element.second << endl;
-    }
-}
+//     for (auto element : mmap){
+//         cout << "Key: " << element.first << " Value: " << element.second << endl;
+//     }
+// }
