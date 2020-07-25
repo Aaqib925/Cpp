@@ -1974,3 +1974,19 @@ using namespace std;
 //         }
 //     }
 // }
+
+int main(){
+    map<string, int> mmap;
+    cout << "Enter how much data you want to add: ";
+    int x;
+    cin >> x;
+    for (int i = 0; i < x; i++){
+        cout << "Enter the String key: ";
+        string KEY;
+        getline(cin, KEY);
+        cout << "Enter the int Value: ";
+        int y;
+        cin >> y;
+        mmap[KEY] = y;
+    }
+}
