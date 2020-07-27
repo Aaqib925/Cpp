@@ -11,7 +11,7 @@
 #include <string.h>
 #include <list>
 #include <fstream>
-
+#include <ncurses.h>
 using namespace std;
 
 // int main() {
@@ -2014,8 +2014,9 @@ using namespace std;
 //     return 0;
 // }
 
-int main(){
-    double x = 6000000000000.20;
-    cout.setf(ios::scientific);
-    cout << x << endl;
-}
+// int main(){
+//     double x = 6;
+//     cout.setf(ios::scientific);
+//     cout << x << endl;
+//     cout.unsetf(ios::scientific);
+// }
