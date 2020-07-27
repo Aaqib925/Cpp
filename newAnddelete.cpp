@@ -21,4 +21,5 @@ int main(){
     delete p; // P is not deleted, The thing which is being pointed is deleted
 
     delete []array; // for deleting an array we use brackets
+    
 }
