@@ -10,6 +10,7 @@
         "initializer_list": "cpp",
         "ostream": "cpp",
         "iomanip": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "mynamespace": "cpp"
     }
 }
