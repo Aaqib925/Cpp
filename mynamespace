@@ -1,19 +1,23 @@
 #include <iostream>
 using namespace std;
 
-namespace mynamespace{
+namespace mynamespace
+{
     int a;
     void f1();
-    class A{
-        public:
+    class A
+    {
+    public:
         void fun();
     };
-}
+} // namespace mynamespace
 
-void mynamespace::f1(){
+void mynamespace::f1()
+{
     cout << "This is the f1 fucntion from namespace you created" << endl;
 }
 
-void mynamespace::A::fun(){
+void mynamespace::A::fun()
+{
     cout << "This is fun function inside the namespace, inside the class" << endl;
 }
