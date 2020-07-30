@@ -7,3 +7,5 @@ int main(){
 
     cout << p1.first << " " << p1.second << endl;
 }
+
+// for more then to values, we can use tuple. Tuple are hetrogenous
