@@ -53,4 +53,13 @@ using namespace std;
 
 int main(){
     array <int, 5> myArray = {2, 3, 5};
+    array<int , 5> secArray = {6, 6};
+    cout << myArray.at(2) << endl;
+    cout << myArray.front() << myArray.back() << endl;
+    myArray.fill(5);
+    cout << myArray[2] << endl;
+
+    myArray.swap(secArray);
+    cout << myArray.size();
+
 }
