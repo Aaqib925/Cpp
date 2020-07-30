@@ -5,7 +5,7 @@ using namespace std;
 class Student{
     private:
     int RollNo;
-    char name[20];
+    string name;
 
     class Address{
         private:
@@ -27,8 +27,21 @@ class Student{
 
     Address A;
 
+    public:
+    void getData(int x, string n){
+        A.getData("206", "Karachi", "Sir Syed Ahmed khan road");
+        RollNo = x;
+        name = n;
+       
+    }
+
+    void showData(){
+        cout << name << " , " << RollNo << ", Address " << A.showData() << endl;
+    }
 };
 
 int main(){
-    
+    Student s1;
+    s1.getData(2019, "Aaqib");
+    s1.showData();
 }
