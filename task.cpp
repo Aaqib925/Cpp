@@ -2020,3 +2020,18 @@ using namespace std;
 //     cout << x << endl;
 //     cout.unsetf(ios::scientific);
 // }
+
+int main(){
+    map<string, int> mymap;
+    pair<string, int> mypair;
+    
+    for (int i = 0; i < 4; i ++){
+        string name; int age;
+        cout << "Enter Name: ";
+        cin >> name;
+        cout << "Enter Age: ";
+        cin >> age;
+        mypair = make_pair(name, age);
+        mymap.insert(mypair);
+    }
+}
