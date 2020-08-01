@@ -2021,21 +2021,21 @@ using namespace std;
 //     cout.unsetf(ios::scientific);
 // }
 
-int main(){
-    map<string, int> mymap;
-    pair<string, int> mypair;
+// int main(){
+//     map<string, int> mymap;
+//     pair<string, int> mypair;
     
-    for (int i = 0; i < 4; i ++){
-        string name; int age;
-        cout << "Enter Name: ";
-        cin >> name;
-        cout << "Enter Age: ";
-        cin >> age;
-        mypair = make_pair(name, age);
-        mymap.insert(mypair);
-    }
+//     for (int i = 0; i < 4; i ++){
+//         string name; int age;
+//         cout << "Enter Name: ";
+//         cin >> name;
+//         cout << "Enter Age: ";
+//         cin >> age;
+//         mypair = make_pair(name, age);
+//         mymap.insert(mypair);
+//     }
 
-    for (auto element: mymap){
-        cout << element.first << " " << element.second << endl;
-    }
-}
+//     for (auto element: mymap){
+//         cout << element.first << " " << element.second << endl;
+//     }
+// }
