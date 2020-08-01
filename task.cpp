@@ -2034,4 +2034,8 @@ int main(){
         mypair = make_pair(name, age);
         mymap.insert(mypair);
     }
+
+    for (auto element: mymap){
+        cout << element.first << " " << element.second << endl;
+    }
 }
