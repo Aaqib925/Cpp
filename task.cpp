@@ -2044,11 +2044,12 @@ int main(){
     char userString[50];
     cin.getline(userString, 50);
     size_t length = strlen(userString);
+    int j = 0;
 
     char result[50]; 
     for (int i = 0; i < length; i++){
         if (isalpha(userString[i])){
-            result[i] = userString[i];
+            result[j++] = userString[i];
         }
     }
 
