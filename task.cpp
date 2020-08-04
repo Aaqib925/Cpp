@@ -2058,3 +2058,30 @@ using namespace std;
 
 //     cout << "The Resultant String is: " << result << endl;
 // }
+
+class Conc{
+    private:
+    string y;
+
+    public:
+    Conc(): y(""){
+    }
+
+    Conc(string y2): y(y2){
+
+    }
+
+    Conc operator+(Conc x)
+    {
+        return Conc(y + x.y);
+    }
+
+    void printString(){
+        cout << y << endl;
+    }
+};
+
+int main()
+{
+    
+}
