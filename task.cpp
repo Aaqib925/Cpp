@@ -2040,21 +2040,21 @@ using namespace std;
 //     }
 // }
 
-int main()
-{
-    char userString[50];
-    cin.getline(userString, 50);
-    size_t length = strlen(userString);
-    int j = 0;
+// int main()
+// {
+//     char userString[50];
+//     cin.getline(userString, 50);
+//     size_t length = strlen(userString);
+//     int j = 0;
 
-    char result[50];
-    for (int i = 0; i < length; i++)
-    {
-        if (isalpha(userString[i]))
-        {
-            result[j++] = userString[i];
-        }
-    }
+//     char result[50];
+//     for (int i = 0; i < length; i++)
+//     {
+//         if (isalpha(userString[i]))
+//         {
+//             result[j++] = userString[i];
+//         }
+//     }
 
-    cout << "The Resultant String is: " << result << endl;
-}
+//     cout << "The Resultant String is: " << result << endl;
+// }
