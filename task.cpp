@@ -1929,7 +1929,7 @@ using namespace std;
 //     vector<string> ans;
 
 //     for (const auto &p : data)
-//     {   
+//     {
 //         // cout << p.first << " " << p.second << endl;
 //         double answer = ((double)p.second/lengthOfCustomer) * 100;
 
@@ -1962,7 +1962,7 @@ using namespace std;
 // }
 
 // int main(){
-    
+
 //     while(1){
 //         char x;
 //         cin >> x;
@@ -2024,7 +2024,7 @@ using namespace std;
 // int main(){
 //     map<string, int> mymap;
 //     pair<string, int> mypair;
-    
+
 //     for (int i = 0; i < 4; i ++){
 //         string name; int age;
 //         cout << "Enter Name: ";
@@ -2040,15 +2040,18 @@ using namespace std;
 //     }
 // }
 
-int main(){
+int main()
+{
     char userString[50];
     cin.getline(userString, 50);
     size_t length = strlen(userString);
     int j = 0;
 
-    char result[50]; 
-    for (int i = 0; i < length; i++){
-        if (isalpha(userString[i])){
+    char result[50];
+    for (int i = 0; i < length; i++)
+    {
+        if (isalpha(userString[i]))
+        {
             result[j++] = userString[i];
         }
     }
