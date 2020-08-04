@@ -2039,3 +2039,18 @@ using namespace std;
 //         cout << element.first << " " << element.second << endl;
 //     }
 // }
+
+int main(){
+    char userString[50];
+    cin.getline(userString, 50);
+    size_t length = strlen(userString);
+
+    char result[50]; 
+    for (int i = 0; i < length; i++){
+        if (isalpha(userString[i])){
+            result[i] = userString[i];
+        }
+    }
+
+    cout << "The Resultant String is: " << result << endl;
+}
