@@ -2138,19 +2138,20 @@ class Account{
     }
 
     void depositAmmount(){
-        cout << "Your Balance is: " << startAmount;
+        cout << "Your Balance is: " << startAmount << endl;
         cout << "How much ammount you want to deposit: ";
+        
         cin >> depoAmount;
         startAmount += depoAmount;
-        cout << "Your Balance Now after deposit is: " << startAmount;
+        cout << "Your Balance Now after deposit is: " << startAmount << endl;
     }
 
     void widthDrawls(){
-        cout << "Your Balance is: " << startAmount;
+        cout << "Your Balance is: " << startAmount << endl;
         cout << "How much ammount you want to withdrawal: ";
         cin >> withdrawls;
         startAmount -= withdrawls;
-        cout << "Your Balance Now after withdrawl is: " << startAmount;
+        cout << "Your Balance Now after withdrawl is: " << startAmount << endl;
     }
 
     void showCurrent(){
@@ -2162,11 +2163,10 @@ class Account{
 
 class TranferMoney: public Account{
     private:
-    string email;
+    string email, feedback;
     string secondName;
     int accountNumber;
     double transMoney;
-    Account a;
 
     public:
     TranferMoney(){
@@ -2176,11 +2176,14 @@ class TranferMoney: public Account{
     }
 
     void TrasferMoney(){
-        cout << "Dear " << name << ", Please enter details for the account you want to transfer: ";
+        cin.ignore();
+        cout << "Dear " << name << ", Please enter details for the account you want to transfer!!" << endl;
         cout << "Enter the Ammount reciever Person Name: ";
         cin >> secondName;
         cout << "Enter the Account number to which you want to transfer: ";
         cin >> accountNumber;
+        cout << "Enter Your email: ";
+        cin >> email;
 
         cout << "Your current balance is: " << startAmount << endl;
         cout << "How much ammount you want to tranfer to " << secondName << "'s Account: ";
@@ -2190,4 +2193,23 @@ class TranferMoney: public Account{
         cout << transMoney << "has been transfered!!!" << endl;
         cout << "Your Current Balance is: " << startAmount << endl;
     }
+
+    void getFeedback(){
+        cout << "Please provide your feedback, If you have any complains or suggestion about our service: ";
+        getline(cin, feedback);
+        cout << "Your feedback has been submitted!!";
+        cout << "Details sent to your email: " << email;
+    }
+};
+
+int main(){
+    TranferMoney a;
+    a.getData();
+    a.depositAmmount();
+    a.widthDrawls();
+    a.showCurrent();
+
+    a.TrasferMoney();
+    a.getFeedback();
+    
 }
