@@ -2097,3 +2097,97 @@ using namespace std;
 //     Conc c3 = c1 + c2;
 //     cout << c3;
 // }
+// int g = 100;
+// int main(){
+//     int a;
+//     {
+//         int b;
+//         b = 20;
+//         a = 35;
+//         g = 65;
+//         cout << b << a << g;
+//     }
+//     a = 50;
+//     cout << a << g;
+// }
+
+class Account{
+    protected:
+    string typeOfAccount, name;
+    double startAmount, depoAmount;
+    int monthInterest, withdrawls;
+
+    public:
+    Account(){
+        typeOfAccount = "";
+        startAmount = 0;
+        depoAmount = 0;
+        monthInterest = 0;
+        withdrawls = 0;
+    }
+    void getData(){
+        cout << "Welcome to the Bank\nPlease Enter your Name: ";
+        getline(cin, name);
+        cout << "Select the type of your account from below \n 1: Current\n 2: Saving";
+        cin >> typeOfAccount;
+
+        cout << "Thank you!!" << endl;
+        cout << "Now please Enter the starting ammount: ";
+        cin >> startAmount;
+        cout << endl;
+    }
+
+    void depositAmmount(){
+        cout << "Your Balance is: " << startAmount;
+        cout << "How much ammount you want to deposit: ";
+        cin >> depoAmount;
+        startAmount += depoAmount;
+        cout << "Your Balance Now after deposit is: " << startAmount;
+    }
+
+    void widthDrawls(){
+        cout << "Your Balance is: " << startAmount;
+        cout << "How much ammount you want to withdrawal: ";
+        cin >> withdrawls;
+        startAmount -= withdrawls;
+        cout << "Your Balance Now after withdrawl is: " << startAmount;
+    }
+
+    void showCurrent(){
+        cout << "\nYour Current Balance is: ";
+        cout << startAmount << endl;
+    }
+
+};
+
+class TranferMoney: public Account{
+    private:
+    string email;
+    string secondName;
+    int accountNumber;
+    double transMoney;
+    Account a;
+
+    public:
+    TranferMoney(){
+        email = "";
+        secondName = "";
+        accountNumber = 0;
+    }
+
+    void TrasferMoney(){
+        cout << "Dear " << name << ", Please enter details for the account you want to transfer: ";
+        cout << "Enter the Ammount reciever Person Name: ";
+        cin >> secondName;
+        cout << "Enter the Account number to which you want to transfer: ";
+        cin >> accountNumber;
+
+        cout << "Your current balance is: " << startAmount << endl;
+        cout << "How much ammount you want to tranfer to " << secondName << "'s Account: ";
+        cin >> transMoney;
+
+        startAmount -= transMoney;
+        cout << transMoney << "has been transfered!!!" << endl;
+        cout << "Your Current Balance is: " << startAmount << endl;
+    }
+}
