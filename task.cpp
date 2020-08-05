@@ -2059,41 +2059,41 @@ using namespace std;
 //     cout << "The Resultant String is: " << result << endl;
 // }
 
-class Conc
-{
-private:
-    string y;
+// class Conc
+// {
+// private:
+//     string y;
 
-public:
-    Conc() : y("")
-    {
-    }
+// public:
+//     Conc() : y("")
+//     {
+//     }
 
-    Conc(string y2) : y(y2)
-    {
-    }
+//     Conc(string y2) : y(y2)
+//     {
+//     }
 
-    Conc operator+(Conc x)
-    {
-        return Conc(y + x.y);
-    }
+//     Conc operator+(Conc x)
+//     {
+//         return Conc(y + x.y);
+//     }
 
-    void printString()
-    {
-        cout << y << endl;
-    }
+//     void printString()
+//     {
+//         cout << y << endl;
+//     }
 
-    friend ostream& operator<<(ostream& dout, const Conc& xx)
-    {
-        cout << xx.y << endl;
-        return dout;
-    }
+//     friend ostream& operator<<(ostream& dout, const Conc& xx)
+//     {
+//         cout << xx.y << endl;
+//         return dout;
+//     }
     
-};
+// };
 
-int main()
-{
-    Conc c1("Aaqib"), c2("Nazir");
-    Conc c3 = c1 + c2;
-    cout << c3;
-}
+// int main()
+// {
+//     Conc c1("Aaqib"), c2("Nazir");
+//     Conc c3 = c1 + c2;
+//     cout << c3;
+// }
