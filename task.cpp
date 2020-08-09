@@ -2213,3 +2213,10 @@ using namespace std;
 //     a.getFeedback();
     
 // }
+
+int main(){
+    list <int> :: iterator it; 
+    for(it = g.begin(); it != g.end(); ++it) 
+        cout << '\t' << *it; 
+    cout << '\n';
+}
