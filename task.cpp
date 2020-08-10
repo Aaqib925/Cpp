@@ -2221,3 +2221,10 @@ using namespace std;
 //         cout << '\t' << *it; 
 //     cout << '\n';
 // }
+
+int main()
+{
+    pair<string, int> mypair;
+    mypair = make_pair("Aaqib", 12);
+    cout << mypair.first << mypair.second << endl;
+}
