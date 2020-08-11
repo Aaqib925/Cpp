@@ -2222,9 +2222,21 @@ using namespace std;
 //     cout << '\n';
 // }
 
+// int main()
+// {
+//     pair<string, int> mypair;
+//     mypair = make_pair("Aaqib", 12);
+//     cout << mypair.first << mypair.second << endl;
+// }
+
 int main()
 {
-    pair<string, int> mypair;
-    mypair = make_pair("Aaqib", 12);
-    cout << mypair.first << mypair.second << endl;
+    vector<int> myvector = {1, 2};
+    myvector.push_back(23);
+    vector<int>::iterator it;
+    
+    for (it = myvector.begin(); it < myvector.end(); it++)
+    {
+        cout << *it << endl;
+    }
 }
