@@ -18,7 +18,7 @@ int main(){
 
     ifstream fin;
     // for reading the input
-    fin.open("data.txt");
+    fin.open("data.txt.c_str()");
     char ch;
     // fin >> ch;  // but this will not get the space
 

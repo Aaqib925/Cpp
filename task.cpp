@@ -2247,33 +2247,51 @@ using namespace std;
     
 // }
 
-int main() 
-{ 
+// int main() 
+// { 
   
-    // initialize container 
-    map<int, int> mp; 
+//     // initialize container 
+//     map<int, int> mp; 
   
-    // insert elements in random order 
-    mp.insert({ 2, 30 }); 
-    mp.insert({ 1, 40 }); 
-    mp.insert({ 3, 60 }); 
+//     // insert elements in random order 
+//     mp.insert({ 2, 30 }); 
+//     mp.insert({ 1, 40 }); 
+//     mp.insert({ 3, 60 }); 
   
-    // does not inserts key 2 with element 20 
-    mp.insert({ 2, 20 }); 
-    mp.insert({ 5, 50 }); 
+//     // does not inserts key 2 with element 20 
+//     mp.insert({ 2, 20 }); 
+//     mp.insert({ 5, 50 }); 
 
-    pair<int, int> mypair = {99, 99};
-    mp.insert(mypair);
+//     pair<int, int> mypair = {99, 99};
+//     mp.insert(mypair);
   
-    // prints the elements 
-    cout << "KEY\tELEMENT\n"; 
-    for (auto itr = mp.begin(); itr != mp.end(); ++itr) { 
-        cout << itr->first << '\t' << itr->second << '\n'; 
+//     // prints the elements 
+//     cout << "KEY\tELEMENT\n"; 
+//     for (auto itr = mp.begin(); itr != mp.end(); ++itr) { 
+//         cout << itr->first << '\t' << itr->second << '\n'; 
+//     }
+
+//     for (auto &x: mp)
+//     {
+//         cout << x.first << ' ' << x.second << endl;
+//     } 
+//     return 0; 
+// } 
+
+int main()
+{
+    int count = 0;
+    ifstream fin;
+    string word;
+
+    fin.open("data.txt");
+
+    while(fin >> word)
+    {
+        // cout << word << endl;
+        count += 1;
+
     }
 
-    for (auto &x: mp)
-    {
-        cout << x.first << ' ' << x.second << endl;
-    } 
-    return 0; 
-} 
+    cout << "The Number of words are: " << count << endl;
+}
