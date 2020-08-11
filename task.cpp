@@ -2229,19 +2229,46 @@ using namespace std;
 //     cout << mypair.first << mypair.second << endl;
 // }
 
-int main()
-{
-    vector<int> myvector = {1, 2};
-    myvector.push_back(23);
-    vector<int>::iterator it;
+// int main()
+// {
+//     vector<int> myvector = {1, 2};
+//     myvector.push_back(23);
+//     vector<int>::iterator it;
     
-    for (it = myvector.begin(); it < myvector.end(); it++)
-    {
-        cout << *it << endl;
-    }
+//     for (it = myvector.begin(); it < myvector.end(); it++)
+//     {
+//         cout << *it << endl;
+//     }
 
-    for (int &x: myvector)
-    {
-        cout << x << " ";
-    }
-}
+//     for (int &x: myvector)
+//     {
+//         cout << x << " ";
+//     }
+    
+// }
+
+int main() 
+{ 
+  
+    // initialize container 
+    map<int, int> mp; 
+  
+    // insert elements in random order 
+    mp.insert({ 2, 30 }); 
+    mp.insert({ 1, 40 }); 
+    mp.insert({ 3, 60 }); 
+  
+    // does not inserts key 2 with element 20 
+    mp.insert({ 2, 20 }); 
+    mp.insert({ 5, 50 }); 
+
+    pair<int, int> mypair = {99, 99};
+    mp.insert(mypair);
+  
+    // prints the elements 
+    cout << "KEY\tELEMENT\n"; 
+    for (auto itr = mp.begin(); itr != mp.end(); ++itr) { 
+        cout << itr->first << '\t' << itr->second << '\n'; 
+    } 
+    return 0; 
+} 
