@@ -2239,4 +2239,9 @@ int main()
     {
         cout << *it << endl;
     }
+
+    for (int &x: myvector)
+    {
+        cout << x << " ";
+    }
 }
