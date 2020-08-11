@@ -2269,6 +2269,11 @@ int main()
     cout << "KEY\tELEMENT\n"; 
     for (auto itr = mp.begin(); itr != mp.end(); ++itr) { 
         cout << itr->first << '\t' << itr->second << '\n'; 
+    }
+
+    for (auto &x: mp)
+    {
+        cout << x.first << ' ' << x.second << endl;
     } 
     return 0; 
 } 
