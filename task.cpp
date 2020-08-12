@@ -2278,20 +2278,42 @@ using namespace std;
 //     return 0; 
 // } 
 
+// int main()
+// {
+//     int count = 0;
+//     ifstream fin;
+//     string word;
+
+//     fin.open("data.txt");
+
+//     while(fin >> word)
+//     {
+//         // cout << word << endl;
+//         count += 1;
+
+//     }
+
+//     cout << "The Number of words are: " << count << endl;
+// }
+
 int main()
-{
-    int count = 0;
-    ifstream fin;
-    string word;
-
-    fin.open("data.txt");
-
-    while(fin >> word)
-    {
-        // cout << word << endl;
-        count += 1;
-
+{   
+    int x = 1;
+    int y = 3;
+    int rollNo = 59;
+    for (int i = 0; i < 4; i++)
+    {   
+        for(int z = 0; z < y; z ++)
+            {
+                cout << ' ';
+            }
+        for (int j = 0; j < i + 1; j ++)
+        {   
+            
+            cout << x + rollNo  << " ";
+            x += 1;
+        }
+        y -= 1;
+        cout << endl;
     }
-
-    cout << "The Number of words are: " << count << endl;
 }
