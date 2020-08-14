@@ -2339,5 +2339,10 @@ int main() {
         // Increment the Iterator to point to next entry
         it++;
     }
+
+    for (const auto element: mapOfWordCount)
+    {
+        cout << element.first << " " << element.second << endl;
+    }
     return 0;
 }
