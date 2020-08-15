@@ -2347,11 +2347,45 @@ using namespace std;
 //     return 0;
 // }
 
+// class LRUCache: public Cache{
+//     private:
+//     int capacity;
+//     map<int, int> mymap;
+    
+//     public:
+//     LRUCache(int capacity)
+//     {
+//         this->capacity = capacity;
+//     }
+
+//     void set(int key, int value)
+//     {
+//         if (mymap.size() <= capacity && mymap.find(key) != mymap.end())
+//         {
+//             mymap.insert(mymap.begin(), {key, value});
+//             for ()
+//         }
+//         else if (mymap.size() > capacity)
+//         {
+//             mymap.erase(prev(mymap.end()));
+//         }
+//     }
+
+//     int get(int key)
+//     {
+//         if (mymap.find(key) != mymap.end())
+//         {   
+//             return mymap[key];
+//         }
+//         return -1;
+//     }
+// };
+
 class LRUCache: public Cache{
     private:
     int capacity;
     map<int, int> mymap;
-    
+    vector<int> myvec;
     public:
     LRUCache(int capacity)
     {
@@ -2360,14 +2394,29 @@ class LRUCache: public Cache{
 
     void set(int key, int value)
     {
-        if (mymap.size() <= capacity && mymap.find(key) != mymap.end())
-        {
+        // if (mymap.find(key) == mymap.end())
+        // {
+        //     mymap.insert(mymap.begin(), {key, value});
+        //     // for (const auto element: mymap)
+        //     // {
+        //     //     cout << element.first << " " << element.second << endl;
+        //     // }
+        // }
+        mymap.insert(mymap.begin(), {key, value});
+        myvec.push_back(key);
+        if (mymap.size() == capacity + 1)
+        {   
+            // cout << "Ab" << endl;
+            mymap.erase(myvec[0]);
+            myvec.erase(myvec.begin());
+            // for (const auto element: myvec)
+            // {
+            //     cout << element << " ";
+            // }
             mymap.insert(mymap.begin(), {key, value});
-            for ()
-        }
-        else if (mymap.size() > capacity)
-        {
-            mymap.erase(prev(mymap.end()));
+            // for (const auto element: mymap){
+            //     cout << element.first << element.second << endl;
+            // }
         }
     }
 
