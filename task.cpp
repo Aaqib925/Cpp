@@ -2318,31 +2318,65 @@ using namespace std;
 //     }
 // }
 
-int main() {
-    std::map<std::string, int> mapOfWordCount;
-    // Insert Element in map
-    mapOfWordCount.insert(std::pair<std::string, int>("first", 1));
-    mapOfWordCount.insert(std::pair<std::string, int>("second", 2));
-    mapOfWordCount.insert(std::pair<std::string, int>("third", 3));
-    mapOfWordCount.insert(std::pair<std::string, int>("third", 4));
-    mapOfWordCount.insert(std::pair<std::string, int>("third", 5));
-    // Create a map iterator and point to beginning of map
-    std::map<std::string, int>::iterator it = mapOfWordCount.begin();
-    // Iterate over the map using Iterator till end.
-    while (it != mapOfWordCount.end())
+// int main() {
+//     std::map<std::string, int> mapOfWordCount;
+//     // Insert Element in map
+//     mapOfWordCount.insert(std::pair<std::string, int>("first", 1));
+//     mapOfWordCount.insert(std::pair<std::string, int>("second", 2));
+//     mapOfWordCount.insert(std::pair<std::string, int>("third", 3));
+//     mapOfWordCount.insert(std::pair<std::string, int>("third", 4));
+//     mapOfWordCount.insert(std::pair<std::string, int>("third", 5));
+//     // Create a map iterator and point to beginning of map
+//     std::map<std::string, int>::iterator it = mapOfWordCount.begin();
+//     // Iterate over the map using Iterator till end.
+//     while (it != mapOfWordCount.end())
+//     {
+//         // Accessing KEY from element pointed by it.
+//         std::string word = it->first;
+//         // Accessing VALUE from element pointed by it.
+//         int count = it->second;
+//         std::cout << word << " :: " << count << std::endl;
+//         // Increment the Iterator to point to next entry
+//         it++;
+//     }
+
+//     for (const auto element: mapOfWordCount)
+//     {
+//         cout << element.first << " " << element.second << endl;
+//     }
+//     return 0;
+// }
+
+class LRUCache: public Cache{
+    private:
+    int capacity;
+    map<int, int> mymap;
+    
+    public:
+    LRUCache(int capacity)
     {
-        // Accessing KEY from element pointed by it.
-        std::string word = it->first;
-        // Accessing VALUE from element pointed by it.
-        int count = it->second;
-        std::cout << word << " :: " << count << std::endl;
-        // Increment the Iterator to point to next entry
-        it++;
+        this->capacity = capacity;
     }
 
-    for (const auto element: mapOfWordCount)
+    void set(int key, int value)
     {
-        cout << element.first << " " << element.second << endl;
+        if (mymap.size() <= capacity && mymap.find(key) != mymap.end())
+        {
+            mymap.insert(mymap.begin(), {key, value});
+            for ()
+        }
+        else if (mymap.size() > capacity)
+        {
+            mymap.erase(prev(mymap.end()));
+        }
     }
-    return 0;
-}
+
+    int get(int key)
+    {
+        if (mymap.find(key) != mymap.end())
+        {   
+            return mymap[key];
+        }
+        return -1;
+    }
+};
