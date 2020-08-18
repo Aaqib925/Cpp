@@ -2430,34 +2430,82 @@ using namespace std;
 //     }
 // };
 
-struct yourName
-{
-    string day;
-    string month;
-    int year;
-};
+// struct yourName
+// {
+//     string day;
+//     string month;
+//     int year;
+// };
 
-void date_comparison(struct yourName *, struct yourName *);
-void date_comparison(yourName *p, yourName *q)
-{
-    if (p->day == q->day && p->month == q->month && p->year == q->year)
-    {
-        printf("Equal\n");
-    }
-    else{
-        printf("Not equal\n");
-    }
-}
+// void date_comparison(struct yourName *, struct yourName *);
+// void date_comparison(yourName *p, yourName *q)
+// {
+//     if (p->day == q->day && p->month == q->month && p->year == q->year)
+//     {
+//         printf("Equal\n");
+//     }
+//     else{
+//         printf("Not equal\n");
+//     }
+// }
 
 
-int main()
-{
-    yourName personOne = {"Tuesday", "April", 2000};
-    yourName personTwo = {"Tuesday", "March", 2000};
-    yourName *ptr1, *ptr2;
-    ptr1 = &personOne;
-    ptr2 = &personTwo;
+// int main()
+// {
+//     yourName personOne = {"Tuesday", "April", 2000};
+//     yourName personTwo = {"Tuesday", "March", 2000};
+//     yourName *ptr1, *ptr2;
+//     ptr1 = &personOne;
+//     ptr2 = &personTwo;
 
-    date_comparison(ptr1, ptr2);
-    getch();
-}
+//     date_comparison(ptr1, ptr2);
+//     getch();
+// }
+
+// double power(int value, int p);
+// double power(float value, int p);
+// double power(long value, int p);
+
+// double power(int value, int p)
+// {   
+//     cout << "Normal" << endl;
+//     double result = 1.0;
+//     for (int i = 0; i < p; i ++)
+//     {
+//         result *= value;
+//         // cout << result << endl;
+//     }
+
+//     return result;
+// }
+
+// double power(float value, int p)
+// {   
+//     cout << "Float One" << endl;
+//     double result = 1.0;
+//     for (int i = 0; i < p; i ++)
+//     {
+//         result *= value;
+//     }
+
+//     return result;
+// }
+
+// double power(long value, int p)
+// {   
+//     cout << "Long One" << endl;
+//     double result = 1.0;
+//     for (int i = 0; i < p; i ++)
+//     {
+//         result *= value;
+//     }
+
+//     return result;
+// }
+
+// int main()
+// {
+//     cout << power(5, 2) << endl;
+//     cout << power(2.2f, 3) << endl;
+//     cout << power(2222222L, 3) << endl;
+// }
