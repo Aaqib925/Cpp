@@ -2430,3 +2430,34 @@ using namespace std;
 //     }
 // };
 
+struct yourName
+{
+    string day;
+    string month;
+    int year;
+};
+
+void date_comparison(struct yourName *, struct yourName *);
+void date_comparison(yourName *p, yourName *q)
+{
+    if (p->day == q->day && p->month == q->month && p->year == q->year)
+    {
+        printf("Equal\n");
+    }
+    else{
+        printf("Not equal\n");
+    }
+}
+
+
+int main()
+{
+    yourName personOne = {"Tuesday", "April", 2000};
+    yourName personTwo = {"Tuesday", "March", 2000};
+    yourName *ptr1, *ptr2;
+    ptr1 = &personOne;
+    ptr2 = &personTwo;
+
+    date_comparison(ptr1, ptr2);
+    getch();
+}
