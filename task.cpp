@@ -2564,5 +2564,5 @@ int main()
         }
         
     }
-
+    cout << counter << endl;
 }
