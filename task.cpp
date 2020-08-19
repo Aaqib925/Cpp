@@ -2514,3 +2514,55 @@ using namespace std;
 // {
 //     cout << "Will code runner be modified for ZSH?" << endl;
 // }
+bool uniqueCharacters(string str);
+bool uniqueCharacters(string str) 
+{ 
+  
+    // If at any time we encounter 2 
+    // same characters, return false 
+    for (int i = 0; i < str.length() - 1; i++) { 
+        for (int j = i + 1; j < str.length(); j++) { 
+            if (str[i] == str[j]) { 
+                return false; 
+            } 
+        } 
+    } 
+  
+    // If no duplicate characters encountered, 
+    // return true 
+    return true; 
+} 
+
+int main()
+{
+    int counter = 0;
+    string possibleNums = "0345678";
+    for (int i = 3500; i < 6501; i++)
+    {
+        int dosraCount = 0;
+        bool isValid;
+        string num = to_string(i);
+        for (char x: num)
+        {
+            if (possibleNums.find(x))
+            {
+                isValid = true;
+            }
+            else{
+                isValid = false;
+                break;
+            }
+        }
+        if (isValid)
+        {
+            if (uniqueCharacters(num) == true)
+            {
+                cout << num  << endl;
+                counter += 1;
+            }
+        
+        }
+        
+    }
+
+}
