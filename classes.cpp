@@ -213,6 +213,18 @@ using namespace std;
 //         cout << endl;
 //     }
 // };
+
+// int main()
+// {
+//     Hospital p1, p2;
+//     p1.addPatient();
+//     p2.addPatient();
+//     p1.showData();
+//     Age a1, a2;
+//     a1.enterAge();
+//     a1.showData();
+
+// }
 // int main(){
 //     // to make instance for class use classname with instance name
 
