@@ -2607,3 +2607,40 @@ using namespace std;
 //     d1.showData();
 // }
 
+class TollBoth{
+    private:
+    static int totalCars;
+    double money;
+
+    public:
+    TollBoth()
+    {
+        money = 0;
+    }
+
+    void payingCar()
+    {   
+        cout << endl;
+        cout << "Car has been added to the record!" << endl;
+        totalCars += 1;
+        money += 0.5;
+    }
+
+    void showData()
+    {   
+        cout << endl;
+        cout << "The Total Cars in record are: " << totalCars << endl;
+        cout << "The Total Amount collected for " << totalCars << " is: " << money << "$" << endl;
+    }
+};
+
+int TollBoth::totalCars = 0;
+
+int main()
+{
+    TollBoth t1;
+    t1.payingCar();
+    t1.payingCar();
+
+    t1.showData();
+}
