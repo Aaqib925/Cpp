@@ -2566,3 +2566,12 @@ using namespace std;
 //     }
 //     cout << counter << endl;
 // }
+
+int main()
+{
+    cout << "Square\t" << "Cubes\t" << "Fourth Power" << endl;
+    for (int i = 1; i <= 5; i ++)
+    {
+        cout << i * i << "\t" << i * i * i << "\t" << i * i * i * i << endl;
+    }
+}
