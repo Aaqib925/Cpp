@@ -72,23 +72,8 @@ class Conc{
         return str;
     }
 };
-
-
-int main(){
-
-    Count c1;
-    ++c1;
-    ++c1;
-    c1.print();
-    c1++;
-    c1.print();
-    Count c2;
-    c2++;
-    Count c3 = c1 + c2;
-    int ordinaryNumber = c3.ans();
-    cout << ordinaryNumber << endl;
-    c3.print();
-
+int main()
+{
     Conc cc("Aaqib");
     Conc cc2("Nazeer");
     Conc cc3 = cc + cc2;
@@ -96,6 +81,29 @@ int main(){
     string ordinary = cc3.ans();
     cout << ordinary << endl;
 }
+
+// int main(){
+
+//     Count c1;
+//     ++c1;
+//     ++c1;
+//     c1.print();
+//     c1++;
+//     c1.print();
+//     Count c2;
+//     c2++;
+//     Count c3 = c1 + c2;
+//     int ordinaryNumber = c3.ans();
+//     cout << ordinaryNumber << endl;
+//     c3.print();
+
+//     Conc cc("Aaqib");
+//     Conc cc2("Nazeer");
+//     Conc cc3 = cc + cc2;
+//     cc3.print();
+//     string ordinary = cc3.ans();
+//     cout << ordinary << endl;
+// }
 
 
 
