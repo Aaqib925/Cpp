@@ -2567,11 +2567,42 @@ using namespace std;
 //     cout << counter << endl;
 // }
 
-int main()
-{
-    cout << "Square\t" << "Cubes\t" << "Fourth Power" << endl;
-    for (int i = 1; i <= 5; i ++)
-    {
-        cout << i * i << "\t" << i * i * i << "\t" << i * i * i * i << endl;
-    }
-}
+// int main()
+// {
+//     cout << "Square\t" << "Cubes\t" << "Fourth Power" << endl;
+//     for (int i = 1; i <= 5; i ++)
+//     {
+//         cout << i * i << "\t" << i * i * i << "\t" << i * i * i * i << endl;
+//     }
+// }
+
+// class DM
+// {
+//     private:
+//     double meters, centiMeters;
+
+//     public:
+//     DM(): meters(0), centiMeters(0)
+//     {}
+//     void getData()
+//     {
+//         cout << "Enter the Value of distance in meters: ";
+//         cin >> meters;
+//         cout << "Enter the value of distance " << this->meters << " in centimeters: ";
+//         cin >> centiMeters;
+//     }
+
+//     void showData()
+//     {   
+//         cout << endl;
+//         cout << "The Value of distance in meters is: " << meters << 'm' << endl;
+//         cout << "The value of distance in centimeters is: " << centiMeters << "cm" << endl; 
+//     }
+// };
+
+// int main()
+// {
+//     DM d1;
+//     d1.getData();
+//     d1.showData();
+// }
