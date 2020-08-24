@@ -2088,7 +2088,7 @@ using namespace std;
 //         cout << xx.y << endl;
 //         return dout;
 //     }
-    
+
 // };
 
 // int main()
@@ -2140,7 +2140,7 @@ using namespace std;
 //     void depositAmmount(){
 //         cout << "Your Balance is: " << startAmount << endl;
 //         cout << "How much ammount you want to deposit: ";
-        
+
 //         cin >> depoAmount;
 //         startAmount += depoAmount;
 //         cout << "Your Balance Now after deposit is: " << startAmount << endl;
@@ -2211,14 +2211,14 @@ using namespace std;
 
 //     a.TrasferMoney();
 //     a.getFeedback();
-    
+
 // }
 
 // int main(){
 //     list <int> g
-//     list <int> :: iterator it; 
-//     for(it = g.begin(); it != g.end(); ++it) 
-//         cout << '\t' << *it; 
+//     list <int> :: iterator it;
+//     for(it = g.begin(); it != g.end(); ++it)
+//         cout << '\t' << *it;
 //     cout << '\n';
 // }
 
@@ -2234,7 +2234,7 @@ using namespace std;
 //     vector<int> myvector = {1, 2};
 //     myvector.push_back(23);
 //     vector<int>::iterator it;
-    
+
 //     for (it = myvector.begin(); it < myvector.end(); it++)
 //     {
 //         cout << *it << endl;
@@ -2244,39 +2244,39 @@ using namespace std;
 //     {
 //         cout << x << " ";
 //     }
-    
+
 // }
 
-// int main() 
-// { 
-  
-//     // initialize container 
-//     map<int, int> mp; 
-  
-//     // insert elements in random order 
-//     mp.insert({ 2, 30 }); 
-//     mp.insert({ 1, 40 }); 
-//     mp.insert({ 3, 60 }); 
-  
-//     // does not inserts key 2 with element 20 
-//     mp.insert({ 2, 20 }); 
-//     mp.insert({ 5, 50 }); 
+// int main()
+// {
+
+//     // initialize container
+//     map<int, int> mp;
+
+//     // insert elements in random order
+//     mp.insert({ 2, 30 });
+//     mp.insert({ 1, 40 });
+//     mp.insert({ 3, 60 });
+
+//     // does not inserts key 2 with element 20
+//     mp.insert({ 2, 20 });
+//     mp.insert({ 5, 50 });
 
 //     pair<int, int> mypair = {99, 99};
 //     mp.insert(mypair);
-  
-//     // prints the elements 
-//     cout << "KEY\tELEMENT\n"; 
-//     for (auto itr = mp.begin(); itr != mp.end(); ++itr) { 
-//         cout << itr->first << '\t' << itr->second << '\n'; 
+
+//     // prints the elements
+//     cout << "KEY\tELEMENT\n";
+//     for (auto itr = mp.begin(); itr != mp.end(); ++itr) {
+//         cout << itr->first << '\t' << itr->second << '\n';
 //     }
 
 //     for (auto &x: mp)
 //     {
 //         cout << x.first << ' ' << x.second << endl;
-//     } 
-//     return 0; 
-// } 
+//     }
+//     return 0;
+// }
 
 // int main()
 // {
@@ -2297,19 +2297,19 @@ using namespace std;
 // }
 
 // int main()
-// {   
+// {
 //     int x = 1;
 //     int y = 3;
 //     int rollNo = 59;
 //     for (int i = 0; i < 4; i++)
-//     {   
+//     {
 //         for(int z = 0; z < y; z ++)
 //             {
 //                 cout << ' ';
 //             }
 //         for (int j = 0; j < i + 1; j ++)
-//         {   
-            
+//         {
+
 //             cout << x + rollNo  << " ";
 //             x += 1;
 //         }
@@ -2351,7 +2351,7 @@ using namespace std;
 //     private:
 //     int capacity;
 //     map<int, int> mymap;
-    
+
 //     public:
 //     LRUCache(int capacity)
 //     {
@@ -2374,7 +2374,7 @@ using namespace std;
 //     int get(int key)
 //     {
 //         if (mymap.find(key) != mymap.end())
-//         {   
+//         {
 //             return mymap[key];
 //         }
 //         return -1;
@@ -2405,7 +2405,7 @@ using namespace std;
 //         mymap.insert(mymap.begin(), {key, value});
 //         myvec.push_back(key);
 //         if (mymap.size() == capacity + 1)
-//         {   
+//         {
 //             // cout << "Ab" << endl;
 //             mymap.erase(myvec[0]);
 //             myvec.erase(myvec.begin());
@@ -2423,7 +2423,7 @@ using namespace std;
 //     int get(int key)
 //     {
 //         if (mymap.find(key) != mymap.end())
-//         {   
+//         {
 //             return mymap[key];
 //         }
 //         return -1;
@@ -2449,7 +2449,6 @@ using namespace std;
 //     }
 // }
 
-
 // int main()
 // {
 //     yourName personOne = {"Tuesday", "April", 2000};
@@ -2467,7 +2466,7 @@ using namespace std;
 // double power(long value, int p);
 
 // double power(int value, int p)
-// {   
+// {
 //     cout << "Normal" << endl;
 //     double result = 1.0;
 //     for (int i = 0; i < p; i ++)
@@ -2480,7 +2479,7 @@ using namespace std;
 // }
 
 // double power(float value, int p)
-// {   
+// {
 //     cout << "Float One" << endl;
 //     double result = 1.0;
 //     for (int i = 0; i < p; i ++)
@@ -2492,7 +2491,7 @@ using namespace std;
 // }
 
 // double power(long value, int p)
-// {   
+// {
 //     cout << "Long One" << endl;
 //     double result = 1.0;
 //     for (int i = 0; i < p; i ++)
@@ -2515,23 +2514,23 @@ using namespace std;
 //     cout << "Will code runner be modified for ZSH?" << endl;
 // }
 // bool uniqueCharacters(string str);
-// bool uniqueCharacters(string str) 
-// { 
-  
-//     // If at any time we encounter 2 
-//     // same characters, return false 
-//     for (int i = 0; i < str.length() - 1; i++) { 
-//         for (int j = i + 1; j < str.length(); j++) { 
-//             if (str[i] == str[j]) { 
-//                 return false; 
-//             } 
-//         } 
-//     } 
-  
-//     // If no duplicate characters encountered, 
-//     // return true 
-//     return true; 
-// } 
+// bool uniqueCharacters(string str)
+// {
+
+//     // If at any time we encounter 2
+//     // same characters, return false
+//     for (int i = 0; i < str.length() - 1; i++) {
+//         for (int j = i + 1; j < str.length(); j++) {
+//             if (str[i] == str[j]) {
+//                 return false;
+//             }
+//         }
+//     }
+
+//     // If no duplicate characters encountered,
+//     // return true
+//     return true;
+// }
 
 // int main()
 // {
@@ -2560,9 +2559,9 @@ using namespace std;
 //                 cout << num  << endl;
 //                 counter += 1;
 //             }
-        
+
 //         }
-        
+
 //     }
 //     cout << counter << endl;
 // }
@@ -2593,10 +2592,10 @@ using namespace std;
 //     }
 
 //     void showData()
-//     {   
+//     {
 //         cout << endl;
 //         cout << "The Value of distance in meters is: " << meters << 'm' << endl;
-//         cout << "The value of distance in centimeters is: " << centiMeters << "cm" << endl; 
+//         cout << "The value of distance in centimeters is: " << centiMeters << "cm" << endl;
 //     }
 // };
 
@@ -2620,7 +2619,7 @@ using namespace std;
 //     }
 
 //     void payingCar()
-//     {   
+//     {
 //         cout << endl;
 //         cout << "Car has been added to the record!" << endl;
 //         totalCars += 1;
@@ -2628,7 +2627,7 @@ using namespace std;
 //     }
 
 //     void showData()
-//     {   
+//     {
 //         cout << endl;
 //         cout << "The Total Cars in record are: " << totalCars << endl;
 //         cout << "The Total Amount collected for " << totalCars << " is: " << money << "$" << endl;
@@ -2645,3 +2644,74 @@ using namespace std;
 
 //     t1.showData();
 // }
+
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+class Hospital
+{
+protected:
+    string name, date, disease, d_date;
+    string arg[5] = {"Name of patient: ", "Date of admission: ", "Disease: ", "Date of Discharge: ", "Age: "};
+    string *ptr[5] = {&name, &date, &disease, &d_date};
+    static int no_of_p;
+    static vector<vector<string>> database;
+
+public:
+    void admit_patient()
+    {
+        string temp;
+        no_of_p += 1;
+        cout << "\nEnter the following details for Patient " << no_of_p << endl;
+        for (int i = 0; i < 4; i++)
+        {
+            cout << arg[i];
+            cin >> *ptr[i];
+        }
+        vector<string> v{name, date, disease, d_date};
+        database.push_back(v);
+    }
+};
+
+int Hospital::no_of_p = 0;
+vector<vector<string>> Hospital::database;
+
+class Patient : public Hospital
+{
+private:
+    string age;
+
+public:
+    void getPatientData()
+    {
+
+        Hospital::admit_patient();
+        cout << "Enter Age of Patient " << database[no_of_p - 1][0] << ": ";
+        cin >> age;
+        database[no_of_p - 1].push_back(age);
+    }
+
+    void showData()
+    {
+        cout << "\n\nDetails of Patients\n";
+        for (int i = 0; i < database.size(); i++)
+        {   
+            cout << "\nDetials of Patient " << i + 1 << endl << endl;
+            for (int j = 0; j < 5; j++)
+            {
+                cout << arg[j] << database[i][j] << endl;
+            }
+        }
+    }
+};
+
+int main()
+{
+    Patient p, p2;
+    p.getPatientData();
+    p2.getPatientData();
+    p.showData();
+}
