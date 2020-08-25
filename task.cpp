@@ -2716,12 +2716,14 @@ using namespace std;
 //     p.showData();
 // }
 
-int main()
-{
-    ofstream myfile;
-    myfile.open("Data.dat", ios::app | ios::binary);
-    int x = 5;
-    string name = "Aaqib";
-    double y = 5.777;
-    
-}
+// int main()
+// {
+//     ofstream myfile;
+//     myfile.open("Data.bin", ios::app | ios::binary);
+//     int x = 5;
+//     string name = "Aaqib";
+//     double y = 5.777;
+
+//     myfile.write(&x, sizeof(x));
+//     myfile
+// }
