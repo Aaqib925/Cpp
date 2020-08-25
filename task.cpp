@@ -2645,73 +2645,73 @@ using namespace std;
 //     t1.showData();
 // }
 
-#include <iostream>
-#include <vector>
-#include <string>
+// #include <iostream>
+// #include <vector>
+// #include <string>
 
-using namespace std;
+// using namespace std;
 
-class Hospital
-{
-protected:
-    string name, date, disease, d_date;
-    string arg[5] = {"Name of patient: ", "Date of admission: ", "Disease: ", "Date of Discharge: ", "Age: "};
-    string *ptr[5] = {&name, &date, &disease, &d_date};
-    static int no_of_p;
-    static vector<vector<string>> database;
+// class Hospital
+// {
+// protected:
+//     string name, date, disease, d_date;
+//     string arg[5] = {"Name of patient: ", "Date of admission: ", "Disease: ", "Date of Discharge: ", "Age: "};
+//     string *ptr[5] = {&name, &date, &disease, &d_date};
+//     static int no_of_p;
+//     static vector<vector<string>> database;
 
-public:
-    void admit_patient()
-    {
-        string temp;
-        no_of_p += 1;
-        cout << "\nEnter the following details for Patient " << no_of_p << endl;
-        for (int i = 0; i < 4; i++)
-        {
-            cout << arg[i];
-            cin >> *ptr[i];
-        }
-        vector<string> v{name, date, disease, d_date};
-        database.push_back(v);
-    }
-};
+// public:
+//     void admit_patient()
+//     {
+//         string temp;
+//         no_of_p += 1;
+//         cout << "\nEnter the following details for Patient " << no_of_p << endl;
+//         for (int i = 0; i < 4; i++)
+//         {
+//             cout << arg[i];
+//             cin >> *ptr[i];
+//         }
+//         vector<string> v{name, date, disease, d_date};
+//         database.push_back(v);
+//     }
+// };
 
-int Hospital::no_of_p = 0;
-vector<vector<string>> Hospital::database;
+// int Hospital::no_of_p = 0;
+// vector<vector<string>> Hospital::database;
 
-class Patient : public Hospital
-{
-private:
-    string age;
+// class Patient : public Hospital
+// {
+// private:
+//     string age;
 
-public:
-    void getPatientData()
-    {
+// public:
+//     void getPatientData()
+//     {
 
-        Hospital::admit_patient();
-        cout << "Enter Age of Patient " << database[no_of_p - 1][0] << ": ";
-        cin >> age;
-        database[no_of_p - 1].push_back(age);
-    }
+//         Hospital::admit_patient();
+//         cout << "Enter Age of Patient " << database[no_of_p - 1][0] << ": ";
+//         cin >> age;
+//         database[no_of_p - 1].push_back(age);
+//     }
 
-    void showData()
-    {
-        cout << "\n\nDetails of Patients\n";
-        for (int i = 0; i < database.size(); i++)
-        {   
-            cout << "\nDetials of Patient " << i + 1 << endl << endl;
-            for (int j = 0; j < 5; j++)
-            {
-                cout << arg[j] << database[i][j] << endl;
-            }
-        }
-    }
-};
+//     void showData()
+//     {
+//         cout << "\n\nDetails of Patients\n";
+//         for (int i = 0; i < database.size(); i++)
+//         {   
+//             cout << "\nDetials of Patient " << i + 1 << endl << endl;
+//             for (int j = 0; j < 5; j++)
+//             {
+//                 cout << arg[j] << database[i][j] << endl;
+//             }
+//         }
+//     }
+// };
 
-int main()
-{
-    Patient p, p2;
-    p.getPatientData();
-    p2.getPatientData();
-    p.showData();
-}
+// int main()
+// {
+//     Patient p, p2;
+//     p.getPatientData();
+//     p2.getPatientData();
+//     p.showData();
+// }
