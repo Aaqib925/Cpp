@@ -2728,4 +2728,36 @@ using namespace std;
 //     myfile.write(&x, sizeof(x));
 //     myfile
 // }
+class User
+{
+private:
+    char data[60];
 
+public:
+    void getData()
+    {
+        cout << "Enter your Name: ";
+        cin >> data;
+    }
+};
+
+void createAccount(User p);
+void createAccount(User p)
+{
+    ofstream file("User.bin", ios::binary | ios::app | ios::out);
+    file.write((char *)&p, sizeof(User));
+}
+void checkAccount(User p);
+void checkAccount(User p)
+{
+    ifstream file("User.bin", ios::binary | ios::in);
+    file.read((char *)&p, sizeof(User));
+}
+int main()
+{
+    User u1, u2;
+    u1.getData();
+    u2.getData();
+    createAccount(u1);
+    checkAccount(u2);
+}
