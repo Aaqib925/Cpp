@@ -40,6 +40,19 @@ int main()
     }
     else
     {
-        
+        file.write((char *) &p, sizeof(Person));
+
+        // pointer get to 0
+        file.seekg(0);
+
+        Person p2;
+        // reading from file
+
+        file.read((char *) &p2, sizeof(Person));
+
+        p.showData();
+        p2.showData();
     }
+
+    file.close();
 }
