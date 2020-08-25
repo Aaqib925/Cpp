@@ -12,6 +12,7 @@
 #include <list>
 #include <fstream>
 #include <ncurses.h>
+#include <cstring>
 using namespace std;
 
 // int main() {
@@ -2727,3 +2728,4 @@ using namespace std;
 //     myfile.write(&x, sizeof(x));
 //     myfile
 // }
+
