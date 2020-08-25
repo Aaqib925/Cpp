@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <cstring>
+using namespace std;
 
 class Person
 {
@@ -16,6 +17,22 @@ class Person
     }
     Person(char *name, int age)
     {
-        
+        strcpy(this->name, name);
+        this->age = age;
     }
+
+    void showData()
+    {
+        cout << "I am " << name << ". I am " << age << " years old!" << endl;
+    }
+};
+
+int main()
+{
+    char name[80] = "Aaqib";
+    Person p(name, 16);
+    p.showData();
+
+    fstream file("person.bin", ios::binary | ios::app);
+    
 }
