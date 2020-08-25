@@ -5,11 +5,11 @@ using namespace std;
 
 class Person
 {
-    private:
+private:
     char name[80];
     int age;
 
-    public:
+public:
     Person()
     {
         strcpy(name, "NoName");
@@ -33,6 +33,13 @@ int main()
     Person p(name, 16);
     p.showData();
 
-    fstream file("person.bin", ios::binary | ios::app);
-    
+    fstream file("person.bin", ios::binary | ios::in | ios::out | ios::trunc);
+    if (!file.is_open())
+    {
+        cout << "Error opening the file!" << endl;
+    }
+    else
+    {
+        
+    }
 }
