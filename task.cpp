@@ -2715,3 +2715,13 @@ using namespace std;
 //     p2.getPatientData();
 //     p.showData();
 // }
+
+int main()
+{
+    ofstream myfile;
+    myfile.open("Data.dat", ios::app | ios::binary);
+    int x = 5;
+    string name = "Aaqib";
+    double y = 5.777;
+    
+}
