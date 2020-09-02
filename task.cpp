@@ -2822,20 +2822,20 @@ using namespace std;
 //     }
 // };
 
-void printKMax(int arr[], int n, int k){
-	//Write your code here.
-     deque<pair<int, int>> dq;
-    for(int a=0; a<n; a++){
-        while(!dq.empty() && a - dq.front().second >= k){
-            dq.pop_front();
-        }
-        while(!dq.empty() && dq.back().first <= arr[a]){
-            dq.pop_back();
-        }
-        dq.push_back({arr[a], a});
-        if(a >= k - 1){
-            cout << dq.front().first << " ";
-        }
-    }
-    cout << endl;
-}
+// void printKMax(int arr[], int n, int k){
+// 	//Write your code here.
+//      deque<pair<int, int>> dq;
+//     for(int a=0; a<n; a++){
+//         while(!dq.empty() && a - dq.front().second >= k){
+//             dq.pop_front();
+//         }
+//         while(!dq.empty() && dq.back().first <= arr[a]){
+//             dq.pop_back();
+//         }
+//         dq.push_back({arr[a], a});
+//         if(a >= k - 1){
+//             cout << dq.front().first << " ";
+//         }
+//     }
+//     cout << endl;
+// }
