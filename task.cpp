@@ -2803,3 +2803,8 @@ public:
             return -1;
     }
 };
+
+class LRUCache{
+    int cap;
+    
+}
