@@ -2803,3 +2803,21 @@ using namespace std;
 //             return -1;
 //     }
 // };
+
+class Matrix
+{
+    public:
+    vector<vector<int>> a;
+
+    Matrix operator+(Matrix second)
+    {
+        for (int i = 0; i < a.size(); i++)
+        {
+            for (int j = 0; j < a[0].size(); j++)
+            {
+                a[i][j] += second.a[i][j];
+            }
+        }
+        return *this;
+    }
+};
