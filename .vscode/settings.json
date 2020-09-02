@@ -11,6 +11,7 @@
         "ostream": "cpp",
         "iomanip": "cpp",
         "iosfwd": "cpp",
-        "mynamespace": "cpp"
+        "mynamespace": "cpp",
+        "list": "cpp"
     }
 }

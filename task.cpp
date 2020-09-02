@@ -2822,14 +2822,20 @@ using namespace std;
 //     }
 // };
 
-struct Workshops
-{
-    int startTime, endTime, duration;
-};
-
-struct Available_Workshops
-{
-    int numberOfWorkshops;
-    Workshops *ws = new Workshops[numberOfWorkshops];
-};
-
+void printKMax(int arr[], int n, int k){
+	//Write your code here.
+     deque<pair<int, int>> dq;
+    for(int a=0; a<n; a++){
+        while(!dq.empty() && a - dq.front().second >= k){
+            dq.pop_front();
+        }
+        while(!dq.empty() && dq.back().first <= arr[a]){
+            dq.pop_back();
+        }
+        dq.push_back({arr[a], a});
+        if(a >= k - 1){
+            cout << dq.front().first << " ";
+        }
+    }
+    cout << endl;
+}
