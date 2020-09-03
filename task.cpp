@@ -2839,3 +2839,36 @@ using namespace std;
 //     }
 //     cout << endl;
 // }
+
+class Main
+{
+    public:
+    string name = "Aaqib";
+
+};
+
+class AnotherClass
+{
+    private:
+    Main m1;
+    Main *ptr = &m1;
+    public:
+
+    void getData()
+    {
+        cout << "Enter Name: "; cin >> ptr->name;
+
+    }
+
+    void showData()
+    {
+        cout << ptr->name << endl;
+    }
+};
+
+int main()
+{
+    AnotherClass a1;
+    a1.getData();
+    a1.showData();
+}
