@@ -2872,4 +2872,42 @@ using namespace std;
 //     a1.getData();
 //     a1.showData();
 // }
+// #include <stdio.h>
+// #include <conio.h>
 
+// void matrix(int i, int j, int m[2][2] );
+
+// main()
+// {
+//     // clrscr();
+//     int m[2][2];
+//     int i, j;
+//     int maximum = m[0][0];
+//     printf("enter the elements of matrix\n");
+
+//     for (i = 0; i <= 1; i++)
+//     {
+//         for (j = 0; j <= 1; j++)
+//         {
+//             scanf("%d", &m[i][j]);
+//             maximum = (maximum < m[i][j]) ? m[i][j] : 0;
+//         }
+//     }
+//     printf("\n");
+//     printf("the maximum no. is %d", maximum);
+//     printf("the given matrix is");
+//     matrix(i, j, m);
+//     getch();
+// }
+
+// void matrix(int i, int j, int m[2][2])
+// {
+//     for (i = 0; i <= 1; i++)
+//     {
+//         for (j = 0; j <= 1; j++)
+//         {
+//             printf("%d", m[i][j]);
+//         }
+//     }
+//     // getch();
+// }
