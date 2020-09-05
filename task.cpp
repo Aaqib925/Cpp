@@ -2944,7 +2944,7 @@ using namespace std;
 //     }
 //     // cout << "result=" << d << endl;
 //     cout << "returning control flow to caller" << endl;
-// }   
+// }
 // #include <iostream>
 
 // using namespace std;
@@ -2988,7 +2988,7 @@ using namespace std;
 //     static int id;
 //     int currentId;
 
-// public: 
+// public:
 //     Message() {currentId = ++id;}
 //     Message(string text) {this->text = text; currentId = ++id;}
 //     const string& get_text() {
@@ -3036,14 +3036,12 @@ using namespace std;
 // public:
 //     static void send_messages(vector<Message> messages, Recipient& recipient) {
 //     // simulates the unpredictable network, where sent messages might arrive in unspecified order
-//         random_shuffle(messages.begin(), messages.end());         
+//         random_shuffle(messages.begin(), messages.end());
 //         for (auto msg : messages) {
 //             recipient.receive(msg);
 //         }
 //     }
 // };
-
-
 
 // int main() {
 //     MessageFactory message_factory;
@@ -3068,6 +3066,7 @@ struct record
 int main()
 {
     record myArray[2];
+
     for (int i = 0; i < 2; i++)
     {
         for (int j = 0; j < 4; j++)
@@ -3093,5 +3092,38 @@ int main()
                 scanf("%d", &myArray[i].averageRuns);
             }
         }
+        printf("\n");
+    }
+
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            if (j == 0)
+            {
+                printf("Name of Player: ");
+                printf("%s", myArray[i].name);
+                printf("\n");
+            }
+            else if (j == 1)
+            {
+                printf("Age of player: ");
+                printf("%d ",myArray[i].age);
+                printf("\n");
+            }
+            else if (j == 2)
+            {
+                printf("Number of Matches: ");
+                printf("%d ",myArray[i].numberOfMatches);
+                printf("\n");
+            }
+            else if (j == 3)
+            {
+                printf("Average Runs: ");
+                printf("%d", myArray[i].averageRuns);
+                printf("\n");
+            }
+        }
+        printf("\n");
     }
 }
