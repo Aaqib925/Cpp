@@ -3055,75 +3055,75 @@ using namespace std;
 //     recipient.print_messages();
 // }
 
-struct record
-{
-    char name[20];
-    int age;
-    int numberOfMatches;
-    int averageRuns;
-};
+// struct record
+// {
+//     char name[20];
+//     int age;
+//     int numberOfMatches;
+//     int averageRuns;
+// };
 
-int main()
-{
-    record myArray[2];
+// int main()
+// {
+//     record myArray[2];
 
-    for (int i = 0; i < 2; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            if (j == 0)
-            {
-                printf("Enter Name of Player: ");
-                scanf("%s", myArray[i].name);
-            }
-            else if (j == 1)
-            {
-                printf("Enter Age of player: ");
-                scanf("%d", &myArray[i].age);
-            }
-            else if (j == 2)
-            {
-                printf("Enter Number of Matches: ");
-                scanf("%d", &myArray[i].numberOfMatches);
-            }
-            else if (j == 3)
-            {
-                printf("Enter Average Runs: ");
-                scanf("%d", &myArray[i].averageRuns);
-            }
-        }
-        printf("\n");
-    }
+//     for (int i = 0; i < 2; i++)
+//     {
+//         for (int j = 0; j < 4; j++)
+//         {
+//             if (j == 0)
+//             {
+//                 printf("Enter Name of Player: ");
+//                 scanf("%s", myArray[i].name);
+//             }
+//             else if (j == 1)
+//             {
+//                 printf("Enter Age of player: ");
+//                 scanf("%d", &myArray[i].age);
+//             }
+//             else if (j == 2)
+//             {
+//                 printf("Enter Number of Matches: ");
+//                 scanf("%d", &myArray[i].numberOfMatches);
+//             }
+//             else if (j == 3)
+//             {
+//                 printf("Enter Average Runs: ");
+//                 scanf("%d", &myArray[i].averageRuns);
+//             }
+//         }
+//         printf("\n");
+//     }
 
-    for (int i = 0; i < 2; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            if (j == 0)
-            {
-                printf("Name of Player: ");
-                printf("%s", myArray[i].name);
-                printf("\n");
-            }
-            else if (j == 1)
-            {
-                printf("Age of player: ");
-                printf("%d ",myArray[i].age);
-                printf("\n");
-            }
-            else if (j == 2)
-            {
-                printf("Number of Matches: ");
-                printf("%d ",myArray[i].numberOfMatches);
-                printf("\n");
-            }
-            else if (j == 3)
-            {
-                printf("Average Runs: ");
-                printf("%d", myArray[i].averageRuns);
-                printf("\n");
-            }
-        }
-        printf("\n");
-    }
-}
+//     for (int i = 0; i < 2; i++)
+//     {
+//         for (int j = 0; j < 4; j++)
+//         {
+//             if (j == 0)
+//             {
+//                 printf("Name of Player: ");
+//                 printf("%s", myArray[i].name);
+//                 printf("\n");
+//             }
+//             else if (j == 1)
+//             {
+//                 printf("Age of player: ");
+//                 printf("%d ",myArray[i].age);
+//                 printf("\n");
+//             }
+//             else if (j == 2)
+//             {
+//                 printf("Number of Matches: ");
+//                 printf("%d ",myArray[i].numberOfMatches);
+//                 printf("\n");
+//             }
+//             else if (j == 3)
+//             {
+//                 printf("Average Runs: ");
+//                 printf("%d", myArray[i].averageRuns);
+//                 printf("\n");
+//             }
+//         }
+//         printf("\n");
+//     }
+// }
