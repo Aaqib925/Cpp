@@ -3057,3 +3057,41 @@ using namespace std;
 //     recipient.print_messages();
 // }
 
+struct record
+{
+    char name[20];
+    int age;
+    int numberOfMatches;
+    int averageRuns;
+};
+
+int main()
+{
+    record myArray[2];
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            if (j == 0)
+            {
+                printf("Enter Name of Player: ");
+                scanf("%s", myArray[i].name);
+            }
+            else if (j == 1)
+            {
+                printf("Enter Age of player: ");
+                scanf("%d", &myArray[i].age);
+            }
+            else if (j == 2)
+            {
+                printf("Enter Number of Matches: ");
+                scanf("%d", &myArray[i].numberOfMatches);
+            }
+            else if (j == 3)
+            {
+                printf("Enter Average Runs: ");
+                scanf("%d", &myArray[i].averageRuns);
+            }
+        }
+    }
+}
