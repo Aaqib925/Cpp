@@ -3140,3 +3140,272 @@ using namespace std;
 //         this->fname = lname;
 //     }
 // };
+// #define MAX_NAME_LENGTH 50
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// class Invoice
+// {
+// private:
+//     string name;
+//     // static int limit;
+
+// public:
+//     Invoice()
+//     {
+//     }
+
+//     void getInfo()
+//     {
+//         // cin.clear();
+//         cout << "ENTER NAME:";
+//         // cin.ignore();
+//         // cin.clear();
+//         cin.ignore(1,'\n');
+//         getline(cin, name);
+//     }
+
+//     void uppername()
+//     {
+//         string uppername;
+//         uppername = name;
+//         string name1 = "";
+//         int len = uppername.length();
+//         for (int i = 0; i < len; ++i)
+//         {
+//             uppername[i] = toupper(uppername[i]);
+//             name1 += uppername[i];
+//         }
+//         cout << uppername;
+//     }
+
+//     void showInfo()
+//     {
+//         cout << "\t\tName :" << name << endl;
+//     }
+// };
+
+// class Customer
+// {
+// private:
+//     Invoice icust;
+//     string address;
+//     string phoneNum;
+//     string emailId;
+//     string customerId;
+
+// public:
+//     void getInfo()
+//     {
+//         icust.getInfo();
+//         cout << "\t\t--------HELLO ";
+//         icust.uppername();
+//         cout << " WELCOME TO VEHICLE FOR HIRE---------" << endl;
+//         cout << "\t\t\t\t--------ENTER YOUR DATA---------" << endl;
+//         cout << "ENTER CUSTOMER ID: ";
+//         cin >> customerId;
+//         cout << "ENTER ADDRESS: ";
+//         cin.ignore();
+//         getline(cin, address);
+//         cout << "ENTER PHONE NUMBER: ";
+//         // cin.ignore();
+//         getline(cin, phoneNum);
+//         cout << "ENTER EMAIL ID: ";
+//         // cin.ignore();
+//         cin >> emailId;
+//     }
+//     void showInfo()
+//     {
+//         icust.showInfo();
+//         cout << "\t\tCustomer ID :" << customerId << endl;
+//         cout << "\t\tAddress :" << address << endl;
+//         cout << "\t\tPhone Number :" << phoneNum << endl;
+//         cout << "\t\tEmail ID :" << emailId << endl;
+//     }
+// };
+
+// class Car
+// {
+// protected:
+//     Invoice icar;
+//     string carModel;
+//     int days;
+
+// public:
+//     virtual int calcRent() = 0;
+//     void getInfo()
+//     {
+//         icar.getInfo();
+//         cout << "\t\t\t--------NOW ENTER DATA FOR ";
+//         icar.uppername();
+//         cout << " YOU RENTED---------" << endl;
+//         cout << "ENTER MODEL OF ";
+//         icar.uppername();
+//         cout << ": ";
+//         // cin.ignore();
+//         getline(cin, carModel);
+//         cout << "ENTER NO OF DAYS YOU RENTED ";
+//         icar.uppername();
+//         cout << ": ";
+//         cin >> days;
+//     }
+//     void showInfo()
+//     {
+
+//         cout << "-------------------------------------------------------------------------------------" << endl;
+//         cout << "Car Name:\t\tCar Model :\t\tRented Days :\t\tTotal Rent : \n";
+//         icar.uppername();
+//         cout << "\t\t\t" << carModel << "\t\t\t" << days << " days"
+//              << "\t\t\t" << calcRent() << endl;
+//         cout << "-------------------------------------------------------------------------------------" << endl;
+//     }
+// };
+
+// class Payment : public Car
+// {
+// private:
+//     int cashGiven;
+//     int cashRepaid;
+//     int rent;
+
+// public:
+//     int calcRent()
+//     {
+//         rent = (days * 5000);
+//         return rent;
+//     }
+//     //TO GET INFO REGARDING PAYMENT
+//     void getInfo()
+//     {
+//         Car::getInfo();
+//         cout << "YOUR TOTAL RENT IS: " << calcRent() << endl;
+//         cout << "ENTER CASH YOU HAVE GIVEN: ";
+//         cin >> cashGiven;
+//     }
+//     //TO SHOW INFO OF PAYMENT
+//     void showInfo()
+//     {
+//         Car::showInfo();
+//         cout << "\n\t\t**PAYMENT SUMMARY**\n"
+//              << endl;
+//         cout << "\t\tTotal cash given: " << cashGiven << "\n"
+//              << endl;
+//         cout << "\t\tTotal cash repaid: " << cashGiven - calcRent() << "\n"
+//              << endl;
+//         cout << "\t\t    --CUSTOMER COPY--\n\t\t(NO SIGNATURES REQUIRED)\n"
+//              << endl;
+//     }
+// };
+
+// int main()
+// {
+//     // char choice;
+//     // //int l =1;
+//     // int l=Invoice::getlimit();
+//     // /*if (l <= 4)
+//     // {
+//     //     do
+//     //     {
+//     //         Customer c; //object of CUSTOMER class
+//     //         Payment p;//object of PAYMENT class
+//     //         //c.getInfo();
+//     //         p.getInfo();
+//     //         cout<<"\n\n\t-----------INVOICE--------------"<<endl;
+//     //         //c.showInfo();
+//     //         p.showInfo();
+//     //         cout << "\n you want to continue(y/n) ";//<< Invoice::getlimit()<< endl;
+//     //         cin >> choice;
+//     //         l++;
+//     //         cout<<l;
+//     //         //l = Invoice::getlimit();
+//     //     }
+//     //     while (choice != 'n');
+
+//     // }
+//     // else if (l==5)
+//     // {
+//     //     cout<<"limit reached";
+//     // }*/
+//     // //Invoice *ptr;
+//     //         Customer * ptr1[80]; //object of CUSTOMER class
+//     //         Payment * ptr2[80];//object of PAYMENT class
+//     // if (l <= 4)
+//     // {
+//     //     do
+//     //     {
+
+//     //         ptr1[l] -> getInfo();
+//     //         ptr2[l] -> getInfo();
+//     //         cout<<"\n\n\t-----------INVOICE--------------"<<endl;
+//     //         ptr1[l] -> showInfo();
+//     //         ptr2[l] -> showInfo();
+//     //         cout << "\n you want to continue(y/n) ";//<< Invoice::getlimit()<< endl;
+//     //         cin >> choice;
+//     //         l = Invoice::getlimit();
+//     //     }
+//     //     while (choice != 'n');
+
+//     // }
+//     // else if (l==5)
+//     // {
+//     //     cout<<"limit reached";
+//     //     //break;
+//     // }
+
+//     // Customer cu;
+//     // cu.getInfo();
+//     // cu.showInfo();
+//     int count = 0;
+//     Customer ptr[80];
+//     Payment ptr2[80];
+//     // char n;
+//     // do
+//     // {   cout << "TAKING CUSTOMER INFO" << endl;
+//     //     ptr[count].showInfo();
+//     //     cout << "TAKING CAR INFO" << endl;
+//     //     ptr2[count].showInfo();
+//     //     cout << "Do you want to continue? y/n";
+//     //     cin >> n;
+//     //     count += 1;
+//     // } while (tolower(n) != 'n');
+
+//     // for (int i = 0; i < count; i ++)
+//     // {
+//     //     cout << "CUSTOMER DETAILS" << endl;
+//     //     ptr[i].showInfo();
+//     //     cout << "CAR DETAILS" << endl;
+//     //     ptr2[i].showInfo();
+//     // }
+//     char n;
+//     while (true)
+//     {
+//         cout << "Do you want to ADD? y/n";
+//         cin >> n;
+//         if (tolower(n) == 'n' || n == 80)
+//         {
+//             break;
+//         }
+//         else
+//         {
+//             ptr[count].getInfo();
+//             ptr2[count].getInfo();
+//             ptr[count].showInfo();
+//             ptr2[count].showInfo();
+//             count += 1;
+//         }
+//     }
+// }
+
+// int main()
+// {
+//     string x[5][3] = { {"corona","40","1000"},{"fever","2","500"},{"emergency ward","3","2000"},{"heart disease","7","3000"} ,{"eye checkup","1","5000"} };
+//     for (int i = 0; i < 5; i++)
+//     {
+//         for (int j = 0; j < 3; j++)
+//         {
+//             cout << x[i][j] << " ";
+//         }
+//         cout << endl;
+//     }
+// }
