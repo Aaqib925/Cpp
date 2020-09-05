@@ -3127,3 +3127,16 @@ using namespace std;
 //         printf("\n");
 //     }
 // }
+
+// class Person
+// {
+//     private:
+//     string fname, lname;
+
+//     public:
+//     Person(string fname,string lname)
+//     {
+//         this->lname = fname;
+//         this->fname = lname;
+//     }
+// };
