@@ -2911,3 +2911,67 @@ using namespace std;
 //     }
 //     // getch();
 // }
+
+// #include <iostream>
+// #include <stdexcept>
+
+// using namespace std;
+
+// int largest_proper_divisor(int n) {
+//     if (n == 0) {
+//         throw invalid_argument("largest proper divisor is not defined for n=0");
+//     }
+//     if (n == 1) {
+//         throw invalid_argument("largest proper divisor is not defined for n=1");
+//     }
+//     for (int i = n/2; i >= 1; --i) {
+//         if (n % i == 0) {
+//             return i;
+//         }
+//     }
+//     return -1; // will never happen
+// }
+
+// void process_input(int n) {
+//     try
+//     {
+//         int d = largest_proper_divisor(n);
+//         cout << "result=" << d << endl;
+//     }
+//     catch (invalid_argument e)
+//     {
+//         cout << e.what() << endl;
+//     }
+//     // cout << "result=" << d << endl;
+//     cout << "returning control flow to caller" << endl;
+// }   
+#include <iostream>
+
+using namespace std;
+
+class Person {
+public:
+    Person(const string& first_name, const string& last_name) : first_name_(first_name), last_name_(last_name) {}
+    const string& get_first_name() const {
+      return first_name_;
+    }
+    const string& get_last_name() const {
+      return last_name_;
+    }
+private:
+    string first_name_;
+    string last_name_;
+};
+
+ostream& operator<<(ostream& os, const Person& p) {
+    os << "first_name=" << p.get_first_name() << ",last_name=" << p.get_last_name();
+    return os;
+}
+
+int main() {
+    string first_name, last_name, event;
+    cin >> first_name >> last_name >> event;
+    auto p = Person(first_name, last_name);
+    cout << p << " " << event << endl;
+    return 0;
+}
