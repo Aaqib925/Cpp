@@ -3409,3 +3409,44 @@ using namespace std;
 //         cout << endl;
 //     }
 // }
+
+class Customer
+{
+private:
+    char full_name[30];
+    char email_address[30];
+    int mobile_number;
+    char home_address[30];
+    // Order o1;
+
+public:
+    void enterDetails();
+    void displayDetails();
+};
+
+void Customer ::  enterDetails()
+{
+    cout << "\nEnter your full name: ";
+    cin.getline(full_name,30);
+    cin.ignore();
+    cout << "Enter your email address: ";
+    cin.getline(email_address,30);
+    cin.ignore();
+    //cout << "Enter your mobile number: ";
+    //cin.getline(mobile_number,30);
+    //cin.ignore();
+    cout << "Enter your home address: ";
+    cin.getline(home_address,30);
+    cin.ignore();
+    cout << "Enter your mobile number: ";
+    cin >> mobile_number;
+    cin.ignore();
+    cout << endl;
+    // o1.setOrder();
+}
+
+int main()
+{
+    Customer c1;
+    c1.enterDetails();
+}
