@@ -3794,7 +3794,9 @@ using namespace std;
 // void Customer ::enterDetails()
 // {
 //     cout << "\nEnter your name: ";
-//     cin >> name;
+//     cin.clear();
+//     cin.ignore(1, '\n');
+//     getline(cin, name);
 //     cout << "Enter your email address: ";
 //     cin >> email_address;
 //     cout << "Enter your mobile number: ";
