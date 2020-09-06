@@ -3455,6 +3455,24 @@ using namespace std;
 // #include <array>
 // using namespace std;
 
+// int validateFunction()
+// {
+//     int a;
+//     cin >> a;
+//     while (1)
+//     {
+//         if (cin.fail())
+//         {
+//             cin.clear();
+//             cin.ignore(numeric_limits<streamsize>::max(),'\n');
+//             cout << "\nPlease Enter Valid Number!!" << endl;
+//             cin >> a;
+//         }
+//         if (!cin.fail())
+//             break;
+//     }
+//     return a;
+// }
 // class Menu
 // {
 // public:
@@ -3560,7 +3578,7 @@ using namespace std;
 //     string Rolls[] = {"Chicken Roll", "Beef Roll", "Mayo Roll"};
 
 //     cout << "Enter your choice: ";
-//     cin >> choice;
+//     choice = validateFunction();
 //     cout << endl;
 //     if (choice == 1)
 //     {
@@ -3630,7 +3648,7 @@ using namespace std;
 //         }
 
 //         cout << "Please enter the quantity: ";
-//         cin >> quantity;
+//         quantity = validateFunction();
 
 //         if (sizeofpizza == 1)
 //             price = quantity * 800;
