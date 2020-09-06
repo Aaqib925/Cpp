@@ -3450,3 +3450,423 @@ using namespace std;
 //     Customer c1;
 //     c1.enterDetails();
 // }
+
+// #include <iostream>
+// #include <array>
+// using namespace std;
+
+// class Menu
+// {
+// public:
+//     void displayMenu()
+//     {
+//         cout << "________________________________" << endl;
+//         cout << "                                        Menu                    " << endl;
+//         cout << "________________________________" << endl;
+//         cout << "\nWhat would you like to order?\n " << endl;
+//         cout << "1. Burgers\n2. Pizzas\n3. Rolls\n4. Desserts\n"
+//              << endl;
+//         //string Burgers[] = {"Zinger","Beef","Chicken"};
+//         //string Pizzas[] = {"Chicken Fajita","Chicken Tikka","Afghani Chicken"};
+//         //string Rolls[] = {"Chicken Roll","Beef Roll","Mayo Roll"};
+//     }
+// };
+
+// class Staff
+// {
+// public:
+//     virtual void confirmOrder() = 0;
+// };
+
+// class Receptionist : public Staff
+// {
+// public:
+//     void confirmOrder();
+// };
+
+// void Receptionist ::confirmOrder()
+// {
+//     cout << "\n                                 Your order has been received! ";
+//     cout << "\n                           The order will be delivered in 45 minutes...";
+//     cout << "\n                                   Thank You for ordering... " << endl;
+// }
+
+// class Payment
+// {
+// public:
+//     int method;
+//     char cardID[30];
+
+// public:
+//     void paymentMethod();
+//     void displayPaymentMethod();
+// };
+
+// void Payment ::paymentMethod()
+// {
+//     cout << "1.Cash\n2.Card\n\nEnter the payment method(1/2): ";
+//     cin >> method;
+//     while (bool pay = true)
+//         if (method == 1)
+//             break;
+//         else if (method == 2)
+//         {
+//             cout << "Enter card id: ";
+//             cin >> cardID;
+//             break;
+//         }
+//         else
+//         {
+//             cout << "1.Cash\n2.Card\n\nPlease enter a valid payment method(1/2): ";
+//             cin >> method;
+//             continue;
+//         }
+// }
+// void Payment ::displayPaymentMethod()
+// {
+//     if (method == 1)
+//     {
+//         cout << "Payment method: cash " << endl;
+//     }
+
+//     else if (method == 2)
+//     {
+//         cout << "Payment method: card " << endl;
+//         cout << "CardID: " << cardID << endl;
+//     }
+//     cout << "______________________________________";
+//     cout << endl;
+// }
+
+// class Order
+// {
+// private:
+//     int choice, burgerchoice, quantity, price, sizeofpizza, flavour, choiceofRolls;
+//     string yourOrder;
+//     Menu m1;
+//     Payment p1;
+
+// public:
+//     void setOrder();
+//     void displayTotalPrice();
+// };
+
+// void Order ::setOrder()
+// {
+// beginning:
+//     m1.displayMenu();
+//     string Burgers[] = {"Zinger Burger Rs.200", "Chicken Burger Rs.150", "Beef Burger Rs.160"};
+//     string Pizzas[] = {"Chicken Fajita", "Chicken Tikka", "Afghani Chicken"};
+//     string Rolls[] = {"Chicken Roll", "Beef Roll", "Mayo Roll"};
+
+//     cout << "Enter your choice: ";
+//     cin >> choice;
+//     cout << endl;
+//     if (choice == 1)
+//     {
+//         for (int i = 1; i < 4; i++)
+//             cout << i << ". " << Burgers[i - 1] << endl;
+//         cout << "\nPlease enter your choice for burgers: ";
+//         cin >> burgerchoice;
+
+//         switch (burgerchoice)
+//         {
+//         case 1:
+//             yourOrder = "Zinger Burger ";
+//             break;
+
+//         case 2:
+//             yourOrder = "Chicken Burger ";
+//             break;
+
+//         case 3:
+//             yourOrder = "Beef Burger ";
+//             break;
+
+//         default:
+//             cout << "Invalid choice!\n ";
+//             goto beginning;
+//         }
+
+//         cout << "Please enter the quantity: ";
+//         cin >> quantity;
+//         cout << endl;
+
+//         if (burgerchoice == 1)
+//             price = quantity * 200;
+//         else if (burgerchoice == 2)
+//             price = quantity * 150;
+//         else if (burgerchoice == 3)
+//             price = quantity * 160;
+//     }
+//     else if (choice == 2)
+//     {
+//         cout << "1. Large Rs.800\n2. Regular Rs.500\n3. Small Rs.250 " << endl;
+//         cout << "\nEnter the size: ";
+//         cin >> sizeofpizza;
+
+//         for (int i = 1; i < 4; i++)
+//             cout << i << ". " << Pizzas[i - 1] << endl;
+//         cout << "Please enter the flavour: ";
+//         cin >> flavour;
+
+//         switch (flavour)
+//         {
+//         case 1:
+//             yourOrder = "Chicken Fajita";
+//             break;
+
+//         case 2:
+//             yourOrder = "Chicken Tikka";
+//             break;
+
+//         case 3:
+//             yourOrder = "Afghani Chicken";
+//             break;
+
+//         default:
+//             cout << "Invalid choice!\n ";
+//             goto beginning;
+//         }
+
+//         cout << "Please enter the quantity: ";
+//         cin >> quantity;
+
+//         if (sizeofpizza == 1)
+//             price = quantity * 800;
+//         else if (sizeofpizza == 2)
+//             price = quantity * 500;
+//         else if (sizeofpizza == 3)
+//             price = quantity * 250;
+//     }
+//     else if (choice == 3)
+//     {
+//         for (int i = 1; i < 4; i++)
+//             cout << i << ". " << Rolls[i - 1] << endl;
+//         cout << "\nPlease enter your choice: ";
+//         cin >> choiceofRolls;
+
+//         switch (choiceofRolls)
+//         {
+//         case 1:
+//             yourOrder = "Chicken Roll";
+//             break;
+
+//         case 2:
+//             yourOrder = "Beef Roll";
+//             break;
+
+//         case 3:
+//             yourOrder = "Mayo Roll";
+//             break;
+
+//         default:
+//             cout << "Invalid choice!\n ";
+//             goto beginning;
+//         }
+
+//         cout << "Please enter the quantity: ";
+//         cin >> quantity;
+//         cout << endl;
+
+//         if (choiceofRolls == 1)
+//             price = quantity * 100;
+//         else if (choiceofRolls == 2)
+//             price = quantity * 80;
+//         else if (choiceofRolls == 3)
+//             price = quantity * 60;
+//     }
+//     else if (choice == 4)
+//     {
+//         cout << "1.Ice creams\n2.Shakes " << endl;
+//         cout << "\nEnter the choice: ";
+//         cin >> choice;
+//         if (choice == 1)
+//         {
+//             cout << "\n1.Mango\n2.Strawberry\n3.Chocolate\n4.Vanilla " << endl;
+//             cout << "\nEnter the flavour: ";
+//             cin >> flavour;
+//             switch (flavour)
+//             {
+//             case 1:
+//                 yourOrder = "Mango Ice cream";
+//                 break;
+
+//             case 2:
+//                 yourOrder = "Strawberry Ice cream";
+//                 break;
+
+//             case 3:
+//                 yourOrder = "Chocolate Ice cream";
+//                 break;
+
+//             case 4:
+//                 yourOrder = "Vanilla Ice cream";
+//                 break;
+
+//             default:
+//                 cout << "\nInvalid choice!\n"
+//                      << endl;
+//                 goto beginning;
+//             }
+//             cout << "\nPlease enter the quantity: ";
+//             cin >> quantity;
+//             cout << endl;
+
+//             price = quantity * 100;
+//         }
+//         else if (choice == 2)
+//         {
+//             cout << "\n1.Mango Shake\n2.Banana Shake\n3.Chocolate Shake\n4.Oreo Shake" << endl;
+//             cout << "\nEnter the flavour: ";
+//             cin >> flavour;
+//             switch (flavour)
+//             {
+//             case 1:
+//                 yourOrder = "Mango Shake";
+//                 break;
+
+//             case 2:
+//                 yourOrder = "Banana Shake";
+//                 break;
+
+//             case 3:
+//                 yourOrder = "Chocolate Shake";
+//                 break;
+
+//             case 4:
+//                 yourOrder = "Oreo Shake";
+//                 break;
+
+//             default:
+//                 cout << "\nInvalid choice!\n"
+//                      << endl;
+//                 goto beginning;
+//             }
+//             cout << "\nPlease enter the quantity: ";
+//             cin >> quantity;
+//             cout << endl;
+
+//             price = quantity * 120;
+//         }
+//         else
+//         {
+//             cout << "\nInvalid choice!\n"
+//                  << endl;
+//             goto beginning;
+//         }
+//     }
+//     else
+//     {
+//         cout << "Invalid choice!\n ";
+//         goto beginning;
+//     }
+
+//     p1.paymentMethod();
+// }
+
+// void Order ::displayTotalPrice()
+// {
+//     cout << "Your order: " << quantity << " " << yourOrder << endl;
+//     cout << "Total amount: " << price << endl;
+
+//     p1.displayPaymentMethod();
+// }
+
+// class Customer
+// {
+// private:
+//     // char name[30];
+//     // char email_address[30];
+//     // char mobile_number[30];
+//     // char home_address[30];
+//     string name;
+//     string email_address;
+//     string mobile_number;
+//     string home_address;
+//     Order o1;
+
+// public:
+//     void enterDetails();
+//     void displayDetails();
+// };
+
+// void Customer ::enterDetails()
+// {
+//     cout << "\nEnter your name: ";
+//     cin >> name;
+//     cout << "Enter your email address: ";
+//     cin >> email_address;
+//     cout << "Enter your mobile number: ";
+//     cin >> mobile_number;
+//     cout << "Enter your home address: ";
+//     cin.ignore();
+//     getline(cin, home_address);
+//     cout << endl;
+
+//     o1.setOrder();
+// }
+
+// void Customer ::displayDetails()
+// {
+//     cout << "______________________________________" << endl;
+//     cout << "                                         Order Details                                  " << endl;
+//     cout << "______________________________________" << endl;
+//     cout << "\nFull name: " << name << endl;
+//     cout << "Email address: " << email_address << endl;
+//     cout << "Mobile number: " << mobile_number << endl;
+//     cout << "Home address: " << home_address << endl;
+//     o1.displayTotalPrice();
+// }
+
+// int main()
+// {
+
+//     Customer *c1[100];
+//     Staff *s1[100];
+//     int c = 0;
+//     int s = 0;
+//     char check, ch;
+
+//     cout << "_________________________________" << endl;
+//     cout << "                            Welcome to Online Food Ordering" << endl;
+//     cout << "_________________________________" << endl;
+//     cout << "\nDo you want to order something(y/n)? ";
+//     cin >> check;
+
+//     do
+//     {
+//         //cout << "\nDo you want to order something(y/n)? ";
+//         //cin >> check;
+
+//         if (check == 'y' || check == 'Y')
+//         {
+//             c1[c] = new Customer;
+//             c1[c]->enterDetails();
+//             c1[c]->displayDetails();
+//             c++;
+
+//             s1[s] = new Receptionist;
+//             s1[s]->confirmOrder();
+//             s++;
+//         }
+//         else if (check == 'n' || check == 'N')
+//             break;
+//         else
+//         {
+//             cout << "Please enter a valid choice! ";
+//             cout << "\nDo you want to order something(y/n)? ";
+//             cin >> check;
+//             continue;
+//         }
+
+//         cout << "_______________________________" << endl;
+//         cout << "                        Welcome to Online Food Ordering Page " << endl;
+//         cout << "_______________________________" << endl;
+//         cout << "\nDo you want to order something(y/n)? ";
+//         cin >> ch;
+
+//     } while (ch == 'y' || ch == 'Y');
+
+//     return 0;
+// }
