@@ -11,7 +11,7 @@
 #include <string.h>
 #include <list>
 #include <fstream>
-#include <ncurses.h>
+// #include <ncurses.h>
 #include <cstring>
 using namespace std;
 
