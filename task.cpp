@@ -4118,30 +4118,35 @@ using namespace std;
 //     palindromeIndex("baa");
 // }
 
-int palindromeIndex(string s) {
-    int lengthOfString = s.length();
-    int i = 0;
-    int j = lengthOfString - 1;
-    while (i < j)
-    {
-        if (s[i] != s[j])
-            break;
-        i += 1;
-        j -= 1;
-    }
-    if (i > j)
-        return -1;
-    int a = i + 1;
-    int b = j;
-    while (a < j && b > i + 1)
-    {
-        if (s[a] != s[b])
-        {
-            return j;
-        }
-        a += 1;
-        b -= 1;
-        return i;
-    }
-}
+// int palindromeIndex(string s) {
+//     int lengthOfString = s.length();
+//     int i = 0;
+//     int j = lengthOfString - 1;
+//     while (i < j)
+//     {
+//         if (s[i] != s[j])
+//             break;
+//         i += 1;
+//         j -= 1;
+//     }
+//     if (i > j)
+//         return -1;
+//     int a = i + 1;
+//     int b = j;
+//     while (a < j && b > i + 1)
+//     {
+//         if (s[a] != s[b])
+//         {
+//             return j;
+//         }
+//         a += 1;
+//         b -= 1;
+//         return i;
+//     }
+//     return -1;
+// }
 
+// int main()
+// {
+//     cout << palindromeIndex("hgygsvlfcwnswtuhmyaljkqlqjjqlqkjlaymhutwsnwcwflvsgygh") << endl;
+// }
