@@ -4075,55 +4075,55 @@ using namespace std;
 //     return 0;
 // }
 
-bool checkPalindrome(string ss);
-bool checkPalindrome(string ss)
-{
-    bool isPalindrome = true;
-    int stringLength = ss.length();
-    for (int i = 0; i < stringLength; i++)
-    {
-        if (ss[i] != ss[stringLength - i - 1])
-        {   
-            isPalindrome = false;
-            break;
-        }
-    }
+// bool checkPalindrome(string ss);
+// bool checkPalindrome(string ss)
+// {
+//     bool isPalindrome = true;
+//     int stringLength = ss.length();
+//     for (int i = 0; i < stringLength; i++)
+//     {
+//         if (ss[i] != ss[stringLength - i - 1])
+//         {   
+//             isPalindrome = false;
+//             break;
+//         }
+//     }
 
-    return isPalindrome;
-}
+//     return isPalindrome;
+// }
+
+// // int main()
+// // {
+// //     cout << checkPalindrome("baaa");
+// // }
+// int palindromeIndex(string s);
+// int palindromeIndex(string s) {
+//     int index = -1;
+//     int sLength = s.length();
+//     for (int i = 0; i < sLength; i ++)
+//     {
+//         if (s[i] != s[sLength - i - 1])
+//         {
+//             string y = s.substr(i, (sLength - i));
+//             string y1 = y.substr(0, y.length() - 1);
+//             string y2 = y.substr(1);
+//             if (checkPalindrome(y1))
+//             {
+//                 return sLength - i - 1;
+//             }
+//             else
+//             {
+//                 return i;    
+//             }
+//         }
+//     }
+//     return 0;
+// }
 
 // int main()
 // {
-//     cout << checkPalindrome("baaa");
+//     cout << palindromeIndex("hgygsvlfcwnswtuhmyaljkqlqjjqlqkjlaymhutwsnwcwflvsgygh") << endl;
 // }
-int palindromeIndex(string s);
-int palindromeIndex(string s) {
-    int index = -1;
-    int sLength = s.length();
-    for (int i = 0; i < sLength; i ++)
-    {
-        if (s[i] != s[sLength - i - 1])
-        {
-            string y = s.substr(i, (sLength - i));
-            string y1 = y.substr(0, y.length() - 1);
-            string y2 = y.substr(1);
-            if (checkPalindrome(y1))
-            {
-                return sLength - i - 1;
-            }
-            else
-            {
-                return i;    
-            }
-        }
-    }
-    return 0;
-}
-
-int main()
-{
-    cout << palindromeIndex("hgygsvlfcwnswtuhmyaljkqlqjjqlqkjlaymhutwsnwcwflvsgygh") << endl;
-}
 
 // int palindromeIndex(string s) {
 //     int lengthOfString = s.length();
