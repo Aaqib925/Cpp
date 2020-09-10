@@ -3897,16 +3897,95 @@ using namespace std;
 //     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 // }
 
+// int main()
+// {
+//     string name = "Aaqib";
+//     int factor = 1;
+//     for (int i = 0; i <= name.size(); i++)
+//     {
+//         if (i + factor <= name.size())
+//         {
+//             string subString = name.substr(i, factor);
+//             cout << subString << endl;
+//         }
+//     }
+// }
+
 int main()
 {
-    string name = "Aaqib";
-    int factor = 2;
-    for (int i = 0; i <= name.size(); i++)
-    {
-        if (i + factor <= name.size())
-        {
-            string subString = name.substr(i, factor);
-            cout << subString << endl;
-        }
+    int n;
+    cin >> n;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+    string genes_temp_temp;
+    getline(cin, genes_temp_temp);
+
+    vector<string> genes_temp = split_string(genes_temp_temp);
+
+    vector<string> genes(n);
+
+    for (int i = 0; i < n; i++) {
+        string genes_item = genes_temp[i];
+
+        genes[i] = genes_item;
     }
+
+    string health_temp_temp;
+    getline(cin, health_temp_temp);
+
+    vector<string> health_temp = split_string(health_temp_temp);
+
+    vector<int> health(n);
+
+    for (int i = 0; i < n; i++) {
+        int health_item = stoi(health_temp[i]);
+
+        health[i] = health_item;
+    }
+    vector<int> ans;
+    int s;
+    cin >> s;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+    for (int s_itr = 0; s_itr < s; s_itr++) {
+        string firstLastd_temp;
+        getline(cin, firstLastd_temp);
+
+        vector<string> firstLastd = split_string(firstLastd_temp);
+
+        int first = stoi(firstLastd[0]);
+
+        int last = stoi(firstLastd[1]);
+
+        string d = firstLastd[2];
+        int total = 0;
+        for (int i = first; i <= last; i ++)
+        {   
+            
+            string x = genes[i];
+            int lengthOfX = x.size();
+            if (d.find(x) != string::npos)
+            {
+                
+                for (int j = 0; j <= d.size(); j++)
+                {
+                    if (j + lengthOfX <= d.size())
+                    {
+                        string subString = d.substr(j, lengthOfX);
+                        if (x == subString)
+                        {
+                            total = total + health[i];
+                            
+                        }
+                    }
+                }
+                
+            }
+
+            
+        }
+        ans.push_back(total);
+    }
+    cout << *min_element(ans.begin(), ans.end()) << " " << *max_element(ans.begin(), ans.end());
+    return 0;
 }
