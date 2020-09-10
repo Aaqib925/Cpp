@@ -3989,3 +3989,20 @@ using namespace std;
 //     cout << *min_element(ans.begin(), ans.end()) << " " << *max_element(ans.begin(), ans.end());
 //     return 0;
 // }
+// Complete the insertionSort function below.
+int insertionSort(vector<int> arr) {
+    int i, key, j, count;  
+    for (i = 1; i < arr.size(); i++) 
+    {  
+        key = arr[i];  
+        j = i - 1;  
+        while (j >= 0 && arr[j] > key) 
+        {  
+            arr[j + 1] = arr[j];  
+            j = j - 1;
+            count += 1;  
+        }  
+        arr[j + 1] = key;  
+    }
+    return count;
+}
