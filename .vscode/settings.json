@@ -12,6 +12,7 @@
         "iomanip": "cpp",
         "iosfwd": "cpp",
         "mynamespace": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "limits": "cpp"
     }
 }

@@ -3890,3 +3890,9 @@ using namespace std;
 
 //     return 0;
 // }
+int main()
+{
+    int n;
+    cin >> n;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+}
