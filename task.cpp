@@ -3960,13 +3960,13 @@ using namespace std;
 //         string d = firstLastd[2];
 //         int total = 0;
 //         for (int i = first; i <= last; i ++)
-//         {   
-            
+//         {
+
 //             string x = genes[i];
 //             int lengthOfX = x.size();
 //             if (d.find(x) != string::npos)
 //             {
-                
+
 //                 for (int j = 0; j <= d.size(); j++)
 //                 {
 //                     if (j + lengthOfX <= d.size())
@@ -3975,14 +3975,13 @@ using namespace std;
 //                         if (x == subString)
 //                         {
 //                             total = total + health[i];
-                            
+
 //                         }
 //                     }
 //                 }
-                
+
 //             }
 
-            
 //         }
 //         ans.push_back(total);
 //     }
@@ -3991,18 +3990,18 @@ using namespace std;
 // }
 // Complete the insertionSort function below.
 // int insertionSort(vector<int> arr) {
-//     int i, key, j, count;  
-//     for (i = 1; i < arr.size(); i++) 
-//     {  
-//         key = arr[i];  
-//         j = i - 1;  
-//         while (j >= 0 && arr[j] > key) 
-//         {  
-//             arr[j + 1] = arr[j];  
+//     int i, key, j, count;
+//     for (i = 1; i < arr.size(); i++)
+//     {
+//         key = arr[i];
+//         j = i - 1;
+//         while (j >= 0 && arr[j] > key)
+//         {
+//             arr[j + 1] = arr[j];
 //             j = j - 1;
-//             count += 1;  
-//         }  
-//         arr[j + 1] = key;  
+//             count += 1;
+//         }
+//         arr[j + 1] = key;
 //     }
 //     return count;
 // }
@@ -4032,12 +4031,12 @@ using namespace std;
 //         temp[k] = s[i];
 //         k++, i++;
 //     }
-    
+
 //     while(j<=right){
 //         temp[k] = s[j];
 //         k++, j++;
 //     }
-    
+
 //     while(left<=right){
 //         s[left] = temp[left];
 //         left++;
@@ -4068,10 +4067,32 @@ using namespace std;
 //         int s[n];
 //         for(int i=0; i<n; i++)
 //             cin >> s[i];
-         
+
 //         long int shift = mergeSort(s, 0, n-1);
-        
+
 //         cout << shift << endl;
 //     }
 //     return 0;
 // }
+
+bool checkPalindrome(string ss);
+bool checkPalindrome(string ss)
+{
+    bool isPalindrome = true;
+    int stringLength = ss.length();
+    for (int i = 0; i < stringLength; i++)
+    {
+        if (ss[i] != ss[stringLength - i - 1])
+        {   
+            isPalindrome = false;
+            break;
+        }
+    }
+
+    return isPalindrome;
+}
+
+int main()
+{
+    cout << checkPalindrome("baaa");
+}
