@@ -4092,7 +4092,26 @@ bool checkPalindrome(string ss)
     return isPalindrome;
 }
 
+// int main()
+// {
+//     cout << checkPalindrome("baaa");
+// }
+int palindromeIndex(string s);
+int palindromeIndex(string s) {
+    int index = -1;
+    int sLength = s.length();
+    for (int i = 0; i < sLength; i ++)
+    {
+        if (s[i] != s[sLength - i - 1])
+        {
+            string y = s.substr(i, (sLength - i - 1) - i);
+            string 
+        }
+    }
+    return 0;
+}
+
 int main()
 {
-    cout << checkPalindrome("baaa");
+    palindromeIndex("aabccccaa");
 }
