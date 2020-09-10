@@ -4104,8 +4104,10 @@ int palindromeIndex(string s) {
     {
         if (s[i] != s[sLength - i - 1])
         {
-            string y = s.substr(i, (sLength - i - 1) - i);
-            string 
+            string y = s.substr(i, (sLength - i));
+            string y1 = y.substr(0, y.length() - 1);
+            string y2 = y.substr(1);
+            cout << y1 << " " << y2 << endl;
         }
     }
     return 0;
@@ -4113,5 +4115,5 @@ int palindromeIndex(string s) {
 
 int main()
 {
-    palindromeIndex("aabccccaa");
+    palindromeIndex("baa");
 }
