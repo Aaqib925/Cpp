@@ -3890,9 +3890,23 @@ using namespace std;
 
 //     return 0;
 // }
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     cin.ignore(numeric_limits<streamsize>::max(), '\n');
+// }
+
 int main()
 {
-    int n;
-    cin >> n;
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    string name = "Aaqib";
+    int factor = 2;
+    for (int i = 0; i <= name.size(); i++)
+    {
+        if (i + factor <= name.size())
+        {
+            string subString = name.substr(i, factor);
+            cout << subString << endl;
+        }
+    }
 }
