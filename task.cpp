@@ -4158,69 +4158,69 @@ using namespace std;
 // {
 //     cout << palindromeIndex("hgygsvlfcwnswtuhmyaljkqlqjjqlqkjlaymhutwsnwcwflvsgygh") << endl;
 // }
-void printDeque(deque<int> a);
-void printDeque(deque<int> a)
-{
-    for (int i = 0; i < a.size(); i++)
-    {
-        cout << a[i] << " ";
-    }
-    cout << endl;
-}
-int activityNotifications(vector<int> expenditure, int d);
-int activityNotifications(vector<int> expenditure, int d)
-{
-    deque<int> subVector;
-    int i = 0, j = d;
-    int alertCount = 0;
-    for (int x = 0; x < d; x++)
-    {
-        subVector.push_back(expenditure[x]);
-    }
-    while (d < expenditure.size())
-    {
-        int moneySpent = expenditure[d];
-        cout << "Money: " << moneySpent << endl;
-        vector<int> x;
-        double median = 0;
-        for (auto &element: subVector)
-        {
-            x.push_back(element);
-        }
-        sort(x.begin(), x.end());
-        // for (auto &element: x)
-        // {
-        //     cout << element << " ";
-        // }
-        // cout << endl;
-        int y;
-        if (x.size() % 2 == 0)
-        {   
-            y = (x.size() / 2) - 1;
-            median = (double)(x[y] + x[++y])/2;
-        }
-        else
-        {
-            y = x.size() / 2;
-            median = (double)x[y];
-        }
-        median *= 2;
-        if (moneySpent >= median)
-        {
-            alertCount += 1;
-        }
-        if (d++ < expenditure.size() - 1)
-        {   
-            subVector.pop_front();
-            subVector.push_back(expenditure[d - 1]);
-            // cout << d << endl;
-        }
+// void printDeque(deque<int> a);
+// void printDeque(deque<int> a)
+// {
+//     for (int i = 0; i < a.size(); i++)
+//     {
+//         cout << a[i] << " ";
+//     }
+//     cout << endl;
+// }
+// int activityNotifications(vector<int> expenditure, int d);
+// int activityNotifications(vector<int> expenditure, int d)
+// {
+//     deque<int> subVector;
+//     int i = 0, j = d;
+//     int alertCount = 0;
+//     for (int x = 0; x < d; x++)
+//     {
+//         subVector.push_back(expenditure[x]);
+//     }
+//     while (d < expenditure.size())
+//     {
+//         int moneySpent = expenditure[d];
+//         // cout << "Money: " << moneySpent << endl;
+//         vector<int> x;
+//         double median = 0;
+//         for (auto &element: subVector)
+//         {
+//             x.push_back(element);
+//         }
+//         sort(x.begin(), x.end());
+//         // for (auto &element: x)
+//         // {
+//         //     cout << element << " ";
+//         // }
+//         // cout << endl;
+//         int y;
+//         if (x.size() % 2 == 0)
+//         {   
+//             y = (x.size() / 2) - 1;
+//             median = (double)(x[y] + x[++y])/2;
+//         }
+//         else
+//         {
+//             y = x.size() / 2;
+//             median = (double)x[y];
+//         }
+//         median *= 2;
+//         if (moneySpent >= median)
+//         {
+//             alertCount += 1;
+//         }
+//         if (d++ < expenditure.size() - 1)
+//         {   
+//             subVector.pop_front();
+//             subVector.push_back(expenditure[d - 1]);
+//             // cout << d << endl;
+//         }
 
-    }
-    return alertCount;
-}
+//     }
+//     return alertCount;
+// }
 
-int main()
-{
-    activityNotifications({10, 20, 30, 40, 50}, 3);
-}
+// int main()
+// {
+//     cout << activityNotifications({2, 3, 4, 2, 3, 6, 8, 4, 5}, 5) << endl;
+// }
