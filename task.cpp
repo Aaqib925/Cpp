@@ -13,6 +13,7 @@
 #include <fstream>
 // #include <ncurses.h>
 #include <cstring>
+#include <deque>
 using namespace std;
 
 // int main() {
@@ -4083,7 +4084,7 @@ using namespace std;
 //     for (int i = 0; i < stringLength; i++)
 //     {
 //         if (ss[i] != ss[stringLength - i - 1])
-//         {   
+//         {
 //             isPalindrome = false;
 //             break;
 //         }
@@ -4113,7 +4114,7 @@ using namespace std;
 //             }
 //             else
 //             {
-//                 return i;    
+//                 return i;
 //             }
 //         }
 //     }
@@ -4157,3 +4158,42 @@ using namespace std;
 // {
 //     cout << palindromeIndex("hgygsvlfcwnswtuhmyaljkqlqjjqlqkjlaymhutwsnwcwflvsgygh") << endl;
 // }
+void printDeque(deque<int> a);
+void printDeque(deque<int> a)
+{
+    for (int i = 0; i < a.size(); i++)
+    {
+        cout << a[i] << " ";
+    }
+    cout << endl;
+}
+int activityNotifications(vector<int> expenditure, int d);
+int activityNotifications(vector<int> expenditure, int d)
+{
+    deque<int> subVector;
+    int i = 0, j = d;
+    for (int x = 0; x < d; x++)
+    {
+        subVector.push_back(expenditure[x]);
+    }
+    while (d < expenditure.size())
+    {
+        int moneySpent = expenditure[d];
+        cout << "Money: " << moneySpent << endl;
+        printDeque(subVector);
+        
+        if (d++ < expenditure.size() - 1)
+        {   
+            subVector.pop_front();
+            subVector.push_back(expenditure[d - 1]);
+            // cout << d << endl;
+        }
+
+    }
+    return 0;
+}
+
+int main()
+{
+    activityNotifications({2, 3, 4, 2, 3, 6, 8, 4, 5}, 5);
+}
