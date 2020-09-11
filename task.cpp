@@ -4172,6 +4172,7 @@ int activityNotifications(vector<int> expenditure, int d)
 {
     deque<int> subVector;
     int i = 0, j = d;
+    int alertCount = 0;
     for (int x = 0; x < d; x++)
     {
         subVector.push_back(expenditure[x]);
@@ -4180,8 +4181,34 @@ int activityNotifications(vector<int> expenditure, int d)
     {
         int moneySpent = expenditure[d];
         cout << "Money: " << moneySpent << endl;
-        printDeque(subVector);
-        
+        vector<int> x;
+        double median = 0;
+        for (auto &element: subVector)
+        {
+            x.push_back(element);
+        }
+        sort(x.begin(), x.end());
+        // for (auto &element: x)
+        // {
+        //     cout << element << " ";
+        // }
+        // cout << endl;
+        int y;
+        if (x.size() % 2 == 0)
+        {   
+            y = (x.size() / 2) - 1;
+            median = (double)(x[y] + x[++y])/2;
+        }
+        else
+        {
+            y = x.size() / 2;
+            median = (double)x[y];
+        }
+        median *= 2;
+        if (moneySpent >= median)
+        {
+            alertCount += 1;
+        }
         if (d++ < expenditure.size() - 1)
         {   
             subVector.pop_front();
@@ -4190,10 +4217,10 @@ int activityNotifications(vector<int> expenditure, int d)
         }
 
     }
-    return 0;
+    return alertCount;
 }
 
 int main()
 {
-    activityNotifications({2, 3, 4, 2, 3, 6, 8, 4, 5}, 5);
+    activityNotifications({10, 20, 30, 40, 50}, 3);
 }
