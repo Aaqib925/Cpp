@@ -4317,31 +4317,31 @@ using namespace std;
 //     cout << anagram("mnop");
 // }
 
-int makingAnagrams(string s1, string s2) {
-    int count = 0;
-    string a = s1;
-    string b = s2;
-    for (char x: s2)
-    {
-        if (a.find(x) != string::npos)
-        {
-            a.erase(a.begin() + a.find(x));
-        }
+// int makingAnagrams(string s1, string s2) {
+//     int count = 0;
+//     string a = s1;
+//     string b = s2;
+//     for (char x: s2)
+//     {
+//         if (a.find(x) != string::npos)
+//         {
+//             a.erase(a.begin() + a.find(x));
+//         }
 
-    }
-    count += a.length();
-    for (char x: s1)
-    {
-        if (b.find(x) != string::npos)
-        {
-            b.erase(b.begin() + b.find(x));
-        }
-    }
-    count += b.length();
-    return count;
-}
+//     }
+//     count += a.length();
+//     for (char x: s1)
+//     {
+//         if (b.find(x) != string::npos)
+//         {
+//             b.erase(b.begin() + b.find(x));
+//         }
+//     }
+//     count += b.length();
+//     return count;
+// }
 
-int main()
-{
-    int result = makingAnagrams("cde", "abc");
-}
+// int main()
+// {
+//     int result = makingAnagrams("cde", "abc");
+// }
