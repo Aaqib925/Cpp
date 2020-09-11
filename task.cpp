@@ -4289,30 +4289,30 @@ using namespace std;
 //     return alerts;
 // }
 
-int anagram(string s) {
-    int count = 0;
-    if (s.length() % 2 != 0)
-    {
-        return -1;
-    }
-    else
-    {
-        string s1 = s.substr(0, s.length()/2);
-        string s2 = s.substr((s.length()/2), s.length());
-        for (char x: s2)
-        {
-            if (s1.find(x) != string::npos)
-            {
-                s1.erase(s1.begin() + s1.find(x));
-            }
-        }
-        return s1.length();
-    }
+// int anagram(string s) {
+//     int count = 0;
+//     if (s.length() % 2 != 0)
+//     {
+//         return -1;
+//     }
+//     else
+//     {
+//         string s1 = s.substr(0, s.length()/2);
+//         string s2 = s.substr((s.length()/2), s.length());
+//         for (char x: s2)
+//         {
+//             if (s1.find(x) != string::npos)
+//             {
+//                 s1.erase(s1.begin() + s1.find(x));
+//             }
+//         }
+//         return s1.length();
+//     }
 
-    // return s1.length();
-}
+//     // return s1.length();
+// }
 
-int main()
-{
-    cout << anagram("mnop");
-}
+// int main()
+// {
+//     cout << anagram("mnop");
+// }
