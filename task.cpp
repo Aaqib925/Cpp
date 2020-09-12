@@ -4351,10 +4351,12 @@ int lilysHomework(vector<int> arr)
 {
     vector<int> accendingArray;
     vector<int> decendingArray;
-
+    vector<int> arr2;
     accendingArray = arr;
     decendingArray = arr;
-
+    arr2 = arr;
+    int accendingCount = 0;
+    int decendingCount = 0;
     sort(accendingArray.begin(), accendingArray.end());
     reverse(decendingArray.begin(), decendingArray.end());
 
@@ -4363,14 +4365,27 @@ int lilysHomework(vector<int> arr)
 
     for (int i = 0; i < accendingArray.size(); i ++)
     {
-        accendingMap[accendingArray[i]] = i;
+        accendingMap[arr[i]] = i;
     }
     for (int i = 0; i < decendingArray.size(); i++)
     {
-        decendingMap[decendingArray[i]] = i;
+        decendingMap[arr[i]] = i;
     }
 
-    
+    for (auto &element: decendingMap)
+    {
+        cout << element.first << " " << element.second << endl;
+    }
+
+    for (int i = 0; i < accendingArray.size(); i++)
+    {
+        if (accendingArray[i] != arr[i])
+        {
+            // int x = accendingMap[accendingArray[i]];
+            swap(accendingArray[i], arr[i]);
+        }
+    }
+    return 0;
 }
 
 
