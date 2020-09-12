@@ -4345,3 +4345,26 @@ using namespace std;
 // {
 //     int result = makingAnagrams("cde", "abc");
 // }
+
+int lilysHomework(vector<int> arr);
+int lilysHomework(vector<int> arr) 
+{
+    vector<int> accendingArray;
+    vector<int> decendingArray;
+
+    accendingArray = arr;
+    decendingArray = arr;
+
+    sort(accendingArray.begin(), accendingArray.end());
+    reverse(decendingArray.begin(), decendingArray.end());
+
+    
+
+
+}
+
+
+int main()
+{
+    lilysHomework({3, 7, 15, 12});
+}
