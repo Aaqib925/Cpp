@@ -4346,62 +4346,61 @@ using namespace std;
 //     int result = makingAnagrams("cde", "abc");
 // }
 
-int lilysHomework(vector<int> arr);
-int lilysHomework(vector<int> arr)
-{
-    vector<int> accendingArray;
-    vector<int> decendingArray;
-    vector<int> arr2;
-    arr2 = arr;
-    accendingArray = arr;
-    decendingArray = arr2;
-    int accendingCount = 0;
-    int decendingCount = 0;
-    sort(accendingArray.begin(), accendingArray.end());
-    sort(decendingArray.begin(), decendingArray.end(), greater<int>());
+// int lilysHomework(vector<int> arr);
+// int lilysHomework(vector<int> arr)
+// {
+//     vector<int> accendingArray;
+//     vector<int> decendingArray;
+//     vector<int> arr2;
+//     arr2 = arr;
+//     accendingArray = arr;
+//     decendingArray = arr2;
+//     int accendingCount = 0;
+//     int decendingCount = 0;
+//     sort(accendingArray.begin(), accendingArray.end());
+//     sort(decendingArray.begin(), decendingArray.end(), greater<int>());
 
-    map<int, int> accendingMap;
+//     map<int, int> accendingMap;
 
-    map<int, int> decendingMap;
+//     map<int, int> decendingMap;
 
-    for (int i = 0; i < accendingArray.size(); i++)
-    {
-        accendingMap[arr[i]] = i;
-    }
-    for (int i = 0; i < decendingArray.size(); i++)
-    {
-        decendingMap[arr[i]] = i;
-    }
+//     for (int i = 0; i < accendingArray.size(); i++)
+//     {
+//         accendingMap[arr[i]] = i;
+//     }
+//     for (int i = 0; i < decendingArray.size(); i++)
+//     {
+//         decendingMap[arr[i]] = i;
+//     }
 
-    for (int i = 0; i < accendingArray.size(); i++)
-    {
-        if (accendingArray[i] != arr[i])
-        {
-            auto it = find(arr.begin(), arr.end(), accendingArray[i]);
-            int index = distance(arr.begin(), it);
-            swap(accendingMap[arr[i]], accendingMap[arr[index]]);
-            swap(arr[i], arr[index]);
-            accendingCount += 1;
-        }
-    }
+//     for (int i = 0; i < accendingArray.size(); i++)
+//     {
+//         if (accendingArray[i] != arr[i])
+//         {
+//             auto it = find(arr.begin(), arr.end(), accendingArray[i]);
+//             int index = distance(arr.begin(), it);
+//             swap(accendingMap[arr[i]], accendingMap[arr[index]]);
+//             swap(arr[i], arr[index]);
+//             accendingCount += 1;
+//         }
+//     }
 
-    for (int i = 0; i < decendingArray.size(); i++)
-    {
-        if (decendingArray[i] != arr2[i])
-        {   
-            // cout << decendingArray[i] << " " << arr2[i] << endl;
-            auto it = find(arr2.begin(), arr2.end(), decendingArray[i]);
-            int index = distance(arr2.begin(), it);
-            swap(decendingMap[arr2[i]], decendingMap[arr2[index]]);
-            swap(arr2[i], arr2[index]);
-            decendingCount += 1;
-        }
-    }
-    cout << accendingCount << " " << decendingCount << endl;
-    return 0;
-}
+//     for (int i = 0; i < decendingArray.size(); i++)
+//     {
+//         if (decendingArray[i] != arr2[i])
+//         {   
+//             // cout << decendingArray[i] << " " << arr2[i] << endl;
+//             auto it = find(arr2.begin(), arr2.end(), decendingArray[i]);
+//             int index = distance(arr2.begin(), it);
+//             swap(decendingMap[arr2[i]], decendingMap[arr2[index]]);
+//             swap(arr2[i], arr2[index]);
+//             decendingCount += 1;
+//         }
+//     }
+//     return min(accendingCount, decendingCount);
+// }
 
-int main()
-{
-    lilysHomework({7, 15, 12, 3});
-}
+// int main()
+// {
+//     lilysHomework({2, 5, 3, 1});
+// }
