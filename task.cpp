@@ -4358,12 +4358,19 @@ int lilysHomework(vector<int> arr)
     sort(accendingArray.begin(), accendingArray.end());
     reverse(decendingArray.begin(), decendingArray.end());
 
-    for (auto &element: decendingArray)
+    map<int, int> accendingMap;
+    map<int, int> decendingMap;
+
+    for (int i = 0; i < accendingArray.size(); i ++)
     {
-        cout << element << endl;
+        accendingMap[accendingArray[i]] = i;
+    }
+    for (int i = 0; i < decendingArray.size(); i++)
+    {
+        decendingMap[decendingArray[i]] = i;
     }
 
-    return 0;
+    
 }
 
 
