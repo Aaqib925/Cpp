@@ -4352,15 +4352,16 @@ int lilysHomework(vector<int> arr)
     vector<int> accendingArray;
     vector<int> decendingArray;
     vector<int> arr2;
-    accendingArray = arr;
-    decendingArray = arr;
     arr2 = arr;
+    accendingArray = arr;
+    decendingArray = arr2;
     int accendingCount = 0;
     int decendingCount = 0;
     sort(accendingArray.begin(), accendingArray.end());
-    reverse(decendingArray.begin(), decendingArray.end());
+    sort(decendingArray.begin(), decendingArray.end(), greater<int>());
 
     map<int, int> accendingMap;
+
     map<int, int> decendingMap;
 
     for (int i = 0; i < accendingArray.size(); i++)
@@ -4376,18 +4377,8 @@ int lilysHomework(vector<int> arr)
     {
         if (accendingArray[i] != arr[i])
         {
-            // int x = accendingMap[accendingArray[i]];
-            // swap(accendingArray[i], accendingArray[arr[i]]);
-            // swap(accendingMap[accendingArray[i]], accendingMap[accendingArray[arr[i]]]);
-            // accendingCount += 1;
-
-            // cout << accendingArray[i] << " " << accendingArray[arr[i]] << endl;
-            auto it = find(accendingArray.begin(), accendingArray.end(), arr[i]);
-            int index = distance(accendingArray.begin(), it);
-            // cout << arr[i] << " " << index << endl;
-            // cout << accendingArray[i] << " " << accendingArray[index] << endl;
-
-            // swap(accendingMap[accendingArray[i]], accendingArray[accendingArray[index]]);
+            auto it = find(arr.begin(), arr.end(), accendingArray[i]);
+            int index = distance(arr.begin(), it);
             swap(accendingMap[arr[i]], accendingMap[arr[index]]);
             swap(arr[i], arr[index]);
             accendingCount += 1;
@@ -4396,17 +4387,21 @@ int lilysHomework(vector<int> arr)
 
     for (int i = 0; i < decendingArray.size(); i++)
     {
-        auto it = find(decendingArray.begin(), decendingArray.end(), arr2[i]);
-        int index = distance(decendingArray.begin(), it);
-        swap(decendingMap[arr2[i]], decendingMap[arr2[index]]);
-        swap(arr2[i], arr2[index]);
-        decendingCount += 1;
-        cout << decendingCount << endl;
+        if (decendingArray[i] != arr2[i])
+        {   
+            // cout << decendingArray[i] << " " << arr2[i] << endl;
+            auto it = find(arr2.begin(), arr2.end(), decendingArray[i]);
+            int index = distance(arr2.begin(), it);
+            swap(decendingMap[arr2[i]], decendingMap[arr2[index]]);
+            swap(arr2[i], arr2[index]);
+            decendingCount += 1;
+        }
     }
+    cout << accendingCount << " " << decendingCount << endl;
     return 0;
 }
 
 int main()
 {
-    lilysHomework({3, 7, 15, 12});
+    lilysHomework({7, 15, 12, 3});
 }
