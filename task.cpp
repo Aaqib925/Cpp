@@ -4405,20 +4405,25 @@ using namespace std;
 //     lilysHomework({2, 5, 3, 1});
 // }
 
-string gameOfThrones(string s)
-{
-    vector<int> f(26, 0);
-    for (int i = 0; i < s.size(); i++)
-    {
-        f[s[i] - 'a']++;
-    }
-    int count1 = 0;
-    for (int i = 0; i < 26; i++)
-    {
-        if (f[i] % 2 != 0 && count1 == 1)
-            return "NO";
-        if (f[i] % 2 != 0)
-            count1++;
-    }
-    return "YES";
-}
+// string gameOfThrones(string s)
+// {
+//     vector<int> f(26, 0);
+//     for (int i = 0; i < s.size(); i++)
+//     {
+//         f[s[i] - 'a']++;
+//     }
+//     int count1 = 0;
+//     for (int i = 0; i < 26; i++)
+//     {
+//         if (f[i] % 2 != 0 && count1 == 1)
+//             return "NO";
+//         if (f[i] % 2 != 0)
+//             count1++;
+//     }
+//     return "YES";
+// }
+
+// int main()
+// {
+//     gameOfThrones("cdefghmnopqrstuvw");
+// }
