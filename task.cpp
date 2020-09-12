@@ -4195,7 +4195,7 @@ using namespace std;
 //         // cout << endl;
 //         int y;
 //         if (x.size() % 2 == 0)
-//         {   
+//         {
 //             y = (x.size() / 2) - 1;
 //             median = (double)(x[y] + x[++y])/2;
 //         }
@@ -4210,7 +4210,7 @@ using namespace std;
 //             alertCount += 1;
 //         }
 //         if (d++ < expenditure.size() - 1)
-//         {   
+//         {
 //             subVector.pop_front();
 //             subVector.push_back(expenditure[d - 1]);
 //             // cout << d << endl;
@@ -4238,7 +4238,7 @@ using namespace std;
 //     int b = 0;
 
 //     //d is even -> median = a+b
-//     if(d%2==0){ 
+//     if(d%2==0){
 //         int first = d/2;
 //         int second = first+1;
 //         int i = 0;
@@ -4254,7 +4254,7 @@ using namespace std;
 //                 break;
 //             }
 //         }
-//     } 
+//     }
 //     else    //d is odd -> median = a + 0 = 2*(middle elem)
 //     {
 //         int first = d/2 + 1;
@@ -4347,7 +4347,7 @@ using namespace std;
 // }
 
 int lilysHomework(vector<int> arr);
-int lilysHomework(vector<int> arr) 
+int lilysHomework(vector<int> arr)
 {
     vector<int> accendingArray;
     vector<int> decendingArray;
@@ -4363,7 +4363,7 @@ int lilysHomework(vector<int> arr)
     map<int, int> accendingMap;
     map<int, int> decendingMap;
 
-    for (int i = 0; i < accendingArray.size(); i ++)
+    for (int i = 0; i < accendingArray.size(); i++)
     {
         accendingMap[arr[i]] = i;
     }
@@ -4382,14 +4382,29 @@ int lilysHomework(vector<int> arr)
             // accendingCount += 1;
 
             // cout << accendingArray[i] << " " << accendingArray[arr[i]] << endl;
-            auto it = find(arr.begin(), arr.end(), arr[i]);
-            int index = distance(arr.begin(), it);
-            cout << index << endl;
+            auto it = find(accendingArray.begin(), accendingArray.end(), arr[i]);
+            int index = distance(accendingArray.begin(), it);
+            // cout << arr[i] << " " << index << endl;
+            // cout << accendingArray[i] << " " << accendingArray[index] << endl;
+
+            // swap(accendingMap[accendingArray[i]], accendingArray[accendingArray[index]]);
+            swap(accendingMap[arr[i]], accendingMap[arr[index]]);
+            swap(arr[i], arr[index]);
+            accendingCount += 1;
         }
+    }
+
+    for (int i = 0; i < decendingArray.size(); i++)
+    {
+        auto it = find(decendingArray.begin(), decendingArray.end(), arr2[i]);
+        int index = distance(decendingArray.begin(), it);
+        swap(decendingMap[arr2[i]], decendingMap[arr2[index]]);
+        swap(arr2[i], arr2[index]);
+        decendingCount += 1;
+        cout << decendingCount << endl;
     }
     return 0;
 }
-
 
 int main()
 {
