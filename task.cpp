@@ -4388,7 +4388,7 @@ using namespace std;
 //     for (int i = 0; i < decendingArray.size(); i++)
 //     {
 //         if (decendingArray[i] != arr2[i])
-//         {   
+//         {
 //             // cout << decendingArray[i] << " " << arr2[i] << endl;
 //             auto it = find(arr2.begin(), arr2.end(), decendingArray[i]);
 //             int index = distance(arr2.begin(), it);
@@ -4404,3 +4404,21 @@ using namespace std;
 // {
 //     lilysHomework({2, 5, 3, 1});
 // }
+
+string gameOfThrones(string s)
+{
+    vector<int> f(26, 0);
+    for (int i = 0; i < s.size(); i++)
+    {
+        f[s[i] - 'a']++;
+    }
+    int count1 = 0;
+    for (int i = 0; i < 26; i++)
+    {
+        if (f[i] % 2 != 0 && count1 == 1)
+            return "NO";
+        if (f[i] % 2 != 0)
+            count1++;
+    }
+    return "YES";
+}
