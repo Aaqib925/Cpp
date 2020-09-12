@@ -4358,9 +4358,12 @@ int lilysHomework(vector<int> arr)
     sort(accendingArray.begin(), accendingArray.end());
     reverse(decendingArray.begin(), decendingArray.end());
 
-    
+    for (auto &element: decendingArray)
+    {
+        cout << element << endl;
+    }
 
-
+    return 0;
 }
 
 
