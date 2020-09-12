@@ -4372,17 +4372,19 @@ int lilysHomework(vector<int> arr)
         decendingMap[arr[i]] = i;
     }
 
-    for (auto &element: decendingMap)
-    {
-        cout << element.first << " " << element.second << endl;
-    }
-
     for (int i = 0; i < accendingArray.size(); i++)
     {
         if (accendingArray[i] != arr[i])
         {
             // int x = accendingMap[accendingArray[i]];
-            swap(accendingArray[i], arr[i]);
+            // swap(accendingArray[i], accendingArray[arr[i]]);
+            // swap(accendingMap[accendingArray[i]], accendingMap[accendingArray[arr[i]]]);
+            // accendingCount += 1;
+
+            // cout << accendingArray[i] << " " << accendingArray[arr[i]] << endl;
+            auto it = find(arr.begin(), arr.end(), arr[i]);
+            int index = distance(arr.begin(), it);
+            cout << index << endl;
         }
     }
     return 0;
