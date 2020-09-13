@@ -4532,6 +4532,7 @@ using namespace std;
 //             {
 //                 Cassette c;
 //                 c.getData();
+//                 casData.push_back(c);
 //             }
 //         }
 //     }
@@ -4553,107 +4554,107 @@ using namespace std;
 //     }
 // }
 
-class Father
-{
-protected:
-    int age;
+// class Father
+// {
+// protected:
+//     int age;
 
-public:
-    Father(int x)
-    {
-        age = x;
-    }
-    virtual void iAm()
-    {
-        cout << "I am Father, My age is: " << age << endl;
-    }
-};
+// public:
+//     Father(int x)
+//     {
+//         age = x;
+//     }
+//     virtual void iAm()
+//     {
+//         cout << "I am Father, My age is: " << age << endl;
+//     }
+// };
 
-class Son : public Father
-{
-public:
-    Son(int y) : Father(y) {}
+// class Son : public Father
+// {
+// public:
+//     Son(int y) : Father(y) {}
 
-    void iAm()
-    {
-        cout << "I am Son, My age is: " << age << endl;
-    }
-};
+//     void iAm()
+//     {
+//         cout << "I am Son, My age is: " << age << endl;
+//     }
+// };
 
-class Daughter : public Father
-{
-public:
-    Daughter(int y) : Father(y) {}
-    void iAm()
-    {
-        cout << "I am Daughter, My age is: " << age << endl;
-    }
-};
+// class Daughter : public Father
+// {
+// public:
+//     Daughter(int y) : Father(y) {}
+//     void iAm()
+//     {
+//         cout << "I am Daughter, My age is: " << age << endl;
+//     }
+// };
 
-int main()
-{
-    Father f1(29);
-    Father *ptr;
-    ptr = &f1;
-    ptr->iAm();
+// int main()
+// {
+//     Father f1(29);
+//     Father *ptr;
+//     ptr = &f1;
+//     ptr->iAm();
 
-    Son s1(18);
-    ptr = &s1;
-    ptr->iAm();
+//     Son s1(18);
+//     ptr = &s1;
+//     ptr->iAm();
 
-    Daughter d1(15);
-    ptr = &d1;
-    ptr->iAm();
-}
+//     Daughter d1(15);
+//     ptr = &d1;
+//     ptr->iAm();
+// }
 
-class Shape
-{
-protected:
-    double length, width;
+// class Shape
+// {
+// protected:
+//     double length, width;
 
-public:
-    virtual void get_data()
-    {
-        cout << "Enter the Length: ";
-        cin >> this->length;
-        cout << "Enter the Width: ";
-        cin >> this->width;
-    }
+// public:
+//     virtual void get_data()
+//     {
+//         cout << "Enter the Length: ";
+//         cin >> this->length;
+//         cout << "Enter the Width: ";
+//         cin >> this->width;
+//     }
 
-    virtual void show_data() = 0;
-};
+//     virtual void show_data() = 0;
+// };
 
-class Rectangle : public Shape
-{
-public:
-    void show_data()
-    {
-        cout << "The Area of Rectangle is: " << (this->width * this->length) << endl;
-    }
-};
+// class Rectangle : public Shape
+// {
+// public:
+//     void show_data()
+//     {
+//         cout << "The Area of Rectangle is: " << (this->width * this->length) << endl;
+//     }
+// };
 
-class Triangle : public Shape
-{
-public:
-    void show_data()
-    {
-        cout << "The Area of Triangle is: " << (this->width * this->length) / 2 << endl;
-    }
-};
+// class Triangle : public Shape
+// {
+// public:
+//     void show_data()
+//     {
+//         cout << "The Area of Triangle is: " << (this->width * this->length) / 2 << endl;
+//     }
+// };
 
-int main()
-{
-    Shape *arr[2];
+// int main()
+// {
+//     Shape *arr[2];
 
-    Rectangle r1;
-    Triangle t1;
+//     Rectangle r1;
+//     Triangle t1;
 
-    arr[0] = &r1;
-    arr[1] = &t1;
+//     arr[0] = &r1;
+//     arr[1] = &t1;
 
-    arr[0]->get_data();
-    arr[0]->show_data();
+//     arr[0]->get_data();
+//     arr[0]->show_data();
 
-    arr[1]->get_data();
-    arr[1]->show_data();
-}
+//     arr[1]->get_data();
+//     arr[1]->show_data();
+// }
