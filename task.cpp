@@ -4427,3 +4427,23 @@ using namespace std;
 // {
 //     gameOfThrones("cdefghmnopqrstuvw");
 // }
+
+class Publisher
+{
+    protected:
+    string titleOfPublication;
+    float priceOfPublication;
+
+    public:
+    Publisher()
+    {
+        titleOfPublication = "";
+        priceOfPublication = 0;
+    }
+
+    void getData()
+    {
+        cout << "Enter title of publication: ";
+        getline(cin, titleOfPublication);
+    }
+}
