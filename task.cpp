@@ -4444,6 +4444,15 @@ class Publisher
     void getData()
     {
         cout << "Enter title of publication: ";
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         getline(cin, titleOfPublication);
+        cout << "Enter the price for this Publication: ";
+        cin >> priceOfPublication;
+    }
+
+    void showData()
+    {
+        cout << "The Title of Publication is: " << titleOfPublication << endl;
+        cout << "The price for this publication is: " << priceOfPublication << endl;
     }
 }
