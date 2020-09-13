@@ -4483,9 +4483,29 @@ class Book: public Publisher
         cout << endl;
     }
 };
+
+class Cassette: public Publisher
+{
+    protected:
+    float tapeInMints;
+    
+    public:
+    Cassette() : tapeInMints(0){}
+
+    void getData()
+    {
+        Publisher::getData();
+        cout << "Enter the Length of Tape in minutes: ";
+        cin >> tapeInMints;
+    }
+
+    void showData()
+    {
+        Publisher::showData();
+        cout << "The Length of Cassette is: " << fixed << setprecision(2) << tapeInMints << endl;
+    }
+};
 int main()
 {
-    Publisher p1;
-    p1.getData();
-    p1.showData();
+    
 }
