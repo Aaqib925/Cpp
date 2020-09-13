@@ -4430,11 +4430,11 @@ using namespace std;
 
 class Publisher
 {
-    protected:
+protected:
     string titleOfPublication;
     float priceOfPublication;
 
-    public:
+public:
     Publisher()
     {
         titleOfPublication = "";
@@ -4444,26 +4444,26 @@ class Publisher
     void getData()
     {
         cout << "Enter title of publication: ";
-        // cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cin.ignore(1, '\n');
         getline(cin, titleOfPublication);
         cout << "Enter the price for this Publication: ";
         cin >> priceOfPublication;
     }
 
     void showData()
-    {   
+    {
         cout << endl;
         cout << "The Title of Publication is: " << titleOfPublication << endl;
         cout << "The price for this publication is: " << fixed << setprecision(2) << priceOfPublication << endl;
     }
 };
 
-class Book: public Publisher
+class Book : public Publisher
 {
-    protected:
+protected:
     int pageCount;
 
-    public:
+public:
     Book()
     {
         pageCount = 0;
@@ -4484,13 +4484,13 @@ class Book: public Publisher
     }
 };
 
-class Cassette: public Publisher
+class Cassette : public Publisher
 {
-    protected:
+protected:
     float tapeInMints;
-    
-    public:
-    Cassette() : tapeInMints(0){}
+
+public:
+    Cassette() : tapeInMints(0) {}
 
     void getData()
     {
@@ -4507,5 +4507,48 @@ class Cassette: public Publisher
 };
 int main()
 {
-    
+    vector<Book> bookData;
+    vector<Cassette> casData;
+    char x;
+    while (true)
+    {
+        cout << "Want to add Publisher Details y/n? ";
+        cin >> x;
+        if (x == 'n' || x == 'N')
+        {
+            break;
+        }
+        else
+        {
+            cout << "Do you want to Publish Book or Cassete b/c?";
+            cin >> x;
+            if (x == 'b' || x == 'B')
+            {
+                Book b;
+                b.getData();
+                bookData.push_back(b);
+            }
+            else if (x == 'c' || x == 'C')
+            {
+                Cassette c;
+                c.getData();
+            }
+        }
+    }
+    if (bookData.size() != 0)
+    {
+        cout << "\nDetails of Books!!\n";
+        for (int i = 0; i < bookData.size(); i++)
+        {
+            bookData[i].showData();
+        }
+    }
+    if (casData.size() != 0)
+    {
+        cout << "\nDetails of Cassettes!!\n";
+        for (int i = 0; i < casData.size(); i++)
+        {
+            casData[i].showData();
+        }
+    }
 }
