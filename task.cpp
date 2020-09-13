@@ -4428,127 +4428,181 @@ using namespace std;
 //     gameOfThrones("cdefghmnopqrstuvw");
 // }
 
-class Publisher
+// class Publisher
+// {
+// protected:
+//     string titleOfPublication;
+//     float priceOfPublication;
+
+// public:
+//     Publisher()
+//     {
+//         titleOfPublication = "";
+//         priceOfPublication = 0;
+//     }
+
+//     void getData()
+//     {
+//         cout << "Enter title of publication: ";
+//         cin.ignore(1, '\n');
+//         getline(cin, titleOfPublication);
+//         cout << "Enter the price for this Publication: ";
+//         cin >> priceOfPublication;
+//     }
+
+//     void showData()
+//     {
+//         cout << endl;
+//         cout << "The Title of Publication is: " << titleOfPublication << endl;
+//         cout << "The price for this publication is: " << fixed << setprecision(2) << priceOfPublication << endl;
+//     }
+// };
+
+// class Book : public Publisher
+// {
+// protected:
+//     int pageCount;
+
+// public:
+//     Book()
+//     {
+//         pageCount = 0;
+//     }
+
+//     void getData()
+//     {
+//         Publisher::getData();
+//         cout << "Enter Page count: ";
+//         cin >> pageCount;
+//     }
+
+//     void showData()
+//     {
+//         Publisher::showData();
+//         cout << "The Page count is: " << pageCount << endl;
+//         cout << endl;
+//     }
+// };
+
+// class Cassette : public Publisher
+// {
+// protected:
+//     float tapeInMints;
+
+// public:
+//     Cassette() : tapeInMints(0) {}
+
+//     void getData()
+//     {
+//         Publisher::getData();
+//         cout << "Enter the Length of Tape in minutes: ";
+//         cin >> tapeInMints;
+//     }
+
+//     void showData()
+//     {
+//         Publisher::showData();
+//         cout << "The Length of Cassette is: " << fixed << setprecision(2) << tapeInMints << endl;
+//     }
+// };
+// int main()
+// {
+//     vector<Book> bookData;
+//     vector<Cassette> casData;
+//     char x;
+//     while (true)
+//     {
+//         cout << "Want to add Publisher Details y/n? ";
+//         cin >> x;
+//         if (x == 'n' || x == 'N')
+//         {
+//             break;
+//         }
+//         else
+//         {
+//             cout << "Do you want to Publish Book or Cassete b/c?";
+//             cin >> x;
+//             if (x == 'b' || x == 'B')
+//             {
+//                 Book b;
+//                 b.getData();
+//                 bookData.push_back(b);
+//             }
+//             else if (x == 'c' || x == 'C')
+//             {
+//                 Cassette c;
+//                 c.getData();
+//             }
+//         }
+//     }
+//     if (bookData.size() != 0)
+//     {
+//         cout << "\nDetails of Books!!\n";
+//         for (int i = 0; i < bookData.size(); i++)
+//         {
+//             bookData[i].showData();
+//         }
+//     }
+//     if (casData.size() != 0)
+//     {
+//         cout << "\nDetails of Cassettes!!\n";
+//         for (int i = 0; i < casData.size(); i++)
+//         {
+//             casData[i].showData();
+//         }
+//     }
+// }
+
+class Father
 {
-protected:
-    string titleOfPublication;
-    float priceOfPublication;
+    protected:
+    int age;
 
-public:
-    Publisher()
+    public:
+    Father(int x)
     {
-        titleOfPublication = "";
-        priceOfPublication = 0;
+        age = x;
     }
-
-    void getData()
+    virtual void iAm()
     {
-        cout << "Enter title of publication: ";
-        cin.ignore(1, '\n');
-        getline(cin, titleOfPublication);
-        cout << "Enter the price for this Publication: ";
-        cin >> priceOfPublication;
-    }
-
-    void showData()
-    {
-        cout << endl;
-        cout << "The Title of Publication is: " << titleOfPublication << endl;
-        cout << "The price for this publication is: " << fixed << setprecision(2) << priceOfPublication << endl;
+        cout << "I am Father, My age is: " << age << endl;
     }
 };
 
-class Book : public Publisher
-{
-protected:
-    int pageCount;
+class Son: public Father
+{   
+    public:
+    Son(int y): Father(y){}
 
-public:
-    Book()
+    void iAm()
     {
-        pageCount = 0;
-    }
-
-    void getData()
-    {
-        Publisher::getData();
-        cout << "Enter Page count: ";
-        cin >> pageCount;
-    }
-
-    void showData()
-    {
-        Publisher::showData();
-        cout << "The Page count is: " << pageCount << endl;
-        cout << endl;
+        cout << "I am Son, My age is: " << age << endl;
     }
 };
 
-class Cassette : public Publisher
+class Daughter: public Father
 {
-protected:
-    float tapeInMints;
-
-public:
-    Cassette() : tapeInMints(0) {}
-
-    void getData()
+    public:
+    Daughter(int y): Father(y){}
+    void iAm()
     {
-        Publisher::getData();
-        cout << "Enter the Length of Tape in minutes: ";
-        cin >> tapeInMints;
-    }
-
-    void showData()
-    {
-        Publisher::showData();
-        cout << "The Length of Cassette is: " << fixed << setprecision(2) << tapeInMints << endl;
+        cout << "I am Daughter, My age is: " << age << endl;
     }
 };
+
 int main()
 {
-    vector<Book> bookData;
-    vector<Cassette> casData;
-    char x;
-    while (true)
-    {
-        cout << "Want to add Publisher Details y/n? ";
-        cin >> x;
-        if (x == 'n' || x == 'N')
-        {
-            break;
-        }
-        else
-        {
-            cout << "Do you want to Publish Book or Cassete b/c?";
-            cin >> x;
-            if (x == 'b' || x == 'B')
-            {
-                Book b;
-                b.getData();
-                bookData.push_back(b);
-            }
-            else if (x == 'c' || x == 'C')
-            {
-                Cassette c;
-                c.getData();
-            }
-        }
-    }
-    if (bookData.size() != 0)
-    {
-        cout << "\nDetails of Books!!\n";
-        for (int i = 0; i < bookData.size(); i++)
-        {
-            bookData[i].showData();
-        }
-    }
-    if (casData.size() != 0)
-    {
-        cout << "\nDetails of Cassettes!!\n";
-        for (int i = 0; i < casData.size(); i++)
-        {
-            casData[i].showData();
-        }
-    }
+    Father f1(29);
+    Father *ptr;
+    ptr = &f1;
+    ptr->iAm();
+
+    Son s1(18);
+    ptr = &s1;
+    ptr->iAm();
+
+    Daughter d1(15);
+    ptr = &d1;
+    ptr->iAm();
+
 }
