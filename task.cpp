@@ -4444,15 +4444,48 @@ class Publisher
     void getData()
     {
         cout << "Enter title of publication: ";
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        // cin.ignore(numeric_limits<streamsize>::max(), '\n');
         getline(cin, titleOfPublication);
         cout << "Enter the price for this Publication: ";
         cin >> priceOfPublication;
     }
 
     void showData()
-    {
+    {   
+        cout << endl;
         cout << "The Title of Publication is: " << titleOfPublication << endl;
-        cout << "The price for this publication is: " << priceOfPublication << endl;
+        cout << "The price for this publication is: " << fixed << setprecision(2) << priceOfPublication << endl;
     }
+};
+
+class Book: public Publisher
+{
+    protected:
+    int pageCount;
+
+    public:
+    Book()
+    {
+        pageCount = 0;
+    }
+
+    void getData()
+    {
+        Publisher::getData();
+        cout << "Enter Page count: ";
+        cin >> pageCount;
+    }
+
+    void showData()
+    {
+        Publisher::showData();
+        cout << "The Page count is: " << pageCount << endl;
+        cout << endl;
+    }
+};
+int main()
+{
+    Publisher p1;
+    p1.getData();
+    p1.showData();
 }
