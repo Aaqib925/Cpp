@@ -4658,3 +4658,51 @@ using namespace std;
 //     arr[1]->get_data();
 //     arr[1]->show_data();
 // }
+
+string highestValuePalindrome(string x, int n, int k);
+string highestValuePalindrome(string x, int n, int k)
+{
+    string s = x;
+    char maxElement;
+    for (char x: s)
+    {
+        if (x > maxElement)
+            maxElement = x;
+    }
+    // cout << s << endl;
+    for (int i = 0; i < n/2; i ++)
+    {
+        if (k == 0)
+            break;
+        else
+        {
+            if (k == 0)
+                break;
+
+            if (s[i] != s[n - i - 1])
+            {
+                if (s[i] != maxElement){
+                    s[i] = maxElement;
+                    k -= 1;
+                    // cout << k << endl;
+                }
+                if (k != 0){
+                    s[n - i - 1] = s[i];
+                    k -= 1;
+                }
+                // cout << s << endl;
+            }
+        }
+    }
+    string y = s;
+    reverse(y.begin(), y.end());
+    if (y == s)
+        return y;
+    return "-1";
+    
+}
+
+int main()
+{
+    cout << highestValuePalindrome("092282", 6, 3) << endl;
+}
