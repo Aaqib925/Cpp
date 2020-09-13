@@ -796,7 +796,7 @@ using namespace std;
 
 // int main(){
 //     int R = 238;
-//     string name = "Shahwar";
+//     string name = "hwar";
 //     int N = name.length();
 //     cout << "Before Multiplication: " << endl;
 //     int array[N][N];
@@ -4555,10 +4555,10 @@ using namespace std;
 
 class Father
 {
-    protected:
+protected:
     int age;
 
-    public:
+public:
     Father(int x)
     {
         age = x;
@@ -4569,10 +4569,10 @@ class Father
     }
 };
 
-class Son: public Father
-{   
-    public:
-    Son(int y): Father(y){}
+class Son : public Father
+{
+public:
+    Son(int y) : Father(y) {}
 
     void iAm()
     {
@@ -4580,10 +4580,10 @@ class Son: public Father
     }
 };
 
-class Daughter: public Father
+class Daughter : public Father
 {
-    public:
-    Daughter(int y): Father(y){}
+public:
+    Daughter(int y) : Father(y) {}
     void iAm()
     {
         cout << "I am Daughter, My age is: " << age << endl;
@@ -4604,5 +4604,56 @@ int main()
     Daughter d1(15);
     ptr = &d1;
     ptr->iAm();
+}
 
+class Shape
+{
+protected:
+    double length, width;
+
+public:
+    virtual void get_data()
+    {
+        cout << "Enter the Length: ";
+        cin >> this->length;
+        cout << "Enter the Width: ";
+        cin >> this->width;
+    }
+
+    virtual void show_data() = 0;
+};
+
+class Rectangle : public Shape
+{
+public:
+    void show_data()
+    {
+        cout << "The Area of Rectangle is: " << (this->width * this->length) << endl;
+    }
+};
+
+class Triangle : public Shape
+{
+public:
+    void show_data()
+    {
+        cout << "The Area of Triangle is: " << (this->width * this->length) / 2 << endl;
+    }
+};
+
+int main()
+{
+    Shape *arr[2];
+
+    Rectangle r1;
+    Triangle t1;
+
+    arr[0] = &r1;
+    arr[1] = &t1;
+
+    arr[0]->get_data();
+    arr[0]->show_data();
+
+    arr[1]->get_data();
+    arr[1]->show_data();
 }

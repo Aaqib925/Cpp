@@ -73,21 +73,6 @@ class Triangle: public Shape{
 };
 
 int main(){
-    // A *arr[2];
-
-    // B obj1;
-    // C obj2;
-
-    // arr[0] = &obj1;
-    // arr[1] = &obj2;
-
-    // arr[0]->fun();
-    // arr[1]->fun();
-
-    // we create a abstract class, if we don't want to make object for it, but want to use
-    // member functions only
-
-    // Review Question
 
     Shape *arr[2];
 
