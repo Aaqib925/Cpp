@@ -5011,3 +5011,25 @@ using namespace std;
 //     Shape3->showColor();
 //     Shape4->showColor();
 // }
+int tellFrequency(string s);
+int tellFrequency(string s)
+{
+    return 0;
+}
+
+
+
+void initialize(string s,int l,int r);
+void initialize(string s, int l, int r)
+{
+    l -= 1;
+    r -= 1;
+    s = s.substr(l, r - l + 1);
+    cout << s << endl;
+}
+
+
+int main()
+{
+    initialize("week", 2, 3);
+}
