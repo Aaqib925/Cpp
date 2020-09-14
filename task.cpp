@@ -4659,50 +4659,141 @@ using namespace std;
 //     arr[1]->show_data();
 // }
 
-string highestValuePalindrome(string x, int n, int k);
-string highestValuePalindrome(string x, int n, int k)
-{
-    string s = x;
-    char maxElement;
-    for (char x: s)
-    {
-        if (x > maxElement)
-            maxElement = x;
-    }
-    // cout << s << endl;
-    for (int i = 0; i < n/2; i ++)
-    {
-        if (k == 0)
-            break;
-        else
-        {
-            if (k == 0)
-                break;
+// string highestValuePalindrome(string x, int n, int k);
+// string highestValuePalindrome(string x, int n, int k)
+// {
+//     string s = x;
+//     char maxElement;
+//     for (char x: s)
+//     {
+//         if (x > maxElement)
+//             maxElement = x;
+//     }
+//     // cout << s << endl;
+//     for (int i = 0; i < n/2; i ++)
+//     {
+//         if (k == 0)
+//             break;
+//         else
+//         {
+//             if (k == 0)
+//                 break;
 
-            if (s[i] != s[n - i - 1])
-            {
-                if (s[i] != maxElement){
-                    s[i] = maxElement;
-                    k -= 1;
-                    // cout << k << endl;
-                }
-                if (k != 0){
-                    s[n - i - 1] = s[i];
-                    k -= 1;
-                }
-                // cout << s << endl;
-            }
-        }
-    }
-    string y = s;
-    reverse(y.begin(), y.end());
-    if (y == s)
-        return y;
-    return "-1";
+//             if (s[i] != s[n - i - 1])
+//             {
+//                 if (s[i] != maxElement){
+//                     s[i] = maxElement;
+//                     k -= 1;
+//                     // cout << k << endl;
+//                 }
+//                 if (k != 0){
+//                     s[n - i - 1] = s[i];
+//                     k -= 1;
+//                 }
+//                 // cout << s << endl;
+//             }
+//         }
+//     }
+//     string y = s;
+//     reverse(y.begin(), y.end());
+//     if (y == s)
+//         return y;
+//     return "-1";
     
-}
+// }
 
-int main()
-{
-    cout << highestValuePalindrome("092282", 6, 3) << endl;
+// int main()
+// {
+//     cout << highestValuePalindrome("092282", 6, 3) << endl;
+// }
+
+
+class Color {
+    protected:
+        string colorname;
+    public:
+        virtual void set_color_name()
+        {
+        }
+        Color() {
+            set_color_name();
+        }
+        virtual string show_color()
+        {
+            return colorname;
+        }
+};
+
+class Red : public Color {
+    public:
+        
+        void set_color_name() {
+            colorname = "Red";
+        }
+        Red()
+        {
+            set_color_name();
+        }
+        string show_color() {
+            return colorname;
+        }
+};
+
+class Blue : public Color {
+    public:
+        void set_color_name() {
+            colorname = "Blue";
+        }
+        Blue()
+        {
+            set_color_name();
+        }
+        string show_color() {
+            return colorname;
+        }
+};
+
+class Shape {
+    protected:
+        string color;
+        Color c1;
+        Color *ptr = &c1;
+    public:
+        Shape(Red *R1) {
+            color = R1->show_color();
+        }
+        Shape(Blue *B1) {
+            color = B1->show_color();
+        }
+        Shape()
+        {
+            cout << "Enter Custom Color: ";
+            cin >> color;
+        }
+        void showColor() {
+            cout << "Colored as " << color << endl;
+        }
+};
+
+class Circle : public Shape {
+    public:
+        Circle(Red *R1) : Shape(R1) {}
+        Circle(Blue *B1) : Shape(B1) {}
+        Circle(): Shape(){}
+};
+
+class Triangle : public Shape {
+    public:
+        Triangle(Red *R1) : Shape(R1) {}
+        Triangle(Blue *B1) : Shape(B1) {}
+        Triangle(): Shape(){}
+};
+
+int main() {
+    Shape *Shape1 = new Triangle(new Red);
+    Shape *Shape2 = new Circle(new Blue);
+    Shape *Shape3 = new Triangle();
+    Shape1->showColor();
+    Shape2->showColor();
+    Shape3->showColor();
 }
