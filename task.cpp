@@ -4797,6 +4797,115 @@ using namespace std;
 //     Shape2->showColor();
 //     Shape3->showColor();
 // }
+// class Color {
+//     protected:
+//         string colorname;
+//     public:
+//         virtual void set_color_name()
+//         {
+//         }
+//         Color() {
+//             set_color_name();
+//         }
+//         virtual string show_color()
+//         {
+//             return colorname;
+//         }
+// };
+
+// class Red : public Color {
+//     public:
+        
+//         void set_color_name() {
+//             colorname = "Red";
+//         }
+//         Red()
+//         {
+//             set_color_name();
+//         }
+//         string show_color() {
+//             return colorname;
+//         }
+// };
+
+// class Blue : public Color {
+//     public:
+//         void set_color_name() {
+//             colorname = "Blue";
+//         }
+//         Blue()
+//         {
+//             set_color_name();
+//         }
+//         string show_color() {
+//             return colorname;
+//         }
+// };
+
+// class CustomColor : public Color {
+//     public:
+//         void set_color_name(string c) {
+//             colorname = c;
+//         }
+//         CustomColor(string c) {
+//             set_color_name(c);
+//         }
+//         CustomColor() {
+//             cout << "\nPlease enter the color you want to fill the shape with >> "; cin >> colorname;
+//         }
+//         string show_color() {
+//             return colorname;
+//         }
+// };
+
+// class Shape {
+//     protected:
+//         string color;
+//         Color c1;
+//         Color *ptr = &c1;
+//     public:
+//         Shape(Red *R1) {
+//             color = R1->show_color();
+//         }
+//         Shape(Blue *B1) {
+//             color = B1->show_color();
+//         }
+//         Shape(CustomColor *C1) {
+//             color = C1->show_color();
+//         }
+//         void showColor() {
+//             cout << "Colored as " << color << endl;
+//         }
+// };
+
+// class Circle : public Shape {
+//     public:
+//         Circle(Red *R1) : Shape(R1) {}
+//         Circle(Blue *B1) : Shape(B1) {}
+//         Circle(CustomColor *C1): Shape(C1){}
+// };
+
+// class Triangle : public Shape {
+//     public:
+//         Triangle(Red *R1) : Shape(R1) {}
+//         Triangle(Blue *B1) : Shape(B1) {}
+//         Triangle(CustomColor *C1): Shape(C1){}
+// };
+
+// int main() {
+//     Shape *Shape1 = new Triangle(new Red);
+//     Shape *Shape2 = new Circle(new Blue);
+//     Shape *Shape3 = new Triangle(new CustomColor);
+//     Shape *Shape4 = new Circle(new CustomColor("Orange"));
+//     Shape1->showColor();
+//     Shape2->showColor();
+//     Shape3->showColor();
+//     Shape4->showColor();
+// }
+
+#include <iostream>
+using namespace std;
+
 class Color {
     protected:
         string colorname;
@@ -4813,13 +4922,13 @@ class Color {
         }
 };
 
-class Red : public Color {
+class RedColor : public Color {
     public:
         
         void set_color_name() {
             colorname = "Red";
         }
-        Red()
+        RedColor()
         {
             set_color_name();
         }
@@ -4828,12 +4937,12 @@ class Red : public Color {
         }
 };
 
-class Blue : public Color {
+class GreenColor : public Color {
     public:
         void set_color_name() {
-            colorname = "Blue";
+            colorname = "Green";
         }
-        Blue()
+        GreenColor()
         {
             set_color_name();
         }
@@ -4864,10 +4973,10 @@ class Shape {
         Color c1;
         Color *ptr = &c1;
     public:
-        Shape(Red *R1) {
+        Shape(RedColor *R1) {
             color = R1->show_color();
         }
-        Shape(Blue *B1) {
+        Shape(GreenColor *B1) {
             color = B1->show_color();
         }
         Shape(CustomColor *C1) {
@@ -4878,25 +4987,25 @@ class Shape {
         }
 };
 
-class Circle : public Shape {
+class Pentagon : public Shape {
     public:
-        Circle(Red *R1) : Shape(R1) {}
-        Circle(Blue *B1) : Shape(B1) {}
-        Circle(CustomColor *C1): Shape(C1){}
+        Pentagon(RedColor *R1) : Shape(R1) {}
+        Pentagon(GreenColor *B1) : Shape(B1) {}
+        Pentagon(CustomColor *C1): Shape(C1){}
 };
 
 class Triangle : public Shape {
     public:
-        Triangle(Red *R1) : Shape(R1) {}
-        Triangle(Blue *B1) : Shape(B1) {}
+        Triangle(RedColor *R1) : Shape(R1) {}
+        Triangle(GreenColor *B1) : Shape(B1) {}
         Triangle(CustomColor *C1): Shape(C1){}
 };
 
 int main() {
-    Shape *Shape1 = new Triangle(new Red);
-    Shape *Shape2 = new Circle(new Blue);
+    Shape *Shape1 = new Triangle(new RedColor);
+    Shape *Shape2 = new Pentagon(new GreenColor);
     Shape *Shape3 = new Triangle(new CustomColor);
-    Shape *Shape4 = new Circle(new CustomColor("Orange"));
+    Shape *Shape4 = new Pentagon(new CustomColor("Orange"));
     Shape1->showColor();
     Shape2->showColor();
     Shape3->showColor();
