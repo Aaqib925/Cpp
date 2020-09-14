@@ -4699,14 +4699,13 @@ using namespace std;
 //     if (y == s)
 //         return y;
 //     return "-1";
-    
+
 // }
 
 // int main()
 // {
 //     cout << highestValuePalindrome("092282", 6, 3) << endl;
 // }
-
 
 // class Color {
 //     protected:
@@ -4726,7 +4725,7 @@ using namespace std;
 
 // class Red : public Color {
 //     public:
-        
+
 //         void set_color_name() {
 //             colorname = "Red";
 //         }
@@ -4815,7 +4814,7 @@ using namespace std;
 
 // class Red : public Color {
 //     public:
-        
+
 //         void set_color_name() {
 //             colorname = "Red";
 //         }
@@ -4924,7 +4923,7 @@ using namespace std;
 
 // class RedColor : public Color {
 //     public:
-        
+
 //         void set_color_name() {
 //             colorname = "Red";
 //         }
@@ -5011,25 +5010,34 @@ using namespace std;
 //     Shape3->showColor();
 //     Shape4->showColor();
 // }
-int tellFrequency(string s);
-int tellFrequency(string s)
+int tellFrequency(string s, char x);
+int tellFrequency(string s, char x)
 {
-    return 0;
+    int count = 0;
+
+    for (int i = 0; s[i] != '\0'; ++i)
+    {
+        if (x == s[i])
+            ++count;
+    }
+    return count;
+    
 }
 
-
-
-void initialize(string s,int l,int r);
+void initialize(string s, int l, int r);
 void initialize(string s, int l, int r)
 {
     l -= 1;
     r -= 1;
     s = s.substr(l, r - l + 1);
-    cout << s << endl;
+    for (char x : s)
+    {
+        int length = 0;
+        string newString = s;
+    }
 }
-
 
 int main()
 {
-    initialize("week", 2, 3);
+    initialize("week", 1, 4);
 }
