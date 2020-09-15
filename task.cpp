@@ -5010,34 +5010,196 @@ using namespace std;
 //     Shape3->showColor();
 //     Shape4->showColor();
 // }
-int tellFrequency(string s, char x);
-int tellFrequency(string s, char x)
-{
-    int count = 0;
+// int tellFrequency(string s, char x);
+// int tellFrequency(string s, char x)
+// {
+//     int count = 0;
 
-    for (int i = 0; s[i] != '\0'; ++i)
-    {
-        if (x == s[i])
-            ++count;
-    }
-    return count;
-    
-}
+//     for (int i = 0; s[i] != '\0'; ++i)
+//     {
+//         if (x == s[i])
+//             ++count;
+//     }
+//     return count;
+// }
 
-void initialize(string s, int l, int r);
-void initialize(string s, int l, int r)
+// void initialize(string s, int l, int r);
+// void initialize(string s, int l, int r)
+// {
+//     l -= 1;
+//     r -= 1;
+//     s = s.substr(l, r - l + 1);
+//     vector<string> ans;
+//     // for (int i = 0; i < s.length(); i ++)
+//     // {
+//     string newString = s;
+//     int length = 0;
+//     for (char x : s)
+//     {
+//         // string newString = s;
+//         int frequency = tellFrequency(newString, x);
+//         if (frequency % 2 == 0)
+//         {
+//             length += frequency;
+//         }
+//         else if (frequency == 1)
+//         {
+//             length += 1;
+//         }
+//         cout << length << endl;
+//     }
+//     // }
+// }
+
+// int main()
+// {
+//     initialize("week", 1, 4);
+// }
+int validateFunction()
 {
-    l -= 1;
-    r -= 1;
-    s = s.substr(l, r - l + 1);
-    for (char x : s)
+    int a;
+    cin >> a;
+    while (1)
     {
-        int length = 0;
-        string newString = s;
+        if (cin.fail())
+        {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(),'\n');
+            cout << "\nPlease Enter Valid Number!!" << endl;
+            cin >> a;
+        }
+        if (!cin.fail())
+            break;
     }
+    return a;
 }
+class Student
+{
+protected:
+    string name, roll_num;
+    // bool canTakeFeedback;
+public:
+    Student()
+    {
+        cout << "\nEnter Name: ";
+        cin >> name;
+        cout << "Enter Roll Number: ";
+        cin >> roll_num;
+    }
+    virtual void GoToNextClassroom() {}
+    // virtual bool isEligibleForFeedback() {return 0;}
+    void returnDetails()
+    {
+        cout << this->name << "\t" << this->roll_num << endl; 
+    }
+};
+
+class RegularStudent : public Student
+{
+public:
+    void GoToNextClassroom()
+    {
+        cout << "\nThank you " << name << " for attending the seminar, please join your batch-mates in the next classroom." << endl;
+    }
+    // bool isEligibleForFeedback() {
+    //     canTakeFeedback = false;
+    //     return canTakeFeedback;
+    // }
+};
+
+class GraduateStudent : public Student
+{
+private:
+    bool Feedback = false;
+
+public:
+    void GoToNextClassroom()
+    {
+        while (true)
+        {
+            if (Feedback)
+            {
+                cout << "\nThank you " << name << " for attending the seminar, please join your batch-mates in the next classroom." << endl;
+                break;
+            }
+            else
+            {
+                cout << "\n"
+                     << name << " , please collect the feedback before you proceed to the next classroom." << endl;
+                cout << "Do you want to collect the feedback? (y/n) >> ";
+                char choice;
+                cin >> choice;
+                if (choice == 'y' || choice == 'Y')
+                {
+                    CollectFeedback();
+                }
+            }
+        }
+    }
+    void CollectFeedback()
+    {
+        Feedback = true;
+    }
+};
 
 int main()
 {
-    initialize("week", 1, 4);
+    cout << "Enter number of attendees: ";
+    int limitToAttend = validateFunction();
+    vector<vector< Student* >> Students = {{},{}};
+    int attendees = 0;
+    char choice;
+    int age;
+    while (attendees < limitToAttend)
+    {
+        cout << "\nDo you want to attend the seminar?(y/n) >> ";
+        cin >> choice;
+        if (choice == 'y' || choice == 'Y')
+        {
+            cout << "\nEnter your Age: >> ";
+            age = validateFunction();
+            if (age < 17)
+            {
+                cout << "Candidate with age 17 or above is only allowed!!" << endl;
+            }
+            else{
+                if (age > 24)
+                {
+                    Students[0].push_back(new GraduateStudent);
+                }
+                else if (age >= 17 && age <= 24)
+                {
+                    Students[1].push_back(new RegularStudent);
+                }
+                attendees++;
+            }
+        }
+    }
+    for (int i = 0; i < Students.size(); i++)
+    {
+        for (int j = 0; j < Students[i].size(); j++)
+        {
+            Students[i][j]->GoToNextClassroom();
+        }
+    }
+    for (int i = 0; i < Students.size(); i++)
+    {
+        for (int j = 0; j < Students[i].size(); j++)
+        {
+            if (i == 0){
+                cout << endl;
+                cout << "DATA OF REGULAR STUDENTS" << endl;
+                cout << "NAMES\t" << "ROLL NUMBERS" << endl;
+                cout << "=====================" << endl;
+            }
+            else if (i == 1){
+                cout << endl;
+                cout << "DATA OF POSTGRADUATE STUDENTS" << endl;
+                cout << "NAMES\t" << "ROLL NUMBERS" << endl;
+                cout << "=====================" << endl;
+            }
+            Students[i][j]->returnDetails();
+
+        }
+    }
 }
