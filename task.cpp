@@ -5465,15 +5465,26 @@ using namespace std;
 //     cout << balancedSums({0, 0, 2, 0}) << endl;
 // }
 
-int minimumAbsoluteDifference(vector<int> arr) {
+// int minimumAbsoluteDifference(vector<int> arr) {
 
-    int ans;
-    sort(arr.begin(), arr.end());
-    for (int i = 1; i < arr.size(); i++)
+//     int ans;
+//     sort(arr.begin(), arr.end());
+//     for (int i = 1; i < arr.size(); i++)
+//     {
+//         int difference = arr[i] - arr[i - 1];
+//         if (difference < ans)
+//             ans = difference;
+//     }
+//     return ans;
+// }
+
+long marcsCakewalk(vector<int> a) {
+    sort(a.begin(), a.end(), greater<int>()); 
+    long int sum = 0;
+    for (int i = 0; i < a.size(); i++)
     {
-        int difference = arr[i] - arr[i - 1];
-        if (difference < ans)
-            ans = difference;
+        sum += (pow(2, i) * a[i]);
     }
-    return ans;
+    return sum;
+
 }
