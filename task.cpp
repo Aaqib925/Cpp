@@ -5391,13 +5391,25 @@ using namespace std;
 int icecreamParlor(int m, vector<int> arr);
 int icecreamParlor(int m, vector<int> arr)
 {
+    bool find = false;
+    
+    for (int i = 0; i < arr.size(); i ++)
+    {
+        for (int j = i + 1; j < arr.size(); j++)
+        {
+            if (!find && arr[i] + arr[j] == m)
+            {
+                find = true;
+                cout << i + 1 << " " << j + 1 << endl;
 
-
+            }
+        }
+    }
 
     return 0;    
 }
 
 int main()
 {
-    icecreamParlor(4, {1, 4, 5, 3, 2});
+    icecreamParlor(4, {2, 2, 4, 3});
 }
