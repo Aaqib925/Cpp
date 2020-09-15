@@ -5388,28 +5388,64 @@ using namespace std;
 // {
 //     Conference C1;
 // }
-int icecreamParlor(int m, vector<int> arr);
-int icecreamParlor(int m, vector<int> arr)
-{
-    bool find = false;
-    
-    for (int i = 0; i < arr.size(); i ++)
-    {
-        for (int j = i + 1; j < arr.size(); j++)
-        {
-            if (!find && arr[i] + arr[j] == m)
-            {
-                find = true;
-                cout << i + 1 << " " << j + 1 << endl;
+// int icecreamParlor(int m, vector<int> arr);
+// int icecreamParlor(int m, vector<int> arr)
+// {
+//     bool find = false;
 
+//     for (int i = 0; i < arr.size(); i ++)
+//     {
+//         for (int j = i + 1; j < arr.size(); j++)
+//         {
+//             if (!find && arr[i] + arr[j] == m)
+//             {
+//                 find = true;
+//                 cout << i + 1 << " " << j + 1 << endl;
+
+//             }
+//         }
+//     }
+
+//     return 0;
+// }
+
+// int main()
+// {
+//     icecreamParlor(4, {2, 2, 4, 3});
+// }
+#include <bits/stdc++.h>
+void balancedSums(vector<int> arr);
+void balancedSums(vector<int> arr)
+{
+
+    for (int i = 0; i < arr.size(); i++)
+    {
+        int leftSum = 0;
+        int rightSum = 0;
+        if (i - 1 > 0)
+        {
+            for (int j = i - 1; j >= 0; j--)
+            {
+                // cout << arr[j] << endl;
+                leftSum += arr[j];
             }
         }
+        if (i + 1 < arr.size())
+        {
+            for (int j = i + 1; j < arr.size(); j++)
+            {
+                rightSum += arr[j];
+            }
+        }
+        if (rightSum == leftSum)
+        {
+            cout << arr[i] << endl;
+            break;
+        }
     }
-
-    return 0;    
 }
 
 int main()
 {
-    icecreamParlor(4, {2, 2, 4, 3});
+    balancedSums({0, 0, 2, 0 });
 }
