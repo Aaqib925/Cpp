@@ -5203,188 +5203,201 @@ using namespace std;
 //         }
 //     }
 // }
-#include <iostream>
-#include <vector>
-#include <limits>
-#include <unistd.h>
-using namespace std;
+// #include <iostream>
+// #include <vector>
+// #include <limits>
+// #include <unistd.h>
+// using namespace std;
 
-int validateFunction()
+// int validateFunction()
+// {
+//     int a;
+//     cin >> a;
+//     while (1)
+//     {
+//         if (cin.fail())
+//         {
+//             cin.clear();
+//             cin.ignore(numeric_limits<streamsize>::max(), '\n');
+//             cout << "\nPlease Enter Valid Number!!" << endl;
+//             cin >> a;
+//         }
+//         if (!cin.fail())
+//             break;
+//     }
+//     return a;
+// }
+// class Student
+// {
+// protected:
+//     string name, roll_num;
+//     // bool canTakeFeedback;
+// public:
+//     Student()
+//     {
+//         cout << "Enter Name: ";
+//         cin >> name;
+//         cout << "Enter Roll Number: ";
+//         cin >> roll_num;
+//     }
+//     virtual void GoToNextClassroom() {}
+//     // virtual bool isEligibleForFeedback() {return 0;}
+//     void returnDetails()
+//     {
+//         cout << this->name << "\t" << this->roll_num << endl;
+//     }
+// };
+
+// class RegularStudent : public Student
+// {
+// public:
+//     void GoToNextClassroom()
+//     {
+//         cout << "\nThank you " << name << " for attending the seminar, please join your batch-mates in the next classroom." << endl;
+//     }
+//     // bool isEligibleForFeedback() {
+//     //     canTakeFeedback = false;
+//     //     return canTakeFeedback;
+//     // }
+// };
+
+// class GraduateStudent : public Student
+// {
+// private:
+//     bool Feedback = false;
+
+// public:
+//     void GoToNextClassroom()
+//     {
+//         while (true)
+//         {
+//             if (Feedback)
+//             {
+//                 cout << "\nThank you " << name << " for attending the seminar, please join your batch-mates in the next classroom." << endl;
+//                 break;
+//             }
+//             else
+//             {
+//                 cout << "\n"
+//                      << name << " , please collect the feedback before you proceed to the next classroom." << endl;
+//                 cout << "Do you want to collect the feedback? (y/n) >> ";
+//                 char choice;
+//                 cin >> choice;
+//                 if (choice == 'y' || choice == 'Y')
+//                 {
+//                     CollectFeedback();
+//                 }
+//             }
+//         }
+//     }
+//     void CollectFeedback()
+//     {
+//         Feedback = true;
+//     }
+// };
+
+// class Conference
+// {
+// private:
+//     int limitOfAttendees;
+//     int attendees = 0;
+//     vector<vector<Student *>> Students = {{}, {}};
+
+// public:
+//     Conference()
+//     {
+//         cout << "\nEnter limit of attendees: ";
+//         limitOfAttendees = validateFunction();
+//         char choice;
+//         int age;
+//         while (attendees < limitOfAttendees)
+//         {
+//             cout << "\nDo you want to attend the seminar?(y/n) >> ";
+//             cin >> choice;
+//             if (choice == 'y' || choice == 'Y')
+//             {
+//                 cout << "\nEnter your Age: ";
+//                 age = validateFunction();
+//                 if (age < 17)
+//                 {
+//                     cout << "Candidate with age 17 or above is only allowed!!" << endl;
+//                 }
+//                 else
+//                 {
+//                     if (age > 24)
+//                     {
+//                         Students[0].push_back(new GraduateStudent);
+//                     }
+//                     else if (age >= 17 && age <= 24)
+//                     {
+//                         Students[1].push_back(new RegularStudent);
+//                     }
+//                     attendees++;
+//                 }
+//             }
+//         }
+//         cout << "\nSeminar in process";
+//         for (int i = 0; i < 2; i++)
+//         {
+//             cout << ".";
+//             usleep(1000000);
+//         }
+//         cout << "\nSeminar ended";
+//         for (int i = 0; i < 2; i++)
+//         {
+//             cout << ".";
+//             usleep(1000000);
+//         }
+//         cout << endl;
+//         for (int i = 0; i < Students.size(); i++)
+//         {
+//             for (int j = 0; j < Students[i].size(); j++)
+//             {
+//                 Students[i][j]->GoToNextClassroom();
+//                 usleep(1000000);
+//             }
+//         }
+//         for (int i = 0; i < Students.size(); i++)
+//         {
+//             for (int j = 0; j < Students[i].size(); j++)
+//             {
+//                 if (i == 0)
+//                 {
+//                     cout << endl;
+//                     cout << "*ATTENDANCE DATA OF REGULAR STUDENTS*" << endl;
+//                     cout << "\nNAMES\t"
+//                          << "ROLL NUMBERS" << endl;
+//                     cout << "=====================" << endl;
+//                 }
+//                 else if (i == 1)
+//                 {
+//                     cout << endl;
+//                     cout << "*ATTENDANCE DATA OF POSTGRADUATE STUDENTS*" << endl;
+//                     cout << "\nNAMES\t"
+//                          << "ROLL NUMBERS" << endl;
+//                     cout << "=====================" << endl;
+//                 }
+//                 Students[i][j]->returnDetails();
+//                 cout << "\n";
+//             }
+//         }
+//     }
+// };
+
+// int main()
+// {
+//     Conference C1;
+// }
+int icecreamParlor(int m, vector<int> arr);
+int icecreamParlor(int m, vector<int> arr)
 {
-    int a;
-    cin >> a;
-    while (1)
-    {
-        if (cin.fail())
-        {
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cout << "\nPlease Enter Valid Number!!" << endl;
-            cin >> a;
-        }
-        if (!cin.fail())
-            break;
-    }
-    return a;
+
+
+
+    return 0;    
 }
-class Student
-{
-protected:
-    string name, roll_num;
-    // bool canTakeFeedback;
-public:
-    Student()
-    {
-        cout << "Enter Name: ";
-        cin >> name;
-        cout << "Enter Roll Number: ";
-        cin >> roll_num;
-    }
-    virtual void GoToNextClassroom() {}
-    // virtual bool isEligibleForFeedback() {return 0;}
-    void returnDetails()
-    {
-        cout << this->name << "\t" << this->roll_num << endl;
-    }
-};
-
-class RegularStudent : public Student
-{
-public:
-    void GoToNextClassroom()
-    {
-        cout << "\nThank you " << name << " for attending the seminar, please join your batch-mates in the next classroom." << endl;
-    }
-    // bool isEligibleForFeedback() {
-    //     canTakeFeedback = false;
-    //     return canTakeFeedback;
-    // }
-};
-
-class GraduateStudent : public Student
-{
-private:
-    bool Feedback = false;
-
-public:
-    void GoToNextClassroom()
-    {
-        while (true)
-        {
-            if (Feedback)
-            {
-                cout << "\nThank you " << name << " for attending the seminar, please join your batch-mates in the next classroom." << endl;
-                break;
-            }
-            else
-            {
-                cout << "\n"
-                     << name << " , please collect the feedback before you proceed to the next classroom." << endl;
-                cout << "Do you want to collect the feedback? (y/n) >> ";
-                char choice;
-                cin >> choice;
-                if (choice == 'y' || choice == 'Y')
-                {
-                    CollectFeedback();
-                }
-            }
-        }
-    }
-    void CollectFeedback()
-    {
-        Feedback = true;
-    }
-};
-
-class Conference
-{
-private:
-    int limitOfAttendees;
-    int attendees = 0;
-    vector<vector<Student *>> Students = {{}, {}};
-
-public:
-    Conference()
-    {
-        cout << "\nEnter limit of attendees: ";
-        limitOfAttendees = validateFunction();
-        char choice;
-        int age;
-        while (attendees < limitOfAttendees)
-        {
-            cout << "\nDo you want to attend the seminar?(y/n) >> ";
-            cin >> choice;
-            if (choice == 'y' || choice == 'Y')
-            {
-                cout << "\nEnter your Age: ";
-                age = validateFunction();
-                if (age < 17)
-                {
-                    cout << "Candidate with age 17 or above is only allowed!!" << endl;
-                }
-                else
-                {
-                    if (age > 24)
-                    {
-                        Students[0].push_back(new GraduateStudent);
-                    }
-                    else if (age >= 17 && age <= 24)
-                    {
-                        Students[1].push_back(new RegularStudent);
-                    }
-                    attendees++;
-                }
-            }
-        }
-        cout << "\nSeminar in process";
-        for (int i = 0; i < 2; i++)
-        {
-            cout << ".";
-            usleep(1000000);
-        }
-        cout << "\nSeminar ended";
-        for (int i = 0; i < 2; i++)
-        {
-            cout << ".";
-            usleep(1000000);
-        }
-        cout << endl;
-        for (int i = 0; i < Students.size(); i++)
-        {
-            for (int j = 0; j < Students[i].size(); j++)
-            {
-                Students[i][j]->GoToNextClassroom();
-                usleep(1000000);
-            }
-        }
-        for (int i = 0; i < Students.size(); i++)
-        {
-            for (int j = 0; j < Students[i].size(); j++)
-            {
-                if (i == 0)
-                {
-                    cout << endl;
-                    cout << "*ATTENDANCE DATA OF REGULAR STUDENTS*" << endl;
-                    cout << "\nNAMES\t"
-                         << "ROLL NUMBERS" << endl;
-                    cout << "=====================" << endl;
-                }
-                else if (i == 1)
-                {
-                    cout << endl;
-                    cout << "*ATTENDANCE DATA OF POSTGRADUATE STUDENTS*" << endl;
-                    cout << "\nNAMES\t"
-                         << "ROLL NUMBERS" << endl;
-                    cout << "=====================" << endl;
-                }
-                Students[i][j]->returnDetails();
-                cout << "\n";
-            }
-        }
-    }
-};
 
 int main()
 {
-    Conference C1;
+    icecreamParlor(4, {1, 4, 5, 3, 2});
 }
