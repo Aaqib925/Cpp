@@ -5413,39 +5413,67 @@ using namespace std;
 // {
 //     icecreamParlor(4, {2, 2, 4, 3});
 // }
-#include <bits/stdc++.h>
-void balancedSums(vector<int> arr);
-void balancedSums(vector<int> arr)
-{
+// #include <bits/stdc++.h>
+// string balancedSums(vector<int> arr);
+// string balancedSums(vector<int> arr)
+// {
 
-    for (int i = 0; i < arr.size(); i++)
+//     //     for (int i = 0; i < arr.size(); i++)
+//     //     {
+//     //         int leftSum = 0;
+//     //         int rightSum = 0;
+//     //         if (i - 1 > 0)
+//     //         {
+//     //             for (int j = i - 1; j >= 0; j--)
+//     //             {
+//     //                 // cout << arr[j] << endl;
+//     //                 leftSum += arr[j];
+//     //             }
+//     //         }
+//     //         if (i + 1 < arr.size())
+//     //         {
+//     //             for (int j = i + 1; j < arr.size(); j++)
+//     //             {
+//     //                 rightSum += arr[j];
+//     //             }
+//     //         }
+//     //         if (rightSum == leftSum)
+//     //         {
+//     //             cout << arr[i] << endl;
+//     //             break;
+//     //         }
+//     //     }
+//     int sum = accumulate(arr.begin(), arr.end(), 0);
+//     int count = arr[0];
+//     int len = arr.size();
+//     if (sum - count == 0)
+//         return "YES";
+
+//     for (int i = 1; i < len; i++)
+//     {
+//         if (sum - arr[i] - count == count || sum - arr[i] == 0)
+//         {
+//             return "YES";
+//         }
+//         count += arr[i];
+//     }
+//     return "NO";
+// }
+
+// int main()
+// {
+//     cout << balancedSums({0, 0, 2, 0}) << endl;
+// }
+
+int minimumAbsoluteDifference(vector<int> arr) {
+
+    int ans;
+    sort(arr.begin(), arr.end());
+    for (int i = 1; i < arr.size(); i++)
     {
-        int leftSum = 0;
-        int rightSum = 0;
-        if (i - 1 > 0)
-        {
-            for (int j = i - 1; j >= 0; j--)
-            {
-                // cout << arr[j] << endl;
-                leftSum += arr[j];
-            }
-        }
-        if (i + 1 < arr.size())
-        {
-            for (int j = i + 1; j < arr.size(); j++)
-            {
-                rightSum += arr[j];
-            }
-        }
-        if (rightSum == leftSum)
-        {
-            cout << arr[i] << endl;
-            break;
-        }
+        int difference = arr[i] - arr[i - 1];
+        if (difference < ans)
+            ans = difference;
     }
-}
-
-int main()
-{
-    balancedSums({0, 0, 2, 0 });
+    return ans;
 }
