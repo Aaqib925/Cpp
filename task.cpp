@@ -5478,13 +5478,13 @@ using namespace std;
 //     return ans;
 // }
 
-long marcsCakewalk(vector<int> a) {
-    sort(a.begin(), a.end(), greater<int>()); 
-    long int sum = 0;
-    for (int i = 0; i < a.size(); i++)
-    {
-        sum += (pow(2, i) * a[i]);
-    }
-    return sum;
+// long marcsCakewalk(vector<int> a) {
+//     sort(a.begin(), a.end(), greater<int>()); 
+//     long int sum = 0;
+//     for (int i = 0; i < a.size(); i++)
+//     {
+//         sum += (pow(2, i) * a[i]);
+//     }
+//     return sum;
 
-}
+// }
