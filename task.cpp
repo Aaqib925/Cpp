@@ -5477,7 +5477,6 @@ using namespace std;
 //     }
 //     return ans;
 // }
-
 // long marcsCakewalk(vector<int> a) {
 //     sort(a.begin(), a.end(), greater<int>()); 
 //     long int sum = 0;
