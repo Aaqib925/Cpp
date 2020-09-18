@@ -5587,3 +5587,14 @@ using namespace std;
 //     return prev;    // nre Reversed List
 // }
 
+// function ListNode reverseList(ListNode head)
+// {
+//     if (head == null || head.next == null)
+//     {
+//         return head;
+//     }
+//     ListNode reversedListHead = reverseList(head.next);
+//     head.next.next = head;
+//     head.next null;
+//     return reverseListHead;
+// }

@@ -13,6 +13,7 @@
         "iosfwd": "cpp",
         "mynamespace": "cpp",
         "list": "cpp",
-        "limits": "cpp"
+        "limits": "cpp",
+        "functional": "cpp"
     }
 }
