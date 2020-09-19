@@ -5598,3 +5598,38 @@ using namespace std;
 //     head.next null;
 //     return reverseListHead;
 // }
+
+int luckBalance(int k, vector<vector<int>> contests) {
+    int smallest = contests[0][0];
+    int index = contests.size();
+    for (int i = 0; i < contests.size(); i++)
+    {
+        if (contests[i][0] < smallest && contests[i][1] == 1)
+        {
+            smallest = contests[i][0]; 
+            index = i;
+            // cout <<"Smallest " << smallest << " INDEX " << index << endl;
+        }
+    }
+    
+    int answer = 0;
+
+    for (int i = 0; i < contests.size(); i++)
+    {
+        if (contests[i][1] == 0)
+        {
+            answer += contests[i][0];
+        }
+        else if (k > 0 && i != index && contests[i][1] == 1)
+        {
+            answer += contests[i][0];
+            k -= 1;
+        }
+        else if (i == index && contests[i][1] == 1)
+        {
+            answer -= contests[i][0];
+        }
+    }
+
+    return answer;
+}
