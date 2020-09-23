@@ -5634,20 +5634,30 @@ using namespace std;
 //     return answer;
 // }
 
+// int main()
+// {
+//     ifstream fin;
+//     fin.open("data.txt");
+
+//     string wordFromFile;
+//     char space;
+//     while (!fin.eof())
+//     {
+//         if (fin >> wordFromFile)
+//         {
+//             cout << wordFromFile;
+//         }
+        
+//     }
+//     fin.close();
+// }
+
 int main()
 {
-    ifstream fin;
-    fin.open("data.txt");
-
-    string wordFromFile;
-    char space;
-    while (!fin.eof())
+    ifstream fin("data.txt");
+    string line;
+    while (getline(fin, line))
     {
-        if (fin >> wordFromFile)
-        {
-            cout << wordFromFile;
-        }
-        
+        cout << line << endl;
     }
-    fin.close();
 }
