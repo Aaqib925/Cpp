@@ -5652,12 +5652,12 @@ using namespace std;
 //     fin.close();
 // }
 
-int main()
-{
-    ifstream fin("data.txt");
-    string line;
-    while (getline(fin, line))
-    {
-        cout << line << endl;
-    }
-}
+// int main()
+// {
+//     ifstream fin("data.txt");
+//     string line;
+//     while (getline(fin, line))
+//     {
+//         cout << line << endl;
+//     }
+// }
