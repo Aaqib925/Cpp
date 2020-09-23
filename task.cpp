@@ -5662,41 +5662,41 @@ using namespace std;
 //     }
 // }
 
-class base
-{
-    public:
-    void showData()
-    {
-        cout << "This is base class" << endl;
-    }
-};
+// class base
+// {
+//     public:
+//     virtual void showData()
+//     {
+//         cout << "This is base class" << endl;
+//     }
+// };
 
-class derive: public base
-{
-    public:
-    void showData()
-    {
-        cout << "This is derived class" << endl;
-    }
-};
+// class derive: public base
+// {
+//     public:
+//     void showData()
+//     {
+//         cout << "This is derived class" << endl;
+//     }
+// };
 
-int main()
-{
-    base *arr[10];
-    char x;
-    for (int i = 0; i < 10; i++)
-    {
-        cout << "Base or Derived? ";
-        cin >> x;
-        if (x == 'b')
-        {
-            arr[i] = new base;
-            arr[i]->showData();
-        }
-        else
-        {
-            arr[i] = new derive;
-            arr[i]->showData();
-        }
-    }
-}
+// int main()
+// {
+//     base *arr[10];
+//     char x;
+//     for (int i = 0; i < 10; i++)
+//     {
+//         cout << "Base or Derived? ";
+//         cin >> x;
+//         if (x == 'b')
+//         {
+//             arr[i] = new base;
+//             arr[i]->showData();
+//         }
+//         else
+//         {
+//             arr[i] = new derive;
+//             arr[i]->showData();
+//         }
+//     }
+// }
