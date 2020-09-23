@@ -87,7 +87,7 @@ using namespace std;
 int main()
 {
     vector<int> vecOfNums = {12, 45, 54, 33, 2, 7, 8, 22, 43, 19};
-    vector<int>::iterator it = std::find(vecOfNums.begin(), vecOfNums.end(), 22);
+    vector<int>::iterator it = find(vecOfNums.begin(), vecOfNums.end(), 22);
 
     if (it != vecOfNums.end())
         std::cout << "Element Found" << std::endl;
