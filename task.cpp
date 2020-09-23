@@ -5633,3 +5633,21 @@ using namespace std;
 
 //     return answer;
 // }
+
+int main()
+{
+    ifstream fin;
+    fin.open("data.txt");
+
+    string wordFromFile;
+    char space;
+    while (!fin.eof())
+    {
+        if (fin >> wordFromFile)
+        {
+            cout << wordFromFile;
+        }
+        
+    }
+    fin.close();
+}
