@@ -54,32 +54,46 @@ using namespace std;
 
 // }
 
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     vector<int> v;
+
+//     for (int i = 0; i < n; i++)
+//     {
+//         int x;
+//         cin >> x;
+//         v.push_back(x);
+//     }
+
+//     int q;
+//     cin >> q;
+//     for (int i = 0; i < q; i++)
+//     {
+//         int value;
+//         cin >> value;
+
+//         vector<int>::iterator low;
+//         low = lower_bound(v.begin(), v.end(), value);
+//         // cout << low << endl;
+//         if (v[low - v.begin()] == value)
+//             cout << "Yes " << (low - v.begin() + 1) << endl;
+//         else
+//             cout << "No " << (low - v.begin() + 1) << endl;
+//     }
+// }
+
 int main()
 {
-    int n;
-    cin >> n;
-    vector<int> v;
+    vector<int> vecOfNums = {12, 45, 54, 33, 2, 7, 8, 22, 43, 19};
+    vector<int>::iterator it = std::find(vecOfNums.begin(), vecOfNums.end(), 22);
 
-    for (int i = 0; i < n; i++)
-    {
-        int x;
-        cin >> x;
-        v.push_back(x);
-    }
+    if (it != vecOfNums.end())
+        std::cout << "Element Found" << std::endl;
+    else
+        std::cout << "Element Not Found" << std::endl;
 
-    int q;
-    cin >> q;
-    for (int i = 0; i < q; i++)
-    {
-        int value;
-        cin >> value;
-
-        vector<int>::iterator low;
-        low = lower_bound(v.begin(), v.end(), value);
-        // cout << low << endl;
-        if (v[low - v.begin()] == value)
-            cout << "Yes " << (low - v.begin() + 1) << endl;
-        else
-            cout << "No " << (low - v.begin() + 1) << endl;
-    }
+    int index = std::distance(vecOfNums.begin(), it);
+    cout << "The Index of Element is: " << index << endl;
 }
