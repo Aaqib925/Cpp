@@ -6052,8 +6052,8 @@ public:
 
         for (int i = 0; i < ptr->count; i++)
         {
-            cout << ptr->userItems[i]->id << '\t'
-            << ptr->userItems[i]->pName << '\t'
+            cout << ptr->userItems[i]->id << "\t\t"
+            << ptr->userItems[i]->pName << "\t\t"
             << ptr->userItems[i]->pCat << '\t'
             << ptr->userItems[i]->prize << '\t'
             << ptr->quantity[i] << endl;
