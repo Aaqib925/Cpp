@@ -5739,7 +5739,10 @@ public:
         cout << "The Title of Publication is: " << titleOfPublication << endl;
         cout << "The price for this publication is: " << fixed << setprecision(2) << priceOfPublication << endl;
     }
-
+    virtual string classType()
+    {
+        return "Base";
+    }
     virtual bool Oversize() = 0;
 };
 
@@ -5765,7 +5768,6 @@ public:
     {
         Publisher::showData();
         cout << "The Page count is: " << pageCount << endl;
-        cout << endl;
     }
 
     bool Oversize()
@@ -5775,6 +5777,10 @@ public:
             return true;
         }
         return false;
+    }
+    string classType()
+    {
+        return "Book";
     }
 };
 
@@ -5805,6 +5811,10 @@ public:
             return true;
         }
         return false;
+    }
+    string classType()
+    {
+        return "Cassete";
     }
 };
 int main()
@@ -5838,5 +5848,24 @@ int main()
             }
         }
     }
-    cout << count << endl;
+    for (int i = 0; i < count; i++)
+    {
+        userArray[i]->showData();
+        if (userArray[i]->Oversize() && userArray[i]->classType() == "Book")
+        {
+            cout << "The Page Count for the Books is under 800 pages" << endl;
+        }
+        else if (!(userArray[i]->Oversize()) && userArray[i]->classType() == "Book")
+        {
+            cout << "The Page Count for the Book exceeds 800 pages(Oversize)" << endl;
+        }
+        if (userArray[i]->Oversize() && userArray[i]->classType() == "Cassete")
+        {
+            cout << "The Length of Audio tape is under 90 mints" << endl;
+        }
+        else if (!(userArray[i]->Oversize()) && userArray[i]->classType() == "Cassete")
+        {
+            cout << "The Length of Audio tape exceeds 90 mints(Oversize)" << endl;
+        }
+    }
 }
