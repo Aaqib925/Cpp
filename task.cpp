@@ -5709,3 +5709,134 @@ using namespace std;
 //     }
 //     return false;
 // }
+
+
+class Publisher
+{
+protected:
+    string titleOfPublication;
+    float priceOfPublication;
+
+public:
+    Publisher()
+    {
+        titleOfPublication = "";
+        priceOfPublication = 0;
+    }
+
+    virtual void getData()
+    {
+        cout << "Enter title of publication: ";
+        cin.ignore(1, '\n');
+        getline(cin, titleOfPublication);
+        cout << "Enter the price for this Publication: ";
+        cin >> priceOfPublication;
+    }
+
+    virtual void showData()
+    {
+        cout << endl;
+        cout << "The Title of Publication is: " << titleOfPublication << endl;
+        cout << "The price for this publication is: " << fixed << setprecision(2) << priceOfPublication << endl;
+    }
+
+    virtual bool Oversize() = 0;
+};
+
+class Book : public Publisher
+{
+protected:
+    int pageCount;
+
+public:
+    Book()
+    {
+        pageCount = 0;
+    }
+
+    void getData()
+    {
+        Publisher::getData();
+        cout << "Enter Page count: ";
+        cin >> pageCount;
+    }
+
+    void showData()
+    {
+        Publisher::showData();
+        cout << "The Page count is: " << pageCount << endl;
+        cout << endl;
+    }
+
+    bool Oversize()
+    {
+        if (pageCount <= 800)
+        {
+            return true;
+        }
+        return false;
+    }
+};
+
+class Cassette : public Publisher
+{
+protected:
+    float tapeInMints;
+
+public:
+    Cassette() : tapeInMints(0) {}
+
+    void getData()
+    {
+        Publisher::getData();
+        cout << "Enter the Length of Tape in minutes: ";
+        cin >> tapeInMints;
+    }
+
+    void showData()
+    {
+        Publisher::showData();
+        cout << "The Length of Cassette in minutes is: " << fixed << setprecision(2) << tapeInMints << endl;
+    }
+    bool Oversize()
+    {
+        if (tapeInMints <= 90)
+        {
+            return true;
+        }
+        return false;
+    }
+};
+int main()
+{
+    Publisher *userArray[50];
+    char x;
+    int count = 0;
+    while (true)
+    {
+        cout << "Want to add Publisher Details y/n? ";
+        cin >> x;
+        if (x == 'n' || x == 'N')
+        {
+            break;
+        }
+        else
+        {
+            cout << "Do you want to Publish Book or Cassete b/c?";
+            cin >> x;
+            if (x == 'b' || x == 'B')
+            {
+                userArray[count] = new Book;
+                userArray[count]->getData();
+                count += 1;
+            }
+            else if (x == 'c' || x == 'C')
+            {
+                userArray[count] = new Cassette;
+                userArray[count]->getData();
+                count += 1;
+            }
+        }
+    }
+    cout << count << endl;
+}
