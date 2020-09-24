@@ -5966,6 +5966,98 @@ class Customer
 
     void getData()
     {
-        cout << "Enter your Name: "
+        cout << "Enter your Name: "; cin >> name;
+        char x;
+        int y = 0;
+        while (true)
+        {
+            cout << "Do you want to buy something? y/n";
+            cin >> y;
+            if (y == 'n')
+                break;
+            else
+            {
+                cout << "Available Products" << endl;
+                cout << "1: Grocery\n2:Frozen Items\n3: Dairy\n4: Meat\n5: Bakery\n6: Pharmacy" << endl;
+                cout << "Enter your choice: ";
+                cin >> x;
+                if (x == 1)
+                {
+                    userItems[count] = new Grocery;
+                    cout << "Enter Quantity: ";
+                    cin >> y;
+                    quantity[count] = y;
+                    count += 1;
+                }
+                else if (x == 2)
+                {
+                    userItems[count] = new FrozenFoods;
+                    cout << "Enter Quantity: ";
+                    cin >> y;
+                    quantity[count] = y;
+                    count += 1;
+                }
+                else if (x == 3)
+                {
+                    userItems[count] = new Dairy;
+                    cout << "Enter Quantity: ";
+                    cin >> y;
+                    quantity[count] = y;
+                    count += 1;
+                }
+                else if (x == 4)
+                {
+                    userItems[count] = new Meat;
+                    cout << "Enter Quantity: ";
+                    cin >> y;
+                    quantity[count] = y;
+                    count += 1;
+                }
+                else if (x == 5)
+                {
+                    userItems[count] = new Bakery;
+                    cout << "Enter Quantity: ";
+                    cin >> y;
+                    quantity[count] = y;
+                    count += 1;
+                }
+                else if (x == 6)
+                {
+                    userItems[count] = new Pharmacy;
+                    cout << "Enter Quantity: ";
+                    cin >> y;
+                    quantity[count] = y;
+                    count += 1;
+                }
+            }
+            
+        }
     }
-}
+};
+
+class Counter
+{
+    public:
+    Customer *ptr = new Customer;
+    int totalPrice;
+
+
+    void operateCustomer()
+    {
+        ptr->getData();
+        cout << "Purchase Receipt!!" << endl;
+
+        cout << "Product Id\n Product Name\nProduct Category\tPrize\tQuantity" << endl;
+
+        for (int i = 0; i < ptr->count; i++)
+        {
+            cout << ptr->userItems[i]->id << '\t'
+            << ptr->userItems[i]->pName << '\t'
+            << ptr->userItems[i]->pCat << '\t'
+            << ptr->userItems[i]->prize << '\t'
+            << ptr->quantity[i] << endl;
+        }
+        
+    }
+};
+
