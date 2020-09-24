@@ -5881,78 +5881,78 @@ public:
 
 class Grocery : public Product
 {
-    public:
+public:
     Grocery()
     {
-        int id = 101;
-        string pName = "Grocery";
-        string pCat = "Grocery";
-        int prize = 7;
+        id = 101;
+        pName = "Grocery";
+        pCat = "Grocery";
+        prize = 7;
     }
 };
 
 class FrozenFoods : public Product
 {
-    public:
+public:
     FrozenFoods()
     {
-        int id = 102;
-        string pName = "Frozen Foods";
-        string pCat = "Frozen Foods";
-        int prize = 5;
+        id = 102;
+        pName = "Frozen Foods";
+        pCat = "Frozen Foods";
+        prize = 5;
     }
 };
 
-class Dairy: public Product
+class Dairy : public Product
 {
-    public:
+public:
     Dairy()
     {
-        int id = 103;
-        string pName = "Dairy";
-        string pCat = "Dairy";
-        int prize = 6;
+        id = 103;
+        pName = "Dairy";
+        pCat = "Dairy";
+        prize = 6;
     }
 };
 
-class Meat: public Product
+class Meat : public Product
 {
-    public:
+public:
     Meat()
     {
-        int id = 104;
-        string pName = "Meat";
-        string pCat = "Meat";
-        int prize = 12;
+        id = 104;
+        pName = "Meat";
+        pCat = "Meat";
+        prize = 12;
     }
 };
 
-class Bakery: public Product
+class Bakery : public Product
 {
-    public:
+public:
     Bakery()
     {
-        int id = 105;
-        string pName = "Bakery";
-        string pCat = "Bakery";
-        int prize = 8;
+        id = 105;
+        pName = "Bakery";
+        pCat = "Bakery";
+        prize = 8;
     }
 };
-class Pharmacy: public Product
+class Pharmacy : public Product
 {
-    public:
+public:
     Pharmacy()
     {
-        int id = 105;
-        string pName = "Pharmacy";
-        string pCat = "Pharmacy";
-        int prize = 9;
+        id = 105;
+        pName = "Pharmacy";
+        pCat = "Pharmacy";
+        prize = 9;
     }
 };
 
 class Customer
 {
-    public:
+public:
     string name;
     Product *userItems[50];
     int count;
@@ -5966,14 +5966,15 @@ class Customer
 
     void getData()
     {
-        cout << "Enter your Name: "; cin >> name;
-        char x;
+        cout << "Enter your Name: ";
+        cin >> name;
+        int x;
         int y = 0;
         while (true)
         {
             cout << "Do you want to buy something? y/n";
-            cin >> y;
-            if (y == 'n')
+            cin >> x;
+            if (x == 0)
                 break;
             else
             {
@@ -6030,24 +6031,24 @@ class Customer
                     count += 1;
                 }
             }
-            
         }
     }
 };
 
 class Counter
 {
-    public:
-    Customer *ptr = new Customer;
-    int totalPrice;
-
+public:
+    Customer c1;
+    Customer *ptr = &c1;
+    int totalPrice = 0;
 
     void operateCustomer()
     {
-        ptr->getData();
+        c1.getData();
+        // cout << c1.userItems[0]->id << endl;
         cout << "Purchase Receipt!!" << endl;
 
-        cout << "Product Id\n Product Name\nProduct Category\tPrize\tQuantity" << endl;
+        cout << "Product Id\tProduct Name\tProduct Category\tPrize\tQuantity" << endl;
 
         for (int i = 0; i < ptr->count; i++)
         {
@@ -6056,8 +6057,15 @@ class Counter
             << ptr->userItems[i]->pCat << '\t'
             << ptr->userItems[i]->prize << '\t'
             << ptr->quantity[i] << endl;
+            totalPrice += (ptr->quantity[i] * ptr->userItems[i]->prize);
+
         }
-        
+        cout << "Total Price is: " << totalPrice << endl;
     }
 };
 
+int main()
+{
+    Counter c1;
+    c1.operateCustomer();
+}
