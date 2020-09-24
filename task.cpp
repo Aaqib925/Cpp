@@ -5711,14 +5711,14 @@ using namespace std;
 // }
 
 
-class Publisher
+class Publication
 {
 protected:
     string titleOfPublication;
     float priceOfPublication;
 
 public:
-    Publisher()
+    Publication()
     {
         titleOfPublication = "";
         priceOfPublication = 0;
@@ -5746,7 +5746,7 @@ public:
     virtual bool Oversize() = 0;
 };
 
-class Book : public Publisher
+class Book : public Publication
 {
 protected:
     int pageCount;
@@ -5759,14 +5759,14 @@ public:
 
     void getData()
     {
-        Publisher::getData();
+        Publication::getData();
         cout << "Enter Page count: ";
         cin >> pageCount;
     }
 
     void showData()
     {
-        Publisher::showData();
+        Publication::showData();
         cout << "The Page count is: " << pageCount << endl;
     }
 
@@ -5784,7 +5784,7 @@ public:
     }
 };
 
-class Cassette : public Publisher
+class Cassette : public Publication
 {
 protected:
     float tapeInMints;
@@ -5794,14 +5794,14 @@ public:
 
     void getData()
     {
-        Publisher::getData();
+        Publication::getData();
         cout << "Enter the Length of Tape in minutes: ";
         cin >> tapeInMints;
     }
 
     void showData()
     {
-        Publisher::showData();
+        Publication::showData();
         cout << "The Length of Cassette in minutes is: " << fixed << setprecision(2) << tapeInMints << endl;
     }
     bool Oversize()
@@ -5819,7 +5819,7 @@ public:
 };
 int main()
 {
-    Publisher *userArray[50];
+    Publication *userArray[50];
     char x;
     int count = 0;
     while (true)
