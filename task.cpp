@@ -5897,8 +5897,8 @@ public:
     FrozenFoods()
     {
         id = 102;
-        pName = "Frozen Foods";
-        pCat = "Frozen Foods";
+        pName = "Frozen";
+        pCat = "Frozen";
         prize = 5;
     }
 };
@@ -6048,13 +6048,13 @@ public:
         // cout << c1.userItems[0]->id << endl;
         cout << "Purchase Receipt!!" << endl;
 
-        cout << "Product Id\tProduct Name\tProduct Category\tPrize\tQuantity" << endl;
+        cout << "Product Id\tProduct Name\t\tCategory\t\tPrize\tQuantity" << endl;
 
         for (int i = 0; i < ptr->count; i++)
         {
             cout << ptr->userItems[i]->id << "\t\t"
-            << ptr->userItems[i]->pName << "\t\t"
-            << ptr->userItems[i]->pCat << '\t'
+            << ptr->userItems[i]->pName << "\t\t\t"
+            << ptr->userItems[i]->pCat << "\t\t\t"
             << ptr->userItems[i]->prize << '\t'
             << ptr->quantity[i] << endl;
             totalPrice += (ptr->quantity[i] * ptr->userItems[i]->prize);
