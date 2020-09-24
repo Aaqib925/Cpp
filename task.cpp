@@ -5482,7 +5482,7 @@ using namespace std;
 //     return ans;
 // }
 // long marcsCakewalk(vector<int> a) {
-//     sort(a.begin(), a.end(), greater<int>()); 
+//     sort(a.begin(), a.end(), greater<int>());
 //     long int sum = 0;
 //     for (int i = 0; i < a.size(); i++)
 //     {
@@ -5492,83 +5492,82 @@ using namespace std;
 
 // }
 
-// struct Node { 
-//     int data; 
-//     struct Node* next; 
-//     Node(int data) 
-//     { 
-//         this->data = data; 
-//         next = NULL; 
-//     } 
-// }; 
-  
-// struct LinkedList { 
-//     Node* head; 
-//     LinkedList() 
-//     { 
-//         head = NULL; 
-//     } 
-  
-//     /* Function to reverse the linked list */
-//     void reverse() 
-//     { 
-//         // Initialize current, previous and 
-//         // next pointers 
-//         Node* current = head; 
-//         Node *prev = NULL, *next = NULL; 
-  
-//         while (current != NULL) { 
-//             // Store next 
-//             next = current->next; 
-  
-//             // Reverse current node's pointer 
-//             current->next = prev; 
-  
-//             // Move pointers one position ahead. 
-//             prev = current; 
-//             current = next; 
-//         } 
-//         head = prev; 
-//     } 
-  
-//     /* Function to print linked list */
-//     void print() 
-//     { 
-//         struct Node* temp = head; 
-//         while (temp != NULL) { 
-//             cout << temp->data << " "; 
-//             temp = temp->next; 
-//         } 
-//     } 
-  
-//     void push(int data) 
-//     { 
-//         Node* temp = new Node(data); 
-//         temp->next = head; 
-//         head = temp; 
-//     } 
-// }; 
-  
-// /* Driver program to test above function*/
-// int main() 
-// { 
-//     /* Start with the empty list */
-//     LinkedList ll; 
-//     ll.push(20); 
-//     ll.push(4); 
-//     ll.push(15); 
-//     ll.push(85); 
-  
-//     cout << "Given linked list\n"; 
-//     ll.print(); 
-  
-//     ll.reverse(); 
-  
-//     cout << "\nReversed Linked list \n"; 
-//     ll.print(); 
-//     return 0; 
-// } 
+// struct Node {
+//     int data;
+//     struct Node* next;
+//     Node(int data)
+//     {
+//         this->data = data;
+//         next = NULL;
+//     }
+// };
 
+// struct LinkedList {
+//     Node* head;
+//     LinkedList()
+//     {
+//         head = NULL;
+//     }
+
+//     /* Function to reverse the linked list */
+//     void reverse()
+//     {
+//         // Initialize current, previous and
+//         // next pointers
+//         Node* current = head;
+//         Node *prev = NULL, *next = NULL;
+
+//         while (current != NULL) {
+//             // Store next
+//             next = current->next;
+
+//             // Reverse current node's pointer
+//             current->next = prev;
+
+//             // Move pointers one position ahead.
+//             prev = current;
+//             current = next;
+//         }
+//         head = prev;
+//     }
+
+//     /* Function to print linked list */
+//     void print()
+//     {
+//         struct Node* temp = head;
+//         while (temp != NULL) {
+//             cout << temp->data << " ";
+//             temp = temp->next;
+//         }
+//     }
+
+//     void push(int data)
+//     {
+//         Node* temp = new Node(data);
+//         temp->next = head;
+//         head = temp;
+//     }
+// };
+
+// /* Driver program to test above function*/
+// int main()
+// {
+//     /* Start with the empty list */
+//     LinkedList ll;
+//     ll.push(20);
+//     ll.push(4);
+//     ll.push(15);
+//     ll.push(85);
+
+//     cout << "Given linked list\n";
+//     ll.print();
+
+//     ll.reverse();
+
+//     cout << "\nReversed Linked list \n";
+//     ll.print();
+//     return 0;
+// }
 
 // Function ListNode reverse(ListNode head)
 // {
@@ -5606,12 +5605,12 @@ using namespace std;
 //     {
 //         if (contests[i][0] < smallest && contests[i][1] == 1)
 //         {
-//             smallest = contests[i][0]; 
+//             smallest = contests[i][0];
 //             index = i;
 //             // cout <<"Smallest " << smallest << " INDEX " << index << endl;
 //         }
 //     }
-    
+
 //     int answer = 0;
 
 //     for (int i = 0; i < contests.size(); i++)
@@ -5647,7 +5646,7 @@ using namespace std;
 //         {
 //             cout << wordFromFile;
 //         }
-        
+
 //     }
 //     fin.close();
 // }
@@ -5709,7 +5708,6 @@ using namespace std;
 //     }
 //     return false;
 // }
-
 
 // class Publication
 // {
@@ -5869,3 +5867,105 @@ using namespace std;
 //         }
 //     }
 // }
+
+class Product
+{
+public:
+    int id;
+    string pName;
+    string pCat;
+    int prize;
+
+    Product() : id(0), pName(""), pCat(""), prize(0) {}
+};
+
+class Grocery : public Product
+{
+    public:
+    Grocery()
+    {
+        int id = 101;
+        string pName = "Grocery";
+        string pCat = "Grocery";
+        int prize = 7;
+    }
+};
+
+class FrozenFoods : public Product
+{
+    public:
+    FrozenFoods()
+    {
+        int id = 102;
+        string pName = "Frozen Foods";
+        string pCat = "Frozen Foods";
+        int prize = 5;
+    }
+};
+
+class Dairy: public Product
+{
+    public:
+    Dairy()
+    {
+        int id = 103;
+        string pName = "Dairy";
+        string pCat = "Dairy";
+        int prize = 6;
+    }
+};
+
+class Meat: public Product
+{
+    public:
+    Meat()
+    {
+        int id = 104;
+        string pName = "Meat";
+        string pCat = "Meat";
+        int prize = 12;
+    }
+};
+
+class Bakery: public Product
+{
+    public:
+    Bakery()
+    {
+        int id = 105;
+        string pName = "Bakery";
+        string pCat = "Bakery";
+        int prize = 8;
+    }
+};
+class Pharmacy: public Product
+{
+    public:
+    Pharmacy()
+    {
+        int id = 105;
+        string pName = "Pharmacy";
+        string pCat = "Pharmacy";
+        int prize = 9;
+    }
+};
+
+class Customer
+{
+    public:
+    string name;
+    Product *userItems[50];
+    int count;
+    int quantity[50];
+
+    Customer()
+    {
+        name = "";
+        count = 0;
+    }
+
+    void getData()
+    {
+        cout << "Enter your Name: "
+    }
+}
