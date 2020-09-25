@@ -6073,12 +6073,12 @@ using namespace std;
 // #include <iostream>
 // using namespace std;
 
-int main()
-{
-    string x = "AAqib";
-    for (int i = 0; i < x.length(); i++)
-    {
-        cout << char(tolower(x[i]));
-    }
-    cout << '\n';
-}
+// int main()
+// {
+//     string x = "AAqib";
+//     for (int i = 0; i < x.length(); i++)
+//     {
+//         cout << char(tolower(x[i]));
+//     }
+//     cout << '\n';
+// }
