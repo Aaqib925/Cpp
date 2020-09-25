@@ -5868,204 +5868,204 @@ using namespace std;
 //     }
 // }
 
-class Product
-{
-public:
-    int id;
-    string pName;
-    string pCat;
-    int prize;
+// class Product
+// {
+// public:
+//     int id;
+//     string pName;
+//     string pCat;
+//     int prize;
 
-    Product() : id(0), pName(""), pCat(""), prize(0) {}
-};
+//     Product() : id(0), pName(""), pCat(""), prize(0) {}
+// };
 
-class Grocery : public Product
-{
-public:
-    Grocery()
-    {
-        id = 101;
-        pName = "Grocery";
-        pCat = "Grocery";
-        prize = 7;
-    }
-};
+// class Grocery : public Product
+// {
+// public:
+//     Grocery()
+//     {
+//         id = 101;
+//         pName = "Grocery";
+//         pCat = "Grocery";
+//         prize = 7;
+//     }
+// };
 
-class FrozenFoods : public Product
-{
-public:
-    FrozenFoods()
-    {
-        id = 102;
-        pName = "Frozen";
-        pCat = "Frozen";
-        prize = 5;
-    }
-};
+// class FrozenFoods : public Product
+// {
+// public:
+//     FrozenFoods()
+//     {
+//         id = 102;
+//         pName = "Frozen";
+//         pCat = "Frozen";
+//         prize = 5;
+//     }
+// };
 
-class Dairy : public Product
-{
-public:
-    Dairy()
-    {
-        id = 103;
-        pName = "Dairy";
-        pCat = "Dairy";
-        prize = 6;
-    }
-};
+// class Dairy : public Product
+// {
+// public:
+//     Dairy()
+//     {
+//         id = 103;
+//         pName = "Dairy";
+//         pCat = "Dairy";
+//         prize = 6;
+//     }
+// };
 
-class Meat : public Product
-{
-public:
-    Meat()
-    {
-        id = 104;
-        pName = "Meat";
-        pCat = "Meat";
-        prize = 12;
-    }
-};
+// class Meat : public Product
+// {
+// public:
+//     Meat()
+//     {
+//         id = 104;
+//         pName = "Meat";
+//         pCat = "Meat";
+//         prize = 12;
+//     }
+// };
 
-class Bakery : public Product
-{
-public:
-    Bakery()
-    {
-        id = 105;
-        pName = "Bakery";
-        pCat = "Bakery";
-        prize = 8;
-    }
-};
-class Pharmacy : public Product
-{
-public:
-    Pharmacy()
-    {
-        id = 105;
-        pName = "Pharmacy";
-        pCat = "Pharmacy";
-        prize = 9;
-    }
-};
+// class Bakery : public Product
+// {
+// public:
+//     Bakery()
+//     {
+//         id = 105;
+//         pName = "Bakery";
+//         pCat = "Bakery";
+//         prize = 8;
+//     }
+// };
+// class Pharmacy : public Product
+// {
+// public:
+//     Pharmacy()
+//     {
+//         id = 105;
+//         pName = "Pharmacy";
+//         pCat = "Pharmacy";
+//         prize = 9;
+//     }
+// };
 
-class Customer
-{
-public:
-    string name;
-    Product *userItems[50];
-    int count;
-    int quantity[50];
+// class Customer
+// {
+// public:
+//     string name;
+//     Product *userItems[50];
+//     int count;
+//     int quantity[50];
 
-    Customer()
-    {
-        name = "";
-        count = 0;
-    }
+//     Customer()
+//     {
+//         name = "";
+//         count = 0;
+//     }
 
-    void getData()
-    {
-        cout << "Enter your Name: ";
-        cin >> name;
-        int x;
-        int y = 0;
-        while (true)
-        {
-            cout << "Do you want to buy something? y/n";
-            cin >> x;
-            if (x == 0)
-                break;
-            else
-            {
-                cout << "Available Products" << endl;
-                cout << "1: Grocery\n2:Frozen Items\n3: Dairy\n4: Meat\n5: Bakery\n6: Pharmacy" << endl;
-                cout << "Enter your choice: ";
-                cin >> x;
-                if (x == 1)
-                {
-                    userItems[count] = new Grocery;
-                    cout << "Enter Quantity: ";
-                    cin >> y;
-                    quantity[count] = y;
-                    count += 1;
-                }
-                else if (x == 2)
-                {
-                    userItems[count] = new FrozenFoods;
-                    cout << "Enter Quantity: ";
-                    cin >> y;
-                    quantity[count] = y;
-                    count += 1;
-                }
-                else if (x == 3)
-                {
-                    userItems[count] = new Dairy;
-                    cout << "Enter Quantity: ";
-                    cin >> y;
-                    quantity[count] = y;
-                    count += 1;
-                }
-                else if (x == 4)
-                {
-                    userItems[count] = new Meat;
-                    cout << "Enter Quantity: ";
-                    cin >> y;
-                    quantity[count] = y;
-                    count += 1;
-                }
-                else if (x == 5)
-                {
-                    userItems[count] = new Bakery;
-                    cout << "Enter Quantity: ";
-                    cin >> y;
-                    quantity[count] = y;
-                    count += 1;
-                }
-                else if (x == 6)
-                {
-                    userItems[count] = new Pharmacy;
-                    cout << "Enter Quantity: ";
-                    cin >> y;
-                    quantity[count] = y;
-                    count += 1;
-                }
-            }
-        }
-    }
-};
+//     void getData()
+//     {
+//         cout << "Enter your Name: ";
+//         cin >> name;
+//         int x;
+//         int y = 0;
+//         while (true)
+//         {
+//             cout << "Do you want to buy something? y/n";
+//             cin >> x;
+//             if (x == 0)
+//                 break;
+//             else
+//             {
+//                 cout << "Available Products" << endl;
+//                 cout << "1: Grocery\n2:Frozen Items\n3: Dairy\n4: Meat\n5: Bakery\n6: Pharmacy" << endl;
+//                 cout << "Enter your choice: ";
+//                 cin >> x;
+//                 if (x == 1)
+//                 {
+//                     userItems[count] = new Grocery;
+//                     cout << "Enter Quantity: ";
+//                     cin >> y;
+//                     quantity[count] = y;
+//                     count += 1;
+//                 }
+//                 else if (x == 2)
+//                 {
+//                     userItems[count] = new FrozenFoods;
+//                     cout << "Enter Quantity: ";
+//                     cin >> y;
+//                     quantity[count] = y;
+//                     count += 1;
+//                 }
+//                 else if (x == 3)
+//                 {
+//                     userItems[count] = new Dairy;
+//                     cout << "Enter Quantity: ";
+//                     cin >> y;
+//                     quantity[count] = y;
+//                     count += 1;
+//                 }
+//                 else if (x == 4)
+//                 {
+//                     userItems[count] = new Meat;
+//                     cout << "Enter Quantity: ";
+//                     cin >> y;
+//                     quantity[count] = y;
+//                     count += 1;
+//                 }
+//                 else if (x == 5)
+//                 {
+//                     userItems[count] = new Bakery;
+//                     cout << "Enter Quantity: ";
+//                     cin >> y;
+//                     quantity[count] = y;
+//                     count += 1;
+//                 }
+//                 else if (x == 6)
+//                 {
+//                     userItems[count] = new Pharmacy;
+//                     cout << "Enter Quantity: ";
+//                     cin >> y;
+//                     quantity[count] = y;
+//                     count += 1;
+//                 }
+//             }
+//         }
+//     }
+// };
 
-class Counter
-{
-public:
-    Customer c1;
-    Customer *ptr = &c1;
-    int totalPrice = 0;
+// class Counter
+// {
+// public:
+//     Customer c1;
+//     Customer *ptr = &c1;
+//     int totalPrice = 0;
 
-    void operateCustomer()
-    {
-        c1.getData();
-        // cout << c1.userItems[0]->id << endl;
-        cout << "Purchase Receipt!!" << endl;
+//     void operateCustomer()
+//     {
+//         c1.getData();
+//         // cout << c1.userItems[0]->id << endl;
+//         cout << "Purchase Receipt!!" << endl;
 
-        cout << "Product Id\tProduct Name\t\tCategory\tPrize\tQuantity" << endl;
+//         cout << "Product Id\tProduct Name\t\tCategory\tPrize\tQuantity" << endl;
 
-        for (int i = 0; i < ptr->count; i++)
-        {
-            cout << ptr->userItems[i]->id << "\t\t"
-            << ptr->userItems[i]->pName << "\t\t\t"
-            << ptr->userItems[i]->pCat << "\t\t"
-            << ptr->userItems[i]->prize << '\t'
-            << ptr->quantity[i] << endl;
-            totalPrice += (ptr->quantity[i] * ptr->userItems[i]->prize);
+//         for (int i = 0; i < ptr->count; i++)
+//         {
+//             cout << ptr->userItems[i]->id << "\t\t"
+//             << ptr->userItems[i]->pName << "\t\t\t"
+//             << ptr->userItems[i]->pCat << "\t\t"
+//             << ptr->userItems[i]->prize << '\t'
+//             << ptr->quantity[i] << endl;
+//             totalPrice += (ptr->quantity[i] * ptr->userItems[i]->prize);
 
-        }
-        cout << "Total Price is: " << totalPrice << endl;
-    }
-};
+//         }
+//         cout << "Total Price is: " << totalPrice << endl;
+//     }
+// };
 
-int main()
-{
-    Counter c1;
-    c1.operateCustomer();
-}
+// int main()
+// {
+//     Counter c1;
+//     c1.operateCustomer();
+// }
