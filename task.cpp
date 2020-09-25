@@ -6069,3 +6069,16 @@ using namespace std;
 //     Counter c1;
 //     c1.operateCustomer();
 // }
+
+// #include <iostream>
+// using namespace std;
+
+int main()
+{
+    string x = "AAqib";
+    for (int i = 0; i < x.length(); i++)
+    {
+        cout << char(tolower(x[i]));
+    }
+    cout << '\n';
+}
