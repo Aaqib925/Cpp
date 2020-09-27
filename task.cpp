@@ -6148,7 +6148,6 @@ void printArray(int arr[], int size)
 int main()  
 {  
     int arr[] = {2, 14, 5, 12, 11, 56, 23, 21, 19, 16};  
-    // int arr[] = {2, 14, 5, 12, 11, 56, 23, 21, 19, 16};
     int n = sizeof(arr) / sizeof(arr[0]);  
     quickSort(arr, 0, n - 1);  
     cout << "Sorted array: \n";  
