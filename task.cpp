@@ -6274,3 +6274,19 @@ using namespace std;
 // {
 //     cout << candies(8, {2, 4, 3, 5, 2, 6, 4, 5}) << endl;
 // }
+
+// int main()
+// {
+//     vector<int> a = {4, 3, 2, 1};
+//     for (int i = 0; i < a.size(); i++)
+//     {
+//         int secondAns = 0;
+//         int x = i + 1;
+//         for (int j = 0; j <= i; j++)
+//         {
+//             secondAns += (a[j] * x);
+//             x -= 1;
+//         }
+//         cout << secondAns << endl;
+//     }
+// }
