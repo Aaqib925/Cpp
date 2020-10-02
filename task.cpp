@@ -6191,86 +6191,86 @@ using namespace std;
 //     cout << '\n';
 // }
 
-long candies(int n, vector<int> arr)
-{
-    // long ans = 1;
-    // bool foundEnd = false;
-    // int prAns = 1;
-    // for (int i = 1; i < n; i++)
-    // {
-    //     if (arr[i] > arr[i - 1])
-    //     {
-    //         cout << "First: ";
-    //         prAns += 1;
-    //         ans += prAns;
-    //         cout << prAns << '\n';
-    //     }
-    //     else if (arr[i] == arr[i - 1])
-    //     {
-    //         cout << "Second: ";
-    //         prAns -= 1;
-    //         ans += prAns;
-    //         cout << prAns << '\n';
-    //     }
-    //     else
-    //     {
-    //         cout << "Third: ";
-    //         prAns = 1;
-    //         ans += prAns;
-    //         cout << prAns << '\n';
-    //     }
-    // }
-    // return ans;
-    unsigned int descending_seq = 0;
-    unsigned long sum = 0;
-    unsigned int prev_c = 0;
-    unsigned int prev_num_of_candies = 0;
-    for (int c : arr)
-    {
-        if (c >= prev_c)
-        {
-            if (descending_seq > 0)
-            {
-                // agjust local max value if descending sequence
-                // was longer than ascending
-                if (descending_seq >= prev_num_of_candies)
-                {
-                    sum += 1 + descending_seq - prev_num_of_candies;
-                }
-                // last of descending = local minimum
-                prev_num_of_candies = 1;
-                descending_seq = 0;
-            }
-            if (c > prev_c)
-            {
-                ++prev_num_of_candies;
-            }
-            else
-            {
-                // optimal if previous value is the same
-                prev_num_of_candies = 1;
-            }
-            sum += prev_num_of_candies;
-        }
-        else
-        {
-            ++descending_seq;
-            // For 3 descending numbers in a row this summing strategy
-            // will increment like sum+=1+2+3 which is the same as
-            // more usual and expected sum+=3+2+1
-            sum += descending_seq;
-        }
-        prev_c = c;
-    }
-    // If we finished on descending order, update last local max
-    if (descending_seq >= prev_num_of_candies)
-    {
-        sum += 1 + descending_seq - prev_num_of_candies;
-    }
-    return sum;
-}
+// long candies(int n, vector<int> arr)
+// {
+//     // long ans = 1;
+//     // bool foundEnd = false;
+//     // int prAns = 1;
+//     // for (int i = 1; i < n; i++)
+//     // {
+//     //     if (arr[i] > arr[i - 1])
+//     //     {
+//     //         cout << "First: ";
+//     //         prAns += 1;
+//     //         ans += prAns;
+//     //         cout << prAns << '\n';
+//     //     }
+//     //     else if (arr[i] == arr[i - 1])
+//     //     {
+//     //         cout << "Second: ";
+//     //         prAns -= 1;
+//     //         ans += prAns;
+//     //         cout << prAns << '\n';
+//     //     }
+//     //     else
+//     //     {
+//     //         cout << "Third: ";
+//     //         prAns = 1;
+//     //         ans += prAns;
+//     //         cout << prAns << '\n';
+//     //     }
+//     // }
+//     // return ans;
+//     unsigned int descending_seq = 0;
+//     unsigned long sum = 0;
+//     unsigned int prev_c = 0;
+//     unsigned int prev_num_of_candies = 0;
+//     for (int c : arr)
+//     {
+//         if (c >= prev_c)
+//         {
+//             if (descending_seq > 0)
+//             {
+//                 // agjust local max value if descending sequence
+//                 // was longer than ascending
+//                 if (descending_seq >= prev_num_of_candies)
+//                 {
+//                     sum += 1 + descending_seq - prev_num_of_candies;
+//                 }
+//                 // last of descending = local minimum
+//                 prev_num_of_candies = 1;
+//                 descending_seq = 0;
+//             }
+//             if (c > prev_c)
+//             {
+//                 ++prev_num_of_candies;
+//             }
+//             else
+//             {
+//                 // optimal if previous value is the same
+//                 prev_num_of_candies = 1;
+//             }
+//             sum += prev_num_of_candies;
+//         }
+//         else
+//         {
+//             ++descending_seq;
+//             // For 3 descending numbers in a row this summing strategy
+//             // will increment like sum+=1+2+3 which is the same as
+//             // more usual and expected sum+=3+2+1
+//             sum += descending_seq;
+//         }
+//         prev_c = c;
+//     }
+//     // If we finished on descending order, update last local max
+//     if (descending_seq >= prev_num_of_candies)
+//     {
+//         sum += 1 + descending_seq - prev_num_of_candies;
+//     }
+//     return sum;
+// }
 
-int main()
-{
-    cout << candies(8, {2, 4, 3, 5, 2, 6, 4, 5}) << endl;
-}
+// int main()
+// {
+//     cout << candies(8, {2, 4, 3, 5, 2, 6, 4, 5}) << endl;
+// }
