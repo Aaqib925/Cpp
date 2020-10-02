@@ -6161,8 +6161,22 @@ using namespace std;
 // }
 
 vector<int> maximumPerimeterTriangle(vector<int> sticks) {
+    int i = sticks.size() - 3;
+    while(i >= 0 && sticks[i] + sticks[i + 1] <= sticks[i + 2])
+        i -= 1;
 
-
+    vector<int> ansVector;
+    if (i > 0)
+    {
+        ansVector.push_back(sticks[i]);
+        ansVector.push_back(sticks[i + 1]);
+        ansVector.push_back(sticks[i + 2]);
+    }
+    else
+    {
+        cout << "-1" << endl;
+    }
+    
 }
 
 int main()
