@@ -6159,3 +6159,18 @@ using namespace std;
 // {
 //     cout << "Testing the Intellisence" << endl;
 // }
+
+vector<int> maximumPerimeterTriangle(vector<int> sticks) {
+
+
+}
+
+int main()
+{
+    vector<int> ans = maximumPerimeterTriangle({1, 1, 1, 2, 3, 5});
+    for (int i = 0; i < ans.size(); i++)
+    {
+        cout << ans[i] << " "; 
+    }
+    cout << '\n';
+}
