@@ -6160,31 +6160,47 @@ using namespace std;
 //     cout << "Testing the Intellisence" << endl;
 // }
 
-vector<int> maximumPerimeterTriangle(vector<int> sticks) {
-    int i = sticks.size() - 3;
-    while(i >= 0 && sticks[i] + sticks[i + 1] <= sticks[i + 2])
-        i -= 1;
+// vector<int> maximumPerimeterTriangle(vector<int> sticks) {
+//     sort(sticks.begin(), sticks.end());
+//     int i = sticks.size() - 3;
+//     while(i >= 0 && sticks[i] + sticks[i + 1] <= sticks[i + 2])
+//         i -= 1;
 
-    vector<int> ansVector;
-    if (i > 0)
+//     vector<int> ansVector;
+//     if (i > 0)
+//     {
+//         ansVector.push_back(sticks[i]);
+//         ansVector.push_back(sticks[i + 1]);
+//         ansVector.push_back(sticks[i + 2]);
+//         return ansVector;
+//     }
+//     else
+//     {
+//         ansVector.push_back(-1);
+//         return ansVector;
+//     }
+// }
+
+// int main()
+// {
+//     vector<int> ans = maximumPerimeterTriangle({1, 1, 1, 2, 3, 5});
+//     for (int i = 0; i < ans.size(); i++)
+//     {
+//         cout << ans[i] << " "; 
+//     }
+//     cout << '\n';
+// }
+
+long candies(int n, vector<int> arr) {
+    long ans = 0;
+    for (int i = 0; i < n; i++)
     {
-        ansVector.push_back(sticks[i]);
-        ansVector.push_back(sticks[i + 1]);
-        ansVector.push_back(sticks[i + 2]);
+        
     }
-    else
-    {
-        cout << "-1" << endl;
-    }
-    
+
 }
 
 int main()
 {
-    vector<int> ans = maximumPerimeterTriangle({1, 1, 1, 2, 3, 5});
-    for (int i = 0; i < ans.size(); i++)
-    {
-        cout << ans[i] << " "; 
-    }
-    cout << '\n';
+    cout << candies(6, {4, 6, 4, 5, 6, 2});
 }
