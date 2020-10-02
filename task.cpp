@@ -6083,77 +6083,77 @@ using namespace std;
 //     cout << '\n';
 // }
 
-// using namespace std;  
-  
-// // A utility function to swap two elements  
-// void swap(int* a, int* b)  
-// {  
-//     int t = *a;  
-//     *a = *b;  
-//     *b = t;  
-// }  
-// void printArray(int arr[], int size); 
-// /* This function takes last element as pivot, places  
-// the pivot element at its correct position in sorted  
-// array, and places all smaller (smaller than pivot)  
-// to left of pivot and all greater elements to right  
+// using namespace std;
+
+// // A utility function to swap two elements
+// void swap(int* a, int* b)
+// {
+//     int t = *a;
+//     *a = *b;
+//     *b = t;
+// }
+// void printArray(int arr[], int size);
+// /* This function takes last element as pivot, places
+// the pivot element at its correct position in sorted
+// array, and places all smaller (smaller than pivot)
+// to left of pivot and all greater elements to right
 // of pivot */
-// int partition (int arr[], int low, int high)  
-// {  
-//     int pivot = arr[high]; // pivot  
-//     int i = (low - 1); // Index of smaller element  
-  
-//     for (int j = low; j <= high - 1; j++)  
-//     {  
-//         // If current element is smaller than the pivot  
-//         if (arr[j] < pivot)  
-//         {  
-//             i++; // increment index of smaller element  
-//             swap(&arr[i], &arr[j]);  
-//         }  
-//     }  
-//     swap(&arr[i + 1], &arr[high]);  
-//     return (i + 1);  
-// }  
-  
-// /* The main function that implements QuickSort  
-// arr[] --> Array to be sorted,  
-// low --> Starting index,  
+// int partition (int arr[], int low, int high)
+// {
+//     int pivot = arr[high]; // pivot
+//     int i = (low - 1); // Index of smaller element
+
+//     for (int j = low; j <= high - 1; j++)
+//     {
+//         // If current element is smaller than the pivot
+//         if (arr[j] < pivot)
+//         {
+//             i++; // increment index of smaller element
+//             swap(&arr[i], &arr[j]);
+//         }
+//     }
+//     swap(&arr[i + 1], &arr[high]);
+//     return (i + 1);
+// }
+
+// /* The main function that implements QuickSort
+// arr[] --> Array to be sorted,
+// low --> Starting index,
 // high --> Ending index */
-// void quickSort(int arr[], int low, int high)  
-// {  
-//     if (low < high)  
-//     {  
-//         /* pi is partitioning index, arr[p] is now  
+// void quickSort(int arr[], int low, int high)
+// {
+//     if (low < high)
+//     {
+//         /* pi is partitioning index, arr[p] is now
 //         at right place */
-//         int pi = partition(arr, low, high);  
-        
-//         // Separately sort elements before  
-//         // partition and after partition  
-//         quickSort(arr, low, pi - 1);  
-//         quickSort(arr, pi + 1, high);  
-//     }  
-// }  
-  
+//         int pi = partition(arr, low, high);
+
+//         // Separately sort elements before
+//         // partition and after partition
+//         quickSort(arr, low, pi - 1);
+//         quickSort(arr, pi + 1, high);
+//     }
+// }
+
 // /* Function to print an array */
-// void printArray(int arr[], int size)  
-// {  
-//     int i;  
-//     for (i = 0; i < size; i++)  
-//         cout << arr[i] << " ";  
-//     cout << endl;  
-// }  
-  
-// // Driver Code 
-// int main()  
-// {  
-//     int arr[] = {2, 14, 5, 12, 11, 56, 23, 21, 19, 16};  
-//     int n = sizeof(arr) / sizeof(arr[0]);  
-//     quickSort(arr, 0, n - 1);  
-//     cout << "Sorted array: \n";  
-//     printArray(arr, n);  
-//     return 0;  
-// }  
+// void printArray(int arr[], int size)
+// {
+//     int i;
+//     for (i = 0; i < size; i++)
+//         cout << arr[i] << " ";
+//     cout << endl;
+// }
+
+// // Driver Code
+// int main()
+// {
+//     int arr[] = {2, 14, 5, 12, 11, 56, 23, 21, 19, 16};
+//     int n = sizeof(arr) / sizeof(arr[0]);
+//     quickSort(arr, 0, n - 1);
+//     cout << "Sorted array: \n";
+//     printArray(arr, n);
+//     return 0;
+// }
 
 // int main()
 // {
@@ -6186,21 +6186,91 @@ using namespace std;
 //     vector<int> ans = maximumPerimeterTriangle({1, 1, 1, 2, 3, 5});
 //     for (int i = 0; i < ans.size(); i++)
 //     {
-//         cout << ans[i] << " "; 
+//         cout << ans[i] << " ";
 //     }
 //     cout << '\n';
 // }
 
-long candies(int n, vector<int> arr) {
-    long ans = 0;
-    for (int i = 0; i < n; i++)
+long candies(int n, vector<int> arr)
+{
+    // long ans = 1;
+    // bool foundEnd = false;
+    // int prAns = 1;
+    // for (int i = 1; i < n; i++)
+    // {
+    //     if (arr[i] > arr[i - 1])
+    //     {
+    //         cout << "First: ";
+    //         prAns += 1;
+    //         ans += prAns;
+    //         cout << prAns << '\n';
+    //     }
+    //     else if (arr[i] == arr[i - 1])
+    //     {
+    //         cout << "Second: ";
+    //         prAns -= 1;
+    //         ans += prAns;
+    //         cout << prAns << '\n';
+    //     }
+    //     else
+    //     {
+    //         cout << "Third: ";
+    //         prAns = 1;
+    //         ans += prAns;
+    //         cout << prAns << '\n';
+    //     }
+    // }
+    // return ans;
+    unsigned int descending_seq = 0;
+    unsigned long sum = 0;
+    unsigned int prev_c = 0;
+    unsigned int prev_num_of_candies = 0;
+    for (int c : arr)
     {
-        
+        if (c >= prev_c)
+        {
+            if (descending_seq > 0)
+            {
+                // agjust local max value if descending sequence
+                // was longer than ascending
+                if (descending_seq >= prev_num_of_candies)
+                {
+                    sum += 1 + descending_seq - prev_num_of_candies;
+                }
+                // last of descending = local minimum
+                prev_num_of_candies = 1;
+                descending_seq = 0;
+            }
+            if (c > prev_c)
+            {
+                ++prev_num_of_candies;
+            }
+            else
+            {
+                // optimal if previous value is the same
+                prev_num_of_candies = 1;
+            }
+            sum += prev_num_of_candies;
+        }
+        else
+        {
+            ++descending_seq;
+            // For 3 descending numbers in a row this summing strategy
+            // will increment like sum+=1+2+3 which is the same as
+            // more usual and expected sum+=3+2+1
+            sum += descending_seq;
+        }
+        prev_c = c;
     }
-
+    // If we finished on descending order, update last local max
+    if (descending_seq >= prev_num_of_candies)
+    {
+        sum += 1 + descending_seq - prev_num_of_candies;
+    }
+    return sum;
 }
 
 int main()
 {
-    cout << candies(6, {4, 6, 4, 5, 6, 2});
+    cout << candies(8, {2, 4, 3, 5, 2, 6, 4, 5}) << endl;
 }
