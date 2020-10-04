@@ -6313,6 +6313,15 @@ int beautifulPairs(vector<int> A, vector<int> B)
     {
         b[x]++;
     }
+    int sum = 0;
+    for (int i = 0; i < 1001; i++)
+    {
+        if (a[i] > 0 && b[i] > 0)
+        {
+            sum += (min(a[i], b[i]));
+        }
+    }
+    
 }
 
 int main()
