@@ -6380,7 +6380,7 @@ void decentNumber(int n)
     {
         if (count5 % 3 != 0)
         {
-            count5 -= 1;
+            count5 -= 5;
         }
         else
         {
@@ -6391,7 +6391,7 @@ void decentNumber(int n)
             else
             {
                 cond1 = false;
-                count5 -= 1;
+                count5 -= 5;
             }
         }
     }
@@ -6411,5 +6411,5 @@ void decentNumber(int n)
 
 int main()
 {
-    decentNumber(11);
+    decentNumber(12);
 }
