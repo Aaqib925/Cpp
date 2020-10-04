@@ -6321,7 +6321,11 @@ int beautifulPairs(vector<int> A, vector<int> B)
             sum += (min(a[i], b[i]));
         }
     }
-    
+    if (sum > n)
+    {
+        return sum - 1;
+    }
+    return sum + 1;
 }
 
 int main()
