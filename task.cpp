@@ -6413,17 +6413,19 @@ using namespace std;
 // {
 //     decentNumber(12);
 // }
-int toys(vector<int> w) {
-    int count = 0, x = -1;
-    sort(w.begin(), w.end());
-    for (int i = 0; i < w.size(); i++)
-    {
-        if (w[i] > x)
-        {
-            x = w[i] + 4;
-            count += 1;
-        }
+// int toys(vector<int> w) {
+//     int count = 0, x = -1;
+//     sort(w.begin(), w.end());
+//     for (int i = 0; i < w.size(); i++)
+//     {
+//         if (w[i] > x)
+//         {
+//             x = w[i] + 4;
+//             count += 1;
+//         }
     
-    }
-    return count;
-}
+//     }
+//     return count;
+// }
+
+
