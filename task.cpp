@@ -6300,3 +6300,22 @@ using namespace std;
 //         cout << x << "\t"<< i << '\t' << x * i << endl;
 //     }
 // }
+
+int beautifulPairs(vector<int> A, vector<int> B)
+{
+    int a[1001] = {0};
+    int b[1001] = {0};
+    for (int x: A)
+    {
+        a[x]++;    
+    }
+    for (int x: B)
+    {
+        b[x]++;
+    }
+}
+
+int main()
+{
+    cout << beautifulPairs({1, 2, 3, 4}, {1, 2, 3, 3});
+}
