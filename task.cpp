@@ -6301,34 +6301,115 @@ using namespace std;
 //     }
 // }
 
-int beautifulPairs(vector<int> A, vector<int> B)
+// int beautifulPairs(vector<int> A, vector<int> B)
+// {
+//     int a[1001] = {0};
+//     int b[1001] = {0};
+//     for (int x: A)
+//     {
+//         a[x]++;
+//     }
+//     for (int x: B)
+//     {
+//         b[x]++;
+//     }
+//     int sum = 0;
+//     for (int i = 0; i < 1001; i++)
+//     {
+//         if (a[i] > 0 && b[i] > 0)
+//         {
+//             sum += (min(a[i], b[i]));
+//         }
+//     }
+//     if (sum > n)
+//     {
+//         return sum - 1;
+//     }
+//     return sum + 1;
+// }
+
+// int main()
+// {
+//     cout << beautifulPairs({1, 2, 3, 4}, {1, 2, 3, 3});
+// }
+
+// void decentNumber(int n) {
+//     int count5 = n;
+//     int count3 = n;
+//     bool cond1 = false;
+//     bool cond2 = false;
+//     string ans = "";
+//     while (!cond1 && !cond2)
+//     {
+//         if (count5 % 3 != 0)
+//         {
+//             count5 -= 1;
+//         }
+//         else
+//         {
+//             cond1 = true;
+//             count3 = n - count5;
+//             if (count3 % 5 == 0)
+//                 cond2 = true;
+//             else{
+//                 cond1 = false;
+//                 count5 -= 1;
+//             }
+//         }
+//     }
+//     for (int i = 0; i < count5; i++)
+//         ans += "5";
+//     for (int i = 0; i < count3; i++)
+//         ans += "3";
+//     cout << ans << endl;
+// }
+
+// int main()
+// {
+//     decentNumber(7);
+// }
+
+void decentNumber(int n)
 {
-    int a[1001] = {0};
-    int b[1001] = {0};
-    for (int x: A)
+    int count5 = n;
+    int count3 = n;
+    bool cond1 = false;
+    bool cond2 = false;
+    string ans = "";
+    while (!cond1 && !cond2 && count5 >= 0)
     {
-        a[x]++;    
-    }
-    for (int x: B)
-    {
-        b[x]++;
-    }
-    int sum = 0;
-    for (int i = 0; i < 1001; i++)
-    {
-        if (a[i] > 0 && b[i] > 0)
+        if (count5 % 3 != 0)
         {
-            sum += (min(a[i], b[i]));
+            count5 -= 1;
+        }
+        else
+        {
+            cond1 = true;
+            count3 = n - count5;
+            if (count3 % 5 == 0)
+                cond2 = true;
+            else
+            {
+                cond1 = false;
+                count5 -= 1;
+            }
         }
     }
-    if (sum > n)
+
+    if (cond1 && cond2)
     {
-        return sum - 1;
+        for (int i = 0; i < count5; i++)
+            ans += "5";
+        for (int i = 0; i < count3; i++)
+            ans += "3";
+
+        cout << ans << endl;
     }
-    return sum + 1;
+    else
+        cout << "-1" << endl;
 }
 
 int main()
 {
-    cout << beautifulPairs({1, 2, 3, 4}, {1, 2, 3, 3});
+    decentNumber(11);
 }
