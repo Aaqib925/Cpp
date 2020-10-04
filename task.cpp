@@ -6369,47 +6369,47 @@ using namespace std;
 //     decentNumber(7);
 // }
 
-void decentNumber(int n)
-{
-    int count5 = n;
-    int count3 = n;
-    bool cond1 = false;
-    bool cond2 = false;
-    string ans = "";
-    while (!cond1 && !cond2 && count5 >= 0)
-    {
-        if (count5 % 3 != 0)
-        {
-            count5 -= 5;
-        }
-        else
-        {
-            cond1 = true;
-            count3 = n - count5;
-            if (count3 % 5 == 0)
-                cond2 = true;
-            else
-            {
-                cond1 = false;
-                count5 -= 5;
-            }
-        }
-    }
+// void decentNumber(int n)
+// {
+//     int count5 = n;
+//     int count3 = n;
+//     bool cond1 = false;
+//     bool cond2 = false;
+//     string ans = "";
+//     while (!cond1 && !cond2 && count5 >= 0)
+//     {
+//         if (count5 % 3 != 0)
+//         {
+//             count5 -= 5;
+//         }
+//         else
+//         {
+//             cond1 = true;
+//             count3 = n - count5;
+//             if (count3 % 5 == 0)
+//                 cond2 = true;
+//             else
+//             {
+//                 cond1 = false;
+//                 count5 -= 5;
+//             }
+//         }
+//     }
 
-    if (cond1 && cond2)
-    {
-        for (int i = 0; i < count5; i++)
-            ans += "5";
-        for (int i = 0; i < count3; i++)
-            ans += "3";
+//     if (cond1 && cond2)
+//     {
+//         for (int i = 0; i < count5; i++)
+//             ans += "5";
+//         for (int i = 0; i < count3; i++)
+//             ans += "3";
 
-        cout << ans << endl;
-    }
-    else
-        cout << "-1" << endl;
-}
+//         cout << ans << endl;
+//     }
+//     else
+//         cout << "-1" << endl;
+// }
 
-int main()
-{
-    decentNumber(12);
-}
+// int main()
+// {
+//     decentNumber(12);
+// }
