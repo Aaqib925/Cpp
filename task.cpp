@@ -6426,30 +6426,35 @@ using namespace std;
 
 //     }
 //     return count;
+// // }
+// void largestPermutation(int k, vector<int> arr)
+// {
+//     int n = arr.size();
+//     for (int i = 0; i < n; i++)
+//     {
+//         cout << arr[i] << ' ' << n - i << endl;
+//         if (arr[i] != n - i && k != 0)
+//         {
+//             cout << "Yes" << endl;
+//             int j = i + 1;
+//             while (arr[j] != n - i){
+//                 cout << arr[j] << ' ' << n - i << endl;
+//                 j++;
+//             }
+//             cout << "Done" << endl;
+//             int temp = arr[i];
+//             arr[i] = arr[j];
+//             arr[j] = temp;
+//             k--;
+//         }
+//     }
+
+//     for (int i = 0; i < n; i++)
+//         cout << arr[i] << " ";
+//     cout << '\n';
 // }
-void largestPermutation(int k, vector<int> arr)
-{
-    int n = arr.size();
-    for (int i = 0; i < n; i++)
-    {
-        if (arr[i] != n - i && k != 0)
-        {
-            int j = i + 1;
-            while (arr[j] != n - i)
-                j++;
-            int temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp;
-            k--;
-        }
-    }
 
-    for (int i = 0; i < n; i++)
-        cout << arr[i] << " ";
-    cout << '\n';
-}
-
-int main()
-{
-    largestPermutation(1, {4, 2, 3, 5, 1});
-}
+// int main()
+// {
+//     largestPermutation(1, {4, 2, 3, 5, 1});
+// }
