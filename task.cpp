@@ -6458,14 +6458,14 @@ using namespace std;
 // {
 //     largestPermutation(1, {4, 2, 3, 5, 1});
 // }
-// void printVector(vector<int>arr)
-// {
-//     for (auto &x: arr)
-//     {
-//         cout << x << ' ';
-//     }
-//     cout << '\n';
-// }
+void printVector(vector<int>arr)
+{
+    for (auto &x: arr)
+    {
+        cout << x << ' ';
+    }
+    cout << '\n';
+}
 // int maximumToys(vector<int> prices, int k)
 // {
 //     sort(prices.begin(), prices.end());
@@ -6490,3 +6490,35 @@ using namespace std;
 //     int ans = maximumToys({3, 7, 2, 9, 4}, 15);
 //     cout << ans << '\n';
 // }
+
+void jimOrders(vector<vector<int>> orders) {
+    vector<int> ans(orders.size(), 0);
+    vector<int> finalList(orders.size(), 0);
+    map<int, int> customersTime;
+    
+    for (int i = 0; i < orders.size(); i ++)
+    {
+        int time = 0;
+        for (int j = 0; j < 2; j++)
+        {
+            time += orders[i][j];
+            ans[i] = time;
+        }
+        customersTime[time] = i + 1;
+    }
+    sort(ans.begin(), ans.end());
+    for (auto &x: ans)
+        cout << x << ' ';
+    cout << '\n';
+    for ()
+    for (int i = 0; i < orders.size(); i++)
+    {
+        finalList[i] = customersTime[ans[i]];
+    }
+    return finalList;
+}
+
+int main()
+{
+    jimOrders({{1, 1}, {1, 1}});
+}
