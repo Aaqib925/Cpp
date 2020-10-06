@@ -6458,9 +6458,9 @@ using namespace std;
 // {
 //     largestPermutation(1, {4, 2, 3, 5, 1});
 // }
-void printVector(vector<int>arr)
+void printVector(vector<int> arr)
 {
-    for (auto &x: arr)
+    for (auto &x : arr)
     {
         cout << x << ' ';
     }
@@ -6480,7 +6480,7 @@ void printVector(vector<int>arr)
 //         {
 //             break;
 //         }
-        
+
 //     }
 //     return count;
 // }
@@ -6495,7 +6495,7 @@ void printVector(vector<int>arr)
 //     vector<int> ans(orders.size(), 0);
 //     vector<int> finalList(orders.size(), 0);
 //     map<int, int> customersTime;
-    
+
 //     for (int i = 0; i < orders.size(); i ++)
 //     {
 //         int time = 0;
@@ -6525,3 +6525,20 @@ void printVector(vector<int>arr)
 // {
 //     jimOrders({{1, 1}, {1, 1}});
 // }
+
+string twoArrays(int k, vector<int> A, vector<int> B)
+{
+    sort(A.begin(), A.end());
+    sort(B.begin(), B.end(), greater<int>());
+    for (int i = 0; i < A.size(); i++)
+    {
+        if (A[i] + B[i] < k)
+            return "NO";
+    }
+    return "YES";
+}
+
+int main()
+{
+    twoArrays(10, {2, 1, 3}, {7, 8, 9});
+}
