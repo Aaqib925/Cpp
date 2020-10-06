@@ -6458,3 +6458,24 @@ using namespace std;
 // {
 //     largestPermutation(1, {4, 2, 3, 5, 1});
 // }
+
+
+int maximumToys(vector<int> prices, int k) {
+    sort(prices.begin(), prices.end());
+    int count, sum;
+    for (int i = 0; i < prices.size(); i++)
+    {
+        sum += prices[i];
+        if (sum <= k)
+        {
+            count += 1;
+        }
+    }
+    return count;
+
+}
+
+int main()
+{
+    
+}
