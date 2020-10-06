@@ -6565,3 +6565,20 @@ void printVector(vector<int> arr)
 //     int ans = maximizingXor(10, 15);
 //     cout << ans << '\n';
 // }
+
+// long sumXor(long n) {
+//     int count = 0;
+
+//     for (int i = 0; i < n; i++)
+//     {
+//         // cout << n + i << ' ' << n ^ i << '\n';
+        
+//     }
+//     return count;
+// }
+
+// int main()
+// {
+//     int ans = sumXor(10);
+//     cout << ans << endl;
+// }
