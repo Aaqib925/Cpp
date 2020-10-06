@@ -6491,37 +6491,37 @@ void printVector(vector<int>arr)
 //     cout << ans << '\n';
 // }
 
-void jimOrders(vector<vector<int>> orders) {
-    vector<int> ans(orders.size(), 0);
-    vector<int> finalList(orders.size(), 0);
-    map<int, int> customersTime;
+// void jimOrders(vector<vector<int>> orders) {
+//     vector<int> ans(orders.size(), 0);
+//     vector<int> finalList(orders.size(), 0);
+//     map<int, int> customersTime;
     
-    for (int i = 0; i < orders.size(); i ++)
-    {
-        int time = 0;
-        for (int j = 0; j < 2; j++)
-        {
-            time += orders[i][j];
-            ans[i] = time + i;
-        }
-        customersTime[time + i] = i + 1;
-    }
-    sort(ans.begin(), ans.end());
-    for (auto &x: ans)
-        cout << x << ' ';
-    cout << '\n';
-    for (auto &x: customersTime)
-    {
-        cout << x.first << ' ' << x.second << '\n';
-    }
-    cout << '\n';
-    for (int i = 0; i < orders.size(); i++)
-    {
-        finalList[i] = customersTime[ans[i]];
-    }
-}
+//     for (int i = 0; i < orders.size(); i ++)
+//     {
+//         int time = 0;
+//         for (int j = 0; j < 2; j++)
+//         {
+//             time += orders[i][j];
+//             ans[i] = time + i;
+//         }
+//         customersTime[time + i] = i + 1;
+//     }
+//     sort(ans.begin(), ans.end());
+//     for (auto &x: ans)
+//         cout << x << ' ';
+//     cout << '\n';
+//     for (auto &x: customersTime)
+//     {
+//         cout << x.first << ' ' << x.second << '\n';
+//     }
+//     cout << '\n';
+//     for (int i = 0; i < orders.size(); i++)
+//     {
+//         finalList[i] = customersTime[ans[i]];
+//     }
+// }
 
-int main()
-{
-    jimOrders({{1, 1}, {1, 1}});
-}
+// int main()
+// {
+//     jimOrders({{1, 1}, {1, 1}});
+// }
