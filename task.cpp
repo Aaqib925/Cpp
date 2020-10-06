@@ -6544,24 +6544,24 @@ void printVector(vector<int> arr)
 // }
 
 
-int maximizingXor(int l, int r) {
-    int ans = 0;
-    for (int i = l; i <= r; i++)
-    {
-        for (int j = i; j <= r; j++)
-        {
-            int x = i ^ j;
-            if (x > ans)
-            {
-                ans = x;
-            }
-        }
-    }
-    return ans;
-}
+// int maximizingXor(int l, int r) {
+//     int ans = 0;
+//     for (int i = l; i <= r; i++)
+//     {
+//         for (int j = i; j <= r; j++)
+//         {
+//             int x = i ^ j;
+//             if (x > ans)
+//             {
+//                 ans = x;
+//             }
+//         }
+//     }
+//     return ans;
+// }
 
-int main()
-{
-    int ans = maximizingXor(10, 15);
-    cout << ans << '\n';
-}
+// int main()
+// {
+//     int ans = maximizingXor(10, 15);
+//     cout << ans << '\n';
+// }
