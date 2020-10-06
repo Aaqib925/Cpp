@@ -6502,20 +6502,23 @@ void jimOrders(vector<vector<int>> orders) {
         for (int j = 0; j < 2; j++)
         {
             time += orders[i][j];
-            ans[i] = time;
+            ans[i] = time + i;
         }
-        customersTime[time] = i + 1;
+        customersTime[time + i] = i + 1;
     }
     sort(ans.begin(), ans.end());
     for (auto &x: ans)
         cout << x << ' ';
     cout << '\n';
-    for ()
+    for (auto &x: customersTime)
+    {
+        cout << x.first << ' ' << x.second << '\n';
+    }
+    cout << '\n';
     for (int i = 0; i < orders.size(); i++)
     {
         finalList[i] = customersTime[ans[i]];
     }
-    return finalList;
 }
 
 int main()
