@@ -6542,3 +6542,26 @@ void printVector(vector<int> arr)
 // {
 //     twoArrays(10, {2, 1, 3}, {7, 8, 9});
 // }
+
+
+int maximizingXor(int l, int r) {
+    int ans = 0;
+    for (int i = l; i <= r; i++)
+    {
+        for (int j = i; j <= r; j++)
+        {
+            int x = i ^ j;
+            if (x > ans)
+            {
+                ans = x;
+            }
+        }
+    }
+    return ans;
+}
+
+int main()
+{
+    int ans = maximizingXor(10, 15);
+    cout << ans << '\n';
+}
