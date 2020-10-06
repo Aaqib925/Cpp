@@ -6526,19 +6526,19 @@ void printVector(vector<int> arr)
 //     jimOrders({{1, 1}, {1, 1}});
 // }
 
-string twoArrays(int k, vector<int> A, vector<int> B)
-{
-    sort(A.begin(), A.end());
-    sort(B.begin(), B.end(), greater<int>());
-    for (int i = 0; i < A.size(); i++)
-    {
-        if (A[i] + B[i] < k)
-            return "NO";
-    }
-    return "YES";
-}
+// string twoArrays(int k, vector<int> A, vector<int> B)
+// {
+//     sort(A.begin(), A.end());
+//     sort(B.begin(), B.end(), greater<int>());
+//     for (int i = 0; i < A.size(); i++)
+//     {
+//         if (A[i] + B[i] < k)
+//             return "NO";
+//     }
+//     return "YES";
+// }
 
-int main()
-{
-    twoArrays(10, {2, 1, 3}, {7, 8, 9});
-}
+// int main()
+// {
+//     twoArrays(10, {2, 1, 3}, {7, 8, 9});
+// }
