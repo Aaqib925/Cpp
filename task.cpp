@@ -6582,25 +6582,44 @@ void printVector(vector<int> arr)
 //     cout << ans << endl;
 // }
 
-vector<int> twoSum(vector<int> nums, int target)
-{
-    vector<int> ans(2, 0);
-    for (int i = 0; i < nums.size(); i++)
-    {
-        int x = nums.size() - 1;
-        if (nums[i] + nums[x] == target && x > i)
-        {
-            ans[0] = i;
-            ans[1] = x;
-        }
-        else
-            x -= 1;
-    }
-    return ans;
-}
+// vector<int> twoSum(vector<int> nums, int target)
+// {
+//     bool found = false;
+//     vector<int> ans(2, 0);
+//     for (int i = 0; i < nums.size(); i++)
+//     {
+//         int x = nums.size() - 1;
+//         for (int j = x; j > i; j--)
+//         {
+//             if (nums[i] + nums[j] == target)
+//             {
+//                 ans[0] = i;
+//                 ans[1] = j;
+//                 found = true;
+//                 break;
+//             }
+//         }
+//         if (found)
+//             break;
+//     }
+//     return ans;
+// }
 
-int main()
-{
-    vector<int> ans = twoSum({2, 7, 11, 15}, 9);
-    printVector(ans);
-}
+// int main()
+// {
+//     vector<int> ans = twoSum({3, 2, 4}, 6);
+//     printVector(ans);
+// }
+
+// int main()
+// {
+//     int x = -123;
+//     string ans = "";
+//     if (x < 0)
+//         ans += "-";
+//     x = abs(x);
+//     string newAns = to_string(x);
+//     reverse(newAns.begin(), newAns.end());
+//     ans += newAns;
+//     cout << ans << endl;
+// }
