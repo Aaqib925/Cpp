@@ -6543,7 +6543,6 @@ void printVector(vector<int> arr)
 //     twoArrays(10, {2, 1, 3}, {7, 8, 9});
 // }
 
-
 // int maximizingXor(int l, int r) {
 //     int ans = 0;
 //     for (int i = l; i <= r; i++)
@@ -6572,7 +6571,7 @@ void printVector(vector<int> arr)
 //     for (int i = 0; i < n; i++)
 //     {
 //         // cout << n + i << ' ' << n ^ i << '\n';
-        
+
 //     }
 //     return count;
 // }
@@ -6582,3 +6581,26 @@ void printVector(vector<int> arr)
 //     int ans = sumXor(10);
 //     cout << ans << endl;
 // }
+
+vector<int> twoSum(vector<int> nums, int target)
+{
+    vector<int> ans(2, 0);
+    for (int i = 0; i < nums.size(); i++)
+    {
+        int x = nums.size() - 1;
+        if (nums[i] + nums[x] == target && x > i)
+        {
+            ans[0] = i;
+            ans[1] = x;
+        }
+        else
+            x -= 1;
+    }
+    return ans;
+}
+
+int main()
+{
+    vector<int> ans = twoSum({2, 7, 11, 15}, 9);
+    printVector(ans);
+}
