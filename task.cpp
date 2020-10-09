@@ -6623,3 +6623,31 @@ void printVector(vector<int> arr)
 //     ans += newAns;
 //     cout << ans << endl;
 // }
+
+int monotoneIncreasingDigits(int N)
+{
+    for (int i = N; i >= 0; i--)
+    {
+        // cout << i << endl;
+        bool found = true;
+        string x = to_string(i);
+        for (int j = 0; j < x.size() - 1; j++)
+        {
+            if (x[j] > x[j + 1]){
+                found = false;
+                break;
+            }
+        }
+        if (found)
+        {
+            cout << i << endl;
+            break;
+        }
+    }
+    return 0;
+}
+
+int main()
+{
+    monotoneIncreasingDigits(10);
+}
