@@ -6751,3 +6751,17 @@ void printVector(vector<int> arr)
 // {
 //     numJewelsInStones("aA", "aAAbbbb");
 // }
+
+class Solution {
+public:
+    int numJewelsInStones(string J, string S) {
+        unordered_set<char> temp;
+        int ans = 0;
+        for (char x: J)
+            temp.insert(x);
+        for (char x: S)
+            if (temp.count(x) == 1)
+                ans ++;
+        return ans;
+    }
+};
