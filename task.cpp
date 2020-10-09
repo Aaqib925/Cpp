@@ -6781,20 +6781,39 @@ void printVector(vector<int> arr)
 //     restoreString("codeleet", {4,5,6,7,0,2,1,3});
 // }
 
-void smallerNumbersThanCurrent(vector<int> nums)
+// void smallerNumbersThanCurrent(vector<int> nums)
+// {
+//     vector<int> secNums = nums;
+//     vector<int> ans(nums.size(), 0);
+//     sort(secNums.begin(), secNums.end());
+//     for (int i = 0; i < nums.size(); i++)
+//     {
+//         vector<int>::iterator it = find(secNums.begin(), secNums.end(), nums[i]);
+//         ans[i] = distance(secNums.begin(), it);
+//     }
+//     printVector(ans);
+// }
+
+vector<int> smallerNumbersThanCurrent(vector<int> nums)
 {
-    vector<int> secNums = nums;
-    vector<int> ans(nums.size(), 0);
-    sort(secNums.begin(), secNums.end());
-    for (int i = 0; i < nums.size(); i++)
+    int arr[101] = {0};
+    for (int i : nums)
+        arr[i]++;
+    for (int i = 1; i < 101; i++)
+        arr[i] += arr[i - 1];
+    int k = 0;
+    for (int i : nums)
     {
-        vector<int>::iterator it = find(secNums.begin(), secNums.end(), nums[i]);
-        ans[i] = distance(secNums.begin(), it);
+        if (i == 0)
+            nums[k++] = 0;
+        else
+            nums[k++] = arr[i - 1];
     }
-    printVector(ans);
+    return nums;
 }
 
 int main()
 {
-    smallerNumbersThanCurrent({8,1,2,2,3});
+    vector<int> ans = smallerNumbersThanCurrent({8, 1, 2, 2, 3});
+    printVector(ans);
 }
