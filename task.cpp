@@ -6700,3 +6700,19 @@ void printVector(vector<int> arr)
 // {
 //     cout << numIdenticalPairs({1,2,3,1,1,3}) << endl;
 // }
+
+class Solution {
+public:
+    vector<bool> kidsWithCandies(vector<int>& candies, int extraCandies) {
+        vector<bool> ans(candies.size());
+        int maxVal = *max_element(candies.begin(), candies.end());
+        for (int i = 0; i < candies.size(); i++)
+        {
+            if (candies[i] == maxVal || candies[i] + extraCandies >= maxVal)
+                ans[i] = true;
+            else
+                ans[i] = false;
+        }
+        return ans;
+    }
+};
