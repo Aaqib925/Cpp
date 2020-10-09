@@ -6766,7 +6766,7 @@ void printVector(vector<int> arr)
 //     }
 // };
 
-// void restoreString(string s, vector<int> indices) 
+// void restoreString(string s, vector<int> indices)
 // {
 //     string ans = s;
 //     for (int i = 0; i < indices.size(); i++)
@@ -6780,3 +6780,21 @@ void printVector(vector<int> arr)
 // {
 //     restoreString("codeleet", {4,5,6,7,0,2,1,3});
 // }
+
+void smallerNumbersThanCurrent(vector<int> nums)
+{
+    vector<int> secNums = nums;
+    vector<int> ans(nums.size(), 0);
+    sort(secNums.begin(), secNums.end());
+    for (int i = 0; i < nums.size(); i++)
+    {
+        vector<int>::iterator it = find(secNums.begin(), secNums.end(), nums[i]);
+        ans[i] = distance(secNums.begin(), it);
+    }
+    printVector(ans);
+}
+
+int main()
+{
+    smallerNumbersThanCurrent({8,1,2,2,3});
+}
