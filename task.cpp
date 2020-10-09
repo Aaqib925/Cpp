@@ -6765,3 +6765,18 @@ void printVector(vector<int> arr)
 //         return ans;
 //     }
 // };
+
+// void restoreString(string s, vector<int> indices) 
+// {
+//     string ans = s;
+//     for (int i = 0; i < indices.size(); i++)
+//     {
+//         ans[indices[i]] = s[i];
+//     }
+//     cout << ans << endl;
+// }
+
+// int main()
+// {
+//     restoreString("codeleet", {4,5,6,7,0,2,1,3});
+// }
