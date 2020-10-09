@@ -6794,26 +6794,45 @@ void printVector(vector<int> arr)
 //     printVector(ans);
 // }
 
-vector<int> smallerNumbersThanCurrent(vector<int> nums)
-{
-    int arr[101] = {0};
-    for (int i : nums)
-        arr[i]++;
-    for (int i = 1; i < 101; i++)
-        arr[i] += arr[i - 1];
-    int k = 0;
-    for (int i : nums)
-    {
-        if (i == 0)
-            nums[k++] = 0;
-        else
-            nums[k++] = arr[i - 1];
-    }
-    return nums;
-}
+// vector<int> smallerNumbersThanCurrent(vector<int> nums)
+// {
+//     int arr[101] = {0};
+//     for (int i : nums)
+//         arr[i]++;
+//     for (int i = 1; i < 101; i++)
+//         arr[i] += arr[i - 1];
+//     int k = 0;
+//     for (int i : nums)
+//     {
+//         if (i == 0)
+//             nums[k++] = 0;
+//         else
+//             nums[k++] = arr[i - 1];
+//     }
+//     return nums;
+// }
 
-int main()
-{
-    vector<int> ans = smallerNumbersThanCurrent({8, 1, 2, 2, 3});
-    printVector(ans);
-}
+// int main()
+// {
+//     vector<int> ans = smallerNumbersThanCurrent({8, 1, 2, 2, 3});
+//     printVector(ans);
+// }
+
+// void subtractProductAndSum(int n)
+// {
+//     int prod = 1;
+//     int sum = 0;
+//     while (n > 0)
+//     {
+//         int x =  n % 10;
+//         n /= 10;
+//         prod *= x;
+//         sum += x;
+//     }
+//     cout << prod - sum;
+// }
+
+// int main()
+// {
+//     subtractProductAndSum(4421);
+// }
