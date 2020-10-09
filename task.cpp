@@ -6678,25 +6678,25 @@ void printVector(vector<int> arr)
 //     }
 // };
 
-int numIdenticalPairs(vector<int> nums)
-{
-    int sum = 0;
-    int lastNum = 0;
-    sort(nums.begin(), nums.end());
+// int numIdenticalPairs(vector<int> nums)
+// {
+//     int sum = 0;
+//     int lastNum = 0;
+//     sort(nums.begin(), nums.end());
 
-    for (int i = 0; i < nums.size(); i++)
-    {
-        if (nums[i] != lastNum)
-        {
-            lastNum = nums[i];
-            int freq = count(nums.begin(), nums.end(), nums[i]);
-            sum += freq * (freq - 1)/2;
-        }
-    }
-    return sum;
-}
+//     for (int i = 0; i < nums.size(); i++)
+//     {
+//         if (nums[i] != lastNum)
+//         {
+//             lastNum = nums[i];
+//             int freq = count(nums.begin(), nums.end(), nums[i]);
+//             sum += freq * (freq - 1)/2;
+//         }
+//     }
+//     return sum;
+// }
 
-int main()
-{
-    cout << numIdenticalPairs({1,2,3,1,1,3}) << endl;
-}
+// int main()
+// {
+//     cout << numIdenticalPairs({1,2,3,1,1,3}) << endl;
+// }
