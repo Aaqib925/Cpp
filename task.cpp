@@ -6664,16 +6664,39 @@ void printVector(vector<int> arr)
 //     }
 // };
 
-class Solution {
-public:
-    vector<int> runningSum(vector<int>& nums) {
-        int sum = 0;
-        vector<int> ans(nums.size(), 0);
-        for (int i = 0; i < nums.size(); i++)
+// class Solution {
+// public:
+//     vector<int> runningSum(vector<int>& nums) {
+//         int sum = 0;
+//         vector<int> ans(nums.size(), 0);
+//         for (int i = 0; i < nums.size(); i++)
+//         {
+//             sum += nums[i];
+//             ans[i] = sum;
+//         }
+//         return ans;
+//     }
+// };
+
+int numIdenticalPairs(vector<int> nums)
+{
+    int sum = 0;
+    int lastNum = 0;
+    sort(nums.begin(), nums.end());
+
+    for (int i = 0; i < nums.size(); i++)
+    {
+        if (nums[i] != lastNum)
         {
-            sum += nums[i];
-            ans[i] = sum;
+            lastNum = nums[i];
+            int freq = count(nums.begin(), nums.end(), nums[i]);
+            sum += freq * (freq - 1)/2;
         }
-        return ans;
     }
-};
+    return sum;
+}
+
+int main()
+{
+    cout << numIdenticalPairs({1,2,3,1,1,3}) << endl;
+}
