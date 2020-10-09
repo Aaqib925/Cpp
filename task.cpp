@@ -6716,17 +6716,38 @@ void printVector(vector<int> arr)
 //         return ans;
 //     }
 // };
-class Solution {
-public:
-    string defangIPaddr(string address) {
-        string ans = "";
-        for (char x: address)
-        {
-            if (x != '.')
-                ans += x;
-            else
-                ans += "[.]";
-        }
-        return ans;
-    }
-};
+// class Solution {
+// public:
+//     string defangIPaddr(string address) {
+//         string ans = "";
+//         for (char x: address)
+//         {
+//             if (x != '.')
+//                 ans += x;
+//             else
+//                 ans += "[.]";
+//         }
+//         return ans;
+//     }
+// };
+
+// int numJewelsInStones(string J, string S)
+// {
+//     int sum = 0;
+//     char last;
+//     for (char x : J)
+//     {
+//         if (x != last)
+//         {
+//             last = x;
+//             sum += count(S.begin(), S.end(), x);
+//             cout << sum << endl;
+//         }
+//     }
+//     return sum;
+// }
+
+// int main()
+// {
+//     numJewelsInStones("aA", "aAAbbbb");
+// }
