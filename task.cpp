@@ -6869,3 +6869,25 @@ void printVector(vector<int> arr)
 //     int ans = reverse(1534236469);
 //     cout << ans << endl;
 // }
+
+// int main()
+// {
+//     vector<int> arr = {0,1,2,3,4};
+//     arr.insert(arr.begin() + 0, 5);
+//     for (auto &x: arr)
+//     {
+//         cout << x;
+//     }
+// }
+
+class Solution {
+public:
+    vector<int> createTargetArray(vector<int>& nums, vector<int>& index) {
+        vector<int> ans;
+        for (int i = 0; i < nums.size(); i++)
+        {
+            ans.insert(ans.begin() + index[i], nums[i]);
+        }
+        return ans;
+    }
+};
