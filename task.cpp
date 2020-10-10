@@ -6836,3 +6836,36 @@ void printVector(vector<int> arr)
 // {
 //     subtractProductAndSum(4421);
 // }
+
+int reverse(int x)
+{
+    bool polarity;
+    if (x > 0)
+        polarity = true;
+    else
+        polarity = false;
+
+
+    x = abs(x);
+    string ans = "";
+    int factor = 1;
+    while (x > 0)
+    {
+        int y = x % 10;
+
+        x /= 10;
+        ans += to_string(y);
+    }
+    stringstream geek(ans); 
+    int finAns = 0;
+    geek >> finAns;
+    if (!polarity)
+        return -finAns;
+    return finAns;
+}
+
+int main()
+{
+    int ans = reverse(120);
+    cout << ans << endl;
+}
