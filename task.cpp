@@ -6891,17 +6891,37 @@ void printVector(vector<int> arr)
 //     }
 // };
 
-void xorOperation(int n, int start)
-{
-    int ans = 0;
-    for (int i = 0; i < n; i++)
-    {
-        ans ^= start + 2 * i;
-    }
-    cout << ans << endl;
-}
+// void xorOperation(int n, int start)
+// {
+//     int ans = 0;
+//     for (int i = 0; i < n; i++)
+//     {
+//         ans ^= start + 2 * i;
+//     }
+//     cout << ans << endl;
+// }
 
-int main()
+// int main()
+// {
+//     xorOperation(10, 5);
+// }
+
+class Solution
 {
-    xorOperation(10, 5);
-}
+public:
+    int balancedStringSplit(string s)
+    {
+        int balance = 0;
+        int ans = 0;
+        for (char x : s)
+        {
+            if (x == 'R')
+                balance++;
+            else
+                balance--;
+            if (balance == 0)
+                ans++;
+        }
+        return ans;
+    }
+};
