@@ -6845,7 +6845,6 @@ void printVector(vector<int> arr)
 //     else
 //         polarity = false;
 
-
 //     x = abs(x);
 //     string ans = "";
 //     while (x > 0)
@@ -6855,7 +6854,7 @@ void printVector(vector<int> arr)
 //         x /= 10;
 //         ans += to_string(y);
 //     }
-//     stringstream geek(ans); 
+//     stringstream geek(ans);
 //     long long int finAns = 0;
 //     geek >> finAns;
 //     if(ans>=INT_MAX) return 0;
@@ -6880,14 +6879,29 @@ void printVector(vector<int> arr)
 //     }
 // }
 
-class Solution {
-public:
-    vector<int> createTargetArray(vector<int>& nums, vector<int>& index) {
-        vector<int> ans;
-        for (int i = 0; i < nums.size(); i++)
-        {
-            ans.insert(ans.begin() + index[i], nums[i]);
-        }
-        return ans;
+// class Solution {
+// public:
+//     vector<int> createTargetArray(vector<int>& nums, vector<int>& index) {
+//         vector<int> ans;
+//         for (int i = 0; i < nums.size(); i++)
+//         {
+//             ans.insert(ans.begin() + index[i], nums[i]);
+//         }
+//         return ans;
+//     }
+// };
+
+void xorOperation(int n, int start)
+{
+    int ans = 0;
+    for (int i = 0; i < n; i++)
+    {
+        ans ^= start + 2 * i;
     }
-};
+    cout << ans << endl;
+}
+
+int main()
+{
+    xorOperation(10, 5);
+}
