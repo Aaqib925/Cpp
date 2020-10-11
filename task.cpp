@@ -11,6 +11,7 @@
 #include <string.h>
 #include <list>
 #include <fstream>
+#include <numeric>
 // #include <ncurses.h>
 #include <cstring>
 #include <deque>
@@ -6906,22 +6907,47 @@ void printVector(vector<int> arr)
 //     xorOperation(10, 5);
 // }
 
-class Solution
+// class Solution
+// {
+// public:
+//     int balancedStringSplit(string s)
+//     {
+//         int balance = 0;
+//         int ans = 0;
+//         for (char x : s)
+//         {
+//             if (x == 'R')
+//                 balance++;
+//             else
+//                 balance--;
+//             if (balance == 0)
+//                 ans++;
+//         }
+//         return ans;
+//     }
+// };
+
+void sumOddLengthSubarrays(vector<int> arr)
 {
-public:
-    int balancedStringSplit(string s)
+    int finalAns = 0;
+    for (int i = 0; i < arr.size(); i++)
     {
-        int balance = 0;
-        int ans = 0;
-        for (char x : s)
+        
+        for (int j = i; j < arr.size() ; j++)
         {
-            if (x == 'R')
-                balance++;
-            else
-                balance--;
-            if (balance == 0)
-                ans++;
+            int sum = 0;
+            if ((j - i) % 2 == 0)
+            {
+                for (int k = i; k <= j; k++)
+                    sum += arr[k];
+                finalAns += sum;
+            }
         }
-        return ans;
     }
-};
+    cout << finalAns << endl;
+}
+
+int main()
+{
+    sumOddLengthSubarrays({1,4,2,5,3});
+}
