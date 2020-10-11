@@ -6932,8 +6932,8 @@ void sumOddLengthSubarrays(vector<int> arr)
     int finalAns = 0;
     for (int i = 0; i < arr.size(); i++)
     {
-        
-        for (int j = i; j < arr.size() ; j++)
+
+        for (int j = i; j < arr.size(); j++)
         {
             int sum = 0;
             if ((j - i) % 2 == 0)
@@ -6947,7 +6947,27 @@ void sumOddLengthSubarrays(vector<int> arr)
     cout << finalAns << endl;
 }
 
+int sumOddLengthSubarrays(vector<int> &arr)
+{
+    int odd = 1;
+    int result = 0;
+    for (int i = 0; i < arr.size(); i++)
+    {
+        int sum = 0;
+        for (int j = i; j < arr.size(); j++)
+        {
+            sum += arr[j];
+            if (odd % 2 == 1)
+            {
+                result += sum;
+            }
+            odd++;
+        }
+    }
+    return result;
+}
+
 int main()
 {
-    sumOddLengthSubarrays({1,4,2,5,3});
+    sumOddLengthSubarrays({10, 11, 12});
 }
