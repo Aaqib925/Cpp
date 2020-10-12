@@ -7016,15 +7016,16 @@ void countGoodTriplets(vector<int> arr, int a, int b, int c)
 {
     int numOfGood = 0;
     // int j = 1, k = 2;
-    for (int i = 0; i < arr.size() - 3; i++)
+    for (int i = 0; i < arr.size() - 1; i++)
     {
         int j = i + 1, k = i + 2;
-        while (k < arr.size() && j < arr.size() - 1)
+        while (j < arr.size() - 1)
         {
             // bool pass = false;
+            // cout << arr[i] << ' ' << arr[j] << ' ' << arr[k] << endl;
             if (abs(arr[i] - arr[j]) <= a && abs(arr[j] - arr[k]) <= b && abs(arr[i] - arr[k]) <= c)
             {
-                // cout << arr[i] << ' ' << arr[j] << ' ' << arr[k] << endl;
+                
                 // pass = true;
                 numOfGood++;
             }
@@ -7042,5 +7043,5 @@ void countGoodTriplets(vector<int> arr, int a, int b, int c)
 
 int main()
 {
-    countGoodTriplets({3, 0, 1, 1, 9, 7}, 7, 2, 3);
+    countGoodTriplets({5,5,2,6,4}, 5,4,5);
 }
