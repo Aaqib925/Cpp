@@ -6974,32 +6974,33 @@ void sumOddLengthSubarrays(vector<int> arr)
 
 void findNumbers(vector<int> nums)
 {
+    // int evenCount = 0;
+    // int i = 0;
+    // int lengthOfNumber = 0;
+    // bool cond = false;
+    // while (i < nums.size())
+    // {
+    //     // nums[i] %= 10;
+    //     if (nums[i] == 0)
+    //         cond = true;
+    //     nums[i] /= 10;
+    //     if (nums[i] >= 0 && !cond){
+    //         lengthOfNumber++;
+    //     }
+    //     else
+    //     {
+    //         cond = false;
+    //         i++;
+    //         if (lengthOfNumber % 2 == 0)
+    //             evenCount++;
+    //         lengthOfNumber = 0;
+    //     }
+    // }
+    // cout << evenCount << endl;
     int evenCount = 0;
-    int i = 0;
-    int lengthOfNumber = 0;
-    bool cond = false;
-    while (i < nums.size())
-    {
-        // nums[i] %= 10;
-        if (nums[i] == 0)
-            cond = true;
-        nums[i] /= 10;
-        if (nums[i] >= 0 && !cond){
-            lengthOfNumber++;
-        }
-        else
-        {
-            cond = false;
-            i++;
-            if (lengthOfNumber % 2 == 0)
-                evenCount++;
-            lengthOfNumber = 0;
-        }
-    }
-    cout << evenCount << endl;
 }
 
 int main()
 {
-    findNumbers({12, 345, 2, 6, 7896});
+    findNumbers({555,901,482,1771});
 }
