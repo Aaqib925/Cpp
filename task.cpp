@@ -6972,42 +6972,75 @@ void sumOddLengthSubarrays(vector<int> arr)
 //     sumOddLengthSubarrays({10, 11, 12});
 // }
 
-void findNumbers(vector<int> nums)
+// void findNumbers(vector<int> nums)
+// {
+//     // int evenCount = 0;
+//     // int i = 0;
+//     // int lengthOfNumber = 0;
+//     // bool cond = false;
+//     // while (i < nums.size())
+//     // {
+//     //     // nums[i] %= 10;
+//     //     if (nums[i] == 0)
+//     //         cond = true;
+//     //     nums[i] /= 10;
+//     //     if (nums[i] >= 0 && !cond){
+//     //         lengthOfNumber++;
+//     //     }
+//     //     else
+//     //     {
+//     //         cond = false;
+//     //         i++;
+//     //         if (lengthOfNumber % 2 == 0)
+//     //             evenCount++;
+//     //         lengthOfNumber = 0;
+//     //     }
+//     // }
+//     // cout << evenCount << endl;
+//     int evenCount = 0;
+//     for (int i = 0; i < nums.size(); i++)
+//     {
+//         string x = to_string(nums[i]);
+//         if (x.length() % 2 == 0)
+//             evenCount ++;
+//     }
+//     cout << evenCount << endl;
+// }
+
+// int main()
+// {
+//     findNumbers({555,901,482,1771});
+// }
+
+void countGoodTriplets(vector<int> arr, int a, int b, int c)
 {
-    // int evenCount = 0;
-    // int i = 0;
-    // int lengthOfNumber = 0;
-    // bool cond = false;
-    // while (i < nums.size())
-    // {
-    //     // nums[i] %= 10;
-    //     if (nums[i] == 0)
-    //         cond = true;
-    //     nums[i] /= 10;
-    //     if (nums[i] >= 0 && !cond){
-    //         lengthOfNumber++;
-    //     }
-    //     else
-    //     {
-    //         cond = false;
-    //         i++;
-    //         if (lengthOfNumber % 2 == 0)
-    //             evenCount++;
-    //         lengthOfNumber = 0;
-    //     }
-    // }
-    // cout << evenCount << endl;
-    int evenCount = 0;
-    for (int i = 0; i < nums.size(); i++)
+    int numOfGood = 0;
+    // int j = 1, k = 2;
+    for (int i = 0; i < arr.size() - 3; i++)
     {
-        string x = to_string(nums[i]);
-        if (x.length() % 2 == 0)
-            evenCount ++;
+        int j = i + 1, k = i + 2;
+        while (k < arr.size() && j < arr.size() - 1)
+        {
+            // bool pass = false;
+            if (abs(arr[i] - arr[j]) <= a && abs(arr[j] - arr[k]) <= b && abs(arr[i] - arr[k]) <= c)
+            {
+                // cout << arr[i] << ' ' << arr[j] << ' ' << arr[k] << endl;
+                // pass = true;
+                numOfGood++;
+            }
+            k++;
+            if (k > arr.size() - 1)
+            {
+                // pass = false;
+                j++;
+                k = j + 1;
+            }
+        }
     }
-    cout << evenCount << endl;
+    cout << numOfGood << endl;
 }
 
 int main()
 {
-    findNumbers({555,901,482,1771});
+    countGoodTriplets({3, 0, 1, 1, 9, 7}, 7, 2, 3);
 }
