@@ -6998,6 +6998,13 @@ void findNumbers(vector<int> nums)
     // }
     // cout << evenCount << endl;
     int evenCount = 0;
+    for (int i = 0; i < nums.size(); i++)
+    {
+        string x = to_string(nums[i]);
+        if (x.length() % 2 == 0)
+            evenCount ++;
+    }
+    cout << evenCount << endl;
 }
 
 int main()
