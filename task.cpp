@@ -7012,36 +7012,61 @@ void sumOddLengthSubarrays(vector<int> arr)
 //     findNumbers({555,901,482,1771});
 // }
 
-void countGoodTriplets(vector<int> arr, int a, int b, int c)
+// void countGoodTriplets(vector<int> arr, int a, int b, int c)
+// {
+//     int numOfGood = 0;
+//     // int j = 1, k = 2;
+//     for (int i = 0; i < arr.size() - 1; i++)
+//     {
+//         int j = i + 1, k = i + 2;
+//         while (j < arr.size() - 1)
+//         {
+//             // bool pass = false;
+//             // cout << arr[i] << ' ' << arr[j] << ' ' << arr[k] << endl;
+//             if (abs(arr[i] - arr[j]) <= a && abs(arr[j] - arr[k]) <= b && abs(arr[i] - arr[k]) <= c)
+//             {
+
+//                 // pass = true;
+//                 numOfGood++;
+//             }
+//             k++;
+//             if (k > arr.size() - 1)
+//             {
+//                 // pass = false;
+//                 j++;
+//                 k = j + 1;
+//             }
+//         }
+//     }
+//     cout << numOfGood << endl;
+// }
+
+// int main()
+// {
+//     countGoodTriplets({5,5,2,6,4}, 5,4,5);
+// }
+
+class Solution
 {
-    int numOfGood = 0;
-    // int j = 1, k = 2;
-    for (int i = 0; i < arr.size() - 1; i++)
+public:
+    int countGoodTriplets(vector<int> &arr, int a, int b, int c)
     {
-        int j = i + 1, k = i + 2;
-        while (j < arr.size() - 1)
+        int res = 0;
+        int n = arr.size();
+        for (int i = 0; i <= n - 3; i++)
         {
-            // bool pass = false;
-            // cout << arr[i] << ' ' << arr[j] << ' ' << arr[k] << endl;
-            if (abs(arr[i] - arr[j]) <= a && abs(arr[j] - arr[k]) <= b && abs(arr[i] - arr[k]) <= c)
+            for (int j = i + 1; j <= n - 2; j++)
             {
-                
-                // pass = true;
-                numOfGood++;
-            }
-            k++;
-            if (k > arr.size() - 1)
-            {
-                // pass = false;
-                j++;
-                k = j + 1;
+                if (abs(arr[j] - arr[i]) > a)
+                    continue;
+                for (int k = j + 1; k <= n - 1; k++)
+                {
+                    if (abs(arr[k] - arr[j]) > b || abs(arr[k] - arr[i]) > c)
+                        continue;
+                    res++;
+                }
             }
         }
+        return res;
     }
-    cout << numOfGood << endl;
-}
-
-int main()
-{
-    countGoodTriplets({5,5,2,6,4}, 5,4,5);
-}
+};
