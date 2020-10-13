@@ -7070,7 +7070,13 @@ void sumOddLengthSubarrays(vector<int> arr)
 //         return res;
 //     }
 // };
-int main()
-{
-    
-}
+class Solution {
+public:
+    string toLowerCase(string str) {
+        for (int i = 0; i < str.length(); i++)
+        {
+            str[i] = tolower(str[i]);
+        }
+        return str;
+    }
+};
