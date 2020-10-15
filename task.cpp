@@ -7096,3 +7096,43 @@ void sumOddLengthSubarrays(vector<int> arr)
 //         return sum;
 //     }
 // };
+
+void oddCells(int n, int m, vector<vector<int>> indices)
+{
+    vector<vector<int>> arr(n, vector<int>(m, 0));
+    int count = 0;
+    for (int i = 0; i < indices.size(); i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            int x = ++arr[indices[i][0]][j];
+            if (x % 2 == 0)
+                count --;
+            else
+                count ++;
+            
+        }
+        for (int j = 0; j < n; j++)
+        {
+            int x = ++arr[j][indices[i][1]];
+            if (x % 2 == 0)
+                count --;
+            else
+                count ++;
+        }
+    }
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            cout << arr[i][j] << ' ';
+        }
+        cout << '\n';
+    }
+    cout << count << endl;
+}
+
+int main()
+{
+    oddCells(2, 2, {{1, 1}, {0, 0}});
+}
