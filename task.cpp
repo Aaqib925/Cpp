@@ -7181,7 +7181,6 @@ void sumOddLengthSubarrays(vector<int> arr)
 //     return num;
 // }
 
-
 // int main()
 // {
 //     cout << maximum69Number(9999) << endl;
@@ -7199,3 +7198,14 @@ void sumOddLengthSubarrays(vector<int> arr)
 //         return count;
 //     }
 // };
+
+class Solution
+{
+public:
+    int maxProduct(vector<int> &nums)
+    {
+        sort(nums.begin(), nums.end());
+        int n = nums.size();
+        return (nums[n - 1] - 1) * (nums[n - 2] - 1);
+    }
+};
