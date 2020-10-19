@@ -7110,7 +7110,7 @@ void sumOddLengthSubarrays(vector<int> arr)
 //                 count --;
 //             else
 //                 count ++;
-            
+
 //         }
 //         for (int j = 0; j < n; j++)
 //         {
@@ -7164,3 +7164,14 @@ void sumOddLengthSubarrays(vector<int> arr)
 // {
 //     oddCells(2, 3, {{0, 1}, {1, 1}});
 // }
+
+int maximum69Number(int num)
+{
+    
+}
+
+
+int main()
+{
+    cout << maximum69Number(9669) << endl;
+}
