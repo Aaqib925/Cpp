@@ -7227,9 +7227,11 @@ void freqAlphabets(string s)
         {
             x = s[i];
         }
-        cout << x << endl;
-        
+        stringstream geek(x);
+        geek >> y;
+        ans = arr[y - 1] + ans;
     }
+    cout << ans << endl;
 }
 
 int main()
