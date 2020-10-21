@@ -7209,3 +7209,30 @@ void sumOddLengthSubarrays(vector<int> arr)
 //         return (nums[n - 1] - 1) * (nums[n - 2] - 1);
 //     }
 // };
+
+void freqAlphabets(string s)
+{
+    char arr[27] = "abcdefghijklmnopqrstuvwxyz";
+    string ans = "";
+    for (int i = s.length() - 1; i >= 0; i--)
+    {
+        string x = "";
+        int y = 0;
+        if (s[i] == '#')
+        {
+            x += s[--i];
+            x = s[--i] + x;
+        }
+        else
+        {
+            x = s[i];
+        }
+        cout << x << endl;
+        
+    }
+}
+
+int main()
+{
+    freqAlphabets("10#11#12");
+}
