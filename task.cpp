@@ -7239,28 +7239,28 @@ void sumOddLengthSubarrays(vector<int> arr)
 //     freqAlphabets("10#11#12");
 // }
 
-class Solution {
-public:
-    string freqAlphabets(string s) {
-        char arr[27] = "abcdefghijklmnopqrstuvwxyz";
-        string ans = "";
-        for (int i = s.length() - 1; i >= 0; i--)
-        {
-            string x = "";
-            int y = 0;
-            if (s[i] == '#')
-            {
-                x += s[--i];
-                x = s[--i] + x;
-            }
-            else
-            {
-                x = s[i];
-            }
-            stringstream geek(x);
-            geek >> y;
-            ans = arr[y - 1] + ans;
-        }
-        return ans;
-    }
-};
+// class Solution {
+// public:
+//     string freqAlphabets(string s) {
+//         char arr[27] = "abcdefghijklmnopqrstuvwxyz";
+//         string ans = "";
+//         for (int i = s.length() - 1; i >= 0; i--)
+//         {
+//             string x = "";
+//             int y = 0;
+//             if (s[i] == '#')
+//             {
+//                 x += s[--i];
+//                 x = s[--i] + x;
+//             }
+//             else
+//             {
+//                 x = s[i];
+//             }
+//             stringstream geek(x);
+//             geek >> y;
+//             ans = arr[y - 1] + ans;
+//         }
+//         return ans;
+//     }
+// };
