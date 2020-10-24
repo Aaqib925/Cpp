@@ -7264,3 +7264,37 @@ void sumOddLengthSubarrays(vector<int> arr)
 //         return ans;
 //     }
 // };
+
+void repeatedNTimes(vector<int> A)
+{
+    // sort(A.begin(), A.end());
+    // int x;
+    // for (int i = 0; i < A.size() - 1; i++)
+    // {
+    //     if (A[i] == A[i + 1])
+    //     {
+    //         // cout << A[i] << ' ' << A[i + 1] << endl;
+    //         x = A[i];
+    //         break;
+    //     }
+    // }
+    // cout << x << endl;
+    int arr[10001] = {0};
+    int x;
+    for (int i = 0; i < A.size(); i++)
+    {
+        arr[A[i]]++;
+        if (arr[A[i]] > 1)
+        {
+            x = A[i];
+            break;
+        }
+    }
+    cout << x << endl;
+
+}
+
+int main()
+{
+    repeatedNTimes({2,1,2,5,3,2});
+}
