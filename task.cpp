@@ -7265,37 +7265,80 @@ void sumOddLengthSubarrays(vector<int> arr)
 //     }
 // };
 
-void repeatedNTimes(vector<int> A)
-{
-    // sort(A.begin(), A.end());
-    // int x;
-    // for (int i = 0; i < A.size() - 1; i++)
-    // {
-    //     if (A[i] == A[i + 1])
-    //     {
-    //         // cout << A[i] << ' ' << A[i + 1] << endl;
-    //         x = A[i];
-    //         break;
-    //     }
-    // }
-    // cout << x << endl;
-    int arr[10002] = {0};
-    int x;
-    int m = A.size() / 2;
-    for (int i = 0; i < A.size(); i++)
-    {
-        arr[A[i]]++;
-        if (arr[A[i]] == m)
-        {
-            x = A[i];
-            break;
-        }
-    }
-    cout << x << endl;
+// void repeatedNTimes(vector<int> A)
+// {
+//     // sort(A.begin(), A.end());
+//     // int x;
+//     // for (int i = 0; i < A.size() - 1; i++)
+//     // {
+//     //     if (A[i] == A[i + 1])
+//     //     {
+//     //         // cout << A[i] << ' ' << A[i + 1] << endl;
+//     //         x = A[i];
+//     //         break;
+//     //     }
+//     // }
+//     // cout << x << endl;
+//     int arr[10002] = {0};
+//     int x;
+//     int m = A.size() / 2;
+//     for (int i = 0; i < A.size(); i++)
+//     {
+//         arr[A[i]]++;
+//         if (arr[A[i]] == m)
+//         {
+//             x = A[i];
+//             break;
+//         }
+//     }
+//     cout << x << endl;
 
-}
+// }
+
+// int main()
+// {
+//     repeatedNTimes({2,1,2,5,3,2});
+// }
+
+// class Solution
+// {
+// public:
+//     bool judgeCircle(string moves)
+//     {
+//         int lr = 0;
+//         int ud = 0;
+//         for (int i = 0; i < moves.length(); i++)
+//         {
+//             if (moves[i] == 'L')
+//                 lr--;
+//             else if (moves[i] == 'R')
+//                 lr++;
+//             else if (moves[i] == 'U')
+//                 ud++;
+//             else if (moves[i] == 'D')
+//                 ud--;
+//         }
+//         if (lr == 0 && ud == 0)
+//             return true;
+//         return false;
+//     }
+// };
 
 int main()
 {
-    repeatedNTimes({2,1,2,5,3,2});
+    int n = 9;
+    int j = 0;
+    int y = 1;
+    for (int i = 0; i < n; i++)
+    {
+        cout << i + 1;
+        ++j;
+        if (j == y)
+        {
+            y++;
+            j = 0;
+            cout << '\n';
+        }
+    }
+    cout << endl;
 }
