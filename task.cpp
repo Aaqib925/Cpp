@@ -7324,21 +7324,22 @@ void sumOddLengthSubarrays(vector<int> arr)
 //     }
 // };
 
-int main()
-{
-    int n = 9;
-    int j = 0;
-    int y = 1;
-    for (int i = 0; i < n; i++)
-    {
-        cout << i + 1;
-        ++j;
-        if (j == y)
-        {
-            y++;
-            j = 0;
-            cout << '\n';
-        }
-    }
-    cout << endl;
-}
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     int j = 0;
+//     int y = 1;
+//     for (int i = 0; i < n; i++)
+//     {
+//         cout << i + 1;
+//         ++j;
+//         if (j == y)
+//         {
+//             y++;
+//             j = 0;
+//             cout << '\n';
+//         }
+//     }
+//     cout << endl;
+// }
