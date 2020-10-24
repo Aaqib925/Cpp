@@ -7279,12 +7279,13 @@ void repeatedNTimes(vector<int> A)
     //     }
     // }
     // cout << x << endl;
-    int arr[10001] = {0};
+    int arr[10002] = {0};
     int x;
+    int m = A.size() / 2;
     for (int i = 0; i < A.size(); i++)
     {
         arr[A[i]]++;
-        if (arr[A[i]] > 1)
+        if (arr[A[i]] == m)
         {
             x = A[i];
             break;
