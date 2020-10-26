@@ -7344,28 +7344,28 @@ void sumOddLengthSubarrays(vector<int> arr)
 //     cout << endl;
 // }
 
-class Solution
-{
-public:
-    vector<int> diStringMatch(string S)
-    {
-        int length = S.length();
-        int start = 0;
-        vector<int> ans;
-        for (char x : S)
-        {
-            if (x == 'I')
-            {
-                ans.push_back(start);
-                start++;
-            }
-            else
-            {
-                ans.push_back(length);
-                length--;
-            }
-        }
-        ans.push_back(start);
-        return ans;
-    }
-};
+// class Solution
+// {
+// public:
+//     vector<int> diStringMatch(string S)
+//     {
+//         int length = S.length();
+//         int start = 0;
+//         vector<int> ans;
+//         for (char x : S)
+//         {
+//             if (x == 'I')
+//             {
+//                 ans.push_back(start);
+//                 start++;
+//             }
+//             else
+//             {
+//                 ans.push_back(length);
+//                 length--;
+//             }
+//         }
+//         ans.push_back(start);
+//         return ans;
+//     }
+// };
