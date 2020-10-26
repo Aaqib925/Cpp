@@ -7455,19 +7455,35 @@ void sumOddLengthSubarrays(vector<int> arr)
 //     cout << "True" << endl;
 // }
 
+// class Solution
+// {
+// public:
+//     int heightChecker(vector<int> &heights)
+//     {
+//         int count = 0;
+//         vector<int> sortedHeights = heights;
+//         sort(sortedHeights.begin(), sortedHeights.end());
+//         for (int i = 0; i < heights.size(); i++)
+//         {
+//             if (heights[i] != sortedHeights[i])
+//                 count++;
+//         }
+//         return count;
+//     }
+// };
+
 class Solution
 {
 public:
-    int heightChecker(vector<int> &heights)
+    bool canMakeArithmeticProgression(vector<int> &arr)
     {
-        int count = 0;
-        vector<int> sortedHeights = heights;
-        sort(sortedHeights.begin(), sortedHeights.end());
-        for (int i = 0; i < heights.size(); i++)
+        sort(arr.begin(), arr.end());
+        int diff = arr[1] - arr[0];
+        for (int i = 1; i < arr.size(); i++)
         {
-            if (heights[i] != sortedHeights[i])
-                count++;
+            if (arr[i] - arr[i - 1] != diff)
+                return false;
         }
-        return count;
+        return true;
     }
 };
