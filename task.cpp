@@ -7442,7 +7442,7 @@ void sumOddLengthSubarrays(vector<int> arr)
 //             cout << x << ' ' << freq << endl;
 //             // printVector(ans);
 //             if (find(ans.begin(), ans.end(), freq) != ans.end())
-//             {   
+//             {
 //                  cout << "False" << endl;
 //             }
 //             else
@@ -7454,3 +7454,20 @@ void sumOddLengthSubarrays(vector<int> arr)
 //     }
 //     cout << "True" << endl;
 // }
+
+class Solution
+{
+public:
+    int heightChecker(vector<int> &heights)
+    {
+        int count = 0;
+        vector<int> sortedHeights = heights;
+        sort(sortedHeights.begin(), sortedHeights.end());
+        for (int i = 0; i < heights.size(); i++)
+        {
+            if (heights[i] != sortedHeights[i])
+                count++;
+        }
+        return count;
+    }
+};
