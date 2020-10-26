@@ -7402,16 +7402,26 @@ void sumOddLengthSubarrays(vector<int> arr)
 //     }
 // };
 
+// class Solution
+// {
+// public:
+//     vector<int> sortedSquares(vector<int> &A)
+//     {
+//         for (int i = 0; i < A.size(); i++)
+//         {
+//             A[i] = A[i] * A[i];
+//         }
+//         sort(A.begin(), A.end());
+//         return A;
+//     }
+// };
+
 class Solution
 {
 public:
-    vector<int> sortedSquares(vector<int> &A)
+    int peakIndexInMountainArray(vector<int> &v)
     {
-        for (int i = 0; i < A.size(); i++)
-        {
-            A[i] = A[i] * A[i];
-        }
-        sort(A.begin(), A.end());
-        return A;
+        int maxElementIndex = std::max_element(v.begin(), v.end()) - v.begin();
+        return maxElementIndex;
     }
 };
