@@ -7416,12 +7416,41 @@ void sumOddLengthSubarrays(vector<int> arr)
 //     }
 // };
 
-class Solution
-{
-public:
-    int peakIndexInMountainArray(vector<int> &v)
-    {
-        int maxElementIndex = std::max_element(v.begin(), v.end()) - v.begin();
-        return maxElementIndex;
-    }
-};
+// class Solution
+// {
+// public:
+//     int peakIndexInMountainArray(vector<int> &v)
+//     {
+//         int maxElementIndex = std::max_element(v.begin(), v.end()) - v.begin();
+//         return maxElementIndex;
+//     }
+// };
+
+// int main()
+// {
+//     vector<int> arr = {1, 2};
+//     sort(arr.begin(), arr.end());
+//     vector<int> ans;
+//     // cond = true;
+//     int x = 0;
+//     for (int i = 0; i < arr.size(); i++)
+//     {
+//         if (x != arr[i])
+//         {
+//             x = arr[i];
+//             int freq = count(arr.begin(), arr.end(), x);
+//             cout << x << ' ' << freq << endl;
+//             // printVector(ans);
+//             if (find(ans.begin(), ans.end(), freq) != ans.end())
+//             {   
+//                  cout << "False" << endl;
+//             }
+//             else
+//                 ans.push_back(freq);
+
+//             cout << "Vector: ";
+//             printVector(ans);
+//         }
+//     }
+//     cout << "True" << endl;
+// }
