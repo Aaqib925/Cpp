@@ -7369,3 +7369,19 @@ void sumOddLengthSubarrays(vector<int> arr)
 //         return ans;
 //     }
 // };
+class Solution
+{
+public:
+    int hammingDistance(int x, int y)
+    {
+        int count = 0;
+        int ans = x ^ y;
+        while (ans > 0)
+        {
+            if (ans % 2 == 0)
+                count++;
+            ans /= 2;
+        }
+        return count;
+    }
+};
