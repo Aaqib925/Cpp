@@ -7504,3 +7504,47 @@ void sumOddLengthSubarrays(vector<int> arr)
 //         return ans;
 //     }
 // };
+void printMultiVector(vector<vector<int>> x)
+{
+    for (int i = 0; i < x.size(); i++)
+    {
+        printVector(x[i]);
+    }
+    cout << '\n';
+}
+
+
+int invert(int n)
+{
+    if (n == 1)
+        return 0;
+    return 1;
+}
+
+vector<vector<int>> flipAndInvertImage(vector<vector<int>> A)
+{
+    for (int i = 0; i < A.size(); i++)
+    {
+        int x = A[0].size() - 1;
+        for (int j = 0; j < (A[0].size() / 2) + A[0].size() % 2; j++)
+        {
+            if (x == j)
+                A[i][j] = invert(A[i][j]);
+            else
+            {
+                swap(A[i][j], A[i][x]);
+                A[i][j] = invert(A[i][j]);
+                A[i][x] = invert(A[i][x]);
+                x--;
+            }
+            
+        }
+    }
+    return A;
+}
+
+int main()
+{
+    vector<vector<int>> x = flipAndInvertImage({{1,1,0,0},{1,0,0,1},{0,1,1,1},{1,0,1,0}});
+    printMultiVector(x);
+}
