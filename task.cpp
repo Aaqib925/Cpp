@@ -7549,24 +7549,24 @@ void printMultiVector(vector<vector<int>> x)
 //     vector<vector<int>> x = flipAndInvertImage({{1,1,0,0},{1,0,0,1},{0,1,1,1},{1,0,1,0}});
 //     printMultiVector(x);
 // }
-class Solution
-{
-public:
-    string generateTheString(int n)
-    {
-        string ans = "";
-        if (n % 2 == 0)
-        {
-            for (int i = 0; i < n - 1; i++)
-                ans += 'a';
-            ans += 'b';
-            return ans;
-        }
-        else
-        {
-            for (int i = 0; i < n; i++)
-                ans += 'a';
-            return ans;
-        }
-    }
-};
+// class Solution
+// {
+// public:
+//     string generateTheString(int n)
+//     {
+//         string ans = "";
+//         if (n % 2 == 0)
+//         {
+//             for (int i = 0; i < n - 1; i++)
+//                 ans += 'a';
+//             ans += 'b';
+//             return ans;
+//         }
+//         else
+//         {
+//             for (int i = 0; i < n; i++)
+//                 ans += 'a';
+//             return ans;
+//         }
+//     }
+// };
