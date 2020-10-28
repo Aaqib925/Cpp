@@ -7488,7 +7488,3 @@ void sumOddLengthSubarrays(vector<int> arr)
 //     }
 // };
 
-int main()
-{
-    cout << "Is this Working?" << endl;
-}
