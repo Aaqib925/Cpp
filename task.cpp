@@ -7570,3 +7570,36 @@ void printMultiVector(vector<vector<int>> x)
 //         }
 //     }
 // };
+
+// vector<int> minSubsequence(vector<int> nums)
+// {
+//     sort(nums.begin(), nums.end(), greater<int>());
+//     int count = 1;
+//     vector<int> ans;
+//     int x = nums[0];
+//     for (int i = 0; i < nums.size(); i++)
+//     {
+//         if (count < 2)
+//         {
+//             if (nums[i] == x)
+//             {
+//                 ans.push_back(nums[i]);
+//             }
+//             else if (nums[i] != x)
+//             {
+//                 count++;
+//                 x = nums[i];
+//                 ans.push_back(x);
+//             }
+//         }
+//         else
+//             break;
+//     }
+//     return ans;
+// }
+
+// int main()
+// {
+//     vector<int> ans = minSubsequence({4,3,10,9,8});
+//     printVector(ans);
+// }
