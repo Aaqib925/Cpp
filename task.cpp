@@ -7603,3 +7603,36 @@ void printMultiVector(vector<vector<int>> x)
 //     vector<int> ans = minSubsequence({4,3,10,9,8});
 //     printVector(ans);
 // }
+
+class Solution
+{
+public:
+    vector<int> luckyNumbers(vector<vector<int>> &matrix)
+    {
+        int maxInColAndRows = 0;
+        vector<int> ans;
+        vector<int> rows;
+        vector<vector<int>> matrix2 = matrix;
+        for (int i = 0; i < matrix2.size(); i++)
+        {
+            sort(matrix2[i].begin(), matrix2[i].end());
+            rows.push_back(matrix2[i][0]);
+        }
+
+        for (int i = 0; i < matrix[0].size(); i++)
+        {
+            int maxNumber = 0;
+            for (int j = 0; j < matrix.size(); j++)
+            {
+                if (matrix[j][i] > maxNumber)
+                    maxNumber = matrix[j][i];
+            }
+            if (find(rows.begin(), rows.end(), maxNumber) != rows.end())
+            {
+                ans.push_back(maxNumber);
+                return ans;
+            }
+        }
+        return ans;
+    }
+};
