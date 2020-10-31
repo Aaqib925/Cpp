@@ -7673,3 +7673,27 @@ void printMultiVector(vector<vector<int>> x)
 //         return ans;
 //     }
 // };
+
+class Solution
+{
+public:
+    string reverseWords(string s)
+    {
+        if (s == "")
+            return "";
+        else
+        {
+            string ans = "";
+            stringstream ss(s);
+            string word;
+            while (ss >> word)
+            {
+                reverse(word.begin(), word.end());
+                ans += word;
+                ans += ' ';
+            }
+            ans.erase(ans.length() - 1, 1);
+            return ans;
+        }
+    }
+};
