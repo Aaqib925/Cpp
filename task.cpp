@@ -7674,26 +7674,48 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 // };
 
+// class Solution
+// {
+// public:
+//     string reverseWords(string s)
+//     {
+//         if (s == "")
+//             return "";
+//         else
+//         {
+//             string ans = "";
+//             stringstream ss(s);
+//             string word;
+//             while (ss >> word)
+//             {
+//                 reverse(word.begin(), word.end());
+//                 ans += word;
+//                 ans += ' ';
+//             }
+//             ans.erase(ans.length() - 1, 1);
+//             return ans;
+//         }
+//     }
+// };
+
 class Solution
 {
 public:
-    string reverseWords(string s)
+    vector<int> constructRectangle(int area)
     {
-        if (s == "")
-            return "";
-        else
+        int width;
+        int length;
+        vector<int> ans;
+        for (int i = 1; i <= sqrt(area); i++)
         {
-            string ans = "";
-            stringstream ss(s);
-            string word;
-            while (ss >> word)
+            if (area % i == 0)
             {
-                reverse(word.begin(), word.end());
-                ans += word;
-                ans += ' ';
+                width = i;
+                length = area / i;
             }
-            ans.erase(ans.length() - 1, 1);
-            return ans;
         }
+        ans.push_back(length);
+        ans.push_back(width);
+        return ans;
     }
 };
