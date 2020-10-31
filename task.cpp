@@ -7698,24 +7698,42 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 // };
 
-class Solution
-{
-public:
-    vector<int> constructRectangle(int area)
-    {
-        int width;
-        int length;
-        vector<int> ans;
-        for (int i = 1; i <= sqrt(area); i++)
-        {
-            if (area % i == 0)
-            {
-                width = i;
-                length = area / i;
-            }
-        }
-        ans.push_back(length);
-        ans.push_back(width);
-        return ans;
-    }
-};
+// class Solution
+// {
+// public:
+//     vector<int> constructRectangle(int area)
+//     {
+//         int width;
+//         int length;
+//         vector<int> ans;
+//         for (int i = 1; i <= sqrt(area); i++)
+//         {
+//             if (area % i == 0)
+//             {
+//                 width = i;
+//                 length = area / i;
+//             }
+//         }
+//         ans.push_back(length);
+//         ans.push_back(width);
+//         return ans;
+//     }
+// };
+
+// class Solution
+// {
+// public:
+//     bool containsDuplicate(vector<int> &nums)
+//     {
+//         sort(nums.begin(), nums.end());
+//         int num = nums[0];
+//         for (int i = 1; i < nums.size(); i++)
+//         {
+//             if (nums[i] == num)
+//                 return true;
+//             else
+//                 num = nums[i];
+//         }
+//         return false;
+//     }
+// };
