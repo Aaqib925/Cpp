@@ -7829,8 +7829,11 @@ public:
         {
             for (int j = 0; j < grid[0].size(); j++)
             {
-                if (grid[i][j] < 0)
-                    count++;
+                if (grid[i][j] < 0){
+                    count += grid[0].size() - j;
+                    break;
+                }
+
             }
         }
         return count;
