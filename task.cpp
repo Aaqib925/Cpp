@@ -7761,3 +7761,53 @@ void printMultiVector(vector<vector<int>> x)
 //     bool ans = containsNearbyDuplicate({1, 0, 1, 1}, 1);
 //     cout << ans << endl;
 // }
+
+// int main()
+// {
+// string x = "j";
+// int count = 0;
+// int maxNumber = 0;
+// char character = x[0];
+// int ans = 0;
+// for (int i = 0; i < x.length(); i++)
+// {
+//     if (character == x[i])
+//     {
+//         count ++;
+//         maxNumber = count;
+//     }
+//     else
+//     {
+//         if (maxNumber < count)
+//             ans = count;
+//         count = 1;
+//         character = x[i];
+//     }
+//     // maxNumber = ans;
+// }
+// cout << maxNumber << endl;
+// }
+
+int maxPower(string x)
+{
+    int count = 0;
+    int maxNumber = 0;
+    char character = x[0];
+    // int ans = 0;
+    for (int i = 0; i < x.length(); i++)
+    {
+        if (character == x[i])
+        {
+            count++;
+            maxNumber = count;
+        }
+        else
+        {
+            if (maxNumber < count)
+                maxNumber = count;
+            count = 1;
+            character = x[i];
+        }
+    }
+    return maxNumber;
+}
