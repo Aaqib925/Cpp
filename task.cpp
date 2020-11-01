@@ -7737,3 +7737,27 @@ void printMultiVector(vector<vector<int>> x)
 //         return false;
 //     }
 // };
+#include <unordered_map>
+bool containsNearbyDuplicate(vector<int> nums, int k)
+{
+    unordered_map<int, int> map;
+    for (int i = 0; i < nums.size(); i++)
+    {
+        if (map.find(nums[i]) != map.end())
+        {
+            if ( <= k)
+                return true;
+        }
+        else
+        {
+            map[nums[i]] = i;
+        }
+    }
+    return false;
+}
+
+int main()
+{
+    bool ans = containsNearbyDuplicate({1, 0, 1, 1}, 1);
+    cout << ans << endl;
+}
