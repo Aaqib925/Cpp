@@ -7788,26 +7788,51 @@ void printMultiVector(vector<vector<int>> x)
 // cout << maxNumber << endl;
 // }
 
-int maxPower(string x)
+// int maxPower(string x)
+// {
+//     int count = 0;
+//     int maxNumber = 0;
+//     char character = x[0];
+//     // int ans = 0;
+//     for (int i = 0; i < x.length(); i++)
+//     {
+//         if (character == x[i])
+//         {
+//             count++;
+//             if (maxNumber < count)
+//                 maxNumber = count;
+//         }
+//         else
+//         {
+//             if (maxNumber < count)
+//                 maxNumber = count;
+//             count = 1;
+//             character = x[i];
+//         }
+//     }
+//     return maxNumber;
+// }
+
+// int main()
+// {
+//     int res = maxPower("bacacccbba");
+//     cout << res;
+// }
+
+class Solution
 {
-    int count = 0;
-    int maxNumber = 0;
-    char character = x[0];
-    // int ans = 0;
-    for (int i = 0; i < x.length(); i++)
+public:
+    int countNegatives(vector<vector<int>> &grid)
     {
-        if (character == x[i])
+        int count = 0;
+        for (int i = 0; i < grid.size(); i++)
         {
-            count++;
-            maxNumber = count;
+            for (int j = 0; j < grid[0].size(); j++)
+            {
+                if (grid[i][j] < 0)
+                    count++;
+            }
         }
-        else
-        {
-            if (maxNumber < count)
-                maxNumber = count;
-            count = 1;
-            character = x[i];
-        }
+        return count;
     }
-    return maxNumber;
-}
+};
