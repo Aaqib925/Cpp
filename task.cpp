@@ -7868,3 +7868,24 @@ void printMultiVector(vector<vector<int>> x)
 //         }
 //     }
 // };
+
+int main()
+{
+    vector<string> logs = {"./","wz4/","../","mj2/","../","../","ik0/","il7/"};
+    int result = 0;
+    for (int i = 0; i < logs.size(); i++)
+    {
+        if (logs[i] != "./" && logs[i] != "../")
+        {
+            cout << "First " << logs[i] << endl;
+            result += 2;
+        }
+        else if (logs[i] != "./")
+        {
+            cout << "Second " << logs[i] << endl;
+            if (result -= 2 >= 0)
+                result -= 2;
+        }
+        cout << result << endl;
+    }
+}
