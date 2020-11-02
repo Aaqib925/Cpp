@@ -7851,3 +7851,20 @@ void printMultiVector(vector<vector<int>> x)
 //             return (high - low + 1) / 2;
 //     }
 // };
+class Solution
+{
+public:
+    int arrangeCoins(int n)
+    {
+        int x = 1;
+        while (true)
+        {
+            n -= x;
+            x++;
+            if (n < 0)
+                return x - 2;
+            else if (n == 0)
+                return x - 1;
+        }
+    }
+};
