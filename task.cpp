@@ -7890,27 +7890,27 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 // }
 
-class Solution
-{
-public:
-    int minOperations(vector<string> &logs)
-    {
-        stack<string> ret;
-        for (auto w : logs)
-        {
-            if (!ret.empty() && w.substr(0, 2) == ".." && w[w.length() - 1] == '/')
-            {
-                ret.pop();
-            }
-            else if (w[0] == '.')
-            {
-                continue;
-            }
-            else
-            {
-                ret.push(w.substr(0, w.length() - 1));
-            }
-        }
-        return ret.size();
-    }
-};
+// class Solution
+// {
+// public:
+//     int minOperations(vector<string> &logs)
+//     {
+//         stack<string> ret;
+//         for (auto w : logs)
+//         {
+//             if (!ret.empty() && w.substr(0, 2) == ".." && w[w.length() - 1] == '/')
+//             {
+//                 ret.pop();
+//             }
+//             else if (w[0] == '.')
+//             {
+//                 continue;
+//             }
+//             else
+//             {
+//                 ret.push(w.substr(0, w.length() - 1));
+//             }
+//         }
+//         return ret.size();
+//     }
+// };
