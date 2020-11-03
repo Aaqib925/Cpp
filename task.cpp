@@ -7915,16 +7915,30 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 // };
 
-int fact(int i)
-{
-    if (i == 0 || i == 1)
-        return 1;
-    else
-        return i * fact(i - 1);
-}
+// int fact(int i)
+// {
+//     if (i == 0 || i == 1)
+//         return 1;
+//     else
+//         return i * fact(i - 1);
+// }
 
-int main()
-{
-    int x = fact(5);
-    cout << x << endl;
-}
+// int main()
+// {
+//     int x = fact(5);
+//     cout << x << endl;
+// }
+
+// int main()
+// {
+//     string sent = "CBCCDXYZD";
+//     string pattern = "CD";
+//     for (int i = 0; i < sent.size(); i++)
+//     {
+//         if (sent[i] == pattern[0] && sent[i + pattern.length() - 1] == pattern[pattern.length() - 1])
+//         {
+//             cout << i << endl;
+//             break;
+//         }
+//     }
+// }
