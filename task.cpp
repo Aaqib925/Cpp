@@ -7914,3 +7914,17 @@ void printMultiVector(vector<vector<int>> x)
 //         return ret.size();
 //     }
 // };
+
+int fact(int i)
+{
+    if (i == 0 || i == 1)
+        return 1;
+    else
+        return i * fact(i - 1);
+}
+
+int main()
+{
+    int x = fact(5);
+    cout << x << endl;
+}
