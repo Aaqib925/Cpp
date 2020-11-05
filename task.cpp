@@ -7943,49 +7943,49 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 // }
 
-int findPattern(string T, string P)
-{
-    int p1 = 0;
-    int p2 = T.length() - 1;
+// int findPattern(string T, string P)
+// {
+//     int p1 = 0;
+//     int p2 = T.length() - 1;
 
-    bool cond = false;
-    bool condP1 = false;
-    bool condP2 = false;
+//     bool cond = false;
+//     bool condP1 = false;
+//     bool condP2 = false;
 
-    for (int i = 0; i < T.length(); i++)
-    {
-        if (p1 == P[0] && p2 - p1 == P.length() - 1)
-        {
-            cond = true;
-            condP1 = true;
-        }
-        else
-        {
-            condP1 = true;
-            cond = false;
-        }
-        if (p2 == P[P.length() - 1] && p2 - p1 == P.length() - 1)
-        {
-            cond = true;
-            condP2 = true;
-        }
-        else 
-        {
-            condP2 = false;
-            cond = false;
-        }
-        if (!condP1)
-            p1++;
-        if (!condP2)
-            p2--;
-        if (cond)
-            return p1;
-    }
-    // return 99;
-}
+//     for (int i = 0; i < T.length(); i++)
+//     {
+//         if (p1 == P[0] && p2 - p1 == P.length() - 1)
+//         {
+//             cond = true;
+//             condP1 = true;
+//         }
+//         else
+//         {
+//             condP1 = true;
+//             cond = false;
+//         }
+//         if (p2 == P[P.length() - 1] && p2 - p1 == P.length() - 1)
+//         {
+//             cond = true;
+//             condP2 = true;
+//         }
+//         else 
+//         {
+//             condP2 = false;
+//             cond = false;
+//         }
+//         if (!condP1)
+//             p1++;
+//         if (!condP2)
+//             p2--;
+//         if (cond)
+//             return p1;
+//     }
+//     // return 99;
+// }
 
-int main()
-{
-    int x = findPattern("XXABCDfsaEF", "CD");
-    cout << x << endl;
-}
+// int main()
+// {
+//     int x = findPattern("XXABCDfsaEF", "CD");
+//     cout << x << endl;
+// }
