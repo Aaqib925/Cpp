@@ -8001,29 +8001,29 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 // }
 
-class Solution {
-public:
-    int findContentChildren(vector<int>& g, vector<int>& s) {
+// class Solution {
+// public:
+//     int findContentChildren(vector<int>& g, vector<int>& s) {
         
-        int m = g.size(), n = s.size(), count1 = 0, count2 = 0, ans = 0;
+//         int m = g.size(), n = s.size(), count1 = 0, count2 = 0, ans = 0;
         
-        sort(g.begin(), g.end(), greater<int>());
-        sort(s.begin(), s.end(), greater<int>());
+//         sort(g.begin(), g.end(), greater<int>());
+//         sort(s.begin(), s.end(), greater<int>());
         
-        while (count1 < m && count2 < n)
-        {
-            if (g[count1] <= s[count2])
-            {
-                ans++;
-                count1++;
-                count2++;
-            }
-            else if (g[count1 > s[count2]])
-            {
-                count1++;
-            }
-        }
+//         while (count1 < m && count2 < n)
+//         {
+//             if (g[count1] <= s[count2])
+//             {
+//                 ans++;
+//                 count1++;
+//                 count2++;
+//             }
+//             else if (g[count1 > s[count2]])
+//             {
+//                 count1++;
+//             }
+//         }
         
-        return ans;
-    }
-};
+//         return ans;
+//     }
+// };
