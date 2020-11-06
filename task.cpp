@@ -7990,13 +7990,13 @@ void printMultiVector(vector<vector<int>> x)
 //     cout << x << endl;
 // }
 
-int main()
-{
-    int x, y;
+// int main()
+// {
+//     int x, y;
     
-    while (true)
-    {
-        cin >> x >> y;
-        cout << x % y << endl;
-    }
-}
+//     while (true)
+//     {
+//         cin >> x >> y;
+//         cout << x % y << endl;
+//     }
+// }
