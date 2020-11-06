@@ -7989,3 +7989,14 @@ void printMultiVector(vector<vector<int>> x)
 //     int x = findPattern("XXABCDfsaEF", "CD");
 //     cout << x << endl;
 // }
+
+int main()
+{
+    int x, y;
+    
+    while (true)
+    {
+        cin >> x >> y;
+        cout << x % y << endl;
+    }
+}
