@@ -7969,7 +7969,7 @@ void printMultiVector(vector<vector<int>> x)
 //             cond = true;
 //             condP2 = true;
 //         }
-//         else 
+//         else
 //         {
 //             condP2 = false;
 //             cond = false;
@@ -7993,7 +7993,7 @@ void printMultiVector(vector<vector<int>> x)
 // int main()
 // {
 //     int x, y;
-    
+
 //     while (true)
 //     {
 //         cin >> x >> y;
@@ -8004,12 +8004,12 @@ void printMultiVector(vector<vector<int>> x)
 // class Solution {
 // public:
 //     int findContentChildren(vector<int>& g, vector<int>& s) {
-        
+
 //         int m = g.size(), n = s.size(), count1 = 0, count2 = 0, ans = 0;
-        
+
 //         sort(g.begin(), g.end(), greater<int>());
 //         sort(s.begin(), s.end(), greater<int>());
-        
+
 //         while (count1 < m && count2 < n)
 //         {
 //             if (g[count1] <= s[count2])
@@ -8023,7 +8023,7 @@ void printMultiVector(vector<vector<int>> x)
 //                 count1++;
 //             }
 //         }
-        
+
 //         return ans;
 //     }
 // };
@@ -8033,3 +8033,23 @@ void printMultiVector(vector<vector<int>> x)
 //         return (int)sqrt(x);
 //     }
 // };
+class Solution
+{
+public:
+    bool isPerfectSquare(long int n)
+    {
+        long int i = 0;
+        while (i < n)
+            i++;
+        if (i == n)
+            return true;
+        else
+            return false;
+    }
+};
+
+int main()
+{
+    Solution s1;
+    cout << s1.isPerfectSquare(5);
+}
