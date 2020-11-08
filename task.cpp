@@ -8033,43 +8033,43 @@ void printMultiVector(vector<vector<int>> x)
 //         return (int)sqrt(x);
 //     }
 // };
-class Solution
-{
-public:
-    bool isPerfectSquare(long int n)
-    {
-        long int i = 0;
-        while (i < n)
-            i++;
-        if (i == n)
-            return true;
-        else
-            return false;
-    }
-};
+// class Solution
+// {
+// public:
+//     bool isPerfectSquare(long int n)
+//     {
+//         long int i = 0;
+//         while (i < n)
+//             i++;
+//         if (i == n)
+//             return true;
+//         else
+//             return false;
+//     }
+// };
 
-int main()
-{
-    Solution s1;
-    cout << s1.isPerfectSquare(5);
-}
+// int main()
+// {
+//     Solution s1;
+//     cout << s1.isPerfectSquare(5);
+// }
 
-class Solution
-{
-public:
-    bool isPerfectSquare(int num)
-    {
-        long long a = 1;
-        long long i = 3;
-        while (a <= num)
-        {
-            if (a == num)
-            {
-                return true;
-            }
-            a += i;
-            i += 2;
-        }
-        return false;
-    }
-};
+// class Solution
+// {
+// public:
+//     bool isPerfectSquare(int num)
+//     {
+//         long long a = 1;
+//         long long i = 3;
+//         while (a <= num)
+//         {
+//             if (a == num)
+//             {
+//                 return true;
+//             }
+//             a += i;
+//             i += 2;
+//         }
+//         return false;
+//     }
+// };
