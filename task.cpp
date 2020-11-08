@@ -8053,3 +8053,23 @@ int main()
     Solution s1;
     cout << s1.isPerfectSquare(5);
 }
+
+class Solution
+{
+public:
+    bool isPerfectSquare(int num)
+    {
+        long long a = 1;
+        long long i = 3;
+        while (a <= num)
+        {
+            if (a == num)
+            {
+                return true;
+            }
+            a += i;
+            i += 2;
+        }
+        return false;
+    }
+};
