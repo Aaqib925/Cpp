@@ -8118,7 +8118,7 @@ int main()
     second = new Node();
 
     head->data = 1;
-    head->next = second;
+    head->next = first;
 
     first->data = 2;
     first->next = second;
