@@ -8093,3 +8093,19 @@ void printMultiVector(vector<vector<int>> x)
 //         return true;
 //     return false;
 // }
+
+class Node
+{
+    public:
+    int data;
+    Node *next;
+};
+
+int main()
+{
+    Node *head = NULL, *first = NULL, *second = NULL;
+    head = new Node();
+    first = new Node();
+    second = new Node();
+
+}
