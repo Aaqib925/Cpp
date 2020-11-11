@@ -8108,4 +8108,12 @@ int main()
     first = new Node();
     second = new Node();
 
+    head->data = 1;
+    head->next = second;
+
+    first->data = 2;
+    first->next = second;
+
+    second->data = 3;
+    second->next = NULL;
 }
