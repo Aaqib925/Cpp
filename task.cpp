@@ -8101,6 +8101,15 @@ class Node
     Node *next;
 };
 
+
+void printLinkedList(Node *n)
+{
+    while (n != NULL)
+    {
+        cout << n->data << ' ';
+        n = n->next;
+    }
+}
 int main()
 {
     Node *head = NULL, *first = NULL, *second = NULL;
