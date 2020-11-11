@@ -8125,4 +8125,6 @@ int main()
 
     second->data = 3;
     second->next = NULL;
+
+    printLinkedList(head);
 }
