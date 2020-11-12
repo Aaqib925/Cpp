@@ -8094,37 +8094,56 @@ void printMultiVector(vector<vector<int>> x)
 //     return false;
 // }
 
-class Node
-{
-    public:
-    int data;
-    Node *next;
-};
+// class Node
+// {
+//     public:
+//     int data;
+//     Node *next;
+// };
 
 
-void printLinkedList(Node *n)
-{
-    while (n != NULL)
-    {
-        cout << n->data << ' ';
-        n = n->next;
-    }
-}
+// void printLinkedList(Node *n)
+// {
+//     while (n != NULL)
+//     {
+//         cout << n->data << ' ';
+//         n = n->next;
+//     }
+// }
+// int main()
+// {
+//     Node *head = NULL, *first = NULL, *second = NULL;
+//     head = new Node();
+//     first = new Node();
+//     second = new Node();
+
+//     head->data = 1;
+//     head->next = first;
+
+//     first->data = 2;
+//     first->next = second;
+
+//     second->data = 3;
+//     second->next = NULL;
+
+//     printLinkedList(head);
+// }
+
+
 int main()
 {
-    Node *head = NULL, *first = NULL, *second = NULL;
-    head = new Node();
-    first = new Node();
-    second = new Node();
-
-    head->data = 1;
-    head->next = first;
-
-    first->data = 2;
-    first->next = second;
-
-    second->data = 3;
-    second->next = NULL;
-
-    printLinkedList(head);
+	vector<int> arr = {22, 4, 15, 9, 3, 11, 33, 7, -12, 0, 22, 6, 6, -33, -74, 58, 49, 18, 20, 23, 4, 3, -31, -5, 30};
+	int count = 0;
+	for (int i = 0; i < arr.size(); i++)
+	{
+		for (int j = i + 1; j < arr.size(); j++)
+		{
+			if (i != j && arr[i] + arr[j] == 25)
+			{
+				cout << arr[i] << " + " << arr[j] << " = " << 25 << endl;
+				count++;
+			}
+		}
+	}
+	cout << "The Total Number of pairs are: " << count << endl;
 }
