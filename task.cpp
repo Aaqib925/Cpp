@@ -8130,20 +8130,20 @@ void printMultiVector(vector<vector<int>> x)
 // }
 
 
-int main()
-{
-	vector<int> arr = {22, 4, 15, 9, 3, 11, 33, 7, -12, 0, 22, 6, 6, -33, -74, 58, 49, 18, 20, 23, 4, 3, -31, -5, 30};
-	int count = 0;
-	for (int i = 0; i < arr.size(); i++)
-	{
-		for (int j = i + 1; j < arr.size(); j++)
-		{
-			if (i != j && arr[i] + arr[j] == 25)
-			{
-				cout << arr[i] << " + " << arr[j] << " = " << 25 << endl;
-				count++;
-			}
-		}
-	}
-	cout << "The Total Number of pairs are: " << count << endl;
-}
+// int main()
+// {
+// 	vector<int> arr = {22, 4, 15, 9, 3, 11, 33, 7, -12, 0, 22, 6, 6, -33, -74, 58, 49, 18, 20, 23, 4, 3, -31, -5, 30};
+// 	int count = 0;
+// 	for (int i = 0; i < arr.size(); i++)
+// 	{
+// 		for (int j = i + 1; j < arr.size(); j++)
+// 		{
+// 			if (i != j && arr[i] + arr[j] == 25)
+// 			{
+// 				cout << arr[i] << " + " << arr[j] << " = " << 25 << endl;
+// 				count++;
+// 			}
+// 		}
+// 	}
+// 	cout << "The Total Number of pairs are: " << count << endl;
+// }
