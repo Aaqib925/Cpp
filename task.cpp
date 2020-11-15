@@ -8145,76 +8145,76 @@ void printMultiVector(vector<vector<int>> x)
 // 	}
 // 	cout << "The Total Number of pairs are: " << count << endl;
 // }
-bool cmp(pair<int, int> &a, pair<int, int> &b)
-{
-    return a.second < b.second;
-}
+// bool cmp(pair<int, int> &a, pair<int, int> &b)
+// {
+//     return a.second < b.second;
+// }
 
-class Solution
-{
-public:
-    vector<int> frequencySort(vector<int> &nums)
-    {
-        vector<int> ans;
-        map<int, int> mymap;
-        for (int i = 0; i < nums.size(); i++)
-        {
-            mymap[nums[i]] = 0;
-            for (int j = 0; j < nums.size(); j++)
-            {
-                if (nums[i] == nums[j])
-                    mymap[nums[i]]++;
-            }
-        }
-        vector<pair<int, int>> A;
-        for (auto &it : mymap)
-        {
-            A.push_back(it);
-        }
-        sort(A.begin(), A.end(), cmp);
+// class Solution
+// {
+// public:
+//     vector<int> frequencySort(vector<int> &nums)
+//     {
+//         vector<int> ans;
+//         map<int, int> mymap;
+//         for (int i = 0; i < nums.size(); i++)
+//         {
+//             mymap[nums[i]] = 0;
+//             for (int j = 0; j < nums.size(); j++)
+//             {
+//                 if (nums[i] == nums[j])
+//                     mymap[nums[i]]++;
+//             }
+//         }
+//         vector<pair<int, int>> A;
+//         for (auto &it : mymap)
+//         {
+//             A.push_back(it);
+//         }
+//         sort(A.begin(), A.end(), cmp);
 
-        for (auto &x : A)
-        {
-            for (int i = 0; i < x.second; i++)
-                ans.push_back(x.first);
-        }
-        return ans;
-    }
-};
+//         for (auto &x : A)
+//         {
+//             for (int i = 0; i < x.second; i++)
+//                 ans.push_back(x.first);
+//         }
+//         return ans;
+//     }
+// };
 
-class Solution
-{
-public:
-    vector<int> frequencySort(vector<int> &a)
-    {
-        vector<int> c(201);
-        int m = 0;
-        // count frequency of each value noting the highest frequency
-        for (int n : a)
-        {
-            int i = n + 100;
-            c[i]++;
-            m = max(m, c[i]);
-        }
-        vector<vector<int>> v(m + 1);
-        // loop over counting vector backwards using frequency as the index
-        for (int i = c.size() - 1; i > -1; i--)
-        {
-            int n = i - 100;
-            if (c[i] > 0)
-                v[c[i]].push_back(n);
-        }
-        int l = -1;
-        // overwrite original vector
-        for (int i = 0; i < v.size(); i++)
-        {
-            for (int j = 0; j < v[i].size(); j++)
-            {
-                int k = i;
-                while (k-- > 0)
-                    a[++l] = v[i][j];
-            }
-        }
-        return a;
-    }
-};
+// class Solution
+// {
+// public:
+//     vector<int> frequencySort(vector<int> &a)
+//     {
+//         vector<int> c(201);
+//         int m = 0;
+//         // count frequency of each value noting the highest frequency
+//         for (int n : a)
+//         {
+//             int i = n + 100;
+//             c[i]++;
+//             m = max(m, c[i]);
+//         }
+//         vector<vector<int>> v(m + 1);
+//         // loop over counting vector backwards using frequency as the index
+//         for (int i = c.size() - 1; i > -1; i--)
+//         {
+//             int n = i - 100;
+//             if (c[i] > 0)
+//                 v[c[i]].push_back(n);
+//         }
+//         int l = -1;
+//         // overwrite original vector
+//         for (int i = 0; i < v.size(); i++)
+//         {
+//             for (int j = 0; j < v[i].size(); j++)
+//             {
+//                 int k = i;
+//                 while (k-- > 0)
+//                     a[++l] = v[i][j];
+//             }
+//         }
+//         return a;
+//     }
+// };
