@@ -8245,12 +8245,22 @@ void printMultiVector(vector<vector<int>> x)
 void ArmStrong(int x)
 {
     int sum = 0;
+    int xCopy = x;
+    string secCopy = to_string(x);
+    int length = secCopy.length();
     while (x > 0)
     {
-        int y = 
+        int y = x % 10;
+        x /= 10;
+        sum += pow(y, length);
     }
+
+    if (sum == xCopy)
+        cout << xCopy << " is ArmStrong number." << endl;
+    else 
+        cout << xCopy << " is not ArmStrong number." << endl;
 }
 int main()
 {
-
+    ArmStrong(153);
 }
