@@ -8218,3 +8218,18 @@ void printMultiVector(vector<vector<int>> x)
 //         return a;
 //     }
 // };
+
+// void calculateFactorial(int x)
+// {
+//     int result = 1;
+//     for (int i = x; i > 0; i--)
+//     {
+//         result *= i;
+//     }
+//     cout << result << endl;
+// }
+
+int main()
+{
+    calculateFactorial(4);
+}
