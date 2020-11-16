@@ -8274,25 +8274,25 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 // }
 
-void seriesThree(int x)
-{
-    int i = 1;
-    int j = 1;
-    while (i <= x)
-    {
-        int y = i;
-        while( y > 0)
-        {
-            cout << j << ' ';
-            y --;
-            j++;
-        }
-        i++;
-        cout << endl;
+// void seriesThree(int x)
+// {
+//     int i = 1;
+//     int j = 1;
+//     while (i <= x)
+//     {
+//         int y = i;
+//         while( y > 0)
+//         {
+//             cout << j << ' ';
+//             y --;
+//             j++;
+//         }
+//         i++;
+//         cout << endl;
 
-    }
-}
-int main()
-{
-    seriesThree(4);
-}
+//     }
+// }
+// int main()
+// {
+//     seriesThree(4);
+// }
