@@ -8228,8 +8228,29 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 //     cout << result << endl;
 // }
+// void fibonacci(int range)
+// {
+//     int x = 1;
+//     int y = 1;
+//     while (range > 0)
+//     {
+//         cout << x << endl;
+//         int temp = x;
+//         x += y;
+//         y = temp;
+//         range--;
+//     }
+// }
 
+void ArmStrong(int x)
+{
+    int sum = 0;
+    while (x > 0)
+    {
+        int y = 
+    }
+}
 int main()
 {
-    calculateFactorial(4);
+
 }
