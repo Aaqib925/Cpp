@@ -8260,7 +8260,39 @@ void printMultiVector(vector<vector<int>> x)
 //     else 
 //         cout << xCopy << " is not ArmStrong number." << endl;
 // }
+
+// void printTable(int x)
+// {
+//     for (int i = 1; i <= x; i++)
+//     {
+//         cout << x << " ";
+//         for (int j = 1; j <= x; j++)
+//         {
+//             cout << i * j << " ";
+//         }
+//         cout << endl;
+//     }
+// }
+
+void seriesOne(int x)
+{
+    int i = 1;
+    int j = 1;
+    while (i <= x)
+    {
+        int y = i;
+        while( y > 0)
+        {
+            cout << j << ' ';
+            y --;
+            j++;
+        }
+        i++;
+        cout << endl;
+
+    }
+}
 int main()
 {
-    ArmStrong(99);
+    seriesOne(10);
 }
