@@ -8274,7 +8274,7 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 // }
 
-void seriesOne(int x)
+void seriesThree(int x)
 {
     int i = 1;
     int j = 1;
@@ -8294,5 +8294,5 @@ void seriesOne(int x)
 }
 int main()
 {
-    seriesOne(10);
+    seriesThree(4);
 }
