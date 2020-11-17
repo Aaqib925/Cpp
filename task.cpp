@@ -8296,3 +8296,8 @@ void printMultiVector(vector<vector<int>> x)
 // {
 //     seriesThree(4);
 // }
+
+int main()
+{
+    cout << floor(5.59) << endl;
+}
