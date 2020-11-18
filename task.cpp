@@ -8301,3 +8301,18 @@ void printMultiVector(vector<vector<int>> x)
 // {
 //     cout << floor(5.59) << endl;
 // }
+class Solution {
+public:
+    int specialArray(vector<int>& nums) {
+        int length = nums.size();
+        int count = 0;
+        for (int i = 0; i < nums.size(); i++)
+        {
+            if (nums[i] >= length)
+                count++;
+        }
+        if (count == 0)
+            return -1;
+        return count;
+    }
+};
