@@ -8257,7 +8257,7 @@ void printMultiVector(vector<vector<int>> x)
 
 //     if (sum == xCopy)
 //         cout << xCopy << " is ArmStrong number." << endl;
-//     else 
+//     else
 //         cout << xCopy << " is not ArmStrong number." << endl;
 // }
 
@@ -8342,3 +8342,47 @@ void printMultiVector(vector<vector<int>> x)
 // 		return ans;
 //     }
 // };
+
+char slowestKey(vector<int> releaseTimes, string keysPressed)
+{
+    map<char, int> x;
+    x[keysPressed[0]] = releaseTimes[0];
+    for (int i = 1; i < releaseTimes.size(); i++)
+    {
+        if (x.find(keysPressed[i]) != x.end() && x[keysPressed[i]] < releaseTimes[i] - releaseTimes[i - 1])
+        {
+            x[keysPressed[i]] = releaseTimes[i] - releaseTimes[i - 1];
+        }
+        else if (x.find(keysPressed[i]) == x.end())
+        {
+            x[keysPressed[i]] = releaseTimes[i] - releaseTimes[i - 1];
+        }
+            
+    }
+
+    std::map<char, int>::iterator best = std::max_element(x.begin(), x.end(), [](const std::pair<char, int> &a, const std::pair<char, int> &b) -> bool { return a.second < b.second; });
+    int maxVal = best->second;
+
+    for (auto &element: x)
+    {
+        cout << element.first << ' ' << element.second << endl;
+    }
+    int ans = 0;
+    char ansChar;
+    for (auto &y : x)
+    {
+        if (y.second == maxVal)
+        {
+            if (int(y.first) > ans)
+                ansChar = y.first;
+        }
+    }
+
+    return ansChar;
+}
+
+int main()
+{
+    char ans =  slowestKey({19, 22, 28, 29, 66, 81, 93, 97 }, "fnfaaxha");
+    cout << ans << endl;
+}
