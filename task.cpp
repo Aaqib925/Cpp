@@ -8301,44 +8301,44 @@ void printMultiVector(vector<vector<int>> x)
 // {
 //     cout << floor(5.59) << endl;
 // }
-class Solution {
-public:
-    int specialArray(vector<int>& nums) {
-        int length = nums.size();
-        int count = 0;
-        for (int i = 0; i < nums.size(); i++)
-        {
-            if (nums[i] >= length)
-                count++;
-        }
-        if (count == 0)
-            return -1;
-        return count;
-    }
-};
+// class Solution {
+// public:
+//     int specialArray(vector<int>& nums) {
+//         int length = nums.size();
+//         int count = 0;
+//         for (int i = 0; i < nums.size(); i++)
+//         {
+//             if (nums[i] >= length)
+//                 count++;
+//         }
+//         if (count == 0)
+//             return -1;
+//         return count;
+//     }
+// };
 
-class Solution {
-public:
-    int specialArray(vector<int>& nums) {
-        int ans = -1;
-		int n = nums.size();
+// class Solution {
+// public:
+//     int specialArray(vector<int>& nums) {
+//         int ans = -1;
+// 		int n = nums.size();
 
-		for(int i=0;i<=n;i++){
+// 		for(int i=0;i<=n;i++){
 
-			int count = 0;
-			int x = i;
+// 			int count = 0;
+// 			int x = i;
 
-			for(int j=0;j<n;j++)
-				if(nums[j] >= x)
-                    count++;
+// 			for(int j=0;j<n;j++)
+// 				if(nums[j] >= x)
+//                     count++;
 
-			if(count == x){
-				ans = x;
-				break;
-			}
+// 			if(count == x){
+// 				ans = x;
+// 				break;
+// 			}
 
-		}
+// 		}
 
-		return ans;
-    }
-};
+// 		return ans;
+//     }
+// };
