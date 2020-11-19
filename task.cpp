@@ -8362,11 +8362,6 @@ char slowestKey(vector<int> releaseTimes, string keysPressed)
 
     std::map<char, int>::iterator best = std::max_element(x.begin(), x.end(), [](const std::pair<char, int> &a, const std::pair<char, int> &b) -> bool { return a.second < b.second; });
     int maxVal = best->second;
-
-    for (auto &element: x)
-    {
-        cout << element.first << ' ' << element.second << endl;
-    }
     int ans = 0;
     char ansChar;
     for (auto &y : x)
