@@ -8343,41 +8343,58 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 // };
 
-char slowestKey(vector<int> releaseTimes, string keysPressed)
-{
-    map<char, int> x;
-    x[keysPressed[0]] = releaseTimes[0];
-    for (int i = 1; i < releaseTimes.size(); i++)
-    {
-        if (x.find(keysPressed[i]) != x.end() && x[keysPressed[i]] < releaseTimes[i] - releaseTimes[i - 1])
-        {
-            x[keysPressed[i]] = releaseTimes[i] - releaseTimes[i - 1];
-        }
-        else if (x.find(keysPressed[i]) == x.end())
-        {
-            x[keysPressed[i]] = releaseTimes[i] - releaseTimes[i - 1];
-        }
+// char slowestKey(vector<int> releaseTimes, string keysPressed)
+// {
+//     map<char, int> x;
+//     x[keysPressed[0]] = releaseTimes[0];
+//     for (int i = 1; i < releaseTimes.size(); i++)
+//     {
+//         if (x.find(keysPressed[i]) != x.end() && x[keysPressed[i]] < releaseTimes[i] - releaseTimes[i - 1])
+//         {
+//             x[keysPressed[i]] = releaseTimes[i] - releaseTimes[i - 1];
+//         }
+//         else if (x.find(keysPressed[i]) == x.end())
+//         {
+//             x[keysPressed[i]] = releaseTimes[i] - releaseTimes[i - 1];
+//         }
             
-    }
+//     }
 
-    std::map<char, int>::iterator best = std::max_element(x.begin(), x.end(), [](const std::pair<char, int> &a, const std::pair<char, int> &b) -> bool { return a.second < b.second; });
-    int maxVal = best->second;
-    int ans = 0;
-    char ansChar;
-    for (auto &y : x)
-    {
-        if (y.second == maxVal)
-        {
-            if (int(y.first) > ans)
-                ansChar = y.first;
-        }
-    }
+//     std::map<char, int>::iterator best = std::max_element(x.begin(), x.end(), [](const std::pair<char, int> &a, const std::pair<char, int> &b) -> bool { return a.second < b.second; });
+//     int maxVal = best->second;
+//     int ans = 0;
+//     char ansChar;
+//     for (auto &y : x)
+//     {
+//         if (y.second == maxVal)
+//         {
+//             if (int(y.first) > ans)
+//                 ansChar = y.first;
+//         }
+//     }
 
-    return ansChar;
-}
-
-int main()
-{
-    char ans =  slowestKey({19, 22, 28, 29, 66, 81, 93, 97 }, "fnfaaxha");
-    cout << ans << endl;
-}
+//     return ansChar;
+// }
+// class Solution {
+// public:
+//     char slowestKey(vector<int>& releaseTimes, string keysPressed) {
+//         char ans = keysPressed[0];
+//         int time = releaseTimes[0];
+        
+//         for (int i = 1; i < keysPressed.size(); ++i) {
+//             if (releaseTimes[i] - releaseTimes[i - 1] > time) {
+//                 time = releaseTimes[i] - releaseTimes[i - 1];
+//                 ans = keysPressed[i];
+//             } else if (releaseTimes[i] - releaseTimes[i - 1] == time) {
+//                 ans = max(ans, keysPressed[i]);
+//             }
+//         }
+        
+//         return ans;
+//     }
+// };
+// int main()
+// {
+//     char ans =  slowestKey({19, 22, 28, 29, 66, 81, 93, 97 }, "fnfaaxha");
+//     cout << ans << endl;
+// }
