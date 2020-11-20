@@ -8427,3 +8427,25 @@ void printMultiVector(vector<vector<int>> x)
 //     else
 //         return maxElement - 2 * k - minElement;
 // }
+
+// int main()
+// {
+//     int miles, galons;
+//     double mpgForTrip, mpgTotal = 0;
+//     while (true)
+//     {
+//         cout << "Enter Miles driven(-1 to quit) ";
+//         cin >> miles;
+//         if (miles == -1)
+//             break;
+//         else
+//         {
+//             cout << "Enter gallons used: ";
+//             cin >> galons;
+//             mpgForTrip = miles / galons;
+//             cout << "MPG for this trip: " << mpgForTrip << endl;
+//             mpgTotal += mpgForTrip;
+//             cout << "Total MPG so far: " << (double)mpgTotal << endl;
+//         }
+//     }
+// }
