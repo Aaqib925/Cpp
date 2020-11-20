@@ -8417,13 +8417,13 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 // };
 
-int main()
-{
-    int maxElement = *max_element(A.begin(), A.end());
-    int minElement = *min_element(A.begin(), A.end());
+// int main()
+// {
+//     int maxElement = *max_element(A.begin(), A.end());
+//     int minElement = *min_element(A.begin(), A.end());
     
-    if ((maxElement - 2 * k - minElement) < 0)
-        return 0;
-    else
-        return maxElement - 2 * k - minElement;
-}
+//     if ((maxElement - 2 * k - minElement) < 0)
+//         return 0;
+//     else
+//         return maxElement - 2 * k - minElement;
+// }
