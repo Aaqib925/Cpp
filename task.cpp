@@ -8357,7 +8357,7 @@ void printMultiVector(vector<vector<int>> x)
 //         {
 //             x[keysPressed[i]] = releaseTimes[i] - releaseTimes[i - 1];
 //         }
-            
+
 //     }
 
 //     std::map<char, int>::iterator best = std::max_element(x.begin(), x.end(), [](const std::pair<char, int> &a, const std::pair<char, int> &b) -> bool { return a.second < b.second; });
@@ -8380,7 +8380,7 @@ void printMultiVector(vector<vector<int>> x)
 //     char slowestKey(vector<int>& releaseTimes, string keysPressed) {
 //         char ans = keysPressed[0];
 //         int time = releaseTimes[0];
-        
+
 //         for (int i = 1; i < keysPressed.size(); ++i) {
 //             if (releaseTimes[i] - releaseTimes[i - 1] > time) {
 //                 time = releaseTimes[i] - releaseTimes[i - 1];
@@ -8389,7 +8389,7 @@ void printMultiVector(vector<vector<int>> x)
 //                 ans = max(ans, keysPressed[i]);
 //             }
 //         }
-        
+
 //         return ans;
 //     }
 // };
@@ -8398,3 +8398,21 @@ void printMultiVector(vector<vector<int>> x)
 //     char ans =  slowestKey({19, 22, 28, 29, 66, 81, 93, 97 }, "fnfaaxha");
 //     cout << ans << endl;
 // }
+
+class Solution
+{
+public:
+    int smallestRangeI(vector<int> &A, int k)
+    {
+        sort(A.begin(), A.end());
+        int a = *min_element(A.begin(), A.end());
+        int b = *max_element(A.begin(), A.end());
+        int m = INT_MAX;
+        for (int i = -k; i <= k; i++)
+        {
+            if (b - k - a - i >= 0 && m > (b - k - a - i))
+                m = b - k - a - i;
+        }
+        return m;
+    }
+};
