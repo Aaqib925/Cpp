@@ -8399,20 +8399,31 @@ void printMultiVector(vector<vector<int>> x)
 //     cout << ans << endl;
 // }
 
-class Solution
+// class Solution
+// {
+// public:
+//     int smallestRangeI(vector<int> &A, int k)
+//     {
+//         sort(A.begin(), A.end());
+//         int a = *min_element(A.begin(), A.end());
+//         int b = *max_element(A.begin(), A.end());
+//         int m = INT_MAX;
+//         for (int i = -k; i <= k; i++)
+//         {
+//             if (b - k - a - i >= 0 && m > (b - k - a - i))
+//                 m = b - k - a - i;
+//         }
+//         return m;
+//     }
+// };
+
+int main()
 {
-public:
-    int smallestRangeI(vector<int> &A, int k)
-    {
-        sort(A.begin(), A.end());
-        int a = *min_element(A.begin(), A.end());
-        int b = *max_element(A.begin(), A.end());
-        int m = INT_MAX;
-        for (int i = -k; i <= k; i++)
-        {
-            if (b - k - a - i >= 0 && m > (b - k - a - i))
-                m = b - k - a - i;
-        }
-        return m;
-    }
-};
+    int maxElement = *max_element(A.begin(), A.end());
+    int minElement = *min_element(A.begin(), A.end());
+    
+    if ((maxElement - 2 * k - minElement) < 0)
+        return 0;
+    else
+        return maxElement - 2 * k - minElement;
+}
