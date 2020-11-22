@@ -8462,45 +8462,45 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 // }
 
-int main()
-{
-    vector<int> nums = {4,5,2,2,1,1,4,4,5,3,2,3,5,3,2,1,2,1,1,3,3,3,5,1,1,2,3};
-    int index = 0;
-    for (int i = 0; i < nums.size(); i++)
-    {
-        int oddSize = 0;
-        int evenSize = 0;
-        int count = 0;
-        for (int j = 0; j < nums.size(); j++)
-        {
-            if (j != i)
-            {
-                if (count % 2 == 0)
-                {
-                    // cout << "EVEN " << nums[j] << endl;
-                    evenSize += nums[j];
-                }
+// int main()
+// {
+//     vector<int> nums = {4,5,2,2,1,1,4,4,5,3,2,3,5,3,2,1,2,1,1,3,3,3,5,1,1,2,3};
+//     int index = 0;
+//     for (int i = 0; i < nums.size(); i++)
+//     {
+//         int oddSize = 0;
+//         int evenSize = 0;
+//         int count = 0;
+//         for (int j = 0; j < nums.size(); j++)
+//         {
+//             if (j != i)
+//             {
+//                 if (count % 2 == 0)
+//                 {
+//                     // cout << "EVEN " << nums[j] << endl;
+//                     evenSize += nums[j];
+//                 }
                     
-                else
-                {    
-                    // cout << "ODD " << nums[j] << endl;
-                    oddSize += nums[j];
-                }
-                count ++;
-            }
-            else
-            {
-                continue;
-            }
+//                 else
+//                 {    
+//                     // cout << "ODD " << nums[j] << endl;
+//                     oddSize += nums[j];
+//                 }
+//                 count ++;
+//             }
+//             else
+//             {
+//                 continue;
+//             }
             
-        }
-        // cout << evenSize << " " << oddSize << endl;
-        if (oddSize == evenSize)
-        {
-            index = i;
-        }
+//         }
+//         // cout << evenSize << " " << oddSize << endl;
+//         if (oddSize == evenSize)
+//         {
+//             index = i;
+//         }
         
-    }
-    cout << "index " << index << endl;
+//     }
+//     cout << "index " << index << endl;
 
-}
+// }
