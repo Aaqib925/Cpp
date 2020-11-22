@@ -8464,13 +8464,43 @@ void printMultiVector(vector<vector<int>> x)
 
 int main()
 {
-    vector<int> nums = {2, 1, 6, 4};
+    vector<int> nums = {2,1,6,4};
     int index = 0;
     for (int i = 0; i < nums.size(); i++)
     {
         int oddSize = 0;
         int evenSize = 0;
+        int count = 0;
+        for (int j = 0; j < nums.size(); j++)
+        {
+            if (j != i)
+            {
+                if (count % 2 == 0)
+                {
+                    // cout << "EVEN " << nums[j] << endl;
+                    evenSize += nums[j];
+                }
+                    
+                else
+                {    
+                    // cout << "ODD " << nums[j] << endl;
+                    oddSize += nums[j];
+                }
+                count ++;
+            }
+            else
+            {
+                continue;
+            }
+            
+        }
+        // cout << evenSize << " " << oddSize << endl;
+        if (oddSize == evenSize)
+        {
+            index = i;
+        }
         
     }
     cout << "index " << index << endl;
+
 }
