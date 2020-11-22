@@ -8464,7 +8464,7 @@ void printMultiVector(vector<vector<int>> x)
 
 int main()
 {
-    vector<int> nums = {2,1,6,4};
+    vector<int> nums = {4,5,2,2,1,1,4,4,5,3,2,3,5,3,2,1,2,1,1,3,3,3,5,1,1,2,3};
     int index = 0;
     for (int i = 0; i < nums.size(); i++)
     {
