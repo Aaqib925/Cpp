@@ -8421,27 +8421,56 @@ void printMultiVector(vector<vector<int>> x)
 // {
 //     int maxElement = *max_element(A.begin(), A.end());
 //     int minElement = *min_element(A.begin(), A.end());
-    
+
 //     if ((maxElement - 2 * k - minElement) < 0)
 //         return 0;
 //     else
 //         return maxElement - 2 * k - minElement;
 // }
 
-class Solution {
-public:
-    bool arrayStringsAreEqual(vector<string>& word1, vector<string>& word2) {
-        string s1, s2;
-        for (int i = 0; i < word1.size(); i++)
-        {
-            s1 += word1[i];
-        }
-        for (int i = 0; i < word2.size(); i++)
-        {
-            s2 += word2[i];
-        }
-        if (s1 == s2)
-            return true;
-        return false;
+// class Solution {
+// public:
+//     bool arrayStringsAreEqual(vector<string>& word1, vector<string>& word2) {
+//         string s1, s2;
+//         for (int i = 0; i < word1.size(); i++)
+//         {
+//             s1 += word1[i];
+//         }
+//         for (int i = 0; i < word2.size(); i++)
+//         {
+//             s2 += word2[i];
+//         }
+//         if (s1 == s2)
+//             return true;
+//         return false;
+//     }
+// };
+
+// int main()
+// {
+//     int n = 5;
+//     int k = 73;
+//     int factor = 26;
+//     for (int i = 0; i < n; i++)
+//     {
+//         if( k >= 0)
+//         {
+//             k -= factor;
+//             factor -= 1;
+//             cout << factor << endl;
+//         }
+//     }
+// }
+
+int main()
+{
+    vector<int> nums = {2, 1, 6, 4};
+    int index = 0;
+    for (int i = 0; i < nums.size(); i++)
+    {
+        int oddSize = 0;
+        int evenSize = 0;
+        
     }
-};
+    cout << "index " << index << endl;
+}
