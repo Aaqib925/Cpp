@@ -8501,5 +8501,5 @@ void printMultiVector(vector<vector<int>> x)
 //         }
         
 //     }
-//     cout << "index " << index << endl;
+//     cout << index << endl;
 // }
