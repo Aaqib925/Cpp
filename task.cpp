@@ -15,6 +15,7 @@
 // #include <ncurses.h>
 #include <cstring>
 #include <deque>
+#include <stack>
 using namespace std;
 
 // int main() {
@@ -8503,3 +8504,18 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 //     cout << index << endl;
 // }
+
+int main()
+{
+    stack<int> s;
+    s.push(5);
+    s.push(4);
+    s.push(1);
+    s.push(9);
+    s.push(3);
+    
+    cout << s.size() << endl;
+    s.pop();
+    cout << s.top() << endl;
+    cout << s.size() << endl;
+}
