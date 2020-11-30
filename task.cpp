@@ -8518,4 +8518,9 @@ int main()
     s.pop();
     cout << s.top() << endl;
     cout << s.size() << endl;
+
+    if (s.empty())
+        cout << "LMFAO, dead" << endl;
+    else
+        cout << "NOOO" << endl;
 }
