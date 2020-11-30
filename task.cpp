@@ -8505,22 +8505,22 @@ void printMultiVector(vector<vector<int>> x)
 //     cout << index << endl;
 // }
 
-int main()
-{
-    stack<int> s;
-    s.push(5);
-    s.push(4);
-    s.push(1);
-    s.push(9);
-    s.push(3);
+// int main()
+// {
+//     stack<int> s;
+//     s.push(5);
+//     s.push(4);
+//     s.push(1);
+//     s.push(9);
+//     s.push(3);
     
-    cout << s.size() << endl;
-    s.pop();
-    cout << s.top() << endl;
-    cout << s.size() << endl;
+//     cout << s.size() << endl;
+//     s.pop();
+//     cout << s.top() << endl;
+//     cout << s.size() << endl;
 
-    if (s.empty())
-        cout << "LMFAO, dead" << endl;
-    else
-        cout << "NOOO" << endl;
-}
+//     if (s.empty())
+//         cout << "LMFAO, dead" << endl;
+//     else
+//         cout << "NOOO" << endl;
+// }
