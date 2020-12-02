@@ -8760,40 +8760,77 @@ void printMultiVector(vector<vector<int>> x)
 //     printArray(arr, n);
 //     return 0;
 // }
+// class Solution
+// {
+// public:
+//     int maxArea(vector<int> &height)
+//     {
+//         int maxArea = 0;
+//         for (int i = 0; i < height.size(); i++)
+//         {
+//             for (int j = 1; j < height.size(); j++)
+//             {
+//                 maxArea = max(maxArea, min(height[i], height[j]) * (j - i));
+//             }
+//         }
+//         return maxArea;
+//     }
+// };
+
+// class Solution
+// {
+// public:
+//     int maxArea(vector<int> &height)
+//     {
+//         int maxArea = 0;
+//         int leftPointer = 0;
+//         int rightPointer = height.size() - 1;
+//         while (leftPointer < rightPointer)
+//         {
+//             maxArea = max(maxArea, min(height[leftPointer], height[rightPointer]) * (rightPointer - leftPointer));
+//             if (height[leftPointer] < height[rightPointer])
+//                 leftPointer++;
+//             else
+//                 rightPointer--;
+//         }
+
+//         return maxArea;
+//     }
+// };
+
+// int main()
+// {
+//     vector<int> nums = {-1, 0, 1, 2, -1, -4};
+//     sort(nums.begin(), nums.end());
+//     printVector(nums);
+//     for (int i = 0; i < nums.size(); i += 2)
+//     {
+//         int ans = 0;
+//         for (int j = i; j < 3; j++)
+//         {
+//             ans += nums[j];
+//         }
+//         if (ans = 0)
+//         {
+//             cout << i << endl;
+//         }
+//     }
+// }
+
 class Solution
 {
 public:
-    int maxArea(vector<int> &height)
+    int removeElement(vector<int> &nums, int val)
     {
-        int maxArea = 0;
-        for (int i = 0; i < height.size(); i++)
+        int ans = 0;
+        for (int i = 0; i < nums.size(); i++)
         {
-            for (int j = 1; j < height.size(); j++)
+            if (nums[i] != val)
             {
-                maxArea = max(maxArea, min(height[i], height[j]) * (j - i));
+                nums[ans] = nums[i];
+                ans++;
             }
         }
-        return maxArea;
-    }
-};
-
-class Solution
-{
-public:
-    int maxArea(vector<int> &height)
-    {
-        int maxArea = 0;
-        int leftPointer = 0;
-        int rightPointer = height.size() - 1;
-        while (leftPointer < rightPointer)
-        {
-            maxArea = max(maxArea, min(height[leftPointer], height[rightPointer]) * (rightPointer - leftPointer));
-            if (height[leftPointer] < height[rightPointer])
-                leftPointer++;
-            else
-                rightPointer--;
-        }
-
-        return maxArea;
+        return ans;
     }
 };
