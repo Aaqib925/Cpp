@@ -16,6 +16,7 @@
 #include <cstring>
 #include <deque>
 #include <set>
+#include <queue>
 #include <stack>
 using namespace std;
 
@@ -8859,17 +8860,28 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 // }
 
-int main()
-{
-    multiset<int> a;
-    a.insert(1);
-    a.insert(7);
-    a.insert(2);
-    a.insert(2);
-    a.insert(7);
+// int main()
+// {
+//     multiset<int> a;
+//     a.insert(1);
+//     a.insert(7);
+//     a.insert(2);
+//     a.insert(2);
+//     a.insert(7);
 
-    // cout << a.count(7) << endl;
-    a.erase(2);
-    for (auto x: a)
-        cout << x << endl;
-}
+//     // cout << a.count(7) << endl;
+//     a.erase(2);
+//     for (auto x: a)
+//         cout << x << endl;
+// }
+
+// int main()
+// {
+//     queue<int> d;
+//     d.push(1);
+//     d.push(2);
+//     d.push(3);
+
+//     cout << d.back() << endl;
+//     cout << d.front() << endl;
+// }
