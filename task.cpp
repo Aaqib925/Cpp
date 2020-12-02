@@ -8730,7 +8730,7 @@ void printMultiVector(vector<vector<int>> x)
 // {
 //     if (low < high)
 //     {
-//         /* pi is partitioning index, arr[p] is now 
+//         /* pi is partitioning index, arr[p] is now
 // 		at right place */
 //         int pi = partition(arr, low, high);
 
@@ -8760,3 +8760,19 @@ void printMultiVector(vector<vector<int>> x)
 //     printArray(arr, n);
 //     return 0;
 // }
+class Solution
+{
+public:
+    int maxArea(vector<int> &height)
+    {
+        int maxArea = 0;
+        for (int i = 0; i < height.size(); i++)
+        {
+            for (int j = 1; j < height.size(); j++)
+            {
+                maxArea = max(maxArea, min(height[i], height[j]) * (j - i));
+            }
+        }
+        return maxArea;
+    }
+};
