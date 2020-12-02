@@ -8944,3 +8944,7 @@ void TOH(int n, int A, int B, int C)
         TOH(n - 1, B, A, C);
     }
 }
+int main()
+{
+    TOH(10, 1, 2, 3);
+}
