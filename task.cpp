@@ -8885,3 +8885,52 @@ void printMultiVector(vector<vector<int>> x)
 //     cout << d.back() << endl;
 //     cout << d.front() << endl;
 // }
+
+// class Solution {
+// public:
+//     vector<int> mostCompetitive(vector<int>& nums, int k) {
+//         vector<int> s;
+//         for (int i = 0; i < nums.size(); i++)
+//         {
+//             while (!s.empty() && s.back() > nums[i] && s.size() + nums.size() - i > k)
+//                 s.pop_back();
+//             if (s.size() < k)
+//                 s.push_back(nums[i]);
+//         }
+//         return s;
+//     }
+// };
+
+// int main()
+// {
+//     vector<int> nums = {1,2,4,3};
+//     int limit = 4;
+//     int count = 0;
+//     int n = nums.size();
+//     int x = nums[0] + nums[n - 1];
+//     for (int i = 0; i < n / 2; i++)
+//     {
+//         if (nums[i] + nums[n - 1 - i] != x)
+//             count++;
+//     }
+//     cout << count << endl;
+// }
+class Solution {
+public:
+    int minimumDeviation(vector<int>& nums) {
+        int res = INT_MAX, min_n = INT_MAX;
+        priority_queue<int> pq;
+        for (auto n : nums) {
+            n = n % 2 ? n * 2 : n;
+            pq.push(n);
+            min_n = min(min_n, n); 
+        }
+        while (pq.top() % 2 == 0) {
+            res = min(res, pq.top() - min_n);
+            min_n = min(min_n, pq.top() / 2);
+            pq.push(pq.top() / 2);
+            pq.pop();
+        }
+        return min(res, pq.top() - min_n);
+    }
+};
