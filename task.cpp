@@ -8834,3 +8834,26 @@ void printMultiVector(vector<vector<int>> x)
 //         return ans;
 //     }
 // };
+
+// Binary Search
+
+int main()
+{
+    int arr[] = {1, 2, 4, 6, 7};
+    int a = 0;
+    int x = 7;
+    int b = sizeof(arr) / sizeof(arr[0]);
+    while(a <= b)
+    {
+        int k = (a + b)/2;
+        if (arr[k] == x)
+        {
+            cout << k << endl;
+            break;
+        }
+        if (arr[k] > x)
+            b = k - 1;
+        else
+            a = k + 1;
+    }
+}
