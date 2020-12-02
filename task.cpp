@@ -8699,8 +8699,6 @@ void printMultiVector(vector<vector<int>> x)
 //     cout << endl;
 // }
 /* C++ implementation of QuickSort */
-#include <bits/stdc++.h>
-using namespace std;
 
 // A utility function to swap two elements
 void swap(int *a, int *b)
