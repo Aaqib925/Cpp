@@ -8776,3 +8776,24 @@ public:
         return maxArea;
     }
 };
+
+class Solution
+{
+public:
+    int maxArea(vector<int> &height)
+    {
+        int maxArea = 0;
+        int leftPointer = 0;
+        int rightPointer = height.size() - 1;
+        while (leftPointer < rightPointer)
+        {
+            maxArea = max(maxArea, min(height[leftPointer], height[rightPointer]) * (rightPointer - leftPointer));
+            if (height[leftPointer] < height[rightPointer])
+                leftPointer++;
+            else
+                rightPointer--;
+        }
+
+        return maxArea;
+    }
+};
