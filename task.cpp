@@ -15,6 +15,7 @@
 // #include <ncurses.h>
 #include <cstring>
 #include <deque>
+#include <set>
 #include <stack>
 using namespace std;
 
@@ -8837,23 +8838,35 @@ void printMultiVector(vector<vector<int>> x)
 
 // Binary Search
 
+// int main()
+// {
+//     int arr[] = {1, 2, 4, 6, 7};
+//     int a = 0;
+//     int x = 10;
+//     int b = sizeof(arr) / sizeof(arr[0]);
+//     while(a <= b)
+//     {
+//         int k = (a + b)/2;
+//         if (arr[k] == x)
+//         {
+//             cout << k << endl;
+//             break;
+//         }
+//         if (arr[k] > x)
+//             b = k - 1;
+//         else
+//             a = k + 1;
+//     }
+// }
+
 int main()
 {
-    int arr[] = {1, 2, 4, 6, 7};
-    int a = 0;
-    int x = 7;
-    int b = sizeof(arr) / sizeof(arr[0]);
-    while(a <= b)
-    {
-        int k = (a + b)/2;
-        if (arr[k] == x)
-        {
-            cout << k << endl;
-            break;
-        }
-        if (arr[k] > x)
-            b = k - 1;
-        else
-            a = k + 1;
-    }
+    multiset<int> a;
+    a.insert(1);
+    a.insert(7);
+    a.insert(2);
+    a.insert(2);
+    a.insert(7);
+
+    cout << a.count(7) << endl;
 }
