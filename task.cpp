@@ -8868,5 +8868,8 @@ int main()
     a.insert(2);
     a.insert(7);
 
-    cout << a.count(7) << endl;
+    // cout << a.count(7) << endl;
+    a.erase(2);
+    for (auto x: a)
+        cout << x << endl;
 }
