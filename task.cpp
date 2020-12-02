@@ -8934,3 +8934,13 @@ void printMultiVector(vector<vector<int>> x)
 //         return min(res, pq.top() - min_n);
 //     }
 // };
+
+void TOH(int n, int A, int B, int C)
+{
+    if (n > 0)
+    {
+        TOH(n - 1, A, C, B);
+        cout << "( " << A << ' ' << C << " )" << endl;
+        TOH(n - 1, B, A, C);
+    }
+}
