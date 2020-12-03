@@ -9136,3 +9136,45 @@ void printMultiVector(vector<vector<int>> x)
 // {
 //     commonChild("SHINCHAN", "NOHARAAA");
 // }
+int main()
+{
+    vector<int> nums = {1,3,5};
+    for (int i = 0; i < nums.size() - 1; i += 2)
+        cout << i << endl;
+}
+
+class Solution {
+public:
+    int searchInsert(vector<int>& nums, int target) {
+        if (target > nums[nums.size() - 1])
+            return nums.size();
+        else if(target < nums[0])
+            return 0;
+        else{
+            int a = 0;
+            int b = nums.size() - 1;
+            while(a <= b)
+            {
+                int mid = (a + b)/2;
+                if (nums[mid] == target)
+                {
+                    return mid;
+                }
+                if (nums[mid] > target)
+                    b = mid  - 1;
+                else
+                    a = mid + 1;
+            }
+            int index = 0;
+            for (int i = 0; i < nums.size() - 1; i ++)
+            {
+                if (target >= nums[i] && target <= nums[i + 1])
+                {
+                    index = i + 1;
+                    break;
+                }
+            }
+            return index;
+        }
+    }
+};
