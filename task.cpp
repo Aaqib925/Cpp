@@ -9026,3 +9026,32 @@ void printMultiVector(vector<vector<int>> x)
 // {
 //     isValid("{}");
 // }
+
+// int main()
+// {
+//     string s = "0P";
+//     int n = s.length() - 1;
+//     string newString = "";
+//     for (int i = 0; i < s.length(); i++)
+//     {
+//         if ((int)tolower(s[i]) >= 97 && (int)tolower(s[i]) <= 122)
+//             newString += tolower(s[i]);
+//     }
+//     bool result = true;
+//     cout << newString << endl;
+//     for(int i = 0; i < newString.length() / 2; i++)
+//     {
+//         if (newString[i] != newString[newString.length() - 1 - i])
+//         {
+//             result = false;
+//             break;
+//         }
+//     }
+//     if (result)
+//         cout << "YEs" << endl;
+//     else
+//     {
+//         cout << "NO" << endl;
+//     }
+    
+// }   
