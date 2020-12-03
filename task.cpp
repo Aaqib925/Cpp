@@ -9077,3 +9077,26 @@ void printMultiVector(vector<vector<int>> x)
 // {
 //     cout << fun1(15) << endl;
 // }
+
+// int Q(int x, int y)
+// {
+//     if (x < y)
+//         return 5;
+//     else
+//         return Q(x - y, y + 2) + x;
+// }
+
+// int main()
+// {
+//     cout << Q(15, 2) << endl;
+// }
+
+// int main()
+// {
+//     int x, y;
+//     while(true)
+//     {
+//         cin >> x >> y;
+//         cout << x % y << endl;
+//     }
+// }
