@@ -9105,8 +9105,8 @@ void printMultiVector(vector<vector<int>> x)
 //     string ans = "";
 //     for (int i = 0; i < s1.length(); i++)
 //     {
-//         size_t found = s2.find(s1[i]); 
-//         if (found != string::npos) 
+//         size_t found = s2.find(s1[i]);
+//         if (found != string::npos)
 //             ans += s1[i];
 //     }
 //     for (int i = 0; i < ans.size(); i++)
@@ -9114,7 +9114,7 @@ void printMultiVector(vector<vector<int>> x)
 //         bool cond = true;
 //         int forFirstString = s1.find(ans[i]);
 //         int forSecondString = s2.find(ans[i]);
-//         cout << ans[i] << ' '<< forFirstString << ' ' << forSecondString << endl; 
+//         cout << ans[i] << ' '<< forFirstString << ' ' << forSecondString << endl;
 //         for (int j = 0; j < ans.size(); j++)
 //         {
 //             if (j != i)
@@ -9128,53 +9128,56 @@ void printMultiVector(vector<vector<int>> x)
 //                 }
 //             }
 //         }
-        
+
 //     }
-    
+
 // }
 // int main()
 // {
 //     commonChild("SHINCHAN", "NOHARAAA");
 // }
-int main()
-{
-    vector<int> nums = {1,3,5};
-    for (int i = 0; i < nums.size() - 1; i += 2)
-        cout << i << endl;
-}
+// int main()
+// {
+//     vector<int> nums = {1, 3, 5};
+//     for (int i = 0; i < nums.size() - 1; i += 2)
+//         cout << i << endl;
+// }
 
-class Solution {
-public:
-    int searchInsert(vector<int>& nums, int target) {
-        if (target > nums[nums.size() - 1])
-            return nums.size();
-        else if(target < nums[0])
-            return 0;
-        else{
-            int a = 0;
-            int b = nums.size() - 1;
-            while(a <= b)
-            {
-                int mid = (a + b)/2;
-                if (nums[mid] == target)
-                {
-                    return mid;
-                }
-                if (nums[mid] > target)
-                    b = mid  - 1;
-                else
-                    a = mid + 1;
-            }
-            int index = 0;
-            for (int i = 0; i < nums.size() - 1; i ++)
-            {
-                if (target >= nums[i] && target <= nums[i + 1])
-                {
-                    index = i + 1;
-                    break;
-                }
-            }
-            return index;
-        }
-    }
-};
+// class Solution
+// {
+// public:
+//     int searchInsert(vector<int> &nums, int target)
+//     {
+//         if (target > nums[nums.size() - 1])
+//             return nums.size();
+//         else if (target < nums[0])
+//             return 0;
+//         else
+//         {
+//             int a = 0;
+//             int b = nums.size() - 1;
+//             while (a <= b)
+//             {
+//                 int mid = (a + b) / 2;
+//                 if (nums[mid] == target)
+//                 {
+//                     return mid;
+//                 }
+//                 if (nums[mid] > target)
+//                     b = mid - 1;
+//                 else
+//                     a = mid + 1;
+//             }
+//             int index = 0;
+//             for (int i = 0; i < nums.size() - 1; i++)
+//             {
+//                 if (target >= nums[i] && target <= nums[i + 1])
+//                 {
+//                     index = i + 1;
+//                     break;
+//                 }
+//             }
+//             return index;
+//         }
+//     }
+// };
