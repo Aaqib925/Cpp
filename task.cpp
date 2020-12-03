@@ -8923,7 +8923,7 @@ void printMultiVector(vector<vector<int>> x)
 //         for (auto n : nums) {
 //             n = n % 2 ? n * 2 : n;
 //             pq.push(n);
-//             min_n = min(min_n, n); 
+//             min_n = min(min_n, n);
 //         }
 //         while (pq.top() % 2 == 0) {
 //             res = min(res, pq.top() - min_n);
@@ -8935,16 +8935,59 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 // };
 
-void TOH(int n, int A, int B, int C)
-{
-    if (n > 0)
-    {
-        TOH(n - 1, A, C, B);
-        cout << "( " << A << ' ' << C << " )" << endl;
-        TOH(n - 1, B, A, C);
-    }
-}
-int main()
-{
-    TOH(10, 1, 2, 3);
-}
+// void TOH(int n, int A, int B, int C)
+// {
+//     if (n > 0)
+//     {
+//         TOH(n - 1, A, C, B);
+//         cout << "( " << A << ' ' << C << " )" << endl;
+//         TOH(n - 1, B, A, C);
+//     }
+// }
+// int main()
+// {
+//     TOH(10, 1, 2, 3);
+// }
+
+// class Solution
+// {
+// public:
+//     bool isValid(string s)
+//     {
+//         string a = "";
+//         for (size_t i = 0; i < s.size(); ++i)
+//         {
+//             if (match(a.back(), s[i]))
+//             {
+//                 a.pop_back();
+//             }
+//             else
+//             {
+//                 a.push_back(s[i]);
+//             }
+//         }
+//         return (a.size() == 0);
+//     }
+//     bool match(char t1, char t2)
+//     {
+//         if (t1 == '(' && t2 == ')')
+//         {
+//             return true;
+//         }
+//         if (t1 == '[' && t2 == ']')
+//         {
+//             return true;
+//         }
+//         if (t1 == '{' && t2 == '}')
+//         {
+//             return true;
+//         }
+//         return false;
+//     }
+// };
+
+// int main()
+// {
+//     Solution s1;
+//     cout << s1.isValid("()");
+// }
