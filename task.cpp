@@ -8991,3 +8991,38 @@ void printMultiVector(vector<vector<int>> x)
 //     Solution s1;
 //     cout << s1.isValid("()");
 // }
+
+// void isValid(string s)
+// {
+//     stack<char> st;
+//     int factor = 0;
+//     for (int i = 0; i < s.length(); i++)
+//     {
+//         if (s[i] == '(' || s[i] == '[' || s[i] == '{')
+//         {
+//             st.push(s[i]);
+//             factor ++;
+//         }
+//         else if (s[i] == ')' || s[i] == '}' || s[i] == ']')
+//             factor--;
+//         if (s[i] == ')' && !st.empty() && st.top() == '(')
+//             st.pop();
+//         else if (s[i] == '}' && !st.empty() && st.top() == '{')
+//             st.pop();
+//         else if (s[i] == ']' && !st.empty() && st.top() == '[')
+//             st.pop();
+//     }
+
+//     if (st.empty() && factor == 0)
+//         cout << "VALID" << endl;
+//     else
+//     {
+//         cout << "NOT VALID" << endl;
+//     }
+    
+// } 
+
+// int main()
+// {
+//     isValid("{}");
+// }

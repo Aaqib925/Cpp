@@ -1,4 +1,4 @@
-== 0)
-            //     count--;
-            // else
-            //     count ++;
+e if (st.empty() && s[i] == ')' || s[i] == '}' || s[i] == ']' )
+        // {
+        //     factor--;
+        // }
