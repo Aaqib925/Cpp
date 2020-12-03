@@ -8946,7 +8946,7 @@ void printMultiVector(vector<vector<int>> x)
 // }
 // int main()
 // {
-//     TOH(10, 1, 2, 3);
+//     TOH(3, 1, 2, 3);
 // }
 
 // class Solution
@@ -9019,8 +9019,8 @@ void printMultiVector(vector<vector<int>> x)
 //     {
 //         cout << "NOT VALID" << endl;
 //     }
-    
-// } 
+
+// }
 
 // int main()
 // {
@@ -9053,8 +9053,8 @@ void printMultiVector(vector<vector<int>> x)
 //     {
 //         cout << "NO" << endl;
 //     }
-    
-// }   
+
+// }
 
 // int fun1(int x, int y)
 // {
@@ -9099,4 +9099,40 @@ void printMultiVector(vector<vector<int>> x)
 //         cin >> x >> y;
 //         cout << x % y << endl;
 //     }
+// }
+
+// void commonChild(string s1, string s2) {
+//     string ans = "";
+//     for (int i = 0; i < s1.length(); i++)
+//     {
+//         size_t found = s2.find(s1[i]); 
+//         if (found != string::npos) 
+//             ans += s1[i];
+//     }
+//     for (int i = 0; i < ans.size(); i++)
+//     {
+//         bool cond = true;
+//         int forFirstString = s1.find(ans[i]);
+//         int forSecondString = s2.find(ans[i]);
+//         cout << ans[i] << ' '<< forFirstString << ' ' << forSecondString << endl; 
+//         for (int j = 0; j < ans.size(); j++)
+//         {
+//             if (j != i)
+//             {
+//                 int anotherIndexes = s1.find(ans[j]);
+//                 int anotherIndexes2 = s2.find(ans[j]);
+//                 // cout << '\t' << anotherIndexes << ' ' << anotherIndexes2 << endl;
+//                 if (forFirstString > anotherIndexes)
+//                 {
+//                     cout << anotherIndexes << endl;
+//                 }
+//             }
+//         }
+        
+//     }
+    
+// }
+// int main()
+// {
+//     commonChild("SHINCHAN", "NOHARAAA");
 // }
