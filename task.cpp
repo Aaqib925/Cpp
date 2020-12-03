@@ -9055,3 +9055,25 @@ void printMultiVector(vector<vector<int>> x)
 //     }
     
 // }   
+
+// int fun1(int x, int y)
+// {
+//     if (x == 0)
+//         return y;
+//     else
+//     {
+//         return fun1(x - 1, x + y);
+//     }
+// }
+int fun1(int n)
+{
+    if (n == 1)
+        return 0;
+    else
+        return 1 + fun1(n / 2);
+}
+
+int main()
+{
+    cout << fun1(15) << endl;
+}
