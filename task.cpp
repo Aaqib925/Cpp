@@ -9358,27 +9358,27 @@ void printMultiVector(vector<vector<int>> x)
 //     solve("abcdef");
 // }
 
-class Solution
-{
-public:
-    bool isAnagram(string s, string t)
-    {
-        if (s.length() != t.length())
-            return false;
-        else
-        {
-            vector<int> counts(26, 0);
-            for (int i = 0; i < i < s.length(); i++)
-            {
-                count[s[i] - 'a']++;
-            }
-            for (int i = 0; i < t.length(); i++)
-            {
-                count[t[i] - 'a']--;
-                if (count[t[i] - 'a'] < 0)
-                    return false;
-            }
-        }
-        return true;
-    }
-};
+// class Solution
+// {
+// public:
+//     bool isAnagram(string s, string t)
+//     {
+//         if (s.length() != t.length())
+//             return false;
+//         else
+//         {
+//             vector<int> counts(26, 0);
+//             for (int i = 0; i < i < s.length(); i++)
+//             {
+//                 count[s[i] - 'a']++;
+//             }
+//             for (int i = 0; i < t.length(); i++)
+//             {
+//                 count[t[i] - 'a']--;
+//                 if (count[t[i] - 'a'] < 0)
+//                     return false;
+//             }
+//         }
+//         return true;
+//     }
+// };
