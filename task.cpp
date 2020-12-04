@@ -9182,19 +9182,48 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 // };
 
-class Solution {
+// class Solution {
+// public:
+//     int kthFactor(int n, int k) {
+//         vector<int> factors;
+//         for (int i = 1; i <= n; i++)
+//         {
+//             if (n % i == 0)
+//             {
+//                 factors.push_back(i);
+//             }
+//         }
+//         if (factors.size() < k)
+//                 return -1;
+//         return factors[k - 1];
+//     }
+// };
+
+class Solution
+{
 public:
-    int kthFactor(int n, int k) {
-        vector<int> factors;
-        for (int i = 1; i <= n; i++)
+    bool validPal(string s, int i, int j)
+    {
+        while (i <= j)
         {
-            if (n % i == 0)
-            {
-                factors.push_back(i);
-            }
+            if (s[i] != s[j])
+                return false;
+            i++;
+            j--;
         }
-        if (factors.size() < k)
-                return -1;
-        return factors[k - 1];
+        return true;
+    }
+    bool validPalindrome(string s)
+    {
+        int i = 0;
+        int j = s.length() - 1;
+        while (i <= j)
+        {
+            if (s[i] != s[j])
+                return validPal(s, i, j - 1) || validPal(s, i + 1, j);
+            i++;
+            j--;
+        }
+        return true;
     }
 };
