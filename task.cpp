@@ -9236,7 +9236,7 @@ void printMultiVector(vector<vector<int>> x)
 //         for (int j = 0; j <= 3; j++)
 //         {
 //             int sum = 0;
-            
+
 //             for (int k = 0; k < 3; k++)
 //             {
 //                 sum += arr[i][j + k];
@@ -9256,21 +9256,87 @@ void printMultiVector(vector<vector<int>> x)
 //     hourglassSum({{1, 1, 1, 0, 0, 0}, {0, 1, 0, 0, 0, 0},{1, 1, 1, 0, 0, 0},{0, 0, 2, 4, 4, 0},{0, 0, 0, 2, 0, 0},{0, 0, 1, 2, 4, 0}});
 // }
 
-void rotLeft(vector<int> a, int d) {
-    vector<int> ans(a.size(), 0);
-    for (int i = 0; i < a.size(); i++)
-    {
-        int index = i - d;
-        if (index < 0)
-            index = a.size() + index;
-        ans[index] = a[i];
-    }
-    printVector(ans);
+// void rotLeft(vector<int> a, int d) {
+//     vector<int> ans(a.size(), 0);
+//     for (int i = 0; i < a.size(); i++)
+//     {
+//         int index = i - d;
+//         if (index < 0)
+//             index = a.size() + index;
+//         ans[index] = a[i];
+//     }
+//     printVector(ans);
 
+// }
 
-}
+// int main()
+// {
+//     rotLeft({1, 2, 3, 4, 5}, 4);
+// }
 
-int main()
-{
-    rotLeft({1, 2, 3, 4, 5}, 4);
-}
+// void minimumBribes(vector<int> q)
+// {
+//     int ans = 0;
+//     for (int i = q.size() - 1; i >= 0; i--)
+//     {
+//         for (int j = max(0, q[i] - 2); j < i; j++)
+//             cout << q[j] << ' ' << q[i] << endl;
+//     }
+//         // int count = 0;
+//         // bool chaotic = false;
+//         // vector<int> sortedQ = q;
+//         // sort(sortedQ.begin(), sortedQ.end());
+//         // printVector(q);
+//         // printVector(sortedQ);
+//         // map<int, int> indexes;
+//         // for (int i = 0; i < q.size(); i++)
+//         // {
+//         //     indexes[q[i]] = i;
+//         // }
+//         // for (int i = 0; i < q.size(); i++)
+//         // {
+//         //     auto it = find(sortedQ.begin(), sortedQ.end(), q[i]);
+//         //     int index = it - sortedQ.begin();
+//         //     // cout << q[i] << " Sorted: " << index << " Original: " << indexes[q[i]] << endl;
+//         //     if (indexes[q[i]] < index)
+//         //     {
+//         //         cout << q[i] << endl;
+//         //         int x = index - indexes[q[i]];
+//         //         if (x > 2)
+//         //         {
+//         //             chaotic = true;
+//         //             break;
+//         //         }
+//         //         else
+//         //         {
+//         //             count += x;
+//         //         }
+//         //     }
+//         // }
+//         // if (chaotic)
+//         //     cout << "Too chaotic" << endl;
+//         // else
+//         // {
+//         //     cout << count << endl;
+//         // }
+//     }
+
+//     int main()
+//     {
+//         minimumBribes({1, 2, 5, 3, 7, 8, 6, 4});
+//     }
+
+// int main()
+// {
+//     vector<int> nums = {4,1,2,1,2};
+//     sort(nums.begin(), nums.end());
+//     if (nums.size() == 1 || nums[0] != nums[1])
+//         return nums[0];
+//     if (nums[nums.size() - 1] != nums[nums.size() - 2])
+//         return nums[nums.size() - 1];
+//     for (int i = 0; i < nums.size() - 1; i++)
+//     {
+//         if (nums[i] != nums[i - 1] && nums[i] != nums[i + 1])
+//             return nums[i];
+//     }
+// }
