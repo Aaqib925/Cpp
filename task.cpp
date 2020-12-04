@@ -9199,31 +9199,78 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 // };
 
-class Solution
+// class Solution
+// {
+// public:
+//     bool validPal(string s, int i, int j)
+//     {
+//         while (i <= j)
+//         {
+//             if (s[i] != s[j])
+//                 return false;
+//             i++;
+//             j--;
+//         }
+//         return true;
+//     }
+//     bool validPalindrome(string s)
+//     {
+//         int i = 0;
+//         int j = s.length() - 1;
+//         while (i <= j)
+//         {
+//             if (s[i] != s[j])
+//                 return validPal(s, i, j - 1) || validPal(s, i + 1, j);
+//             i++;
+//             j--;
+//         }
+//         return true;
+//     }
+// };
+
+// void hourglassSum(vector<vector<int>> arr) {
+//     int ans = 0;
+//     for (int i = 0; i <= 3; i++)
+//     {
+//         int y = 1;
+//         for (int j = 0; j <= 3; j++)
+//         {
+//             int sum = 0;
+            
+//             for (int k = 0; k < 3; k++)
+//             {
+//                 sum += arr[i][j + k];
+//                 sum += arr[i + 2][j + k];
+//             }
+//             sum += arr[i + 1][y];
+//             y++;
+//             ans = max(ans, sum);
+//         }
+//     }
+//     cout << ans << endl;
+
+// }
+
+// int main()
+// {
+//     hourglassSum({{1, 1, 1, 0, 0, 0}, {0, 1, 0, 0, 0, 0},{1, 1, 1, 0, 0, 0},{0, 0, 2, 4, 4, 0},{0, 0, 0, 2, 0, 0},{0, 0, 1, 2, 4, 0}});
+// }
+
+void rotLeft(vector<int> a, int d) {
+    vector<int> ans(a.size(), 0);
+    for (int i = 0; i < a.size(); i++)
+    {
+        int index = i - d;
+        if (index < 0)
+            index = a.size() + index;
+        ans[index] = a[i];
+    }
+    printVector(ans);
+
+
+}
+
+int main()
 {
-public:
-    bool validPal(string s, int i, int j)
-    {
-        while (i <= j)
-        {
-            if (s[i] != s[j])
-                return false;
-            i++;
-            j--;
-        }
-        return true;
-    }
-    bool validPalindrome(string s)
-    {
-        int i = 0;
-        int j = s.length() - 1;
-        while (i <= j)
-        {
-            if (s[i] != s[j])
-                return validPal(s, i, j - 1) || validPal(s, i + 1, j);
-            i++;
-            j--;
-        }
-        return true;
-    }
-};
+    rotLeft({1, 2, 3, 4, 5}, 4);
+}
