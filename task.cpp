@@ -9416,11 +9416,28 @@ void printMultiVector(vector<vector<int>> x)
 //     // Return the number of games you can buy
 //     int count = 0;
 //     int lastCost = 0;
-//     while (s >= p)
+//     while (s >= lastCost)
 //     {
-//         count++;
-//         s -= p;
-//         p = max(p - d, m);
+//         // count++;
+//         // s -= p;
+//         // p = max(p - d, m);
+//         if (count == 0)
+//         {
+//             lastCost = p;
+//             s -= lastCost;
+//             count++;
+//         }
+//         else if (s - lastCost > m)
+//         {
+//             lastCost -= d;
+//             s -= lastCost;
+//             count++;
+//         }
+//         else
+//         {
+//             s -= m;
+//             count++;
+//         }
 //     }
 //     cout << count << endl;
 // }
