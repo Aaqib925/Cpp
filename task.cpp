@@ -9441,7 +9441,6 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 //     cout << count << endl;
 // }
-
 // int main()
 // {
 //     howManyGames(20, 3, 6, 85);
