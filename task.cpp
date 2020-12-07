@@ -9466,81 +9466,110 @@ void printMultiVector(vector<vector<int>> x)
 //     cout << s1.uniquePaths(3, 2) << endl;
 // }
 
-void makeMatrix(int n)
-{
-    vector<vector<int>> mat(n, vector<int>(n));
-    int row = 0;
-    int column = 0;
-    int shrink = 0;
-    bool rDone = false;
-    bool dDone = false;
-    bool lDone = false;
-    bool doit = false;
-    bool uDone = false;
-    for (int i = 0; i < n * n; i++)
-    {
-        if(!rDone && column < n - shrink)
-        {
-            cout << "Right " << row << ' ' << column <<' ' << i + 1 << endl;
-            mat[row][column] = i + 1;
-            column++;
-        }
-        else if (!rDone && column == n - shrink)
-        {    
-            row ++;
-            column --;
-            rDone = true;
-        }
-        if (rDone && !dDone && row < n - shrink)
-        {
-            cout << "Down " << row << ' ' << column <<' ' << i + 1 << endl;
-            mat[row][column] = i + 1;
-            row ++;
-            // cout << "ROW " << row << endl;
-        }
-        else if (rDone && !dDone && row == n - shrink)
-        {
-            dDone = true;
-            row --;
-            column --;
-            // cout << "Second " << row << ' ' << column << endl;
-        }
-        if (rDone && dDone && !lDone && !doit && column >= shrink)
-        {
-            cout << "Left " << row << ' ' << column <<' ' << i + 1 << endl;
-            mat[row][column] = i + 1;
-            column--;
-        }
-        else if (rDone && dDone && !lDone && column == shrink - 1)
-        {
-            // cout << "LEFT2 " << row << ' ' << column <<' ' << i + 1 << endl;
-            lDone = true;
-            column++;
-            row--;
-        }
-        if (rDone && dDone && lDone && !uDone && row - 1 > shrink)
-        {
-            cout << "Up " << row << ' ' << column <<' ' << i + 1 << endl;
-            mat[row][column] = i + 1;
-            row --;
-            cout << "minus " << row << endl;
-        }
-        else if (rDone && dDone && lDone && !uDone && row - 1 == shrink)
-        {
-            mat[row][column] = i + 1;
-            column++;
-            rDone = false;
-            dDone = false;
-            lDone = false;
-            uDone = false;
-            shrink++;
-            cout << row << ' ' << column << endl;
-        }
-    }
-    printMultiVector(mat);
-}
+// void makeMatrix(int n)
+// {
+//     vector<vector<int>> mat(n, vector<int>(n));
+//     int row = 0;
+//     int column = 0;
+//     int shrink = 0;
+//     bool rDone = false;
+//     bool dDone = false;
+//     bool lDone = false;
+//     bool doit = false;
+//     bool uDone = false;
+//     for (int i = 0; i < n * n; i++)
+//     {
+//         if(!rDone && column < n - shrink)
+//         {
+//             mat[row][column] = i + 1;
+//             column++;
+//         }
+//         else if (!rDone && column == n - shrink)
+//         {
+//             row ++;
+//             column --;
+//             rDone = true;
+//         }
+//         if (rDone && !dDone && row < n - shrink)
+//         {
+//             mat[row][column] = i + 1;
+//             row ++;
+//         }
+//         else if (rDone && !dDone && row == n - shrink)
+//         {
+//             dDone = true;
+//             row --;
+//             column --;
+//             // cout << "Second " << row << ' ' << column << endl;
+//         }
+//         if (rDone && dDone && !lDone && !doit && column >= shrink)
+//         {
+//             mat[row][column] = i + 1;
+//             column--;
+//         }
+//         else if (rDone && dDone && !lDone && column == shrink - 1)
+//         {
+//             // cout << "LEFT2 " << row << ' ' << column <<' ' << i + 1 << endl;
+//             lDone = true;
+//             column++;
+//             row--;
+//         }
+//         if (rDone && dDone && lDone && !uDone && row - 1 > shrink)
+//         {
+//             cout << "Up " << row << ' ' << column <<' ' << i + 1 << endl;
+//             mat[row][column] = i + 1;
+//             row --;
+//         }
+//         else if (rDone && dDone && lDone && !uDone && row - 1 == shrink)
+//         {
+//             mat[row][column] = i + 1;
+//             column++;
+//             rDone = false;
+//             dDone = false;
+//             lDone = false;
+//             uDone = false;
+//             shrink++;
+//         }
+//     }
+//     printMultiVector(mat);
+// }
 
-int main()
-{
-    makeMatrix(6);
-}
+// int main()
+// {
+//     makeMatrix(1);
+// }
+// class Solution
+// {
+// public:
+//     vector<vector<int>> generateMatrix(int n)
+//     {
+
+//         vector<vector<int>> result(n, vector<int>(n));
+//         int cnt = 1;
+//         for (int layer = 0; layer < (n + 1) / 2; layer++)
+//         {
+//             // direction 1 - traverse from left to right
+//             for (int ptr = layer; ptr < n - layer; ptr++)
+//             {
+//                 result[layer][ptr] = cnt++;
+//             }
+//             // direction 2 - traverse from top to bottom
+//             for (int ptr = layer + 1; ptr < n - layer; ptr++)
+//             {
+//                 result[ptr][n - layer - 1] = cnt++;
+//             }
+//             // direction 3 - traverse from right to left
+//             for (int ptr = n - layer - 2; ptr >= layer; ptr--)
+//             {
+//                 result[n - layer - 1][ptr] = cnt++;
+//             }
+//             // direction 4 - traverse from bottom to top
+//             for (int ptr = n - layer - 2; ptr > layer; ptr--)
+//             {
+//                 result[ptr][layer] = cnt++;
+//             }
+//         }
+
+//         return result;
+//     }
+// };
