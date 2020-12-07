@@ -9441,3 +9441,112 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 //     cout << count << endl;
 // }
+
+// class Solution {
+// public:
+//     int uniquePaths(int m, int n) {
+//         int dp[m][n];
+//         for (int i = 0; i < m; i++)
+//         {
+//             for (int j = 0; j < n; j++)
+//             {
+//                 if (i == 0 || j == 0)
+//                     dp[i][j] = 1;
+//                 else
+//                     dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+//             }
+//         }
+//         return dp[m - 1][n - 1];
+//     }
+// };
+
+// int main()
+// {
+//     Solution s1;
+//     cout << s1.uniquePaths(3, 2) << endl;
+// }
+
+void makeMatrix(int n)
+{
+    vector<vector<int>> mat(n, vector<int>(n));
+    int row = 0;
+    int column = 0;
+    int shrink = 0;
+    bool rDone = false;
+    bool dDone = false;
+    bool lDone = false;
+    bool uDone = false;
+    for (int i = 0; i < n * n; i++)
+    {
+        if(!rDone && column < n - shrink)
+        {
+            cout << row << ' ' << column <<' ' << i + 1 << endl;
+            cout << "UP" << endl;
+            mat[row][column] = i + 1;
+            column++;
+        }
+        else if (!rDone && column == n - shrink)
+        {
+            
+            row ++;
+            column --;
+            // cout << "This: " << row << ' ' << column << endl;
+            rDone = true;
+        }
+        if (rDone && !dDone && row < n - shrink)
+        {
+            cout << row << ' ' << column <<' ' << i + 1 << endl;
+            // cout << row << ' ' << column << endl;
+            mat[row][column] = i + 1;
+            row ++;
+            // cout << "ROW " << row << endl;
+        }
+        else if (rDone && !dDone && row == n - shrink)
+        {
+            dDone = true;
+            row --;
+            column --;
+            // cout << "Second " << row << ' ' << column << endl;
+        }
+        if (rDone && dDone && !lDone && column > shrink)
+        {
+            cout << row << ' ' << column <<' ' << i + 1 << endl;
+            // cout << row << ' ' << column << endl;
+            mat[row][column] = i + 1;
+            column--;
+        }
+        else if (rDone && dDone && !lDone && column == shrink)
+        {
+            // mat[row][column] = i + 1;
+            lDone = true;
+            // row --;
+            // cout << row << endl;
+        }
+        if (rDone && dDone && lDone && !uDone && row > shrink)
+        {
+            cout << row << ' ' << column <<' ' << i + 1 << endl;
+            // cout << "YA WALA" << endl;
+            mat[row][column] = i + 1;
+            row --;
+        }
+        else if (rDone && dDone && lDone && !uDone && row == shrink)
+        {
+            // cout << "YEs" << endl;
+            row++;
+            // mat[row][column] = i + 1;
+            column ++;
+            rDone = false;
+            dDone = false;
+            lDone = false;
+            uDone = false;
+            shrink++;
+            cout << "row" << ' ' << row << " column " << column << endl; 
+        }
+    }
+    printMultiVector(mat);
+}
+
+int main()
+{
+    makeMatrix(5);
+}
