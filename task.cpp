@@ -9574,18 +9574,58 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 // };
 
-class Solution
-{
-public:
-    int numPairsDivisibleBy60(vector<int> &time)
-    {
-        int count[60] = {0};
-        int result = 0;
-        for (int i = 0; i < time.size(); i++)
-        {
-            result += count[(60 - time[i] % 60) % 60];
-            count[time[i] % 60]++;
-        }
-        return result;
-    }
-};
+// class Solution
+// {
+// public:
+//     int numPairsDivisibleBy60(vector<int> &time)
+//     {
+//         int count[60] = {0};
+//         int result = 0;
+//         for (int i = 0; i < time.size(); i++)
+//         {
+//             result += count[(60 - time[i] % 60) % 60];
+//             count[time[i] % 60]++;
+//         }
+//         return result;
+//     }
+// };
+
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+// class BSTIterator
+// {
+// public:
+//     vector<int> values;
+//     int idx = 0;
+//     void inorder(TreeNode *node, vector<int> &values)
+//     {
+//         if (node == NULL)
+//             return;
+//         inorder(node->left, values);
+//         values.push_back(node->val);
+//         inorder(node->right, values);
+//     }
+//     BSTIterator(TreeNode *root)
+//     {
+//         inorder(root, values);
+//     }
+
+//     int next()
+//     {
+//         return values[idx++];
+//     }
+
+//     bool hasNext()
+//     {
+//         return idx < values.size();
+//     }
+// };
