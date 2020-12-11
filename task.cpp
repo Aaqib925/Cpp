@@ -9665,3 +9665,41 @@ int main()
     cout << len << endl;
 }
 
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        if (nums.size() == 0)
+            return 0;
+        int count = 0;
+        int x = nums[0];
+        int len = 0;
+        for (int i = 0; i < nums.size(); i++)
+        {
+            if (nums[i] == x && count < 2)
+            {
+                count++;
+                len++;
+            }
+            else if (nums[i] == x)
+            {
+                count++;
+                // i--;
+                // cout << i << endl;
+                nums.erase(nums.begin() + i);
+                i--;
+                
+                // printVector(nums);
+            }
+
+            if (nums[i] != x)
+            {
+                count = 1;
+                len++;
+                x = nums[i];
+            }
+            // cout << len << endl;
+        }
+        // cout << len << endl;
+        return len;
+    }
+};
