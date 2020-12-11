@@ -9629,3 +9629,39 @@ void printMultiVector(vector<vector<int>> x)
 //         return idx < values.size();
 //     }
 // };
+
+int main()
+{
+    vector<int> nums = {1,1,1,1,1,2,2, 2, 2,3, 3};
+    vector<int> fac;
+    int count = 0;
+    int x = nums[0];
+    int len = 0;
+    for (int i = 0; i < nums.size(); i++)
+    {
+        if (nums[i] == x && count < 2)
+        {
+            count++;
+            len++;
+        }
+        else if (nums[i] == x)
+        {
+            count++;
+            // i--;
+            cout << i << endl;
+            nums.erase(nums.begin() + i);
+            printVector(nums);
+            i--;
+        }
+        
+        if (nums[i] != x)
+        {
+            count = 1;
+            len++;
+            x = nums[i];
+        }
+        // cout << len << endl;
+    }
+    cout << len << endl;
+}
+
