@@ -9630,76 +9630,96 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 // };
 
-int main()
-{
-    vector<int> nums = {1,1,1,1,1,2,2, 2, 2,3, 3};
-    vector<int> fac;
-    int count = 0;
-    int x = nums[0];
-    int len = 0;
-    for (int i = 0; i < nums.size(); i++)
-    {
-        if (nums[i] == x && count < 2)
-        {
-            count++;
-            len++;
-        }
-        else if (nums[i] == x)
-        {
-            count++;
-            // i--;
-            cout << i << endl;
-            nums.erase(nums.begin() + i);
-            printVector(nums);
-            i--;
-        }
-        
-        if (nums[i] != x)
-        {
-            count = 1;
-            len++;
-            x = nums[i];
-        }
-        // cout << len << endl;
-    }
-    cout << len << endl;
-}
+// int main()
+// {
+//     vector<int> nums = {1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3};
+//     vector<int> fac;
+//     int count = 0;
+//     int x = nums[0];
+//     int len = 0;
+//     for (int i = 0; i < nums.size(); i++)
+//     {
+//         if (nums[i] == x && count < 2)
+//         {
+//             count++;
+//             len++;
+//         }
+//         else if (nums[i] == x)
+//         {
+//             count++;
+//             // i--;
+//             cout << i << endl;
+//             nums.erase(nums.begin() + i);
+//             printVector(nums);
+//             i--;
+//         }
 
-class Solution {
-public:
-    int removeDuplicates(vector<int>& nums) {
-        if (nums.size() == 0)
-            return 0;
-        int count = 0;
-        int x = nums[0];
-        int len = 0;
-        for (int i = 0; i < nums.size(); i++)
-        {
-            if (nums[i] == x && count < 2)
-            {
-                count++;
-                len++;
-            }
-            else if (nums[i] == x)
-            {
-                count++;
-                // i--;
-                // cout << i << endl;
-                nums.erase(nums.begin() + i);
-                i--;
-                
-                // printVector(nums);
-            }
+//         if (nums[i] != x)
+//         {
+//             count = 1;
+//             len++;
+//             x = nums[i];
+//         }
+//         // cout << len << endl;
+//     }
+//     cout << len << endl;
+// }
 
-            if (nums[i] != x)
-            {
-                count = 1;
-                len++;
-                x = nums[i];
-            }
-            // cout << len << endl;
-        }
-        // cout << len << endl;
-        return len;
-    }
-};
+// class Solution
+// {
+// public:
+//     int removeDuplicates(vector<int> &nums)
+//     {
+//         if (nums.size() == 0)
+//             return 0;
+//         int count = 0;
+//         int x = nums[0];
+//         int len = 0;
+//         for (int i = 0; i < nums.size(); i++)
+//         {
+//             if (nums[i] == x && count < 2)
+//             {
+//                 count++;
+//                 len++;
+//             }
+//             else if (nums[i] == x)
+//             {
+//                 count++;
+//                 // i--;
+//                 // cout << i << endl;
+//                 nums.erase(nums.begin() + i);
+//                 i--;
+
+//                 // printVector(nums);
+//             }
+
+//             if (nums[i] != x)
+//             {
+//                 count = 1;
+//                 len++;
+//                 x = nums[i];
+//             }
+//             // cout << len << endl;
+//         }
+//         // cout << len << endl;
+//         return len;
+//     }
+// };
+
+// class Solution
+// {
+// public:
+//     int removeDuplicates(vector<int> &nums)
+//     {
+//         int c = 2;
+//         for (int i = 0; i < nums.size(); i++)
+//         {
+//             if (i > 1 && nums[i] != nums[c - 2])
+//             {
+//                 nums[c] = nums[i];
+//                 c++;
+//             }
+//         }
+//         return c;
+//     }
+// };
