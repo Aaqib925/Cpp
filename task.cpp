@@ -9723,3 +9723,61 @@ void printMultiVector(vector<vector<int>> x)
 //         return c;
 //     }
 // };
+
+// void function(vector<int> arr)
+// {
+
+//     int n = arr.size();
+//     vector<int> S(n, 0);
+//     vector<int> count(n, 0);
+//     for (int i = 0; i < n; i ++)
+//     {
+//         for (int j = i + 1; j < n; j++)
+//         {
+//             if (arr[i] < arr[j])
+//                 count[j]++;
+//             else
+//             {
+//                 count[i]++;
+//             }
+            
+//         }
+//     }
+//     for (int i = 0; i < n; i++)
+//     {
+//         S[count[i]] = arr[i];
+//     }
+
+//     printVector(S);
+// }
+
+// int main()
+// {
+//     function({60, 35, 81, 98});
+// }
+
+bool solve(string s) {
+    int count = 0;
+    stack<int> abc;
+    for (int i = 0; i < s.length(); i++)
+    {
+        if (s[i] == '(')
+        {    
+            count++;
+            abc.push('(');
+        }
+        else 
+            count--;
+        if (!abc.empty() && s[i] == ')' && abc.top() == '(')
+            abc.pop();
+    }
+    if (abc.empty() && !count)
+        return true;
+    return false;
+}
+
+int main()
+{
+    bool x = solve(")");
+    cout << x << endl;
+}
