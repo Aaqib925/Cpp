@@ -9756,28 +9756,28 @@ void printMultiVector(vector<vector<int>> x)
 //     function({60, 35, 81, 98});
 // }
 
-bool solve(string s) {
-    int count = 0;
-    stack<int> abc;
-    for (int i = 0; i < s.length(); i++)
-    {
-        if (s[i] == '(')
-        {    
-            count++;
-            abc.push('(');
-        }
-        else 
-            count--;
-        if (!abc.empty() && s[i] == ')' && abc.top() == '(')
-            abc.pop();
-    }
-    if (abc.empty() && !count)
-        return true;
-    return false;
-}
+// bool solve(string s) {
+//     int count = 0;
+//     stack<int> abc;
+//     for (int i = 0; i < s.length(); i++)
+//     {
+//         if (s[i] == '(')
+//         {    
+//             count++;
+//             abc.push('(');
+//         }
+//         else 
+//             count--;
+//         if (!abc.empty() && s[i] == ')' && abc.top() == '(')
+//             abc.pop();
+//     }
+//     if (abc.empty() && !count)
+//         return true;
+//     return false;
+// }
 
-int main()
-{
-    bool x = solve(")");
-    cout << x << endl;
-}
+// int main()
+// {
+//     bool x = solve(")");
+//     cout << x << endl;
+// }
