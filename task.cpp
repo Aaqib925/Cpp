@@ -9740,7 +9740,7 @@ void printMultiVector(vector<vector<int>> x)
 //             {
 //                 count[i]++;
 //             }
-            
+
 //         }
 //     }
 //     for (int i = 0; i < n; i++)
@@ -9762,11 +9762,11 @@ void printMultiVector(vector<vector<int>> x)
 //     for (int i = 0; i < s.length(); i++)
 //     {
 //         if (s[i] == '(')
-//         {    
+//         {
 //             count++;
 //             abc.push('(');
 //         }
-//         else 
+//         else
 //             count--;
 //         if (!abc.empty() && s[i] == ')' && abc.top() == '(')
 //             abc.pop();
@@ -9781,3 +9781,29 @@ void printMultiVector(vector<vector<int>> x)
 //     bool x = solve(")");
 //     cout << x << endl;
 // }
+
+void increasingTriplet(vector<int> nums)
+{
+    for (int i = 0; i < nums.size() - 2; i++)
+        if (nums[i] <= nums[i + 1] && nums[i + 1] <= nums[i + 2])
+            cout << nums[i] << endl;
+}
+class Solution {
+public:
+    bool increasingTriplet(vector<int>& nums) {
+        int one = INT_MAX, two = INT_MAX;
+        for (auto num : nums) {
+            if (num < one)
+                one = num;
+            else if (one < num && num < two)
+                two = num;
+            else if (two < num)
+                return true;
+        }
+        return false;
+    }
+};
+int main()
+{
+    increasingTriplet({5,1,5,5,2,5,4});
+}
