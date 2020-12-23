@@ -9806,7 +9806,3 @@ void printMultiVector(vector<vector<int>> x)
 //         return false;
 //     }
 // };
-// int main()
-// {
-//     increasingTriplet({5, 1, 5, 5, 2, 5, 4});
-// }
