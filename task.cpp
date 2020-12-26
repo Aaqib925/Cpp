@@ -9806,3 +9806,23 @@ void printMultiVector(vector<vector<int>> x)
 //         return false;
 //     }
 // };
+
+void removeDuplicated(vector<int> arr)
+{
+    int max = *max_element(arr.begin(), arr.end());
+    vector<int> counts(0, max + 1);
+    for (int i = 0; i < arr.size(); i++)
+    {
+        if (counts[arr[i]] < 2)
+            counts[arr[i]]++;
+    }
+    for (int i = 0; i < counts.size(); i++)
+    {
+        cout << counts[i] << ' ';
+    }
+}
+
+int main()
+{
+    removeDuplicated({55, 33, 33, 11, 11, 11, 6, 5, 2, 7, 10, 1, 1, 8, 9});
+}
