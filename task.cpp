@@ -9837,3 +9837,21 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 //     return false;
 // }
+
+// int main()
+// {
+//     vector<int> arr = {1, 2, 3, 4, 5};
+//     int d = 4;
+//     int n = arr.size();
+//     vector<int> result(n, 0);
+//     for (int i = 0; i < arr.size(); i++)
+//     {
+//         int index = 0;
+//         if (i - d < 0)
+//             index = n + i - d;
+//         else
+//             index = i - d;
+//         result[index] = arr[i];
+//     }
+//     printVector(result);
+// }
