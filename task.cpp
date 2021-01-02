@@ -9826,14 +9826,14 @@ void printMultiVector(vector<vector<int>> x)
 // {
 //     removeDuplicated({55, 33, 33, 11, 11, 11, 6, 5, 2, 7, 10, 1, 1, 8, 9});
 // }
-bool solve(vector<int>& nums, int k) {
-    unordered_set<int> comps;
-    for (int i = 0; i < nums.size(); i++)
-    {
-        if (comps.find(nums[i]) != comps.end())
-            return true;
-        else
-            comps.insert(k - nums[i]);
-    }
-    return false;
-}
+// bool solve(vector<int>& nums, int k) {
+//     unordered_set<int> comps;
+//     for (int i = 0; i < nums.size(); i++)
+//     {
+//         if (comps.find(nums[i]) != comps.end())
+//             return true;
+//         else
+//             comps.insert(k - nums[i]);
+//     }
+//     return false;
+// }
