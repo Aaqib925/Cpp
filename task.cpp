@@ -9855,3 +9855,214 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 //     printVector(result);
 // }
+// class Publication
+// {
+// protected:
+//     string titleOfPublication;
+//     float priceOfPublication;
+
+// public:
+//     Publication()
+//     {
+//         titleOfPublication = "";
+//         priceOfPublication = 0;
+//     }
+
+//     virtual void getData()
+//     {
+//         cout << "Enter title of publication: ";
+//         cin.ignore(1, '\n');
+//         getline(cin, titleOfPublication);
+//         cout << "Enter the price for this Publication: ";
+//         cin >> priceOfPublication;
+//     }
+
+//     virtual void showData()
+//     {
+//         cout << endl;
+//         cout << "The Title of Publication is: " << titleOfPublication << endl;
+//         cout << "The price for this publication is: " << fixed << setprecision(2) << priceOfPublication << endl;
+//     }
+// };
+
+// class Book : public Publication
+// {
+// protected:
+//     int pageCount;
+
+// public:
+//     Book()
+//     {
+//         pageCount = 0;
+//     }
+
+//     void getData()
+//     {
+//         Publication::getData();
+//         cout << "Enter Page count: ";
+//         cin >> pageCount;
+//     }
+
+//     void showData()
+//     {
+//         Publication::showData();
+//         cout << "The Page count is: " << pageCount << endl;
+//     }
+// };
+
+// class Cassette : public Publication
+// {
+// protected:
+//     float tapeInMints;
+
+// public:
+//     Cassette() : tapeInMints(0) {}
+
+//     void getData()
+//     {
+//         Publication::getData();
+//         cout << "Enter the Length of Tape in minutes: ";
+//         cin >> tapeInMints;
+//     }
+
+//     void showData()
+//     {
+//         Publication::showData();
+//         cout << "The Length of Cassette in minutes is: " << fixed << setprecision(2) << tapeInMints << endl;
+//     }
+// };
+// int main()
+// {
+//     Publication *userArray[50];
+//     char x;
+//     int count = 0;
+//     while (true)
+//     {
+//         cout << "Want to add Publisher Details y/n? ";
+//         cin >> x;
+//         if (x == 'n' || x == 'N')
+//         {
+//             break;
+//         }
+//         else
+//         {
+//             cout << "Do you want to Publish Book or Cassete b/c?";
+//             cin >> x;
+//             if (x == 'b' || x == 'B')
+//             {
+//                 userArray[count] = new Book;
+//                 userArray[count]->getData();
+//                 count += 1;
+//             }
+//             else if (x == 'c' || x == 'C')
+//             {
+//                 userArray[count] = new Cassette;
+//                 userArray[count]->getData();
+//                 count += 1;
+//             }
+//         }
+//     }
+//     for (int i = 0; i < count; i++)
+//     {
+//         userArray[i]->showData();
+//     }
+// }
+
+// struct Data
+// {
+//     int a;
+//     int b;
+// };
+
+// int main()
+// {
+//     int n, b;
+//     cout << "Enter value of n: ";
+//     cin >> n;
+//     cout << "Enter value of B: ";
+//     cin >> b;
+//     int sum = 0;
+//     for (int i = 0; i < n; i++)
+//     {
+//         Data d1;
+//         cout << "Enter value of a" << i + 1 << ": ";
+//         cin >> d1.a;
+//         d1.b = b;
+//         sum += d1.a * d1.b;
+//     }
+//     float result = pow(sum, 0.25);
+//     cout << "The final answer is: " << result << endl;
+// }
+
+struct Publication
+{
+    string title;
+    float price;
+};
+
+struct Book
+{
+    Publication BookData;
+    int pageCount;
+};
+
+struct Tape
+{
+    Publication TapeData;
+    float playingTime;
+};
+
+Book getDataForBook()
+{
+    cout << endl;
+    Book b;
+    cout << "Enter Title of Book: ";
+    cin >> b.BookData.title;
+    cout << "Enter Price of Book: ";
+    cin >> b.BookData.price;
+    cout << "Enter Page Count for " << b.BookData.title << ": ";
+    cin >> b.pageCount;
+    cout << endl;
+    return b;
+}
+
+Tape getDataForTape()
+{
+    cout << endl;
+    Tape t;
+    cout << "Enter Title of Tape: ";
+    cin >> t.TapeData.title;
+    cout << "Enter Price of Tape: ";
+    cin >> t.TapeData.price;
+    cout << "Enter Playing time(seconds) for " << t.TapeData.title << ": ";
+    cin >> t.playingTime;
+    cout << endl;
+    return t;
+}
+
+void putDataForBook(Book b)
+{
+    cout << endl;
+    cout << "The Title of Book is: " << b.BookData.title << endl;
+    cout << "The Price of Book is: " << fixed << setprecision(2) << b.BookData.price << endl;
+    cout << "The Page Count for book is: " << b.pageCount << endl;
+    cout << endl;
+}
+
+void putDataForTape(Tape t)
+{
+    cout << endl;
+    cout << "The Title of Tape is: " << t.TapeData.title << endl;
+    cout << "The Price of Tape is: " << t.TapeData.price << endl;
+    cout << "The Playing Time in seconds is: " << fixed << setprecision(2) << t.playingTime << endl;
+    cout << endl;
+}
+
+int main()
+{
+    Book userBook = getDataForBook();
+    putDataForBook(userBook);
+
+    Tape userTape = getDataForTape();
+    putDataForTape(userTape);
+}
