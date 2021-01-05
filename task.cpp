@@ -10067,34 +10067,34 @@ void printMultiVector(vector<vector<int>> x)
 //     putDataForTape(userTape);
 // }
 
-int main()
-{
-    int n;
-    cout << "Enter length of Arrays: ";
-    cin >> n;
-    string arr[n];
-    string arr2[n];
-    for (int i = 0; i < n; i++)
-    {
-        string name;
-        cout << "Enter Name for Array 1: ";
-        cin >> name;
-        arr[i] = name;
-        string name2;
-        cout << "Enter Name for Array 2: ";
-        cin >> name2;
-        arr2[i] = name2;
-        if (name == name2)
-            cout << name << " and " << name2 << " are same." << endl;
-    }
-    cout << endl;
-    cout << "First Array {";
-    for (int i = 0; i < n; i++)
-        cout << arr[i] << ", ";
-    cout << "}" << endl;
-    cout << endl;
-    cout << "Second Array {";
-    for (int i = 0; i < n; i++)
-        cout << arr2[i] << ", ";
-    cout << "}" << endl;
-}
+// int main()
+// {
+//     int n;
+//     cout << "Enter length of Arrays: ";
+//     cin >> n;
+//     string arr[n];
+//     string arr2[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         string name;
+//         cout << "Enter Name for Array 1: ";
+//         cin >> name;
+//         arr[i] = name;
+//         string name2;
+//         cout << "Enter Name for Array 2: ";
+//         cin >> name2;
+//         arr2[i] = name2;
+//         if (name == name2)
+//             cout << name << " and " << name2 << " are same." << endl;
+//     }
+//     cout << endl;
+//     cout << "First Array {";
+//     for (int i = 0; i < n; i++)
+//         cout << arr[i] << ", ";
+//     cout << "}" << endl;
+//     cout << endl;
+//     cout << "Second Array {";
+//     for (int i = 0; i < n; i++)
+//         cout << arr2[i] << ", ";
+//     cout << "}" << endl;
+// }
