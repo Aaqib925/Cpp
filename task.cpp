@@ -9994,75 +9994,107 @@ void printMultiVector(vector<vector<int>> x)
 //     cout << "The final answer is: " << result << endl;
 // }
 
-struct Publication
-{
-    string title;
-    float price;
-};
+// struct Publication
+// {
+//     string title;
+//     float price;
+// };
 
-struct Book
-{
-    Publication BookData;
-    int pageCount;
-};
+// struct Book
+// {
+//     Publication BookData;
+//     int pageCount;
+// };
 
-struct Tape
-{
-    Publication TapeData;
-    float playingTime;
-};
+// struct Tape
+// {
+//     Publication TapeData;
+//     float playingTime;
+// };
 
-Book getDataForBook()
-{
-    cout << endl;
-    Book b;
-    cout << "Enter Title of Book: ";
-    cin >> b.BookData.title;
-    cout << "Enter Price of Book: ";
-    cin >> b.BookData.price;
-    cout << "Enter Page Count for " << b.BookData.title << ": ";
-    cin >> b.pageCount;
-    cout << endl;
-    return b;
-}
+// Book getDataForBook()
+// {
+//     cout << endl;
+//     Book b;
+//     cout << "Enter Title of Book: ";
+//     cin >> b.BookData.title;
+//     cout << "Enter Price of Book: ";
+//     cin >> b.BookData.price;
+//     cout << "Enter Page Count for " << b.BookData.title << ": ";
+//     cin >> b.pageCount;
+//     cout << endl;
+//     return b;
+// }
 
-Tape getDataForTape()
-{
-    cout << endl;
-    Tape t;
-    cout << "Enter Title of Tape: ";
-    cin >> t.TapeData.title;
-    cout << "Enter Price of Tape: ";
-    cin >> t.TapeData.price;
-    cout << "Enter Playing time(seconds) for " << t.TapeData.title << ": ";
-    cin >> t.playingTime;
-    cout << endl;
-    return t;
-}
+// Tape getDataForTape()
+// {
+//     cout << endl;
+//     Tape t;
+//     cout << "Enter Title of Tape: ";
+//     cin >> t.TapeData.title;
+//     cout << "Enter Price of Tape: ";
+//     cin >> t.TapeData.price;
+//     cout << "Enter Playing time(seconds) for " << t.TapeData.title << ": ";
+//     cin >> t.playingTime;
+//     cout << endl;
+//     return t;
+// }
 
-void putDataForBook(Book b)
-{
-    cout << endl;
-    cout << "The Title of Book is: " << b.BookData.title << endl;
-    cout << "The Price of Book is: " << fixed << setprecision(2) << b.BookData.price << endl;
-    cout << "The Page Count for book is: " << b.pageCount << endl;
-    cout << endl;
-}
+// void putDataForBook(Book b)
+// {
+//     cout << endl;
+//     cout << "The Title of Book is: " << b.BookData.title << endl;
+//     cout << "The Price of Book is: " << fixed << setprecision(2) << b.BookData.price << endl;
+//     cout << "The Page Count for book is: " << b.pageCount << endl;
+//     cout << endl;
+// }
 
-void putDataForTape(Tape t)
-{
-    cout << endl;
-    cout << "The Title of Tape is: " << t.TapeData.title << endl;
-    cout << "The Price of Tape is: " << t.TapeData.price << endl;
-    cout << "The Playing Time in seconds is: " << fixed << setprecision(2) << t.playingTime << endl;
-    cout << endl;
-}
+// void putDataForTape(Tape t)
+// {
+//     cout << endl;
+//     cout << "The Title of Tape is: " << t.TapeData.title << endl;
+//     cout << "The Price of Tape is: " << t.TapeData.price << endl;
+//     cout << "The Playing Time in seconds is: " << fixed << setprecision(2) << t.playingTime << endl;
+//     cout << endl;
+// }
+
+// int main()
+// {
+//     Book userBook = getDataForBook();
+//     putDataForBook(userBook);
+
+//     Tape userTape = getDataForTape();
+//     putDataForTape(userTape);
+// }
 
 int main()
 {
-    Book userBook = getDataForBook();
-    putDataForBook(userBook);
-
-    Tape userTape = getDataForTape();
-    putDataForTape(userTape);
+    int n;
+    cout << "Enter length of Arrays: ";
+    cin >> n;
+    string arr[n];
+    string arr2[n];
+    for (int i = 0; i < n; i++)
+    {
+        string name;
+        cout << "Enter Name for Array 1: ";
+        cin >> name;
+        arr[i] = name;
+        string name2;
+        cout << "Enter Name for Array 2: ";
+        cin >> name2;
+        arr2[i] = name2;
+        if (name == name2)
+            cout << name << " and " << name2 << " are same." << endl;
+    }
+    cout << endl;
+    cout << "First Array {";
+    for (int i = 0; i < n; i++)
+        cout << arr[i] << ", ";
+    cout << "}" << endl;
+    cout << endl;
+    cout << "Second Array {";
+    for (int i = 0; i < n; i++)
+        cout << arr2[i] << ", ";
+    cout << "}" << endl;
 }
