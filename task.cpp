@@ -10118,3 +10118,23 @@ void printMultiVector(vector<vector<int>> x)
 // {
 //     solve({9, -8, -10, -2, 3}, 0);
 // }
+
+// void solve(string s)
+// {
+//     string ans = "";
+//     int index = -1;
+//     for (int i = 0; i < s.length(); i++)
+//     {
+//         if (s[i] != ans[index])
+//         {
+//             ans += s[i];
+//             index++;
+//         }
+//     }
+//     cout << ans << endl;
+// }
+
+// int main()
+// {
+//     solve("");
+// }
