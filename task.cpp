@@ -10099,22 +10099,22 @@ void printMultiVector(vector<vector<int>> x)
 //     cout << "}" << endl;
 // }
 
-void solve(vector<int> nums, int k)
-{
-    int index = -1;
-    int result = 0;
-    for (int i = 0; i < nums.size(); i++)
-    {
-        if (nums[i] + result <= k)
-        {
-            index = i;
-        }
-        result += nums[i];
-    }
-    cout << index << endl;
-}
+// void solve(vector<int> nums, int k)
+// {
+//     int index = -1;
+//     int result = 0;
+//     for (int i = 0; i < nums.size(); i++)
+//     {
+//         if (nums[i] + result <= k)
+//         {
+//             index = i;
+//         }
+//         result += nums[i];
+//     }
+//     cout << index << endl;
+// }
 
-int main()
-{
-    solve({9, -8, -10, -2, 3}, 0);
-}
+// int main()
+// {
+//     solve({9, -8, -10, -2, 3}, 0);
+// }
