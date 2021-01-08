@@ -10199,21 +10199,66 @@ void printMultiVector(vector<vector<int>> x)
 //     return false;
 // }
 
+// bool solve(vector<int> nums)
+// {
+//     unordered_set<int> set;
 
-bool solve(vector<int>& nums) {
-    unordered_set<int> set;
+//     for (int i : nums)
+//     {
+//         if ((i % 3 == 0 && set.count(i / 3) == 1) || set.count(3 * i) == 1)
+//             return true;
+//         set.insert(i);
+//     }
 
-    for (int i : nums) {
-        if ((i % 3 == 0 && set.count(i / 3) == 1) || set.count(3 * i) == 1) return true;
+//     return false;
+// }
 
-        set.insert(i);
+// int main()
+// {
+//     bool ans = solve({2, 3, 10, 7, 6});
+//     cout << ans << endl;
+// }
+// void solve(vector<int> nums)
+// {
+//     map<int, bool> mmap;
+//     for (int i = 0; i < nums.size(); i++)
+//         mmap[nums[i]] = true;
+//     vector<int> ans;
+//     for (int i = 0; i < nums.size(); i++)
+//     {
+//         bool x = mmap[nums[i]];
+//         if (x)
+//         {
+//             ans.push_back(nums[i]);
+//             mmap[nums[i]] = false;
+//         }
+//     }
+//     printVector(ans);
+// }
+
+// int main()
+// {
+//     solve({1, 3, 4, 1, 3, 5});
+// }
+vector<int> solve(vector<int>& nums) {
+    map<int, int> count;
+
+    for (int num : nums) {
+        auto it = count.find(num);
+        if (it != count.end()) {
+            it->second++;
+        } else {
+            count[num] = 1;
+        }
     }
 
-    return false;
-}
+    for (int i = nums.size() - 1; i > 0; i--) {
+        auto it = count.find(nums[i]);
+        if (it->second != 1) {
+            nums.erase(nums.begin() + i);
+            it->second = 1;
+        }
+    }
 
-int main()
-{
-    bool ans = solve({0, 0});
-    cout << ans << endl;
+    return nums;
 }
