@@ -10139,17 +10139,31 @@ void printMultiVector(vector<vector<int>> x)
 //     solve("");
 // }
 
-string INSERT(string T, int R, string P)
-{
-    string temp1 = T.substr(0, R);
-    string temp2 = T.substr(R, T.length() - 1);
-    temp1 += P + " ";
-    temp1 += temp2;
-    return temp1;
-}
+// string INSERT(string T, int R, string P)
+// {
+//     string temp1 = T.substr(0, R);
+//     string temp2 = T.substr(R, T.length() - 1);
+//     temp1 += P + " ";
+//     temp1 += temp2;
+//     return temp1;
+// }
 
-int main()
-{
-    string ans = INSERT("I am a student of second year science", 30, "Computer");
-    cout << ans << endl;
-}
+// int main()
+// {
+//     string ans = INSERT("Department of Science", 14, "Computer");
+//     cout << ans << endl;
+// }
+
+// string DELETE(string T, int R, int L)
+// {
+//     string temp1 = T.substr(0, R);
+//     string temp2 = T.substr(R + L + 1, T.length() - R - L + 1);
+//     temp1 += temp2;
+//     return temp1;
+// }
+
+// int main()
+// {
+//     string ans = DELETE("Master of Computer Science", 10, 8);
+//     cout << ans << endl;
+// }
