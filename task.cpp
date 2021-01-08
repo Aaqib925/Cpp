@@ -7,6 +7,7 @@
 #include <map>
 #include <sstream>
 #include <iterator>
+#include <unordered_set>
 #include <iomanip>
 #include <string.h>
 #include <list>
@@ -10197,6 +10198,19 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 //     return false;
 // }
+
+
+bool solve(vector<int>& nums) {
+    unordered_set<int> set;
+
+    for (int i : nums) {
+        if ((i % 3 == 0 && set.count(i / 3) == 1) || set.count(3 * i) == 1) return true;
+
+        set.insert(i);
+    }
+
+    return false;
+}
 
 int main()
 {
