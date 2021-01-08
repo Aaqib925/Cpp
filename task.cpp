@@ -10167,3 +10167,39 @@ void printMultiVector(vector<vector<int>> x)
 //     string ans = DELETE("Master of Computer Science", 10, 8);
 //     cout << ans << endl;
 // }
+
+// bool solve(vector<int> nums)
+// {
+//     // map<int, string> mymap;
+//     // for (int i = 0; i < nums.size(); i++)
+//     // {
+//     //     string key = to_string(nums[i]) + "ABC";
+//     //     mymap[nums[i] * 3] = key;
+//     // }
+//     // for (int i = 0; i < nums.size(); i++)
+//     // {
+//     //     string key = to_string(nums[i]) + "ABC";
+//     //     if (mymap.find(nums[i]) != mymap.end() && mymap[nums[i]] != key)
+//     //         return true;
+//     // }
+//     // return false;
+//     map<string, bool> mmap;
+//     for (int i = 0; i < nums.size(); i++)
+//     {
+//         string key = to_string(nums[i] * 3) + to_string(i);
+//         mmap[key] = true;
+//     }
+//     for (int i = 0; i > nums.size(); i++)
+//     {
+//         string key = to_string(nums[i]) + to_string(i);
+//         if (mmap[key])
+//             return true;
+//     }
+//     return false;
+// }
+
+int main()
+{
+    bool ans = solve({0, 0});
+    cout << ans << endl;
+}
