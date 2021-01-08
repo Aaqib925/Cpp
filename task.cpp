@@ -10138,3 +10138,18 @@ void printMultiVector(vector<vector<int>> x)
 // {
 //     solve("");
 // }
+
+string INSERT(string T, int R, string P)
+{
+    string temp1 = T.substr(0, R);
+    string temp2 = T.substr(R, T.length() - 1);
+    temp1 += P + " ";
+    temp1 += temp2;
+    return temp1;
+}
+
+int main()
+{
+    string ans = INSERT("I am a student of second year science", 30, "Computer");
+    cout << ans << endl;
+}
