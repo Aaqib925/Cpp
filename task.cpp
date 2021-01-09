@@ -10263,3 +10263,33 @@ void printMultiVector(vector<vector<int>> x)
 //     return nums;
 // }
 
+void INDEX(string T, string P)
+{
+    int index = 0;
+
+    int k = 0;
+    int MAX = T.length() - P.length() + 1;
+    while (k <= MAX)
+    {
+        bool found = true;
+        for (int L = 0; L < P.length(); L++)
+        {
+            if (P[L] != T[k + L])
+            {
+                found = false;
+            }
+        }
+        if (!found)
+            k++;
+        else
+        {
+            index = k;
+            break;
+        }
+    }
+    cout << index << endl;
+}
+int main()
+{
+    INDEX("Computer", "ut");
+}
