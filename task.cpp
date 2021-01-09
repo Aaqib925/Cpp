@@ -10266,7 +10266,6 @@ void printMultiVector(vector<vector<int>> x)
 int INDEX(string T, string P)
 {
     int index = 0;
-
     int k = 0;
     int MAX = T.length() - P.length() + 1;
     while (k <= MAX)
@@ -10291,5 +10290,6 @@ int INDEX(string T, string P)
 }
 int main()
 {
-    cout << INDEX("Aaqib", "ib");
+    cout << "The Index of Pattern in String: " << INDEX("Computer Science", "put") << endl;
+    cout << "The Index of Pattern in String: " << INDEX("INFORMATION", "FORN") << endl;
 }
