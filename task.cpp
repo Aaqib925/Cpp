@@ -10291,5 +10291,5 @@ int INDEX(string T, string P)
 }
 int main()
 {
-    INDEX("Computer", "ut");
+    cout << INDEX("Aaqib", "ib");
 }
