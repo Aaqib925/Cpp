@@ -10288,8 +10288,24 @@ int INDEX(string T, string P)
     }
     return index;
 }
-int main()
-{
-    cout << "The Index of Pattern in String: " << INDEX("Computer Science", "put") << endl;
-    cout << "The Index of Pattern in String: " << INDEX("INFORMATION", "FORN") << endl;
-}
+// int main()
+// {
+//     cout << "The Index of Pattern in String: " << INDEX("Computer Science", "put") << endl;
+//     cout << "The Index of Pattern in String: " << INDEX("INFORMATION", "FORN") << endl;
+// }
+
+// void REPLACE(string T, string P, string Q)
+// {
+//     int k = INDEX(T, P) + 1;
+//     while (k > 0)
+//     {
+//         T.replace(k - 1, P.length(), Q);
+//         k = INDEX(T, P);
+//     }
+//     cout << T << endl;
+// }
+
+// int main()
+// {
+//     REPLACE("We are Muslims", "We", "All");
+// }
