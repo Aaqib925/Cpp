@@ -10240,25 +10240,26 @@ void printMultiVector(vector<vector<int>> x)
 // {
 //     solve({1, 3, 4, 1, 3, 5});
 // }
-vector<int> solve(vector<int>& nums) {
-    map<int, int> count;
+// vector<int> solve(vector<int>& nums) {
+//     map<int, int> count;
 
-    for (int num : nums) {
-        auto it = count.find(num);
-        if (it != count.end()) {
-            it->second++;
-        } else {
-            count[num] = 1;
-        }
-    }
+//     for (int num : nums) {
+//         auto it = count.find(num);
+//         if (it != count.end()) {
+//             it->second++;
+//         } else {
+//             count[num] = 1;
+//         }
+//     }
 
-    for (int i = nums.size() - 1; i > 0; i--) {
-        auto it = count.find(nums[i]);
-        if (it->second != 1) {
-            nums.erase(nums.begin() + i);
-            it->second = 1;
-        }
-    }
+//     for (int i = nums.size() - 1; i > 0; i--) {
+//         auto it = count.find(nums[i]);
+//         if (it->second != 1) {
+//             nums.erase(nums.begin() + i);
+//             it->second = 1;
+//         }
+//     }
 
-    return nums;
-}
+//     return nums;
+// }
+
