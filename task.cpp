@@ -10263,7 +10263,7 @@ void printMultiVector(vector<vector<int>> x)
 //     return nums;
 // }
 
-void INDEX(string T, string P)
+int INDEX(string T, string P)
 {
     int index = 0;
 
@@ -10287,7 +10287,7 @@ void INDEX(string T, string P)
             break;
         }
     }
-    cout << index << endl;
+    return index;
 }
 int main()
 {
