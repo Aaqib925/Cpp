@@ -10310,21 +10310,21 @@ int INDEX(string T, string P)
 //     REPLACE("We are Muslims", "We", "All");
 // }
 
-void linearSearch(int DATA[], int N, int ITEM)
-{
-    int k = 0, LOC = -1;
-    while (k < N)
-    {
-        if (ITEM == DATA[k])
-        {
-            LOC = k;
-            break;
-        }
-        k++;
-    }
-    if (LOC == -1)
-        cout << "ITEM " << ITEM << " is not in array." << endl;
-    else
-        cout << LOC << " is the location of ITEM" << ITEM << endl;
+// void linearSearch(int DATA[], int N, int ITEM)
+// {
+//     int k = 0, LOC = -1;
+//     while (k < N)
+//     {
+//         if (ITEM == DATA[k])
+//         {
+//             LOC = k;
+//             break;
+//         }
+//         k++;
+//     }
+//     if (LOC == -1)
+//         cout << "ITEM " << ITEM << " is not in array." << endl;
+//     else
+//         cout << LOC << " is the location of ITEM" << ITEM << endl;
     
-}
+// }
