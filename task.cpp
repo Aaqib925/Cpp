@@ -10346,3 +10346,22 @@ void printMultiVector(vector<vector<int>> x)
 //         return ans;
 //     }
 // };
+
+int solve(vector<int>& nums) {
+    map<int, int> count;
+    for (int num : nums) {
+        auto it = count.find(num);
+        if (it != count.end()) {
+            it->second++;
+        } else {
+            count[num] = 1;
+        }
+    }
+    int counts = 0;
+    for (auto &element: count)
+    {
+        int x = element.second;
+        counts += ((x * (x - 1))/2);
+    }
+    return counts;
+}
