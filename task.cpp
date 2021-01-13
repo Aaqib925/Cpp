@@ -10347,21 +10347,30 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 // };
 
+// int solve(vector<int>& nums) {
+//     map<int, int> count;
+//     for (int num : nums) {
+//         auto it = count.find(num);
+//         if (it != count.end()) {
+//             it->second++;
+//         } else {
+//             count[num] = 1;
+//         }
+//     }
+//     int counts = 0;
+//     for (auto &element: count)
+//     {
+//         int x = element.second;
+//         counts += ((x * (x - 1))/2);
+//     }
+//     return counts;
+// }
+
 int solve(vector<int>& nums) {
-    map<int, int> count;
-    for (int num : nums) {
-        auto it = count.find(num);
-        if (it != count.end()) {
-            it->second++;
-        } else {
-            count[num] = 1;
-        }
+    unordered_map<int, int> m;
+    int ans = 0;
+    for (int i = 0; i < nums.size(); i++) {
+        ans += m[nums[i]]++;
     }
-    int counts = 0;
-    for (auto &element: count)
-    {
-        int x = element.second;
-        counts += ((x * (x - 1))/2);
-    }
-    return counts;
+    return ans;
 }
