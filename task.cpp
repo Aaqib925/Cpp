@@ -10326,7 +10326,7 @@ void printMultiVector(vector<vector<int>> x)
 //         cout << "ITEM " << ITEM << " is not in array." << endl;
 //     else
 //         cout << LOC << " is the location of ITEM" << ITEM << endl;
-    
+
 // }
 
 // class Solution {
@@ -10382,19 +10382,55 @@ void printMultiVector(vector<vector<int>> x)
 //     return ans;
 // }
 
-
-int solve(int n) {
+int solve(int n)
+{
     int count = 1;
-    while (n != 1) 
+    while (n != 1)
     {
         count++;
-        if (n % 2 != 0) 
-            n = 3*n + 1; 
+        if (n % 2 != 0)
+            n = 3 * n + 1;
 
         else
-            n = n/2; 
-    } 
-  
+            n = n / 2;
+    }
+
     return count;
 }
-
+int solve(int n)
+{
+    int count = 0;
+    while (n)
+    {
+        int x = n % 2;
+        n /= 2;
+        if (x == 1)
+            count++;
+    }
+    return count;
+} /**
+ * class LLNode {
+ *     public:
+ *         int val;
+ *         LLNode *next;
+ * };
+ */
+int solve(LLNode *node)
+{
+    int count = 0;
+    while (node != NULL)
+    {
+        count++;
+        node = node->next;
+    }
+    return count;
+}
+int solve(int n) {
+    int ans = 1;
+    while (n)
+    {
+        ans *= n;
+        n -= 1;
+    }
+    return ans;
+}
