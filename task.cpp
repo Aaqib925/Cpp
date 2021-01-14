@@ -10381,3 +10381,20 @@ void printMultiVector(vector<vector<int>> x)
 //     for (int i = 0; i < nums.size(); i++) ans += mp[nums[i]]++;
 //     return ans;
 // }
+
+
+int solve(int n) {
+    int count = 1;
+    while (n != 1) 
+    {
+        count++;
+        if (n % 2 != 0) 
+            n = 3*n + 1; 
+
+        else
+            n = n/2; 
+    } 
+  
+    return count;
+}
+
