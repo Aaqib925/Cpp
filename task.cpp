@@ -10434,3 +10434,43 @@ void printMultiVector(vector<vector<int>> x)
 //     }
 //     return ans;
 // }
+
+// int main()
+// {
+//     int x = 3772;
+//     int z = x;
+//     int y = to_string(x).length();
+//     int ans = 0;
+//     while (x)
+//     {
+//         ans += pow(x % 10, y);
+//         x /= 10;
+//     }
+
+//     cout << z << endl;
+//     cout << ans << endl;
+// }
+
+// int main()
+// {
+//     vector<int> nums = {0, 1, 1, 1, 2, 3};
+//     int onesCount = 0;
+//     int index = 0;
+//     for (int i = 0; i < nums.size(); i++)
+//     {
+//         if (onesCount == 0 && nums[i] == 1)
+//             index = i;
+//         if (nums[i] == 1)
+//             onesCount++;
+//     }
+//     int check = 0;
+//     while (nums[index] == 1)
+//     {
+//         check++;
+//         index++;
+//     }
+//     if (check == onesCount)
+//         cout << "Y";
+//     else
+//         cout << "N";
+// }
