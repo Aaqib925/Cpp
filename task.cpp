@@ -10504,37 +10504,80 @@ void printMultiVector(vector<vector<int>> x)
 //     bubbleSort(arr, 5);
 // }
 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// void multiplyMatrix(vector<vector<int>> A, vector<vector<int>> B)
+// {
+// 	vector<vector<int>> C(A.size(), vector<int>(B[0].size(), 0));
+// 	for (int i = 0; i < C.size(); i++)
+// 	{
+// 		for (int j = 0; j < C[0].size(); j++)
+// 		{
+// 			int k = 0;
+// 			while (k < B.size())
+// 			{
+// 				C[i][j] += A[i][k] * B[k][j];
+// 				k++;
+// 			}
+// 		}
+// 	}
+// 	for (int i = 0; i < C.size(); i++)
+// 	{
+// 		for (int j = 0; j < C[0].size(); j++)
+// 		{
+// 			cout << C[i][j] << ' ';
+// 		}
+// 		cout << endl;
+// 	}
+// }
+
+
+// int main()
+// {
+// 	multiplyMatrix({ {1, 2, 3}, {4, 5, 6} }, { {7, 8}, {9, 10}, {11, 12} });
+// }
+
 #include <iostream>
-#include <vector>
 using namespace std;
 
-void multiplyMatrix(vector<vector<int>> A, vector<vector<int>> B)
+void printStack(int arr[], int N)
 {
-	vector<vector<int>> C(A.size(), vector<int>(B[0].size(), 0));
-	for (int i = 0; i < C.size(); i++)
-	{
-		for (int j = 0; j < C[0].size(); j++)
-		{
-			int k = 0;
-			while (k < B.size())
-			{
-				C[i][j] += A[i][k] * B[k][j];
-				k++;
-			}
-		}
-	}
-	for (int i = 0; i < C.size(); i++)
-	{
-		for (int j = 0; j < C[0].size(); j++)
-		{
-			cout << C[i][j] << ' ';
-		}
-		cout << endl;
-	}
+    for (int i = 0; i < N; i++)
+        cout << arr[i] << ' ';
+    cout << endl;
 }
 
+void pushIntoStack(int STACK[], int TOP, int MAXSTR, int ITEM)
+{
+    cout << "Stack before push: ";
+    printStack(STACK, TOP);
+    if (TOP == MAXSTR - 1)
+    {
+        cout << "Overflow" << endl;
+    }
+    STACK[TOP] = ITEM;
+    cout << "Stack After push: ";
+    printStack(STACK, ++TOP);
+}
+
+void popFromStack(int STACK[], int TOP)
+{
+    cout << "Stack before push: ";
+    printStack(STACK, TOP);
+    if (TOP == 0)
+    {
+        cout << "Underflow" << endl;
+    }
+    TOP -= 1;
+    cout << "Stack After pop: ";
+    printStack(STACK, TOP);
+}
 
 int main()
 {
-	multiplyMatrix({ {1, 2, 3}, {4, 5, 6} }, { {7, 8}, {9, 10}, {11, 12} });
+    int arr[10] = {1, 2, 4, 3, 6};
+    pushIntoStack(arr, 5, 10, 100);
+    popFromStack(arr, 6);
 }
