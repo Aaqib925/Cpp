@@ -10475,30 +10475,60 @@ void printMultiVector(vector<vector<int>> x)
 //         cout << "N";
 // }
 
-void bubbleSort(int DATA[], int N)
-{
-    int k = 0;
-    while (k < N)
-    {
-        int PTR = 0;
-        while (PTR < N - 1 - k)
-        {
-            if (DATA[PTR] > DATA[PTR + 1])
-            {
-                swap(DATA[PTR], DATA[PTR + 1]);
-            }
-            PTR++;
-        }
-        k++;
-    }
-    for (int i = 0; i < N; i++)
-    {
-        cout << DATA[i] << ' ';
-    }
-}
+// void bubbleSort(int DATA[], int N)
+// {
+//     int k = 0;
+//     while (k < N)
+//     {
+//         int PTR = 0;
+//         while (PTR < N - 1 - k)
+//         {
+//             if (DATA[PTR] > DATA[PTR + 1])
+//             {
+//                 swap(DATA[PTR], DATA[PTR + 1]);
+//             }
+//             PTR++;
+//         }
+//         k++;
+//     }
+//     for (int i = 0; i < N; i++)
+//     {
+//         cout << DATA[i] << ' ';
+//     }
+//     cout << endl;
+// }
 
-int main()
+// int main()
+// {
+//     int arr[] = {1, 6, 2, 5, 3};
+//     bubbleSort(arr, 5);
+// }
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+void multiplyMatrix(vector<vector<int>> A, vector<vector<int>> B)
 {
-    int arr[] = {1, 6, 2, 5, 3};
-    bubbleSort(arr, 5);
+	vector<vector<int>> C(A.size(), vector<int>(B[0].size(), 0));
+	for (int i = 0; i < C.size(); i++)
+	{
+		for (int j = 0; j < C[0].size(); j++)
+		{
+			int k = 0;
+			while (k < B.size())
+			{
+				C[i][j] += A[i][k] * B[k][j];
+				k++;
+			}
+		}
+	}
+	for (int i = 0; i < C.size(); i++)
+	{
+		for (int j = 0; j < C[0].size(); j++)
+		{
+			cout << C[i][j] << ' ';
+		}
+		cout << endl;
+	}
 }
