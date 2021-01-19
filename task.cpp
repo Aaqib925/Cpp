@@ -10474,3 +10474,36 @@ void printMultiVector(vector<vector<int>> x)
 //     else
 //         cout << "N";
 // }
+
+include <iostream>
+using namespace std;
+
+void bubbleSort(int DATA[], int N)
+{
+	int k = 0;
+	while (k < N)
+	{
+		int PTR = 0;
+		while (PTR < N - 1 - k)
+		{
+			if (DATA[PTR] > DATA[PTR + 1])
+			{
+				swap(DATA[PTR], DATA[PTR + 1]);
+
+			}
+			PTR++;
+
+		}
+		k++;
+	}
+	for (int i = 0; i < N; i++)
+	{
+		cout << DATA[i] << ' ';
+	}
+}
+
+int main()
+{
+	int arr[] = { 1, 6, 2, 5, 3 };
+	bubbleSort(arr, 5);
+}
