@@ -10539,45 +10539,45 @@ void printMultiVector(vector<vector<int>> x)
 // 	multiplyMatrix({ {1, 2, 3}, {4, 5, 6} }, { {7, 8}, {9, 10}, {11, 12} });
 // }
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-void printStack(int arr[], int N)
-{
-    for (int i = 0; i < N; i++)
-        cout << arr[i] << ' ';
-    cout << endl;
-}
+// void printStack(int arr[], int N)
+// {
+//     for (int i = 0; i < N; i++)
+//         cout << arr[i] << ' ';
+//     cout << endl;
+// }
 
-void pushIntoStack(int STACK[], int TOP, int MAXSTR, int ITEM)
-{
-    cout << "Stack before push: ";
-    printStack(STACK, TOP);
-    if (TOP == MAXSTR - 1)
-    {
-        cout << "Overflow" << endl;
-    }
-    STACK[TOP] = ITEM;
-    cout << "Stack After push: ";
-    printStack(STACK, ++TOP);
-}
+// void pushIntoStack(int STACK[], int TOP, int MAXSTR, int ITEM)
+// {
+//     cout << "Stack before push: ";
+//     printStack(STACK, TOP);
+//     if (TOP == MAXSTR - 1)
+//     {
+//         cout << "Overflow" << endl;
+//     }
+//     STACK[TOP] = ITEM;
+//     cout << "Stack After push: ";
+//     printStack(STACK, ++TOP);
+// }
 
-void popFromStack(int STACK[], int TOP)
-{
-    cout << "Stack before push: ";
-    printStack(STACK, TOP);
-    if (TOP == 0)
-    {
-        cout << "Underflow" << endl;
-    }
-    TOP -= 1;
-    cout << "Stack After pop: ";
-    printStack(STACK, TOP);
-}
+// void popFromStack(int STACK[], int TOP)
+// {
+//     cout << "Stack before push: ";
+//     printStack(STACK, TOP);
+//     if (TOP == 0)
+//     {
+//         cout << "Underflow" << endl;
+//     }
+//     TOP -= 1;
+//     cout << "Stack After pop: ";
+//     printStack(STACK, TOP);
+// }
 
-int main()
-{
-    int arr[10] = {1, 2, 4, 3, 6};
-    pushIntoStack(arr, 5, 10, 100);
-    popFromStack(arr, 6);
-}
+// int main()
+// {
+//     int arr[10] = {1, 2, 4, 3, 6};
+//     pushIntoStack(arr, 5, 10, 100);
+//     popFromStack(arr, 6);
+// }
