@@ -10533,7 +10533,6 @@ void printMultiVector(vector<vector<int>> x)
 // 	}
 // }
 
-
 // int main()
 // {
 // 	multiplyMatrix({ {1, 2, 3}, {4, 5, 6} }, { {7, 8}, {9, 10}, {11, 12} });
@@ -10596,3 +10595,35 @@ void printMultiVector(vector<vector<int>> x)
 //         printf("the num is positive");
 //     }
 // }
+
+// void bubbleSort(int data[], int n)
+// {
+//     int k = 0;
+//     while (k < n)
+//     {
+//         int ptr = 0;
+//         while (ptr < n - 1 - k)
+//         {
+//             if (data[ptr] > data[ptr + 1])
+//             {
+//                 int temp = data[ptr];
+//                 data[ptr] = data[ptr + 1];
+//                 data[ptr + 1] = temp;
+//             }
+//             ptr++;
+//         }
+//         k++;
+//     }
+
+//     for (int i = 0; i < n; i++)
+//     {
+//         cout << data[i] << ' ';
+//     }
+// }
+
+// int main()
+// {
+//     int list[] = {6, 2, 1, 55, 100};
+//     bubbleSort(list, 5);
+// }
+
