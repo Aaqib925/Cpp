@@ -10627,35 +10627,35 @@ void printMultiVector(vector<vector<int>> x)
 //     bubbleSort(list, 5);
 // }
 
-const int row = 3, column = 3;
-void matrixMultiplication(int mat1[row][column], int mat2[row][column])
-{
-    int arr[row][column] = {0};
-    for (int i = 0; i < 3; i++)
-    {
-        for (int j = 0; j < 3; j++)
-        {
-            int k = 0;
-            while (k < 3)
-            {
-                arr[i][j] += mat1[i][k] * mat2[k][j];
-                k++;
-            }
-        }
-    }
-    for (int i = 0; i < 3; i++)
-    {
-        for (int j = 0; j < 3; j++)
-        {
-            cout << arr[i][j] << ' ';
-        }
-        cout << endl;
-    }
-}
+// const int row = 3, column = 3;
+// void matrixMultiplication(int mat1[row][column], int mat2[row][column])
+// {
+//     int arr[row][column] = {0};
+//     for (int i = 0; i < 3; i++)
+//     {
+//         for (int j = 0; j < 3; j++)
+//         {
+//             int k = 0;
+//             while (k < 3)
+//             {
+//                 arr[i][j] += mat1[i][k] * mat2[k][j];
+//                 k++;
+//             }
+//         }
+//     }
+//     for (int i = 0; i < 3; i++)
+//     {
+//         for (int j = 0; j < 3; j++)
+//         {
+//             cout << arr[i][j] << ' ';
+//         }
+//         cout << endl;
+//     }
+// }
 
-int main()
-{
-    int list1[row][column] = {{1, 2, 3}, {5, 4, 6}, {7, 8, 9}};
-    int list2[row][column] = {{4, 2, 1}, {7, 3, 1}, {9, 9, 9}};
-    matrixMultiplication(list1, list2);
-}
+// int main()
+// {
+//     int list1[row][column] = {{1, 2, 3}, {5, 4, 6}, {7, 8, 9}};
+//     int list2[row][column] = {{4, 2, 1}, {7, 3, 1}, {9, 9, 9}};
+//     matrixMultiplication(list1, list2);
+// }
