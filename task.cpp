@@ -10581,3 +10581,18 @@ void printMultiVector(vector<vector<int>> x)
 //     pushIntoStack(arr, 5, 10, 100);
 //     popFromStack(arr, 6);
 // }
+
+// int main()
+// {
+//     int x;
+//     printf("enter the value\n");
+//     scanf("%d",&x);
+//     if(x<0)
+//     {
+//         printf("the number is negative");
+//     }
+//     if(x>0)
+//     {
+//         printf("the num is positive");
+//     }
+// }
