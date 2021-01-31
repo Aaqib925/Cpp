@@ -10660,7 +10660,6 @@ void printMultiVector(vector<vector<int>> x)
 //     matrixMultiplication(list1, list2);
 // }
 
-
 // #include <iostream>
 // using namespace std;
 
@@ -10703,3 +10702,141 @@ void printMultiVector(vector<vector<int>> x)
 //     popStack(arr, 5);
 //     pushStack(arr, 4, 9, 100);
 // }
+
+struct DATA
+{
+    string model;
+    int price;
+    string company;
+    string color;
+};
+
+struct Node
+{
+    DATA data;
+    struct Node *next;
+};
+
+void append(Node **head_ref, DATA data)
+{
+    struct Node *newNode = new Node;
+    Node *last = *head_ref;
+    newNode->data = data;
+
+    newNode->next = NULL;
+
+    if (*head_ref == NULL)
+    {
+        *head_ref = newNode;
+        return;
+    }
+
+    while (last->next != NULL)
+        last = last->next;
+
+    last->next = newNode;
+    return;
+}
+void insertAfter(Node *prev_node, DATA data)
+{
+    /*1. check if the given prev_node is NULL */
+    if (prev_node == NULL)
+    {
+        cout << "the given previous node cannot be NULL";
+        return;
+    }
+
+    // Node* new_node = new Node();
+    struct Node *newNode = new Node;
+    newNode->data = data;
+
+    newNode->next = prev_node->next;
+
+    prev_node->next = newNode;
+}
+void insertAtPosition(struct Node **head_ref, DATA data, int position)
+{
+    if (*head_ref == NULL)
+        return;
+
+    struct Node *temp = *head_ref;
+    for (int i = 0; i < position - 2; i++)
+    {
+        cout << endl
+             << "HELLO ";
+        cout << temp->data.model << endl;
+        temp = temp->next;
+    }
+    insertAfter(temp, data);
+}
+void deleteNode(struct Node **head_ref, int position)
+{
+    // If linked list is empty
+    if (*head_ref == NULL)
+        return;
+
+    struct Node *temp = *head_ref;
+
+    if (position == 0)
+    {
+        *head_ref = temp->next;
+        free(temp);
+        return;
+    }
+
+    for (int i = 0; temp != NULL && i < position - 1; i++)
+        temp = temp->next;
+
+    if (temp == NULL || temp->next == NULL)
+        return;
+
+    struct Node *next = temp->next->next;
+
+    free(temp->next); // Free memory
+
+    temp->next = next;
+}
+void display(struct Node **head_ref)
+{
+    if ((*head_ref) == NULL)
+    {
+        cout << "List is empty!" << endl;
+        return;
+    }
+    struct Node *ptr;
+    ptr = (*head_ref);
+    ;
+    while (ptr != NULL)
+    {
+        cout << endl;
+        cout << "Car Model: " << ptr->data.model << endl
+             << "Car Price: " << ptr->data.price << endl
+             << "Car company: " << ptr->data.company << endl
+             << "Car Color: " << ptr->data.color << endl;
+        ptr = ptr->next;
+        cout << endl;
+    }
+}
+
+int main()
+{
+
+    struct Node *head = NULL;
+    display(&head);
+    for (int i = 1; i < 7; i++)
+    {
+        DATA data;
+        data.model = "Model No. " + to_string(i);
+        data.price = i + 1000;
+        data.color = "Black";
+        data.company = "Rolls Royce";
+        append(&head, data);
+    }
+    DATA data;
+    data.model = "INSERTED MODEL";
+    data.price = 999;
+    data.color = "INSERTED COLOR";
+    data.company = "INSERTED COMPANY";
+    insertAtPosition(&head, data, 4);
+    display(&head);
+}
