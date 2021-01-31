@@ -10805,16 +10805,19 @@ void display(struct Node **head_ref)
     }
     struct Node *ptr;
     ptr = (*head_ref);
-    ;
+    int i = 1;
     while (ptr != NULL)
     {
         cout << endl;
-        cout << "Car Model: " << ptr->data.model << endl
-             << "Car Price: " << ptr->data.price << endl
-             << "Car company: " << ptr->data.company << endl
+        cout << "(POSITION " << i << ") ";
+        cout << "Car Model: " << ptr->data.model << " || "
+             << "Car Price: " << ptr->data.price << " || "
+             << "Car company: " << ptr->data.company << " || "
              << "Car Color: " << ptr->data.color << endl;
+        ;
         ptr = ptr->next;
         cout << endl;
+        i++;
     }
 }
 
@@ -10838,5 +10841,8 @@ int main()
     data.color = "INSERTED COLOR";
     data.company = "INSERTED COMPANY";
     insertAtPosition(&head, data, 4);
+    display(&head);
+    cout << "DELETING NODE AT ZERO POSITION" << endl;
+    deleteNode(&head, 0);
     display(&head);
 }
