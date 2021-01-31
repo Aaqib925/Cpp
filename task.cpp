@@ -11076,3 +11076,53 @@ void printMultiVector(vector<vector<int>> x)
 //     int Queue2[] = {6, 1, 2, 8, 4, 5};
 //     insertInQueue(Queue2, 6, 3, 2, 66);
 // }
+
+void printArray(int arr[], int N)
+{
+    for (int i = 0; i < N; i++)
+        cout << arr[i] << ' ';
+    cout << endl;
+}
+
+void MERGE(int A[], int B[], int low, int mid, int high)
+{
+    int x, y, i;
+    for (x = low, y = mid + 1, i = low; x <= mid && y <= high; i++)
+    {
+        if (A[x] <= A[y])
+            B[i] = A[x++];
+        else
+            B[i] = A[y++];
+    }
+    while (x <= mid)
+        B[i++] = A[x++];
+    while (y <= high)
+        B[i++] = A[y++];
+    for (i = low; i <= high; i++)
+        A[i] = B[i];
+}
+
+void sortArray(int A[], int B[], int low, int high)
+{
+    int MID;
+    if (low < high)
+    {
+        MID = (low + high) / 2;
+        sortArray(A, B, low, MID);
+        sortArray(A, B, MID + 1, high);
+        MERGE(A, B, low, MID, high);
+    }
+    else
+        return;
+}
+
+int main()
+{
+    int A[10] = {66, 8, 1, 345, 81, 0, 44, 51, 2, 100};
+    int B[10];
+    cout << "List Before Sorting: ";
+    printArray(A, 10);
+    sortArray(A, B, 0, 9);
+    cout << "List After Sorting: ";
+    printArray(B, 10);
+}
