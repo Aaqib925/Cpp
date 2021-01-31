@@ -10822,7 +10822,7 @@ void printMultiVector(vector<vector<int>> x)
 // {
 
 //     struct Node *head = NULL;
-//     display(&head);
+//     cout << "Creating 6 nodes" << endl;
 //     for (int i = 1; i < 7; i++)
 //     {
 //         DATA data;
@@ -10832,13 +10832,17 @@ void printMultiVector(vector<vector<int>> x)
 //         data.company = "Rolls Royce";
 //         append(&head, data);
 //     }
+//     display(&head);
+//     cout << "===========================================================================================================" << endl;
 //     DATA data;
 //     data.model = "INSERTED MODEL";
 //     data.price = 999;
 //     data.color = "INSERTED COLOR";
 //     data.company = "INSERTED COMPANY";
 //     insertAtPosition(&head, data, 4);
+//     cout << "INSERTING AT 4th POSITION" << endl;
 //     display(&head);
+//     cout << "===========================================================================================================" << endl;
 //     cout << "DELETING NODE AT ZERO POSITION" << endl;
 //     deleteNode(&head, 0);
 //     display(&head);
@@ -11127,30 +11131,29 @@ void printMultiVector(vector<vector<int>> x)
 //     printArray(B, 10);
 // }
 
-void searchElement(int arr[], int low, int high, int N, int ITEM)
-{
-    bool found = false;
-    while (low <= high)
-    {
-        int mid = (low + high) / 2;
-        if (arr[mid] == ITEM)
-        {
-            cout << "ITEM is at position: " << mid + 1 << endl;
-            found = true;
-            return;
-        }
-        if (arr[mid] > ITEM)
-            high = mid - 1;
-        else
-            low = mid + 1;
-    }
-    if (!found)
-        cout << "ITEM not found in the list" << endl;
-}
-
-int main()
-{
-    int arr[] = {1, 2, 4, 6, 7};
-    searchElement(arr, 0, 4, 5, 6);
-    searchElement(arr, 0, 4, 5, 10);
-}
+// void searchElement(int arr[], int low, int high, int N, int ITEM)
+// {
+//     bool found = false;
+//     while (low <= high)
+//     {
+//         int mid = (low + high) / 2;
+//         if (arr[mid] == ITEM)
+//         {
+//             cout << "ITEM is at position: " << mid + 1 << endl;
+//             found = true;
+//             return;
+//         }
+//         if (arr[mid] > ITEM)
+//             high = mid - 1;
+//         else
+//             low = mid + 1;
+//     }
+//     if (!found)
+//         cout << "ITEM not found in the list" << endl;
+// }
+// int main()
+// {
+//     int arr[] = {1, 2, 4, 6, 7};
+//     searchElement(arr, 0, 4, 5, 6);
+//     searchElement(arr, 0, 4, 5, 10);
+// }
