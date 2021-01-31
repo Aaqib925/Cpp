@@ -11126,3 +11126,31 @@ void printMultiVector(vector<vector<int>> x)
 //     cout << "List After Sorting: ";
 //     printArray(B, 10);
 // }
+
+void searchElement(int arr[], int low, int high, int N, int ITEM)
+{
+    bool found = false;
+    while (low <= high)
+    {
+        int mid = (low + high) / 2;
+        if (arr[mid] == ITEM)
+        {
+            cout << "ITEM is at position: " << mid + 1 << endl;
+            found = true;
+            return;
+        }
+        if (arr[mid] > ITEM)
+            high = mid - 1;
+        else
+            low = mid + 1;
+    }
+    if (!found)
+        cout << "ITEM not found in the list" << endl;
+}
+
+int main()
+{
+    int arr[] = {1, 2, 4, 6, 7};
+    searchElement(arr, 0, 4, 5, 6);
+    searchElement(arr, 0, 4, 5, 10);
+}
