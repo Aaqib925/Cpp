@@ -10984,3 +10984,73 @@ void printMultiVector(vector<vector<int>> x)
 //     deleteNode(&head, 5);
 //     display(&head);
 // }
+
+void printQueue(int Queue[], int front, int rear, int N)
+{
+    int i;
+    for (i = front; i != rear; i = (i + 1) % N)
+        cout << Queue[i] << " ";
+    if (front != -1 && i == rear)
+        cout << Queue[i] << " ";
+
+    cout << " || ";
+    cout << "Front: " << front << " "
+         << "Rear: " << rear << endl;
+}
+
+void queueDelete(int Queue[], int N, int front, int rear)
+{
+    cout << "Queue before deleting an item: ";
+    printQueue(Queue, front, rear, N);
+    if (front == -1)
+    {
+        cout << "UnderFlow" << endl;
+        return;
+    }
+    int item = Queue[front];
+    if (front == rear)
+    {
+        front = -1;
+        rear = -1;
+    }
+    else if (front == N - 1)
+        front = 0;
+    else
+        ++front;
+
+    cout << "ITEM removed the Queue is: " << item << endl;
+    cout << "Queue After deleting an item: ";
+    printQueue(Queue, front, rear, N);
+}
+
+// int main()
+// {
+//     int Queue[] = {1, 2, 3, 4, 5};
+//     queueDelete(Queue, 5, 0, 4);
+//     cout << endl;
+//     int Queue2[] = {25, 0, 0, 33, 12, 8};
+//     queueDelete(Queue2, 6, 3, 0);
+// }
+
+void insertInQueue(int Queue[], int N, int front, int rear, int ITEM)
+{
+    cout << "Queue before insertion of ITEM";
+    printQueue(Queue, front, rear, N);
+    if (front == 0 && rear == N - 1 || front == rear + 1)
+    {
+        cout << "OverFlow" << endl;
+        return;
+    }
+    if (front == -1)
+    {
+        front = 0;
+        rear = 0;
+    }
+    else if (rear == N - 1)
+        rear = 0;
+    else
+        rear++;
+    Queue[rear] = ITEM;
+    cout << "Queue after insertion: ";
+    printQueue(Queue, front, rear, N);
+}
