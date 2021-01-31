@@ -10703,146 +10703,284 @@ void printMultiVector(vector<vector<int>> x)
 //     pushStack(arr, 4, 9, 100);
 // }
 
-struct DATA
-{
-    string model;
-    int price;
-    string company;
-    string color;
-};
+// struct DATA
+// {
+//     string model;
+//     int price;
+//     string company;
+//     string color;
+// };
 
-struct Node
-{
-    DATA data;
-    struct Node *next;
-};
+// struct Node
+// {
+//     DATA data;
+//     struct Node *next;
+// };
 
-void append(Node **head_ref, DATA data)
-{
-    struct Node *newNode = new Node;
-    Node *last = *head_ref;
-    newNode->data = data;
+// void append(Node **head_ref, DATA data)
+// {
+//     struct Node *newNode = new Node;
+//     Node *last = *head_ref;
+//     newNode->data = data;
 
-    newNode->next = NULL;
+//     newNode->next = NULL;
 
-    if (*head_ref == NULL)
-    {
-        *head_ref = newNode;
-        return;
-    }
+//     if (*head_ref == NULL)
+//     {
+//         *head_ref = newNode;
+//         return;
+//     }
 
-    while (last->next != NULL)
-        last = last->next;
+//     while (last->next != NULL)
+//         last = last->next;
 
-    last->next = newNode;
-    return;
-}
-void insertAfter(Node *prev_node, DATA data)
-{
-    /*1. check if the given prev_node is NULL */
-    if (prev_node == NULL)
-    {
-        cout << "the given previous node cannot be NULL";
-        return;
-    }
+//     last->next = newNode;
+//     return;
+// }
+// void insertAfter(Node *prev_node, DATA data)
+// {
+//     /*1. check if the given prev_node is NULL */
+//     if (prev_node == NULL)
+//     {
+//         cout << "the given previous node cannot be NULL";
+//         return;
+//     }
 
-    // Node* new_node = new Node();
-    struct Node *newNode = new Node;
-    newNode->data = data;
+//     // Node* new_node = new Node();
+//     struct Node *newNode = new Node;
+//     newNode->data = data;
 
-    newNode->next = prev_node->next;
+//     newNode->next = prev_node->next;
 
-    prev_node->next = newNode;
-}
-void insertAtPosition(struct Node **head_ref, DATA data, int position)
-{
-    if (*head_ref == NULL)
-        return;
+//     prev_node->next = newNode;
+// }
+// void insertAtPosition(struct Node **head_ref, DATA data, int position)
+// {
+//     if (*head_ref == NULL)
+//         return;
 
-    struct Node *temp = *head_ref;
-    for (int i = 0; i < position - 2; i++)
-    {
-        cout << endl
-             << "HELLO ";
-        cout << temp->data.model << endl;
-        temp = temp->next;
-    }
-    insertAfter(temp, data);
-}
-void deleteNode(struct Node **head_ref, int position)
-{
-    // If linked list is empty
-    if (*head_ref == NULL)
-        return;
+//     struct Node *temp = *head_ref;
+//     for (int i = 0; i < position - 2; i++)
+//     {
+//         temp = temp->next;
+//     }
+//     insertAfter(temp, data);
+// }
+// void deleteNode(struct Node **head_ref, int position)
+// {
+//     // If linked list is empty
+//     if (*head_ref == NULL)
+//         return;
 
-    struct Node *temp = *head_ref;
+//     struct Node *temp = *head_ref;
 
-    if (position == 0)
-    {
-        *head_ref = temp->next;
-        free(temp);
-        return;
-    }
+//     if (position == 0)
+//     {
+//         *head_ref = temp->next;
+//         free(temp);
+//         return;
+//     }
 
-    for (int i = 0; temp != NULL && i < position - 1; i++)
-        temp = temp->next;
+//     for (int i = 0; temp != NULL && i < position - 1; i++)
+//         temp = temp->next;
 
-    if (temp == NULL || temp->next == NULL)
-        return;
+//     if (temp == NULL || temp->next == NULL)
+//         return;
 
-    struct Node *next = temp->next->next;
+//     struct Node *next = temp->next->next;
 
-    free(temp->next); // Free memory
+//     free(temp->next); // Free memory
 
-    temp->next = next;
-}
-void display(struct Node **head_ref)
-{
-    if ((*head_ref) == NULL)
-    {
-        cout << "List is empty!" << endl;
-        return;
-    }
-    struct Node *ptr;
-    ptr = (*head_ref);
-    int i = 1;
-    while (ptr != NULL)
-    {
-        cout << endl;
-        cout << "(POSITION " << i << ") ";
-        cout << "Car Model: " << ptr->data.model << " || "
-             << "Car Price: " << ptr->data.price << " || "
-             << "Car company: " << ptr->data.company << " || "
-             << "Car Color: " << ptr->data.color << endl;
-        ;
-        ptr = ptr->next;
-        cout << endl;
-        i++;
-    }
-}
+//     temp->next = next;
+// }
+// void display(struct Node **head_ref)
+// {
+//     if ((*head_ref) == NULL)
+//     {
+//         cout << "List is empty!" << endl;
+//         return;
+//     }
+//     struct Node *ptr;
+//     ptr = (*head_ref);
+//     int i = 1;
+//     while (ptr != NULL)
+//     {
+//         cout << endl;
+//         cout << "(POSITION " << i << ") ";
+//         cout << "Car Model: " << ptr->data.model << " || "
+//              << "Car Price: " << ptr->data.price << " || "
+//              << "Car company: " << ptr->data.company << " || "
+//              << "Car Color: " << ptr->data.color << endl;
+//         ;
+//         ptr = ptr->next;
+//         cout << endl;
+//         i++;
+//     }
+// }
 
-int main()
-{
+// int main()
+// {
 
-    struct Node *head = NULL;
-    display(&head);
-    for (int i = 1; i < 7; i++)
-    {
-        DATA data;
-        data.model = "Model No. " + to_string(i);
-        data.price = i + 1000;
-        data.color = "Black";
-        data.company = "Rolls Royce";
-        append(&head, data);
-    }
-    DATA data;
-    data.model = "INSERTED MODEL";
-    data.price = 999;
-    data.color = "INSERTED COLOR";
-    data.company = "INSERTED COMPANY";
-    insertAtPosition(&head, data, 4);
-    display(&head);
-    cout << "DELETING NODE AT ZERO POSITION" << endl;
-    deleteNode(&head, 0);
-    display(&head);
-}
+//     struct Node *head = NULL;
+//     display(&head);
+//     for (int i = 1; i < 7; i++)
+//     {
+//         DATA data;
+//         data.model = "Model No. " + to_string(i);
+//         data.price = i + 1000;
+//         data.color = "Black";
+//         data.company = "Rolls Royce";
+//         append(&head, data);
+//     }
+//     DATA data;
+//     data.model = "INSERTED MODEL";
+//     data.price = 999;
+//     data.color = "INSERTED COLOR";
+//     data.company = "INSERTED COMPANY";
+//     insertAtPosition(&head, data, 4);
+//     display(&head);
+//     cout << "DELETING NODE AT ZERO POSITION" << endl;
+//     deleteNode(&head, 0);
+//     display(&head);
+// }
+
+// struct DATA
+// {
+//     string model;
+//     string company;
+//     string RAM;
+//     string storageCapacity;
+// };
+
+// struct Node
+// {
+//     DATA data;
+//     struct Node *next;
+// };
+
+// void append(Node **head_ref, DATA data)
+// {
+//     struct Node *newNode = new Node;
+//     Node *last = *head_ref;
+//     newNode->data = data;
+
+//     newNode->next = NULL;
+
+//     if (*head_ref == NULL)
+//     {
+//         *head_ref = newNode;
+//         return;
+//     }
+
+//     while (last->next != NULL)
+//         last = last->next;
+
+//     last->next = newNode;
+//     return;
+// }
+// void insertAfter(Node *prev_node, DATA data)
+// {
+//     /*1. check if the given prev_node is NULL */
+//     if (prev_node == NULL)
+//     {
+//         cout << "the given previous node cannot be NULL";
+//         return;
+//     }
+
+//     // Node* new_node = new Node();
+//     struct Node *newNode = new Node;
+//     newNode->data = data;
+
+//     newNode->next = prev_node->next;
+
+//     prev_node->next = newNode;
+// }
+// void insertAtPosition(struct Node **head_ref, DATA data, int position)
+// {
+//     if (*head_ref == NULL)
+//         return;
+
+//     struct Node *temp = *head_ref;
+//     for (int i = 0; i < position - 2; i++)
+//     {
+//         temp = temp->next;
+//     }
+//     insertAfter(temp, data);
+// }
+// void deleteNode(struct Node **head_ref, int position)
+// {
+//     // If linked list is empty
+//     if (*head_ref == NULL)
+//         return;
+
+//     struct Node *temp = *head_ref;
+
+//     if (position == 0)
+//     {
+//         *head_ref = temp->next;
+//         free(temp);
+//         return;
+//     }
+
+//     for (int i = 0; temp != NULL && i < position - 1; i++)
+//         temp = temp->next;
+
+//     if (temp == NULL || temp->next == NULL)
+//         return;
+
+//     struct Node *next = temp->next->next;
+
+//     free(temp->next); // Free memory
+
+//     temp->next = next;
+// }
+// void display(struct Node **head_ref)
+// {
+//     if ((*head_ref) == NULL)
+//     {
+//         cout << "List is empty!" << endl;
+//         return;
+//     }
+//     struct Node *ptr;
+//     ptr = (*head_ref);
+//     int i = 1;
+//     while (ptr != NULL)
+//     {
+//         cout << endl;
+//         cout << "(POSITION " << i << ") ";
+//         cout << "MOBILE Model: " << ptr->data.model << " || "
+//              << "MOBILE Company: " << ptr->data.company << " || "
+//              << "MOBILE RAM: " << ptr->data.RAM << " || "
+//              << "MOBILE Storage Capacity: " << ptr->data.storageCapacity << endl;
+//         ;
+//         ptr = ptr->next;
+//         cout << endl;
+//         i++;
+//     }
+// }
+
+// int main()
+// {
+
+//     struct Node *head = NULL;
+//     display(&head);
+//     for (int i = 1; i < 6; i++)
+//     {
+//         DATA data;
+//         data.model = "Model No. " + to_string(i);
+//         data.company = "CHINA KA PHONE";
+//         data.RAM = "16GB";
+//         data.storageCapacity = "256GB";
+//         append(&head, data);
+//     }
+//     DATA data;
+//     data.model = "INSERTED MOBILE";
+//     data.company = "INSERTED COMPANY";
+//     data.RAM = "8GB";
+//     data.storageCapacity = "120GB";
+//     insertAtPosition(&head, data, 3);
+//     display(&head);
+//     cout << "DELETING NODE AT ZERO POSITION" << endl;
+//     deleteNode(&head, 5);
+//     display(&head);
+// }
