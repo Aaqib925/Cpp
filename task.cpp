@@ -11157,3 +11157,90 @@ void printMultiVector(vector<vector<int>> x)
 //     searchElement(arr, 0, 4, 5, 6);
 //     searchElement(arr, 0, 4, 5, 10);
 // }
+// void swap(int *a, int *b)
+// {
+//     int t = *a;
+//     *a = *b;
+//     *b = t;
+// }
+// void printArray(int arr[], int size)
+// {
+//     int i;
+//     for (i = 0; i < size; i++)
+//         cout << arr[i] << " ";
+//     cout << endl;
+// }
+// int partition(int arr[], int low, int high)
+// {
+//     int pivot = arr[high]; // pivot
+//     int i = (low - 1);     // Index of smaller element
+
+//     for (int j = low; j <= high - 1; j++)
+//     {
+//         // If current element is smaller than the pivot
+//         if (arr[j] < pivot)
+//         {
+//             i++; // increment index of smaller element
+//             swap(&arr[i], &arr[j]);
+//         }
+//     }
+//     swap(&arr[i + 1], &arr[high]);
+//     return (i + 1);
+// }
+
+// void quickSort(int arr[], int low, int high)
+// {
+//     if (low < high)
+//     {
+//         /* pi is partitioning index, arr[p] is now
+//         at right place */
+//         int pi = partition(arr, low, high);
+
+//         // Separately sort elements before
+//         // partition and after partition
+//         quickSort(arr, low, pi - 1);
+//         printArray(arr, 7);
+//         quickSort(arr, pi + 1, high);
+//         printArray(arr, 7);
+//     }
+// }
+
+// /* Function to print an array */
+
+// // Driver Code
+// int main()
+// {
+//     int arr[] = {45, 34, 12, 56, 78, 90, 41};
+//     int n = sizeof(arr) / sizeof(arr[0]);
+//     quickSort(arr, 0, n - 1);
+//     cout << "Sorted array: \n";
+//     printArray(arr, n);
+//     return 0;
+// }
+
+struct Length
+{
+    int lengthInYards;
+    int lengthInFeets;
+    int lengthInInches;
+};
+
+Length add(Length struct1, Length struct2)
+{
+    Length result;
+    result.lengthInYards = struct1.lengthInYards + struct2.lengthInYards;
+    result.lengthInFeets = struct1.lengthInFeets + struct2.lengthInFeets;
+    result.lengthInInches = struct1.lengthInInches + struct2.lengthInInches;
+    return result;
+}
+void show(Length data)
+{
+    cout << "The Length in yards is: " << data.lengthInYards << endl;
+    cout << "The Length in feets is: " << data.lengthInFeets << endl;
+    cout << "The Length in Inches is: " << data.lengthInInches << endl;
+}
+
+int main()
+{
+    
+}
