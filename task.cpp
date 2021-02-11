@@ -11287,7 +11287,7 @@ void printMultiVector(vector<vector<int>> x)
 //     // E
 //     for (int i = 0; i < size; i++)
 //     {
-//         cout << *(vPtr + i) << endl;
+//         cout << *(vPtr + i) << ' ';
 //     }
 //     cout << endl;
 
@@ -11321,28 +11321,28 @@ void printMultiVector(vector<vector<int>> x)
 //     cout << *(temp -= 4) << endl;
 // }
 
-int main()
-{
-    // A
-    long *longPtr;
+// int main()
+// {
+//     // A
+//     long *longPtr;
 
-    // B
-    long value1 = 200000;
-    long value2;
-    longPtr = &value1;
+//     // B
+//     long value1 = 200000;
+//     long value2;
+//     longPtr = &value1;
 
-    // C
-    cout << *longPtr << endl;
+//     // C
+//     cout << *longPtr << endl;
 
-    // D
-    value2 = *longPtr;
+//     // D
+//     value2 = *longPtr;
 
-    // E
-    cout << value2 << endl;
+//     // E
+//     cout << value2 << endl;
 
-    // F
-    cout << &value1 << endl;
+//     // F
+//     cout << &value1 << endl;
 
-    // G
-    cout << longPtr << endl;
-}
+//     // G
+//     cout << longPtr << endl;
+// }
