@@ -11218,29 +11218,105 @@ void printMultiVector(vector<vector<int>> x)
 //     return 0;
 // }
 
-struct Length
-{
-    int lengthInYards;
-    int lengthInFeets;
-    int lengthInInches;
-};
+// struct Length
+// {
+//     int lengthInYards;
+//     int lengthInFeets;
+//     int lengthInInches;
+// };
 
-Length add(Length struct1, Length struct2)
-{
-    Length result;
-    result.lengthInYards = struct1.lengthInYards + struct2.lengthInYards;
-    result.lengthInFeets = struct1.lengthInFeets + struct2.lengthInFeets;
-    result.lengthInInches = struct1.lengthInInches + struct2.lengthInInches;
-    return result;
-}
-void show(Length data)
-{
-    cout << "The Length in yards is: " << data.lengthInYards << endl;
-    cout << "The Length in feets is: " << data.lengthInFeets << endl;
-    cout << "The Length in Inches is: " << data.lengthInInches << endl;
-}
+// Length add(Length struct1, Length struct2)
+// {
+//     Length result;
+//     result.lengthInYards = struct1.lengthInYards + struct2.lengthInYards;
+//     result.lengthInFeets = struct1.lengthInFeets + struct2.lengthInFeets;
+//     result.lengthInInches = struct1.lengthInInches + struct2.lengthInInches;
+//     return result;
+// }
+// void show(Length data)
+// {
+//     cout << endl;
+//     cout << "The Length in yards is: " << data.lengthInYards << " yards" << endl;
+//     cout << "The Length in feets is: " << data.lengthInFeets << " feets" << endl;
+//     cout << "The Length in Inches is: " << data.lengthInInches << " inches" << endl;
+// }
+
+// int main()
+// {
+//     Length struct1;
+//     Length struct2;
+//     cout << endl;
+//     cout << "Enter length in yards for struct1: ";
+//     cin >> struct1.lengthInYards;
+//     cout << "Enter length in feets for struct1: ";
+//     cin >> struct1.lengthInFeets;
+//     cout << "Enter length in Inches for struct1: ";
+//     cin >> struct1.lengthInInches;
+//     cout << endl;
+//     cout << "Enter length in yards for struct2: ";
+//     cin >> struct2.lengthInYards;
+//     cout << "Enter length in feets for struct2: ";
+//     cin >> struct2.lengthInFeets;
+//     cout << "Enter length in Inches for struct2: ";
+//     cin >> struct2.lengthInInches;
+
+//     Length result = add(struct1, struct2);
+//     show(result);
+// }
 
 int main()
 {
-    
+    // A
+    unsigned const int size = 5;
+    unsigned int values[size] = {2, 4, 6, 8, 10};
+
+    // B
+    unsigned int *vPtr;
+
+    // C
+    for (int i = 0; i < size; i++)
+    {
+        cout << values[i] << " ";
+    }
+    cout << endl;
+
+    // D
+    vPtr = values;
+    vPtr = &values[0];
+
+    // E
+    for (int i = 0; i < size; i++)
+    {
+        cout << *(vPtr + i) << endl;
+    }
+    cout << endl;
+
+    // F
+    for (int i = 0; i < size; i++)
+    {
+        cout << *(values + i) << " ";
+    }
+    cout << endl;
+
+    // G
+    for (int i = 0; i < size; i++)
+    {
+        cout << (vPtr[i]) << ' ';
+    }
+    cout << endl;
+
+    // H
+    cout << values[4] << endl;
+    cout << *(vPtr + 4) << endl;
+    cout << *(values + 4) << endl;
+    cout << vPtr[4] << endl;
+
+    // I
+    cout << (vPtr + 3) << endl;
+    cout << *(vPtr + 3) << endl;
+
+    // J
+    unsigned int *temp = vPtr;
+    cout << (vPtr -= 4) << endl;
+    cout << *(temp -= 4) << endl;
 }
